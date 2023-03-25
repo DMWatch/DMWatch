@@ -104,7 +104,6 @@ class PartyPanel extends PluginPanel
 
 		passphrasePanel.add(passphraseTopLabel);
 		passphrasePanel.add(passphraseLabel);
-//		syncPartyPassphraseVisibility();
 
 		controlsPanel = new ControlsPanel(plugin);
 		topPanel.add(controlsPanel);
@@ -179,28 +178,10 @@ class PartyPanel extends PluginPanel
 			panel.updatePanel();
 		}
 	}
-
-//	public void updatePartyControls()
-//	{
-//		controlsPanel.setVisible(true);
-//	}
-
-//	public void syncPartyPassphraseVisibility()
-//	{
-//		passphraseLabel.setText(plugin.getPartyPassphrase());
-//		passphrasePanel.setVisible(true && plugin.isInParty());
-//	}
-
 	public void updateParty()
 	{
 		controlsPanel.updateControls();
-//		syncPartyPassphraseVisibility();
 	}
-
-//	public void updateDisplayVirtualLevels()
-//	{
-//		playerPanelMap.values().forEach(PlayerPanel::updateDisplayVirtualLevels);
-//	}
 
 	public void updateDisplayPlayerWorlds()
 	{

@@ -573,15 +573,15 @@ public class DMWatchPlugin extends Plugin
 		DMPartyMiscChange e2 = null;
 		if (caseManager.getByHWID(getHWID()) != null)
 		{
-			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.R, caseManager.getByHWID(getHWID()).getStatus());
+//			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.R, caseManager.getByHWID(getHWID()).getStatus());
 		}
 		else if (caseManager.getByAccountHash(client.getAccountHash()) != null)
 		{
-			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.R, caseManager.getByHWID(getHWID()).getStatus());
+			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.R, caseManager.getByAccountHash(client.getAccountHash()).getStatus());
 		}
 		else if (caseManager.get(Text.toJagexName(client.getLocalPlayer().getName() == null ? "" : client.getLocalPlayer().getName())) != null)
 		{
-			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.R, caseManager.getByHWID(getHWID()).getStatus());
+			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.R, caseManager.getByHWID(client.getLocalPlayer().getName()).getStatus());
 		}
 
 		if (e2 != null && !myPlayer.getStatus().equals(e2.getS())) {
@@ -837,10 +837,6 @@ public class DMWatchPlugin extends Plugin
 		if (dmwCase == null && !notifyClear)
 		{
 			return;
-		}
-		else if (dmwCase == null)
-		{
-			response.append(" does not have DMWatch installed.");
 		}
 		else
 		{
