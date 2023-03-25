@@ -102,6 +102,7 @@ public class PlayerPanel extends JPanel
 		// Non-optimal way to attach a mouse listener to
 		// the entire panel, but easy to implement
 		JPanel statsPanel = this.banner.getStatsPanel();
+		JPanel infoPanel = this.banner.getInfoPanel();
 		JLabel expandIcon = this.banner.getExpandIcon();
 		Component[] list = new Component[statsPanel.getComponentCount() + 1];
 		System.arraycopy(statsPanel.getComponents(), 0, list, 0, list.length - 1);
@@ -132,6 +133,7 @@ public class PlayerPanel extends JPanel
 					{
 						banner.setBackground(BACKGROUND_HOVER_COLOR);
 						statsPanel.setBackground(BACKGROUND_HOVER_COLOR);
+						infoPanel.setBackground(BACKGROUND_HOVER_COLOR);
 					}
 
 					@Override
@@ -139,6 +141,7 @@ public class PlayerPanel extends JPanel
 					{
 						banner.setBackground(BACKGROUND_COLOR);
 						statsPanel.setBackground(BACKGROUND_COLOR);
+						infoPanel.setBackground(BACKGROUND_COLOR);
 					}
 				});
 			}

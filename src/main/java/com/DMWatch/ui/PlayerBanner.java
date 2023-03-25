@@ -66,14 +66,14 @@ public class PlayerBanner extends JPanel
 
 	@Getter
 	private final JPanel statsPanel = new JPanel();
-	private final JLabel iconLabel = new JLabel();
-
+	@Getter
 	private final JPanel infoPanel = new JPanel();
 	private final Map<String, JLabel> statLabels = new HashMap<>();
 	private final Map<String, JLabel> iconLabels = new HashMap<>();
 	@Getter
 	private final JLabel expandIcon = new JLabel();
 	private final JLabel worldLabel = new JLabel();
+	private final JLabel iconLabel = new JLabel();
 
 	private final ImageIcon expandIconUp;
 	private final ImageIcon expandIconDown;
