@@ -24,7 +24,7 @@ public class Case
 
 	// "-7383353695795164313"
 	@SerializedName("account_hash")
-	private long accountHash;
+	private String accountHash;
 
 	// "d5d9eac938fe755e25e408d898ed839c"
 	@SerializedName("hardware_id")

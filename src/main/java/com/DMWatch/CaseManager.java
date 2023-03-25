@@ -132,12 +132,11 @@ public class CaseManager
 		return null;
 	}
 
-
-	public Case getByAccountHash(long hashID)
+	public Case getByAccountHash(String hashID)
 	{
 		for (String s : dmCases.keySet())
 		{
-			if (dmCases.get(s).getAccountHash() == hashID)
+			if (dmCases.get(s).getAccountHash().equals(hashID))
 			{
 				return dmCases.get(s);
 			}

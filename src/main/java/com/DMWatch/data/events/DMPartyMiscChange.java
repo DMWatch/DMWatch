@@ -71,13 +71,13 @@ public class DMPartyMiscChange implements PartyProcess
 			case LVL:
 				p.setCombatLevel(v);
 				break;
-			case R:
+			case REASON:
 				p.setStatus(s);
 				break;
 			case HWID:
 				p.setHWID(s);
 				break;
-			case LOGIN:
+			case ACCOUNT_HASH:
 				p.setUserUnique(s);
 				break;
 			default:
@@ -92,8 +92,8 @@ public class DMPartyMiscChange implements PartyProcess
 		W, // World
 		U, // Username
 		LVL, // Combat Level
-		R, // Status
+		REASON, // Status
 		HWID,
-		LOGIN,
+		ACCOUNT_HASH,
 	}
 }

@@ -258,7 +258,7 @@ public class DMWatchPlugin extends Plugin
 
 			myPlayer.setWorld(0);
 			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.W, 0));
-			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.LOGIN, "Not Logged In"));
+			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, "Not Logged In"));
 		}
 	}
 	@Schedule(
@@ -506,7 +506,7 @@ public class DMWatchPlugin extends Plugin
 		}
 	}
 
-	@Schedule(period = 15, unit = ChronoUnit.MINUTES)
+	@Schedule(period = 5, unit = ChronoUnit.MINUTES)
 	public void refreshList()
 	{
 		caseManager.refresh(this::colorAll);
@@ -553,24 +553,24 @@ public class DMWatchPlugin extends Plugin
 
 		if (client.getLocalPlayer() != null)
 		{
-			if (!myPlayer.getUserUnique().equals(String.valueOf(client.getAccountHash())))
+			if (!myPlayer.getUserUnique().equals(getAccountID()))
 			{
-				currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.LOGIN, String.valueOf(client.getAccountHash())));
+				currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, getAccountID()));
 			}
 		}
 
 		DMPartyMiscChange e2 = null;
 		if (caseManager.getByHWID(getHWID()) != null)
 		{
-			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.R, caseManager.getByHWID(getHWID()).getStatus());
+			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.getByHWID(getHWID()).getStatus());
 		}
-		else if (caseManager.getByAccountHash(client.getAccountHash()) != null)
+		else if (caseManager.getByAccountHash(getAccountID()) != null)
 		{
-			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.R, caseManager.getByAccountHash(client.getAccountHash()).getStatus());
+			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.getByAccountHash(getAccountID()).getStatus());
 		}
 		else if (caseManager.get(Text.toJagexName(client.getLocalPlayer().getName() == null ? "" : client.getLocalPlayer().getName())) != null)
 		{
-			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.R, caseManager.getByHWID(client.getLocalPlayer().getName()).getStatus());
+			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.getByHWID(client.getLocalPlayer().getName()).getStatus());
 		}
 
 		if (e2 != null && !myPlayer.getStatus().equals(e2.getS())) {
@@ -778,11 +778,26 @@ public class DMWatchPlugin extends Plugin
 
 	private String getHWID()
 	{
-		try
+		String toEncrypt = System.getenv("COMPUTERNAME") + System.getProperty("user.name") + System.getenv("PROCESSOR_IDENTIFIER") + System.getenv("PROCESSOR_LEVEL");
+		return getEncrypt(toEncrypt);
+	}
+
+	private String getAccountID()
+	{
+		if (client != null)
 		{
-			String toEncrypt = System.getenv("COMPUTERNAME") + System.getProperty("user.name") + System.getenv("PROCESSOR_IDENTIFIER") + System.getenv("PROCESSOR_LEVEL");
+			String toEncrypt = String.valueOf(client.getAccountHash());
+			return getEncrypt(toEncrypt);
+		}
+
+		return "unknown";
+	}
+
+	private String getEncrypt(String input)
+	{
+		try {
 			MessageDigest md = MessageDigest.getInstance("MD5");
-			md.update(toEncrypt.getBytes());
+			md.update(input.getBytes());
 			StringBuilder hexString = new StringBuilder();
 
 			byte[] byteData = md.digest();
@@ -796,9 +811,9 @@ public class DMWatchPlugin extends Plugin
 				}
 				hexString.append(hex);
 			}
-			
+
 			String s = hexString.toString().substring(0, 16).toLowerCase();
-			
+
 			String s1 = s.substring(0, 4);
 			String s2 = s.substring(4, 8);
 			String s3 = s.substring(8, 12);
@@ -829,11 +844,12 @@ public class DMWatchPlugin extends Plugin
 		}
 		else
 		{
-			if (dmwCase.getStatus().equals("1"))
-			{
-				response.append(" is in good standing on DMWatch.");
-			}
-			else if (dmwCase.getStatus().equals("2"))
+//			if (dmwCase.getStatus().equals("1"))
+//			{
+//				response.append(" is in good standing on DMWatch.");
+//			}
+//			else
+			if (dmwCase.getStatus().equals("2"))
 			{
 				response.append(" is accused.");
 			}
