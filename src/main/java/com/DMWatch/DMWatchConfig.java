@@ -33,12 +33,6 @@ public interface DMWatchConfig extends Config
 		position = 70
 	)
 	String NOTIFICATIONS_SECTION = "Notifications";
-	@ConfigSection(
-		name = "Sources",
-		description = "Configure sources for investigating reported players",
-		position = 50
-	)
-	String SOURCES_SECTION = "Sources";
 
 	@ConfigItem(
 		position = 3,
@@ -107,30 +101,6 @@ public interface DMWatchConfig extends Config
 		section = NOTIFICATIONS_SECTION
 	)
 	default boolean notifyOnNearby()
-	{
-		return true;
-	}
-
-	@ConfigItem(
-		position = 9,
-		keyName = "useRW",
-		name = "Use DMWatch",
-		description = "Check for reported players against the DMWatch watchlist",
-		section = SOURCES_SECTION
-	)
-	default boolean useRW()
-	{
-		return true;
-	}
-
-	@ConfigItem(
-		position = 10,
-		keyName = "useWDR",
-		name = "Use We Do Raids",
-		description = "Check for reported players against the We Do Raids banlist",
-		section = SOURCES_SECTION
-	)
-	default boolean useWDR()
 	{
 		return true;
 	}
