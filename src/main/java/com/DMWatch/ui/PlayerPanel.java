@@ -25,6 +25,10 @@
 package com.DMWatch.ui;
 
 import com.DMWatch.DMWatchConfig;
+import com.DMWatch.data.GameItem;
+import com.DMWatch.data.PartyPlayer;
+import com.DMWatch.ui.equipment.EquipmentPanelSlot;
+import com.DMWatch.ui.equipment.PlayerEquipmentPanel;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
@@ -53,12 +57,6 @@ import net.runelite.client.ui.components.materialtabs.MaterialTab;
 import net.runelite.client.ui.components.materialtabs.MaterialTabGroup;
 import net.runelite.client.util.AsyncBufferedImage;
 import net.runelite.client.util.ImageUtil;
-import com.DMWatch.data.GameItem;
-import com.DMWatch.data.PartyPlayer;
-import com.DMWatch.ui.equipment.EquipmentPanelSlot;
-import com.DMWatch.ui.equipment.PlayerEquipmentPanel;
-//import com.DMWatch.ui.prayer.PlayerPrayerPanel;
-//import com.DMWatch.ui.skills.PlayerSkillsPanel;
 
 @Getter
 public class PlayerPanel extends JPanel
@@ -75,7 +73,6 @@ public class PlayerPanel extends JPanel
 	{
 		VENG_ON = ImageUtil.loadImageResource(AlternateSprites.class, AlternateSprites.DISEASE_HEART);
 		VENG_OFF = ImageUtil.loadImageResource(AlternateSprites.class, AlternateSprites.POISON_HEART);
-//		HEART_VENOM = ImageUtil.loadImageResource(AlternateSprites.class, AlternateSprites.VENOM_HEART);
 	}
 
 
@@ -84,8 +81,6 @@ public class PlayerPanel extends JPanel
 	private final PlayerBanner banner;
 	private final PlayerInventoryPanel inventoryPanel;
 	private final PlayerEquipmentPanel equipmentPanel;
-//	private final PlayerSkillsPanel skillsPanel;
-//	private final PlayerPrayerPanel prayersPanel;
 	private final DMWatchConfig config;
 	private final Map<Integer, Boolean> tabMap = new HashMap<>();
 	private PartyPlayer player;
@@ -103,8 +98,6 @@ public class PlayerPanel extends JPanel
 		this.banner = new PlayerBanner(selectedPlayer, showInfo, true, spriteManager);
 		this.inventoryPanel = new PlayerInventoryPanel(selectedPlayer.getInventory(), itemManager);
 		this.equipmentPanel = new PlayerEquipmentPanel(selectedPlayer.getEquipment(), spriteManager, itemManager);
-//		this.skillsPanel = new PlayerSkillsPanel(selectedPlayer, false, spriteManager);
-//		this.prayersPanel = new PlayerPrayerPanel(selectedPlayer, spriteManager);
 
 		// Non-optimal way to attach a mouse listener to
 		// the entire panel, but easy to implement

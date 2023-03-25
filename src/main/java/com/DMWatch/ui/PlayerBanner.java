@@ -24,6 +24,7 @@
  */
 package com.DMWatch.ui;
 
+import com.DMWatch.data.PartyPlayer;
 import com.google.common.base.Strings;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -56,7 +57,6 @@ import net.runelite.client.game.SpriteManager;
 import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.util.ImageUtil;
-import com.DMWatch.data.PartyPlayer;
 
 public class PlayerBanner extends JPanel
 {
@@ -83,8 +83,6 @@ public class PlayerBanner extends JPanel
 	private PartyPlayer player;
 	private boolean checkIcon;
 
-	//	private BufferedImage currentHeart = null;
-//	private boolean usingStamIcon;
 	private BufferedImage currentVenged = null;
 
 	public PlayerBanner(final PartyPlayer player, boolean expanded, boolean displayWorld, SpriteManager spriteManager)
@@ -129,7 +127,7 @@ public class PlayerBanner extends JPanel
 		copyOpt.addActionListener(e ->
 		{
 			final Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-			clipboard.setContents(new StringSelection( "HWID: " + player.getHWID() + "\nRID: " + player.getUserUnique()), null);
+			clipboard.setContents(new StringSelection("HWID: " + player.getHWID() + "\nRID: " + player.getUserUnique()), null);
 		});
 		final JPopupMenu copyPopup = new JPopupMenu();
 		copyPopup.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -138,29 +136,46 @@ public class PlayerBanner extends JPanel
 		infoPanel.setComponentPopupMenu(copyPopup);
 
 		recreatePanel();
-
 	}
 
 	private String msg(String status)
 	{
 		if (status.equals("0"))
+		{
 			return "Unknown";
+		}
 		if (status.equals("1"))
+		{
 			return "Registered";
+		}
 		if (status.equals("2"))
+		{
 			return "Accused";
+		}
 		if (status.equals("3"))
+		{
 			return "Scammer";
+		}
 		if (status.equals("4"))
+		{
 			return "Trusted";
+		}
 		if (status.equals("5"))
+		{
 			return "Developer";
+		}
 		if (status.equals("6"))
+		{
 			return "B Tier";
+		}
 		if (status.equals("7"))
+		{
 			return "A Tier";
+		}
 		if (status.equals("8"))
+		{
 			return "S Tier";
+		}
 		return "Unknown";
 	}
 
@@ -192,27 +207,38 @@ public class PlayerBanner extends JPanel
 		switch (player.getStatus())
 		{
 			case "0":
-				this.setBorder(BorderFactory.createLineBorder(Color.GREEN, 1)); break;
+				this.setBorder(BorderFactory.createLineBorder(Color.GREEN, 1));
+				break;
 			case "1":
-				this.setBorder(BorderFactory.createLineBorder(Color.GREEN, 1)); break;
+				this.setBorder(BorderFactory.createLineBorder(Color.GREEN, 1));
+				break;
 			case "2":
-				this.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 4)); break;
+				this.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 4));
+				break;
 			case "3":
-				this.setBorder(BorderFactory.createLineBorder(Color.RED, 4)); break;
+				this.setBorder(BorderFactory.createLineBorder(Color.RED, 4));
+				break;
 			case "4":
-				this.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1)); break;
+				this.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
+				break;
 			case "5":
-				this.setBorder(BorderFactory.createLineBorder(Color.CYAN, 1)); break;
+				this.setBorder(BorderFactory.createLineBorder(Color.CYAN, 1));
+				break;
 			case "6":
-				this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1)); break;
+				this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+				break;
 			case "7":
-				this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1)); break;
+				this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+				break;
 			case "8":
-				this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1)); break;
+				this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+				break;
 			case "9":
-				this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1)); break;
+				this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
+				break;
 			default:
-				this.setBorder(BorderFactory.createLineBorder(Color.ORANGE, 1)); break;
+				this.setBorder(BorderFactory.createLineBorder(Color.ORANGE, 1));
+				break;
 		}
 
 		// Add avatar label regardless of if one exists just to have UI matching
@@ -251,7 +277,6 @@ public class PlayerBanner extends JPanel
 		usernameLabel.add(expandIcon, BorderLayout.EAST);
 		nameContainer.add(usernameLabel);
 
-
 		worldLabel.setText("Not logged in");
 		if (Strings.isNullOrEmpty(player.getUsername()))
 		{
@@ -262,7 +287,6 @@ public class PlayerBanner extends JPanel
 			worldLabel.setText("World " + player.getWorld());
 		}
 		nameContainer.add(worldLabel);
-
 
 		c.weightx = 1.0;
 		c.fill = GridBagConstraints.HORIZONTAL;
@@ -301,10 +325,10 @@ public class PlayerBanner extends JPanel
 			}
 		}
 
-		statLabels.getOrDefault( "IsVenged", new JLabel()).setText(player.getIsVenged() == 1 ? "Is Venged" : "Not Venged");
-		statLabels.getOrDefault( "DMWatchStatus", new JLabel()).setText(msg(player.getStatus()));
-		statLabels.getOrDefault( "pchash", new JLabel()).setText("HWID: " +player.getHWID());
-		statLabels.getOrDefault( "acchash", new JLabel()).setText("RID: " + player.getUserUnique());
+		statLabels.getOrDefault("IsVenged", new JLabel()).setText(player.getIsVenged() == 1 ? "Is Venged" : "Not Venged");
+		statLabels.getOrDefault("DMWatchStatus", new JLabel()).setText(msg(player.getStatus()));
+		statLabels.getOrDefault("pchash", new JLabel()).setText("HWID: " + player.getHWID());
+		statLabels.getOrDefault("acchash", new JLabel()).setText("RID: " + player.getUserUnique());
 
 		statsPanel.revalidate();
 		statsPanel.repaint();
@@ -332,7 +356,9 @@ public class PlayerBanner extends JPanel
 		panel.setOpaque(false);
 
 		if (includeHoverText)
+		{
 			panel.setToolTipText(name);
+		}
 
 		return panel;
 	}

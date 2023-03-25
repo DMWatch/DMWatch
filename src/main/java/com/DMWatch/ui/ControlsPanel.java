@@ -25,34 +25,27 @@
  */
 package com.DMWatch.ui;
 
+import com.DMWatch.DMWatchPlugin;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import com.DMWatch.DMWatchPlugin;
 import javax.swing.SwingUtilities;
 import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.LinkBrowser;
 
-
 // A copy of the controls from the `net.runelite.client.plugins.party.PartyPanel` class
 public class ControlsPanel extends JPanel
 {
-	private final JButton joinPartyButton = new JButton();
 	private static ImageIcon HELP_ICON;
 	private static ImageIcon HELP_HOVER_ICON;
-
-
+	private final JButton joinPartyButton = new JButton();
 	private final DMWatchPlugin plugin;
 
 	public ControlsPanel(DMWatchPlugin plugin)
@@ -75,7 +68,9 @@ public class ControlsPanel extends JPanel
 			if (!plugin.isInParty())
 			{
 				plugin.changeParty("DMW");
-			} else {
+			}
+			else
+			{
 				plugin.leaveParty();
 			}
 		});
