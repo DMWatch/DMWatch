@@ -31,22 +31,27 @@ import java.awt.Insets;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import com.DMWatch.DMWatchPlugin;
+import javax.swing.SwingUtilities;
+import net.runelite.client.util.ImageUtil;
+import net.runelite.client.util.LinkBrowser;
 
 
 // A copy of the controls from the `net.runelite.client.plugins.party.PartyPanel` class
 public class ControlsPanel extends JPanel
 {
-//	private static final String BTN_CREATE_TEXT = "Create party";
-//	private static final String BTN_LEAVE_TEXT = "Leave party";
-
-//	private final JButton startButton = new JButton();
 	private final JButton joinPartyButton = new JButton();
-//	private final JButton rejoinPartyButton = new JButton();
-//	private final JButton copyPartyIdButton = new JButton();
+	private static ImageIcon HELP_ICON;
+	private static ImageIcon HELP_HOVER_ICON;
+
 
 	private final DMWatchPlugin plugin;
 
@@ -59,82 +64,62 @@ public class ControlsPanel extends JPanel
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.insets = new Insets(0, 2, 4, 2);
 
-//		c.gridx = 0;
-//		c.gridy = 0;
-//		this.add(startButton, c);
-
 		c.gridx = 0;
 		c.gridy = 0;
 		this.add(joinPartyButton, c);
 
-//		c.gridx = 1;
-//		c.gridy = 0;
-//		this.add(copyPartyIdButton, c);
-
-//		c.gridx = 0;
-//		c.gridy = 1;
-//		c.gridwidth = 2;
-//		this.add(rejoinPartyButton, c);
-//
-//		startButton.setText(plugin.isInParty() ? BTN_LEAVE_TEXT : BTN_CREATE_TEXT);
-//		startButton.setFocusable(false);
-
 		joinPartyButton.setText("Join DMWatch");
 		joinPartyButton.setFocusable(false);
-
-//		rejoinPartyButton.setText("Join previous party");
-//		rejoinPartyButton.setFocusable(false);
-
-//		copyPartyIdButton.setText("Copy passphrase");
-//		copyPartyIdButton.setFocusable(false);
-
-//		startButton.addActionListener(e ->
-//		{
-//			if (plugin.isInParty())
-//			{
-//				 Leave party
-//				final int result = JOptionPane.showOptionDialog(startButton,
-//					"Are you sure you want to leave the party?",
-//					"Leave party?", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
-//					null, new String[]{"Yes", "No"}, "No");
-//
-//				if (result == JOptionPane.YES_OPTION)
-//				{
-//					plugin.leaveParty();
-//				}
-//			}
-//			else
-//			{
-//				plugin.createParty();
-//			}
-//		});
-
 		joinPartyButton.addActionListener(e ->
 		{
 			if (!plugin.isInParty())
 			{
-				plugin.changeParty("DMWatch");
-//				plugin.getMyPlayer().setPluginEnabled("Yes");
+				plugin.changeParty("DMW");
 			} else {
 				plugin.leaveParty();
-//				plugin.getMyPlayer().setPluginEnabled("No");
 			}
 		});
 
+		BufferedImage helpIcon = ImageUtil.loadImageResource(DMWatchPlugin.class, "discord-mark-white.png");
+		HELP_ICON = new ImageIcon(helpIcon);
+		HELP_HOVER_ICON = new ImageIcon(ImageUtil.alphaOffset(helpIcon, 0.53f));
+
+		c.gridx = 1;
+		c.gridy = 0;
+
+		JLabel helpButton = new JLabel(HELP_ICON);
+
+		this.add(helpButton, c);
+		helpButton.setToolTipText("Click to join our discord");
+		helpButton.addMouseListener(new MouseAdapter()
+		{
+			@Override
+			public void mousePressed(MouseEvent e)
+			{
+				if (SwingUtilities.isLeftMouseButton(e))
+				{
+					LinkBrowser.browse("https://discord.com/invite/dm");
+				}
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e)
+			{
+				helpButton.setIcon(HELP_HOVER_ICON);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e)
+			{
+				helpButton.setIcon(HELP_ICON);
+			}
+		});
 
 		updateControls();
 	}
 
 	public void updateControls()
 	{
-//		startButton.setText(plugin.isInParty() ? BTN_LEAVE_TEXT : BTN_CREATE_TEXT);
-		joinPartyButton.setText(plugin.isInParty() ? "Leave DMWatch" : "Join DMWatch");
-//		rejoinPartyButton.setVisible(!plugin.isInParty());
-//		copyPartyIdButton.setVisible(plugin.isInParty());
-
-//		if (!plugin.getConfig().showPartyControls())
-//		{
-//			this.setVisible(false);
-//		}
+		joinPartyButton.setText(plugin.isInParty() ? "Leave DMW" : "Join DMW");
 	}
 }
