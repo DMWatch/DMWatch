@@ -562,7 +562,7 @@ public class DMWatchPlugin extends Plugin
 		DMPartyMiscChange e2 = null;
 		if (caseManager.getByHWID(getHWID()) != null)
 		{
-//			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.R, caseManager.getByHWID(getHWID()).getStatus());
+			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.R, caseManager.getByHWID(getHWID()).getStatus());
 		}
 		else if (caseManager.getByAccountHash(client.getAccountHash()) != null)
 		{
