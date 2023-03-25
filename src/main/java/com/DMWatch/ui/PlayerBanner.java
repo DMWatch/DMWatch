@@ -32,13 +32,18 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
 import javax.swing.OverlayLayout;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
@@ -114,11 +119,26 @@ public class PlayerBanner extends JPanel
 		worldLabel.setHorizontalTextPosition(JLabel.LEFT);
 		worldLabel.setVisible(displayWorld);
 
-		statsPanel.add(createIconPanel(spriteManager, SpriteID.SPELL_VENGEANCE_OTHER, "IsVenged", player.getIsVenged() == 1 ? "Is Venged" : "Not Venged"));
-		statsPanel.add(createIconPanel(spriteManager, SpriteID.PLAYER_KILLER_SKULL, "DMWatchStatus", msg(player.getStatus())));
-		infoPanel.add(createTextPanel("pchash", player.getHWID()));
-		infoPanel.add(createTextPanel("acchash", player.getUserUnique()));
+		statsPanel.add(createIconPanel(spriteManager, SpriteID.SPELL_VENGEANCE_OTHER, "IsVenged", player.getIsVenged() == 1 ? "Is Venged" : "Not Venged", false));
+		statsPanel.add(createIconPanel(spriteManager, SpriteID.PLAYER_KILLER_SKULL, "DMWatchStatus", msg(player.getStatus()), true));
+
+		infoPanel.add(createTextPanel("pchash", "HWID: " + player.getHWID()));
+		infoPanel.add(createTextPanel("acchash", "RID: " + player.getUserUnique()));
+
+		final JMenuItem copyOpt = new JMenuItem("Copy IDs");
+		copyOpt.addActionListener(e ->
+		{
+			final Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+			clipboard.setContents(new StringSelection( "HWID: " + player.getHWID() + "\nRID: " + player.getUserUnique()), null);
+		});
+		final JPopupMenu copyPopup = new JPopupMenu();
+		copyPopup.setBorder(new EmptyBorder(5, 5, 5, 5));
+		copyPopup.add(copyOpt);
+
+		infoPanel.setComponentPopupMenu(copyPopup);
+
 		recreatePanel();
+
 	}
 
 	private String msg(String status)
@@ -283,8 +303,8 @@ public class PlayerBanner extends JPanel
 
 		statLabels.getOrDefault( "IsVenged", new JLabel()).setText(player.getIsVenged() == 1 ? "Is Venged" : "Not Venged");
 		statLabels.getOrDefault( "DMWatchStatus", new JLabel()).setText(msg(player.getStatus()));
-		statLabels.getOrDefault( "pchash", new JLabel()).setText(player.getHWID());
-		statLabels.getOrDefault( "acchash", new JLabel()).setText(player.getUserUnique());
+		statLabels.getOrDefault( "pchash", new JLabel()).setText("HWID: " +player.getHWID());
+		statLabels.getOrDefault( "acchash", new JLabel()).setText("RID: " + player.getUserUnique());
 
 		statsPanel.revalidate();
 		statsPanel.repaint();
@@ -293,7 +313,7 @@ public class PlayerBanner extends JPanel
 	}
 
 	private JPanel createIconPanel(final SpriteManager spriteManager, final int spriteID, final String name,
-								   final String value)
+								   final String value, boolean includeHoverText)
 	{
 		final JLabel iconLabel = new JLabel();
 		iconLabel.setPreferredSize(STAT_ICON_SIZE);
@@ -310,7 +330,9 @@ public class PlayerBanner extends JPanel
 		panel.add(iconLabel, BorderLayout.WEST);
 		panel.add(textLabel, BorderLayout.CENTER);
 		panel.setOpaque(false);
-		panel.setToolTipText(name);
+
+		if (includeHoverText)
+			panel.setToolTipText(name);
 
 		return panel;
 	}
@@ -326,7 +348,6 @@ public class PlayerBanner extends JPanel
 		panel.setLayout(new BorderLayout());
 		panel.add(textLabel, BorderLayout.WEST);
 		panel.setOpaque(false);
-		panel.setToolTipText(name);
 
 		return panel;
 	}
