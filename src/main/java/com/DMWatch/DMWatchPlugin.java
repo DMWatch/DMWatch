@@ -5,13 +5,10 @@ import com.DMWatch.data.PartyPlayer;
 import com.DMWatch.data.events.DMPartyBatchedChange;
 import com.DMWatch.data.events.DMPartyMiscChange;
 import com.DMWatch.ui.PlayerPanel;
-import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
 import com.google.inject.Provides;
-import java.io.IOException;
 import java.security.MessageDigest;
 import java.time.Instant;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -58,14 +55,7 @@ import java.awt.image.BufferedImage;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.concurrent.ScheduledExecutorService;
-import static net.runelite.http.api.RuneLiteAPI.GSON;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.HttpUrl;
-import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 @Slf4j
 @PluginDescriptor(
@@ -73,7 +63,6 @@ import okhttp3.Response;
 )
 public class DMWatchPlugin extends Plugin
 {
-//	private static final String INVESTIGATE = "Investigate FW";
 	private static final String CHALLENGE = "Challenge in DM";
 	private static final List<Integer> MENU_WIDGET_IDS = ImmutableList.of(
 		WidgetInfo.FRIENDS_LIST.getGroupId(),
