@@ -169,27 +169,14 @@ class PartyPanel extends PluginPanel
 		}
 	}
 
-	void updatePartyMembersExpand(boolean expand)
+	public void syncPartyPassphraseVisibility()
 	{
-		for (PlayerPanel panel : playerPanelMap.values())
-		{
-			panel.setShowInfo(expand);
-			panel.getBanner().setExpandIcon(expand);
-			panel.updatePanel();
-		}
+		passphraseLabel.setText(plugin.getPartyPassphrase());
 	}
+
 	public void updateParty()
 	{
+		syncPartyPassphraseVisibility();
 		controlsPanel.updateControls();
-	}
-
-	public void updateDisplayPlayerWorlds()
-	{
-		playerPanelMap.values().forEach(PlayerPanel::updateDisplayPlayerWorlds);
-	}
-
-	public void updateAccountInfo()
-	{
-		playerPanelMap.values().forEach(PlayerPanel::updatePanel);
 	}
 }
