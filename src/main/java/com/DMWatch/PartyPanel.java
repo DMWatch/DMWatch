@@ -24,13 +24,19 @@
  */
 package com.DMWatch;
 
+import com.DMWatch.data.PartyPlayer;
+import com.DMWatch.ui.ControlsPanel;
+import com.DMWatch.ui.PlayerPanel;
 import com.google.common.base.Strings;
 import com.google.inject.Inject;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -44,11 +50,10 @@ import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
 import lombok.Getter;
+import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.DynamicGridLayout;
 import net.runelite.client.ui.PluginPanel;
-import com.DMWatch.data.PartyPlayer;
-import com.DMWatch.ui.ControlsPanel;
-import com.DMWatch.ui.PlayerPanel;
+import net.runelite.client.ui.components.IconTextField;
 
 class PartyPanel extends PluginPanel
 {
@@ -60,6 +65,8 @@ class PartyPanel extends PluginPanel
 	private final JPanel basePanel = new JPanel();
 	private final JPanel passphrasePanel = new JPanel();
 	private final JLabel passphraseLabel = new JLabel();
+	private final IconTextField searchBar;
+
 	@Getter
 	private final ControlsPanel controlsPanel;
 
@@ -109,6 +116,34 @@ class PartyPanel extends PluginPanel
 		topPanel.add(controlsPanel);
 		topPanel.add(passphrasePanel);
 
+		this.searchBar = new IconTextField();
+		searchBar.setIcon(IconTextField.Icon.SEARCH);
+		searchBar.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 20, 30));
+		searchBar.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+		searchBar.setHoverBackgroundColor(ColorScheme.DARK_GRAY_HOVER_COLOR);
+		searchBar.setMinimumSize(new Dimension(0, 30));
+		searchBar.addKeyListener(new KeyListener()
+		{
+			@Override
+			public void keyTyped(KeyEvent e)
+			{
+			}
+
+			@Override
+			public void keyPressed(KeyEvent e)
+			{
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e)
+			{
+				redrawOverviewPanel();
+			}
+		});
+		searchBar.addClearListener(() -> redrawOverviewPanel());
+
+		topPanel.add(searchBar);
+
 		this.add(topPanel, BorderLayout.NORTH);
 
 		// Wrap content to anchor to top and prevent expansion
@@ -118,6 +153,11 @@ class PartyPanel extends PluginPanel
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
 		this.add(scrollPane, BorderLayout.CENTER);
+	}
+
+	void redrawOverviewPanel()
+	{
+		renderSidebar();
 	}
 
 	/**
@@ -135,7 +175,18 @@ class PartyPanel extends PluginPanel
 
 		for (final PartyPlayer player : players)
 		{
-			drawPlayerPanel(player);
+			if (!searchBar.getText().isEmpty())
+			{
+				if (player.getUsername().toLowerCase().replaceAll(" ", "")
+					.contains(searchBar.getText().toLowerCase().replaceAll(" ", "")))
+				{
+					drawPlayerPanel(player);
+				}
+			}
+			else
+			{
+				drawPlayerPanel(player);
+			}
 		}
 
 		if (getComponentCount() == 0)
