@@ -24,6 +24,7 @@
  */
 package com.DMWatch.ui.skills;
 
+import com.DMWatch.ImgUtil;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -39,7 +40,6 @@ import net.runelite.api.SpriteID;
 import net.runelite.client.game.SpriteManager;
 import net.runelite.client.ui.FontManager;
 import net.runelite.client.util.ImageUtil;
-import com.DMWatch.ImgUtil;
 
 public class SkillPanelSlot extends JPanel
 {

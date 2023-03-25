@@ -24,6 +24,7 @@
  */
 package com.DMWatch.ui.skills;
 
+import com.DMWatch.ImgUtil;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.GridBagConstraints;
@@ -34,7 +35,6 @@ import javax.swing.JPanel;
 import net.runelite.api.SpriteID;
 import net.runelite.client.game.SpriteManager;
 import net.runelite.client.ui.FontManager;
-import com.DMWatch.ImgUtil;
 
 public class TotalPanelSlot extends JPanel
 {

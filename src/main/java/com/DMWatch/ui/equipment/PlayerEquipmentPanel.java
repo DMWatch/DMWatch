@@ -24,6 +24,7 @@
  */
 package com.DMWatch.ui.equipment;
 
+import com.DMWatch.data.GameItem;
 import com.google.common.collect.ImmutableMap;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -46,7 +47,6 @@ import net.runelite.client.game.SpriteManager;
 import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.util.AsyncBufferedImage;
 import net.runelite.client.util.ImageUtil;
-import com.DMWatch.data.GameItem;
 
 public class PlayerEquipmentPanel extends JPanel
 {

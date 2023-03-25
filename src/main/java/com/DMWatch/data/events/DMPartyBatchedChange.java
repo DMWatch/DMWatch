@@ -24,6 +24,8 @@
  */
 package com.DMWatch.data.events;
 
+import com.DMWatch.data.GameItem;
+import com.DMWatch.data.PartyPlayer;
 import java.util.ArrayList;
 import java.util.Collection;
 import lombok.Data;
@@ -31,8 +33,6 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import net.runelite.client.game.ItemManager;
 import net.runelite.client.party.messages.PartyMemberMessage;
-import com.DMWatch.data.GameItem;
-import com.DMWatch.data.PartyPlayer;
 
 @Data
 @NoArgsConstructor
