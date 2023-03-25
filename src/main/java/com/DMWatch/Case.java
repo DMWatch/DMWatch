@@ -10,44 +10,36 @@ import java.util.Date;
 
 @Data
 @AllArgsConstructor
-public class Case {
-    private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("MMM d, yyyy");
+public class Case
+{
+	private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("MMM d, yyyy");
 
-    // "Zezima"
-    @SerializedName("accused_rsn")
-    private String rsn;
+	// "Stella"
+	@SerializedName("display_rsn")
+	private String rsn;
 
-    // "2019-03-10 13:35:34" GMT
-    @SerializedName("published_date")
-    private Date date;
+	// "2019-03-10 13:35:34" GMT
+	@SerializedName("signup_date")
+	private Date date;
 
-    // "a0a6200"
-    @SerializedName("short_code")
-    private String code;
+	// "-7383353695795164313"
+	@SerializedName("account_hash")
+	private long accountHash;
 
-    // "Accused Of Stealing Borrowed Items"
-    private String reason;
+	// "d5d9eac938fe755e25e408d898ed839c"
+	@SerializedName("hardware_id")
+	private String hardwareID;
 
-    // "4"
-    @SerializedName("evidence_rating")
-    private String rating;
+	// "Scammed a 1b dm"
+	private String reason;
 
-    // "FW" / null
-    @SerializedName("source")
-    private String source;
+	// "0 - unknown // 1 - clean // 2 - accused // 3 - scammed"
+	@SerializedName("evidence_rating")
+	private String status;
 
-    public String niceDate() {
-        return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate().format(DATE_FORMAT);
-    }
 
-    public String getSource(){
-        return (source == null) ? "FW" : source;
-    }
-
-    public String niceSourcePossessive() {
-        switch (getSource().toLowerCase()) {
-            case "fw": return "DMWatch's";
-            default: return "Unknown's";
-        }
-    }
+	public String niceDate()
+	{
+		return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate().format(DATE_FORMAT);
+	}
 }
