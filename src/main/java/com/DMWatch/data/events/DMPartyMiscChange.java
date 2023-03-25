@@ -1,6 +1,5 @@
 /*
- * Copyright (c) 2018, TheLonelyDev <https://github.com/TheLonelyDev>
- * Copyright (c) 2018, Adam <Adam@sigterm.info>
+ * Copyright (c) 2022, TheStonedTurtle <https://github.com/TheStonedTurtle>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,46 +22,78 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.DMWatch;
+package com.DMWatch.data.events;
 
-import net.runelite.client.input.KeyListener;
+import com.DMWatch.data.PartyPlayer;
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
-import javax.inject.Inject;
-import java.awt.event.KeyEvent;
-
-public class DMWatchInputListener implements KeyListener
+// Used for updating stuff that is just a single integer value and doesn't fit into the other classes
+@Data
+@Slf4j
+public class DMPartyMiscChange implements PartyProcess
 {
-	private static final int HOTKEY = KeyEvent.VK_SHIFT;
+	PartyMisc t;
+	Integer v;
+	String s;
 
-	private final DMWatchPlugin plugin;
-
-	@Inject
-	private DMWatchInputListener(DMWatchPlugin plugin)
+	public DMPartyMiscChange(PartyMisc t, Integer v)
 	{
-		this.plugin = plugin;
+		this.t = t;
+		this.v = v;
+		this.s = null;
+	}
+
+	public DMPartyMiscChange(PartyMisc t, String s)
+	{
+		this.t = t;
+		this.v = null;
+		this.s = s;
 	}
 
 	@Override
-	public void keyTyped(KeyEvent e)
+	public void process(PartyPlayer p)
 	{
-
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e)
-	{
-		if (e.getKeyCode() == HOTKEY)
+		switch (t)
 		{
-			plugin.setHotKeyPressed(true);
+			case V:
+				p.setIsVenged(v);
+				break;
+			case P:
+				p.setPluginEnabled(s);
+				break;
+			case W:
+				p.setWorld(v);
+				break;
+			case U:
+				p.setUsername(s);
+				break;
+			case LVL:
+				p.setCombatLevel(v);
+				break;
+			case R:
+				p.setStatus(s);
+				break;
+			case HWID:
+				p.setHWID(s);
+				break;
+			case LOGIN:
+				p.setUserUnique(s);
+				break;
+			default:
+				log.warn("Unhandled misc change type for event: {}", this);
 		}
 	}
 
-	@Override
-	public void keyReleased(KeyEvent e)
+	public enum PartyMisc
 	{
-		if (e.getKeyCode() == HOTKEY)
-		{
-			plugin.setHotKeyPressed(false);
-		}
+		V, // VENGED
+		P, // plugin enabled
+		W, // World
+		U, // Username
+		LVL, // Combat Level
+		R, // Status
+		HWID,
+		LOGIN,
 	}
 }
