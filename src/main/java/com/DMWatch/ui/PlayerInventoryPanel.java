@@ -24,6 +24,7 @@
  */
 package com.DMWatch.ui;
 
+import com.DMWatch.data.GameItem;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JLabel;
@@ -32,7 +33,6 @@ import net.runelite.client.game.ItemManager;
 import net.runelite.client.ui.DynamicGridLayout;
 import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.util.QuantityFormatter;
-import com.DMWatch.data.GameItem;
 
 public class PlayerInventoryPanel extends JPanel
 {

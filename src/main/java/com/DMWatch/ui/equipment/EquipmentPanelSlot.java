@@ -24,14 +24,14 @@
  */
 package com.DMWatch.ui.equipment;
 
+import com.DMWatch.ImgUtil;
+import com.DMWatch.data.GameItem;
 import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import lombok.Getter;
 import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.QuantityFormatter;
-import com.DMWatch.ImgUtil;
-import com.DMWatch.data.GameItem;
 
 public class EquipmentPanelSlot extends JLabel
 {

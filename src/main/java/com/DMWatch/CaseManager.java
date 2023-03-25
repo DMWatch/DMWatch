@@ -1,14 +1,9 @@
 package com.DMWatch;
 
-import com.google.gson.*;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonDeserializer;
 import com.google.gson.reflect.TypeToken;
-import lombok.extern.slf4j.Slf4j;
-import net.runelite.client.callback.ClientThread;
-import net.runelite.client.util.Text;
-import okhttp3.*;
-
-import javax.inject.Inject;
-import javax.inject.Singleton;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
@@ -21,6 +16,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
+import javax.inject.Inject;
+import javax.inject.Singleton;
+import lombok.extern.slf4j.Slf4j;
+import net.runelite.client.callback.ClientThread;
+import net.runelite.client.util.Text;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.HttpUrl;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 @Slf4j
 @Singleton
@@ -124,12 +130,7 @@ public class CaseManager
 		String cleanRsn = Text.removeTags(Text.toJagexName(rsn)).toLowerCase();
 
 		Case c = dmCases.get(cleanRsn);
-		if (c != null)
-		{
-			return c;
-		}
-
-		return null;
+		return c;
 	}
 
 	public Case getByAccountHash(String hashID)

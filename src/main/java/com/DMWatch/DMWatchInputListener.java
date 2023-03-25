@@ -25,10 +25,9 @@
  */
 package com.DMWatch;
 
-import net.runelite.client.input.KeyListener;
-
-import javax.inject.Inject;
 import java.awt.event.KeyEvent;
+import javax.inject.Inject;
+import net.runelite.client.input.KeyListener;
 
 public class DMWatchInputListener implements KeyListener
 {

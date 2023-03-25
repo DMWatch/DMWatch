@@ -7,20 +7,46 @@ import com.DMWatch.data.events.DMPartyMiscChange;
 import com.DMWatch.ui.PlayerPanel;
 import com.google.common.collect.ImmutableList;
 import com.google.inject.Provides;
+import java.awt.image.BufferedImage;
 import java.security.MessageDigest;
 import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.concurrent.ScheduledExecutorService;
+import javax.inject.Inject;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import net.runelite.api.*;
-import net.runelite.api.events.*;
+import net.runelite.api.ChatMessageType;
+import net.runelite.api.Client;
+import net.runelite.api.GameState;
+import net.runelite.api.InventoryID;
+import net.runelite.api.Item;
+import net.runelite.api.MenuAction;
+import net.runelite.api.MenuEntry;
+import net.runelite.api.Player;
+import net.runelite.api.ScriptID;
+import net.runelite.api.SpriteID;
+import net.runelite.api.Varbits;
+import net.runelite.api.events.ClanMemberJoined;
+import net.runelite.api.events.CommandExecuted;
+import net.runelite.api.events.FocusChanged;
+import net.runelite.api.events.FriendsChatMemberJoined;
+import net.runelite.api.events.GameStateChanged;
+import net.runelite.api.events.GameTick;
+import net.runelite.api.events.ItemContainerChanged;
+import net.runelite.api.events.MenuEntryAdded;
+import net.runelite.api.events.MenuOptionClicked;
+import net.runelite.api.events.PlayerSpawned;
+import net.runelite.api.events.ScriptPostFired;
+import net.runelite.api.events.VarbitChanged;
 import net.runelite.api.widgets.Widget;
 import net.runelite.api.widgets.WidgetInfo;
 import net.runelite.client.callback.ClientThread;
@@ -49,12 +75,6 @@ import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
 import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.Text;
-
-import javax.inject.Inject;
-import java.awt.image.BufferedImage;
-import java.time.temporal.ChronoUnit;
-import java.util.List;
-import java.util.concurrent.ScheduledExecutorService;
 import okhttp3.OkHttpClient;
 
 @Slf4j
@@ -261,6 +281,7 @@ public class DMWatchPlugin extends Plugin
 			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, "Not Logged In"));
 		}
 	}
+
 	@Schedule(
 		period = 10,
 		unit = ChronoUnit.SECONDS
@@ -573,7 +594,8 @@ public class DMWatchPlugin extends Plugin
 			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.getByHWID(client.getLocalPlayer().getName()).getStatus());
 		}
 
-		if (e2 != null && !myPlayer.getStatus().equals(e2.getS())) {
+		if (e2 != null && !myPlayer.getStatus().equals(e2.getS()))
+		{
 			myPlayer.setStatus(caseManager.getByHWID(getHWID()).getStatus());
 			currentChange.getM().add(e2);
 		}
@@ -795,7 +817,8 @@ public class DMWatchPlugin extends Plugin
 
 	private String getEncrypt(String input)
 	{
-		try {
+		try
+		{
 			MessageDigest md = MessageDigest.getInstance("MD5");
 			md.update(input.getBytes());
 			StringBuilder hexString = new StringBuilder();
@@ -812,7 +835,7 @@ public class DMWatchPlugin extends Plugin
 				hexString.append(hex);
 			}
 
-			String s = hexString.toString().substring(0, 16).toLowerCase();
+			String s = hexString.substring(0, 16).toLowerCase();
 
 			String s1 = s.substring(0, 4);
 			String s2 = s.substring(4, 8);
