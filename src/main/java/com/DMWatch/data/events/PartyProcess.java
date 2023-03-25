@@ -1,6 +1,5 @@
 /*
- * Copyright (c) 2018, TheLonelyDev <https://github.com/TheLonelyDev>
- * Copyright (c) 2018, Adam <Adam@sigterm.info>
+ * Copyright (c) 2022, TheStonedTurtle <https://github.com/TheStonedTurtle>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,46 +22,11 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.DMWatch;
+package com.DMWatch.data.events;
 
-import net.runelite.client.input.KeyListener;
+import com.DMWatch.data.PartyPlayer;
 
-import javax.inject.Inject;
-import java.awt.event.KeyEvent;
-
-public class DMWatchInputListener implements KeyListener
+public interface PartyProcess
 {
-	private static final int HOTKEY = KeyEvent.VK_SHIFT;
-
-	private final DMWatchPlugin plugin;
-
-	@Inject
-	private DMWatchInputListener(DMWatchPlugin plugin)
-	{
-		this.plugin = plugin;
-	}
-
-	@Override
-	public void keyTyped(KeyEvent e)
-	{
-
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e)
-	{
-		if (e.getKeyCode() == HOTKEY)
-		{
-			plugin.setHotKeyPressed(true);
-		}
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e)
-	{
-		if (e.getKeyCode() == HOTKEY)
-		{
-			plugin.setHotKeyPressed(false);
-		}
-	}
+	void process(PartyPlayer p);
 }
