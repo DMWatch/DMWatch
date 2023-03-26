@@ -265,16 +265,58 @@ public class PlayerPanel extends JPanel
 	public void updatePanel()
 	{
 		this.removeAll();
+		Color color;
+		int thickness = 2;
+
+		switch (player.getStatus())
+		{
+			case "0":
+				color = Color.GREEN;
+				break;
+			case "1":
+				color = Color.GREEN;
+				break;
+			case "2":
+				color = Color.YELLOW;
+				thickness = 4;
+				break;
+			case "3":
+				color = Color.RED;
+				thickness = 4;
+				break;
+			case "4":
+				color = Color.BLACK;
+				break;
+			case "5":
+				color = Color.CYAN;
+				break;
+			case "6":
+				color = Color.BLUE;
+				break;
+			case "7":
+				color = Color.BLUE;
+				break;
+			case "8":
+				color = Color.BLUE;
+				break;
+			case "9":
+				color = Color.BLUE;
+				break;
+			default:
+				color = Color.ORANGE;
+				break;
+		}
+
 		if (showInfo)
 		{
 			this.setBorder(new CompoundBorder(
-				new MatteBorder(2, 2, 2, 2, new Color(87, 80, 64)),
-				new EmptyBorder(0, 0, 5, 0)
-			));
+				new MatteBorder(thickness, thickness, thickness, thickness, color),
+				new EmptyBorder(0, 0, 5, 0))
+			);
 		}
 		else
 		{
-			this.setBorder(new MatteBorder(2, 2, 2, 2, new Color(87, 80, 64)));
+			this.setBorder(new MatteBorder(thickness, thickness, thickness, thickness, color));
 		}
 
 		final JPanel view = new JPanel();
