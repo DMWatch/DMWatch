@@ -32,6 +32,9 @@ import com.DMWatch.ui.equipment.PlayerEquipmentPanel;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
@@ -39,7 +42,9 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
 import javax.swing.SwingUtilities;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
@@ -95,15 +100,28 @@ public class PlayerPanel extends JPanel
 		this.spriteManager = spriteManager;
 		this.itemManager = itemManager;
 		this.showInfo = false;
-		this.banner = new PlayerBanner(selectedPlayer, showInfo, true, spriteManager);
+		this.banner = new PlayerBanner(selectedPlayer, showInfo, true, spriteManager, config);
 		this.inventoryPanel = new PlayerInventoryPanel(selectedPlayer.getInventory(), itemManager);
 		this.equipmentPanel = new PlayerEquipmentPanel(selectedPlayer.getEquipment(), spriteManager, itemManager);
 
 		// Non-optimal way to attach a mouse listener to
 		// the entire panel, but easy to implement
 		JPanel statsPanel = this.banner.getStatsPanel();
-		JPanel infoPanel = this.banner.getInfoPanel();
 		JLabel expandIcon = this.banner.getExpandIcon();
+
+
+		final JMenuItem copyOpt = new JMenuItem("Copy IDs");
+		copyOpt.addActionListener(e ->
+		{
+			final Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+			clipboard.setContents(new StringSelection("HWID: " + player.getHWID() + "\nRID: " + player.getUserUnique()), null);
+		});
+		final JPopupMenu copyPopup = new JPopupMenu();
+		copyPopup.setBorder(new EmptyBorder(5, 5, 5, 5));
+		copyPopup.add(copyOpt);
+
+		banner.setComponentPopupMenu(copyPopup);
+
 		Component[] list = new Component[statsPanel.getComponentCount() + 1];
 		System.arraycopy(statsPanel.getComponents(), 0, list, 0, list.length - 1);
 		list[list.length - 1] = banner;
@@ -133,7 +151,6 @@ public class PlayerPanel extends JPanel
 					{
 						banner.setBackground(BACKGROUND_HOVER_COLOR);
 						statsPanel.setBackground(BACKGROUND_HOVER_COLOR);
-						infoPanel.setBackground(BACKGROUND_HOVER_COLOR);
 					}
 
 					@Override
@@ -141,7 +158,6 @@ public class PlayerPanel extends JPanel
 					{
 						banner.setBackground(BACKGROUND_COLOR);
 						statsPanel.setBackground(BACKGROUND_COLOR);
-						infoPanel.setBackground(BACKGROUND_COLOR);
 					}
 				});
 			}
@@ -193,7 +209,7 @@ public class PlayerPanel extends JPanel
 
 		if (hasBreakingBannerChange)
 		{
-			banner.recreatePanel();
+			banner.recreatePanel(config.hideIDS());
 		}
 
 		BufferedImage veng = null;

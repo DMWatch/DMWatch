@@ -365,6 +365,12 @@ public class DMWatchPlugin extends Plugin
 		{
 			colorAll();
 		}
+
+
+		if (event.getKey().equals("hideIDS"))
+		{
+			panel.renderSidebar();
+		}
 	}
 
 	@Subscribe
