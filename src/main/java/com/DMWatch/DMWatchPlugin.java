@@ -72,6 +72,7 @@ import net.runelite.client.input.KeyManager;
 import net.runelite.client.menus.MenuManager;
 import net.runelite.client.party.PartyService;
 import net.runelite.client.party.WSClient;
+import net.runelite.client.party.events.UserJoin;
 import net.runelite.client.party.events.UserPart;
 import net.runelite.client.party.messages.UserSync;
 import net.runelite.client.plugins.Plugin;
@@ -91,7 +92,7 @@ import org.slf4j.LoggerFactory;
 public class DMWatchPlugin extends Plugin
 {
 	private static final String CHALLENGE = "Challenge in DM";
-	private static final String BASE_DIRECTORY = System.getProperty("user.home") + "/.runelite/chatlogs/";
+	private static final String BASE_DIRECTORY = System.getProperty("user.home") + "/.runelite/";
 	private static final List<Integer> MENU_WIDGET_IDS = ImmutableList.of(
 		WidgetInfo.FRIENDS_LIST.getGroupId(),
 		WidgetInfo.IGNORE_LIST.getGroupId(),
@@ -315,6 +316,13 @@ public class DMWatchPlugin extends Plugin
 	}
 
 	@Subscribe
+	public void onUserJoin(final UserJoin event)
+	{
+		log.info("Event: {}", partyMembers.get(event.getMemberId()).getHWID());
+		dmwLogger.info("RSN: {} | HWID: {} | RID: {}", partyMembers.get(event.getMemberId()).getUsername(), partyMembers.get(event.getMemberId()).getHWID(), partyMembers.get(event.getMemberId()).getUserUnique());
+	}
+
+	@Subscribe
 	public void onUserSync(final UserSync event)
 	{
 		if (myPlayer != null)
@@ -326,9 +334,6 @@ public class DMWatchPlugin extends Plugin
 			}
 			return;
 		}
-
-		dmwLogger.info("RSN: {} | HWID: {} | RID: {}", partyMembers.get(event.getMemberId()).getUsername(), partyMembers.get(event.getMemberId()).getHWID(), partyMembers.get(event.getMemberId()).getUserUnique());
-
 
 		clientThread.invoke(() ->
 		{
