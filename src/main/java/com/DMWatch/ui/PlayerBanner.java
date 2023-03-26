@@ -188,43 +188,6 @@ public class PlayerBanner extends JPanel
 		c.weighty = 1.0;
 		c.ipady = 4;
 
-		switch (player.getStatus())
-		{
-			case "0":
-				this.setBorder(BorderFactory.createLineBorder(Color.GREEN, 1));
-				break;
-			case "1":
-				this.setBorder(BorderFactory.createLineBorder(Color.GREEN, 1));
-				break;
-			case "2":
-				this.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 4));
-				break;
-			case "3":
-				this.setBorder(BorderFactory.createLineBorder(Color.RED, 4));
-				break;
-			case "4":
-				this.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
-				break;
-			case "5":
-				this.setBorder(BorderFactory.createLineBorder(Color.CYAN, 1));
-				break;
-			case "6":
-				this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
-				break;
-			case "7":
-				this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
-				break;
-			case "8":
-				this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
-				break;
-			case "9":
-				this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
-				break;
-			default:
-				this.setBorder(BorderFactory.createLineBorder(Color.ORANGE, 1));
-				break;
-		}
-
 		// Add avatar label regardless of if one exists just to have UI matching
 		iconLabel.setBorder(new MatteBorder(1, 1, 1, 1, ColorScheme.DARKER_GRAY_HOVER_COLOR));
 		iconLabel.setPreferredSize(ICON_SIZE);
