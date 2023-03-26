@@ -24,6 +24,7 @@
  */
 package com.DMWatch.ui;
 
+import com.DMWatch.DMWatchConfig;
 import com.DMWatch.data.PartyPlayer;
 import com.google.common.base.Strings;
 import java.awt.BorderLayout;
@@ -33,18 +34,13 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import javax.swing.JMenuItem;
 import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
 import javax.swing.OverlayLayout;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
@@ -85,7 +81,7 @@ public class PlayerBanner extends JPanel
 
 	private BufferedImage currentVenged = null;
 
-	public PlayerBanner(final PartyPlayer player, boolean expanded, boolean displayWorld, SpriteManager spriteManager)
+	public PlayerBanner(final PartyPlayer player, boolean expanded, boolean displayWorld, SpriteManager spriteManager, DMWatchConfig config)
 	{
 		super();
 		this.player = player;
@@ -123,19 +119,7 @@ public class PlayerBanner extends JPanel
 		infoPanel.add(createTextPanel("pchash", "HWID: " + player.getHWID()));
 		infoPanel.add(createTextPanel("acchash", "RID: " + player.getUserUnique()));
 
-		final JMenuItem copyOpt = new JMenuItem("Copy IDs");
-		copyOpt.addActionListener(e ->
-		{
-			final Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-			clipboard.setContents(new StringSelection("HWID: " + player.getHWID() + "\nRID: " + player.getUserUnique()), null);
-		});
-		final JPopupMenu copyPopup = new JPopupMenu();
-		copyPopup.setBorder(new EmptyBorder(5, 5, 5, 5));
-		copyPopup.add(copyOpt);
-
-		infoPanel.setComponentPopupMenu(copyPopup);
-
-		recreatePanel();
+		recreatePanel(config.hideIDS());
 	}
 
 	private String msg(String status)
@@ -192,7 +176,7 @@ public class PlayerBanner extends JPanel
 		}
 	}
 
-	public void recreatePanel()
+	public void recreatePanel(boolean includeIDs)
 	{
 		removeAll();
 
@@ -298,12 +282,15 @@ public class PlayerBanner extends JPanel
 		c.gridx = 0;
 		c.gridwidth = 2;
 		add(statsPanel, c);
-		c.gridy++;
-		c.weightx = 0;
-		c.gridx = 0;
-		c.gridwidth = 2;
-		add(infoPanel, c);
 
+		if (!includeIDs)
+		{
+			c.gridy++;
+			c.weightx = 0;
+			c.gridx = 0;
+			c.gridwidth = 2;
+			add(infoPanel, c);
+		}
 		revalidate();
 		repaint();
 	}

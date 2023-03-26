@@ -12,13 +12,6 @@ public interface DMWatchConfig extends Config
 	String CONFIG_GROUP = "DMWatch";
 	String PLAYER_OPTION = "playerOption";
 	String PLAYER_TEXT_COLOR = "playerTextColor";
-
-	@ConfigSection(
-		name = "Screenshot",
-		description = "All the options for screenshot behavior",
-		position = 80
-	)
-	String SCREENSHOT_SECTION = "Screenshot";
 	@ConfigSection(
 		name = "Menu",
 		description = "All the options for menu behavior",
@@ -99,6 +92,17 @@ public interface DMWatchConfig extends Config
 		section = NOTIFICATIONS_SECTION
 	)
 	default boolean notifyOnNearby()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		position = 9,
+		keyName = "hideIDS",
+		name = "Hide ID info",
+		description = "Hide the IDs on the Party Panel"
+	)
+	default boolean hideIDS()
 	{
 		return true;
 	}
