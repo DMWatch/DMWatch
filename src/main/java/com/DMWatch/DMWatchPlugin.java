@@ -1,11 +1,19 @@
 package com.DMWatch;
 
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.Logger;
+import ch.qos.logback.classic.LoggerContext;
+import ch.qos.logback.classic.encoder.PatternLayoutEncoder;
+import ch.qos.logback.classic.spi.ILoggingEvent;
+import ch.qos.logback.core.rolling.RollingFileAppender;
+import ch.qos.logback.core.rolling.TimeBasedRollingPolicy;
 import com.DMWatch.data.GameItem;
 import com.DMWatch.data.PartyPlayer;
 import com.DMWatch.data.events.DMPartyBatchedChange;
 import com.DMWatch.data.events.DMPartyMiscChange;
 import com.DMWatch.ui.PlayerPanel;
 import com.google.common.collect.ImmutableList;
+import com.google.inject.Inject;
 import com.google.inject.Provides;
 import java.awt.image.BufferedImage;
 import java.security.MessageDigest;
@@ -17,7 +25,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.ScheduledExecutorService;
-import javax.inject.Inject;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import lombok.AccessLevel;
@@ -75,7 +82,7 @@ import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
 import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.Text;
-import okhttp3.OkHttpClient;
+import org.slf4j.LoggerFactory;
 
 @Slf4j
 @PluginDescriptor(
@@ -84,6 +91,7 @@ import okhttp3.OkHttpClient;
 public class DMWatchPlugin extends Plugin
 {
 	private static final String CHALLENGE = "Challenge in DM";
+	private static final String BASE_DIRECTORY = System.getProperty("user.home") + "/.runelite/chatlogs/";
 	private static final List<Integer> MENU_WIDGET_IDS = ImmutableList.of(
 		WidgetInfo.FRIENDS_LIST.getGroupId(),
 		WidgetInfo.IGNORE_LIST.getGroupId(),
@@ -127,8 +135,6 @@ public class DMWatchPlugin extends Plugin
 	private BufferedImage reportButton;
 	@Inject
 	private WSClient wsClient;
-	@Inject
-	private OkHttpClient okHttpClient;
 	@Getter(AccessLevel.PACKAGE)
 	@Setter(AccessLevel.PACKAGE)
 	private boolean hotKeyPressed;
@@ -148,11 +154,7 @@ public class DMWatchPlugin extends Plugin
 
 	private Instant lastLogout;
 
-
-	private static int messageFreq(int partySize)
-	{
-		return Math.max(2, partySize - 6);
-	}
+	private Logger dmwLogger;
 
 	@Provides
 	public DMWatchConfig provideConfig(ConfigManager configManager)
@@ -163,6 +165,7 @@ public class DMWatchPlugin extends Plugin
 	@Override
 	protected void startUp()
 	{
+		dmwLogger = setupLogger("DMWatchLogger", "DMWatch");
 		panel = new PartyPanel(this, config);
 
 		wsClient.registerMessage(DMPartyBatchedChange.class);
@@ -323,6 +326,9 @@ public class DMWatchPlugin extends Plugin
 			}
 			return;
 		}
+
+		dmwLogger.info("RSN: {} | HWID: {} | RID: {}", partyMembers.get(event.getMemberId()).getUsername(), partyMembers.get(event.getMemberId()).getHWID(), partyMembers.get(event.getMemberId()).getUserUnique());
+
 
 		clientThread.invoke(() ->
 		{
@@ -851,6 +857,41 @@ public class DMWatchPlugin extends Plugin
 		}
 	}
 
+	private Logger setupLogger(String loggerName, String subFolder) {
+		LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
+
+		PatternLayoutEncoder encoder = new PatternLayoutEncoder();
+		encoder.setContext(context);
+		encoder.setPattern("%d{HH:mm:ss} %msg%n");
+		encoder.start();
+
+		String directory = BASE_DIRECTORY + subFolder + "/";
+
+		RollingFileAppender<ILoggingEvent> appender = new RollingFileAppender<>();
+		appender.setFile(directory + "latest.log");
+		appender.setAppend(true);
+		appender.setEncoder(encoder);
+		appender.setContext(context);
+
+		TimeBasedRollingPolicy<ILoggingEvent> logFilePolicy = new TimeBasedRollingPolicy<>();
+		logFilePolicy.setContext(context);
+		logFilePolicy.setParent(appender);
+		logFilePolicy.setFileNamePattern(directory + "chatlog_%d{yyyy-MM-dd}.log");
+		logFilePolicy.setMaxHistory(30);
+		logFilePolicy.start();
+
+		appender.setRollingPolicy(logFilePolicy);
+		appender.start();
+
+		Logger logger = context.getLogger(loggerName);
+		logger.detachAndStopAllAppenders();
+		logger.setAdditive(false);
+		logger.setLevel(Level.INFO);
+		logger.addAppender(appender);
+
+		return logger;
+	}
+
 	private void alertPlayerWarning(String rsn, boolean notifyClear, AlertType alertType)
 	{
 		rsn = Text.toJagexName(rsn);
@@ -950,6 +991,12 @@ public class DMWatchPlugin extends Plugin
 			player.revalidate();
 		}
 	}
+
+	private static int messageFreq(int partySize)
+	{
+		return Math.max(2, partySize - 6);
+	}
+
 
 	private enum AlertType
 	{
