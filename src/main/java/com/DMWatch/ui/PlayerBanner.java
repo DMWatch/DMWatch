@@ -142,7 +142,7 @@ public class PlayerBanner extends JPanel
 	{
 		if (status.equals("0"))
 		{
-			return "Unknown";
+			return "User";
 		}
 		if (status.equals("1"))
 		{

@@ -17,18 +17,14 @@ public class PartyPlayer
 	private transient PartyMember member;
 	private String username;
 	private int combatLevel;
-
 	private int world;
 	private GameItem[] equipment;
 	private GameItem[] inventory;
-
 	private int isVenged;
-
 	private String HWID;
 	private String userUnique;
 	private String pluginEnabled;
 	private String status;
-
 
 	public PartyPlayer(final PartyMember member)
 	{
@@ -41,7 +37,7 @@ public class PartyPlayer
 		this.combatLevel = -1;
 		this.world = 0;
 		this.status = "0";
-		this.HWID = "Unknown";
+		this.HWID = "unknown";
 		this.userUnique = "";
 	}
 
