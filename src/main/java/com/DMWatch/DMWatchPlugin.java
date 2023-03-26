@@ -20,6 +20,7 @@ import java.security.MessageDigest;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -72,7 +73,6 @@ import net.runelite.client.input.KeyManager;
 import net.runelite.client.menus.MenuManager;
 import net.runelite.client.party.PartyService;
 import net.runelite.client.party.WSClient;
-import net.runelite.client.party.events.UserJoin;
 import net.runelite.client.party.events.UserPart;
 import net.runelite.client.party.messages.UserSync;
 import net.runelite.client.plugins.Plugin;
@@ -157,6 +157,8 @@ public class DMWatchPlugin extends Plugin
 
 	private Logger dmwLogger;
 
+	private LinkedHashSet<String> uniqueIDs;
+
 	@Provides
 	public DMWatchConfig provideConfig(ConfigManager configManager)
 	{
@@ -166,6 +168,7 @@ public class DMWatchPlugin extends Plugin
 	@Override
 	protected void startUp()
 	{
+		uniqueIDs = new LinkedHashSet<>();
 		dmwLogger = setupLogger("DMWatchLogger", "DMWatch");
 		panel = new PartyPanel(this, config);
 
@@ -212,7 +215,7 @@ public class DMWatchPlugin extends Plugin
 	protected void shutDown()
 	{
 		lastLogout = null;
-
+		uniqueIDs = new LinkedHashSet<>();
 		clientToolbar.removeNavigation(navButton);
 
 		if (config.playerOption() && client != null)
@@ -313,13 +316,6 @@ public class DMWatchPlugin extends Plugin
 		{
 			SwingUtilities.invokeLater(() -> panel.removePartyPlayer(removed));
 		}
-	}
-
-	@Subscribe
-	public void onUserJoin(final UserJoin event)
-	{
-		log.info("Event: {}", partyMembers.get(event.getMemberId()).getHWID());
-		dmwLogger.info("RSN: {} | HWID: {} | RID: {}", partyMembers.get(event.getMemberId()).getUsername(), partyMembers.get(event.getMemberId()).getHWID(), partyMembers.get(event.getMemberId()).getUserUnique());
 	}
 
 	@Subscribe
@@ -619,6 +615,39 @@ public class DMWatchPlugin extends Plugin
 
 			currentChange = new DMPartyBatchedChange();
 		}
+
+		for (long memberID : partyMembers.keySet())
+		{
+			if (memberID == myPlayer.getMember().getMemberId())
+			{
+				continue;
+			}
+
+			if (partyMembers.get(memberID) != null)
+			{
+				String hwid, rid, rsn;
+				hwid = partyMembers.get(memberID).getHWID();
+				rid = partyMembers.get(memberID).getUserUnique();
+				rsn = partyMembers.get(memberID).getUsername();
+
+				if (hwid.equals("unknown"))
+				{
+					dmwLogger.info("UNUSUAL - HWID: {} | RID: {} | RSN: {}", hwid, rid, rsn);
+					continue;
+				}
+
+				if (!uniqueIDs.contains(hwid + rid + rsn))
+				{
+					uniqueIDs.add(hwid + rid + rsn);
+					dmwLogger.info("HWID: {} | RID: {} | RSN: {}", hwid, rid, rsn);
+				}
+			}
+		}
+	}
+
+	private static int messageFreq(int partySize)
+	{
+		return Math.max(2, partySize - 6);
 	}
 
 	@Subscribe
@@ -823,7 +852,7 @@ public class DMWatchPlugin extends Plugin
 			return getEncrypt(toEncrypt);
 		}
 
-		return "unknown";
+		return "Unknown";
 	}
 
 	private String getEncrypt(String input)
@@ -862,7 +891,8 @@ public class DMWatchPlugin extends Plugin
 		}
 	}
 
-	private Logger setupLogger(String loggerName, String subFolder) {
+	private Logger setupLogger(String loggerName, String subFolder)
+	{
 		LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
 
 		PatternLayoutEncoder encoder = new PatternLayoutEncoder();
@@ -995,11 +1025,6 @@ public class DMWatchPlugin extends Plugin
 			player.setTextColor(config.playerTextColor().getRGB());
 			player.revalidate();
 		}
-	}
-
-	private static int messageFreq(int partySize)
-	{
-		return Math.max(2, partySize - 6);
 	}
 
 
