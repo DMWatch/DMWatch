@@ -7,8 +7,8 @@ Features
 -----------
 
 - Sync DMWatch every 5mins
-- Right-click `Investigate` players in menu tabs
-- Right-click `Investigate` player models
+- Right-click `Challenge in DM` players in menu tabs
+- Right-click `Challenge in DM` player models
 - `::fw rsn` command for search capabilities
 - Notify user when a player on the watchlist joins the clan chat/friends chat you're in
 - Notify user when a player nearby is on the watch list

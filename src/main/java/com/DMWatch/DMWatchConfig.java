@@ -29,7 +29,7 @@ public interface DMWatchConfig extends Config
 		position = 3,
 		keyName = PLAYER_OPTION,
 		name = "Player option",
-		description = "Add investigate option to players",
+		description = "Add Challenge in DM option to players",
 		section = MENU_SECTION
 	)
 	default boolean playerOption()
@@ -41,7 +41,7 @@ public interface DMWatchConfig extends Config
 		position = 4,
 		keyName = "menuOption",
 		name = "Menu option",
-		description = "Show investigate option in menus",
+		description = "Show Challenge in DM option in menus",
 		section = MENU_SECTION
 	)
 	default boolean menuOption()
@@ -53,7 +53,7 @@ public interface DMWatchConfig extends Config
 		position = 5,
 		keyName = "useHotkey",
 		name = "Require Shift-Click",
-		description = "Require Shift-Right-Click to view investigate option in menus",
+		description = "Require Shift-Right-Click to view Challenge in DM option in menus",
 		section = MENU_SECTION
 	)
 	default boolean useHotkey()

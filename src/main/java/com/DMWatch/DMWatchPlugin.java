@@ -425,7 +425,7 @@ public class DMWatchPlugin extends Plugin
 	{
 		for (MenuEntry me : client.getMenuEntries())
 		{
-			// don't add menu option if we've already added investigate
+			// don't add menu option if we've already added Challenge in DM
 			if (CHALLENGE.equals(me.getOption()))
 			{
 				return;
