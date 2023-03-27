@@ -28,16 +28,16 @@ import com.DMWatch.DMWatchConfig;
 import com.DMWatch.data.PartyPlayer;
 import com.google.common.base.Strings;
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.Map;
-import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -53,13 +53,13 @@ import net.runelite.client.game.SpriteManager;
 import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.util.ImageUtil;
+import net.runelite.client.util.LinkBrowser;
 
 public class PlayerBanner extends JPanel
 {
 	private static final Dimension STAT_ICON_SIZE = new Dimension(18, 18);
 	private static final Dimension ICON_SIZE = new Dimension(Constants.ITEM_SPRITE_WIDTH - 6, Constants.ITEM_SPRITE_HEIGHT - 4);
 	private static final BufferedImage EXPAND_ICON = ImageUtil.loadImageResource(PlayerPanel.class, "expand.png");
-
 	@Getter
 	private final JPanel statsPanel = new JPanel();
 	@Getter
@@ -80,10 +80,13 @@ public class PlayerBanner extends JPanel
 	private boolean checkIcon;
 
 	private BufferedImage currentVenged = null;
+	private final BufferedImage isStreamer = null;
+	DMWatchConfig config;
 
 	public PlayerBanner(final PartyPlayer player, boolean expanded, boolean displayWorld, SpriteManager spriteManager, DMWatchConfig config)
 	{
 		super();
+		this.config = config;
 		this.player = player;
 		this.setLayout(new GridBagLayout());
 		this.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 100));
@@ -150,7 +153,7 @@ public class PlayerBanner extends JPanel
 		}
 		if (status.equals("6"))
 		{
-			return "B Tier";
+			return "Twitch streamer";
 		}
 		if (status.equals("7"))
 		{
@@ -229,10 +232,7 @@ public class PlayerBanner extends JPanel
 		{
 			worldLabel.setText("");
 		}
-		else if (player.getWorld() > 0)
-		{
-			worldLabel.setText("World " + player.getWorld());
-		}
+		updateWorld(player.getWorld());
 		nameContainer.add(worldLabel);
 
 		c.weightx = 1.0;
@@ -294,9 +294,9 @@ public class PlayerBanner extends JPanel
 		iconLabels.put(name, iconLabel);
 		setSpriteIcon(name, spriteID, spriteManager);
 
-		final JLabel textLabel = new JLabel(value);
-		textLabel.setHorizontalAlignment(JLabel.CENTER);
-		textLabel.setHorizontalTextPosition(JLabel.CENTER);
+		final JLabel textLabel = new JLabel(" " + value);
+		textLabel.setHorizontalAlignment(JLabel.LEFT);
+		textLabel.setHorizontalTextPosition(JLabel.LEFT);
 		statLabels.put(name, textLabel);
 
 		final JPanel panel = new JPanel();
@@ -316,8 +316,8 @@ public class PlayerBanner extends JPanel
 	private JPanel createTextPanel(final String name, final String value)
 	{
 		final JLabel textLabel = new JLabel(value);
-		textLabel.setHorizontalAlignment(JLabel.CENTER);
-		textLabel.setHorizontalTextPosition(JLabel.CENTER);
+		textLabel.setHorizontalAlignment(JLabel.LEFT);
+		textLabel.setHorizontalTextPosition(JLabel.LEFT);
 		statLabels.put(name, textLabel);
 
 		final JPanel panel = new JPanel();
@@ -350,23 +350,59 @@ public class PlayerBanner extends JPanel
 	private void setBufferedIcon(String statLabelKey, final BufferedImage img)
 	{
 		final JLabel label = iconLabels.get(statLabelKey);
-		SwingUtilities.invokeLater(() ->
+		if (!player.getStatus().equals("5"))
 		{
-			label.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
-			label.revalidate();
-			label.repaint();
-		});
-	}
-
-	public void setVenged(final BufferedImage img, SpriteManager spriteManager)
-	{
-		// If the new value is the same then do nothing
-		if ((img == null && currentVenged == null) || (img != null && img.equals(currentVenged)))
-		{
+			SwingUtilities.invokeLater(() ->
+			{
+				ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
+				label.setIcon(ic);
+				label.revalidate();
+				label.repaint();
+			});
 			return;
 		}
-		currentVenged = img;
-		if (currentVenged == null)
+
+		if (player.getStatus().equals("5"))
+		{
+			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
+			ImageIcon hoverIC = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
+			SwingUtilities.invokeLater(() ->
+			{
+				if (label.getMouseListeners().length == 0)
+				{
+					label.addMouseListener(new MouseAdapter()
+					{
+						@Override
+						public void mousePressed(MouseEvent e)
+						{
+							if (SwingUtilities.isLeftMouseButton(e))
+							{
+								LinkBrowser.browse("https://www.twitch.tv/" + player.getReason());
+							}
+						}
+
+						@Override
+						public void mouseEntered(MouseEvent e)
+						{
+							label.setIcon(hoverIC);
+						}
+
+						@Override
+						public void mouseExited(MouseEvent e)
+						{
+							label.setIcon(ic);
+						}
+					});
+					label.revalidate();
+				}
+			});
+		}
+	}
+
+	public void setVenged(boolean currentVenged, SpriteManager spriteManager)
+	{
+		// If the new value is the same then do nothing
+		if (!currentVenged)
 		{
 			setSpriteIcon("IsVenged", SpriteID.SPELL_VENGEANCE_OTHER, spriteManager);
 		}
@@ -378,8 +414,34 @@ public class PlayerBanner extends JPanel
 		statsPanel.repaint();
 	}
 
+	// TODO make this more generic
+	public void setStreamerIcon(boolean b, BufferedImage bufferedImage, SpriteManager spriteManager)
+	{
+		if (b)
+		{
+			setBufferedIcon("DMWatchStatus", bufferedImage);
+		}
+		else
+		{
+			setSpriteIcon("DMWatchStatus", SpriteID.PLAYER_KILLER_SKULL, spriteManager);
+		}
+		statsPanel.revalidate();
+		statsPanel.repaint();
+	}
+
 	public void updateWorld(int world)
 	{
-		worldLabel.setText("World " + world);
+		if (world == -1)
+		{
+			worldLabel.setText("Hidden");
+		}
+		else if (world == 0)
+		{
+			worldLabel.setText("Logged out");
+		}
+		else
+		{
+			worldLabel.setText("World " + world);
+		}
 	}
 }

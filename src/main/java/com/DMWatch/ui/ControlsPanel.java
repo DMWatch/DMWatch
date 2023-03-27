@@ -43,8 +43,9 @@ import net.runelite.client.util.LinkBrowser;
 // A copy of the controls from the `net.runelite.client.plugins.party.PartyPanel` class
 public class ControlsPanel extends JPanel
 {
-	private static ImageIcon HELP_ICON;
-	private static ImageIcon HELP_HOVER_ICON;
+	private static final BufferedImage DISCORD_IMG = ImageUtil.loadImageResource(DMWatchPlugin.class, "discord-mark-white.png");
+	private static ImageIcon DISCORD_ICON;
+	private static ImageIcon DISCORD_HOVER_ICON;
 	private final JButton joinPartyButton = new JButton();
 	private final DMWatchPlugin plugin;
 
@@ -75,14 +76,13 @@ public class ControlsPanel extends JPanel
 			}
 		});
 
-		BufferedImage helpIcon = ImageUtil.loadImageResource(DMWatchPlugin.class, "discord-mark-white.png");
-		HELP_ICON = new ImageIcon(helpIcon);
-		HELP_HOVER_ICON = new ImageIcon(ImageUtil.alphaOffset(helpIcon, 0.53f));
+		DISCORD_ICON = new ImageIcon(DISCORD_IMG);
+		DISCORD_HOVER_ICON = new ImageIcon(ImageUtil.alphaOffset(DISCORD_IMG, 0.53f));
 
 		c.gridx = 1;
 		c.gridy = 0;
 
-		JLabel helpButton = new JLabel(HELP_ICON);
+		JLabel helpButton = new JLabel(DISCORD_ICON);
 
 		this.add(helpButton, c);
 		helpButton.setToolTipText("Click to join our discord");
@@ -100,13 +100,13 @@ public class ControlsPanel extends JPanel
 			@Override
 			public void mouseEntered(MouseEvent e)
 			{
-				helpButton.setIcon(HELP_HOVER_ICON);
+				helpButton.setIcon(DISCORD_HOVER_ICON);
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e)
 			{
-				helpButton.setIcon(HELP_ICON);
+				helpButton.setIcon(DISCORD_ICON);
 			}
 		});
 

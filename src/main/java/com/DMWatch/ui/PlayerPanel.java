@@ -25,6 +25,7 @@
 package com.DMWatch.ui;
 
 import com.DMWatch.DMWatchConfig;
+import com.DMWatch.DMWatchPlugin;
 import com.DMWatch.data.GameItem;
 import com.DMWatch.data.PartyPlayer;
 import com.DMWatch.ui.equipment.EquipmentPanelSlot;
@@ -53,7 +54,6 @@ import lombok.Getter;
 import lombok.Setter;
 import net.runelite.api.EquipmentInventorySlot;
 import net.runelite.api.SpriteID;
-import net.runelite.client.game.AlternateSprites;
 import net.runelite.client.game.ItemManager;
 import net.runelite.client.game.SpriteManager;
 import net.runelite.client.ui.ColorScheme;
@@ -70,17 +70,7 @@ public class PlayerPanel extends JPanel
 	private static final Color BACKGROUND_COLOR = ColorScheme.DARK_GRAY_COLOR;
 	private static final Color BACKGROUND_HOVER_COLOR = ColorScheme.DARKER_GRAY_COLOR;
 	private static final BufferedImage EXPAND_ICON = ImageUtil.loadImageResource(PlayerPanel.class, "expand.png");
-
-	private static final BufferedImage VENG_ON;
-	private static final BufferedImage VENG_OFF;
-
-	static
-	{
-		VENG_ON = ImageUtil.loadImageResource(AlternateSprites.class, AlternateSprites.DISEASE_HEART);
-		VENG_OFF = ImageUtil.loadImageResource(AlternateSprites.class, AlternateSprites.POISON_HEART);
-	}
-
-
+	private static final BufferedImage TWITCH_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "twitch.png");
 	private final SpriteManager spriteManager;
 	private final ItemManager itemManager;
 	private final PlayerBanner banner;
@@ -212,20 +202,13 @@ public class PlayerPanel extends JPanel
 			banner.recreatePanel(config.hideIDS());
 		}
 
-		BufferedImage veng = null;
-		if (player.getIsVenged() == 1)
-		{
-			veng = VENG_ON;
-		}
-		else
-		{
-			veng = null;
-		}
-
-		banner.setVenged(veng, spriteManager);
+		// TODO rename these methods to be way more clear/genericly recreate them
+		banner.setVenged(player.getIsVenged() == 1, spriteManager);
+		banner.setStreamerIcon(player.getStatus().equals("5"), TWITCH_ICON, spriteManager);
 
 		if (!showInfo)
 		{
+			updatePanel();
 			return;
 		}
 
@@ -339,15 +322,5 @@ public class PlayerPanel extends JPanel
 
 		revalidate();
 		repaint();
-	}
-
-	public void updateDisplayPlayerWorlds()
-	{
-		banner.updateWorld(player.getWorld());
-	}
-
-	public void updateAccountData()
-	{
-		banner.refreshStats();
 	}
 }

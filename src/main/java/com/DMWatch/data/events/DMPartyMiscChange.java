@@ -71,7 +71,7 @@ public class DMPartyMiscChange implements PartyProcess
 			case LVL:
 				p.setCombatLevel(v);
 				break;
-			case REASON:
+			case TIER:
 				p.setStatus(s);
 				break;
 			case HWID:
@@ -79,6 +79,9 @@ public class DMPartyMiscChange implements PartyProcess
 				break;
 			case ACCOUNT_HASH:
 				p.setUserUnique(s);
+				break;
+			case REASON:
+				p.setReason(s);
 				break;
 			default:
 				log.warn("Unhandled misc change type for event: {}", this);
@@ -92,8 +95,10 @@ public class DMPartyMiscChange implements PartyProcess
 		W, // World
 		U, // Username
 		LVL, // Combat Level
-		REASON, // Status
+		TIER, // Reason
 		HWID, // HWID
 		ACCOUNT_HASH, //
+		REASON
+
 	}
 }

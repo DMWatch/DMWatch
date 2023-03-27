@@ -188,12 +188,11 @@ public class DMWatchPlugin extends Plugin
 
 		clientToolbar.addNavigation(navButton);
 
-
 		if (isInParty())
 		{
 			clientThread.invokeLater(() ->
 			{
-				myPlayer = new PartyPlayer(partyService.getLocalMember(), client, itemManager);
+				myPlayer = new PartyPlayer(partyService.getLocalMember(), client, config, itemManager);
 				partyService.send(new UserSync());
 				partyService.send(partyPlayerAsBatchedChange());
 			});
@@ -259,7 +258,7 @@ public class DMWatchPlugin extends Plugin
 
 		if (myPlayer == null)
 		{
-			myPlayer = new PartyPlayer(partyService.getLocalMember(), client, itemManager);
+			myPlayer = new PartyPlayer(partyService.getLocalMember(), client, config, itemManager);
 			final DMPartyBatchedChange ce = partyPlayerAsBatchedChange();
 			partyService.send(ce);
 			return;
@@ -267,7 +266,9 @@ public class DMWatchPlugin extends Plugin
 
 		if (c.getGameState() == GameState.LOGGED_IN)
 		{
-			DMPartyMiscChange e = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.W, client.getWorld());
+			int world = getWorld();
+			DMPartyMiscChange e = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.W, world);
+
 			if (myPlayer.getWorld() != e.getV())
 			{
 				myPlayer.setWorld(e.getV());
@@ -275,17 +276,26 @@ public class DMWatchPlugin extends Plugin
 			}
 		}
 
+		if (c.getGameState() == GameState.HOPPING)
+		{
+			myPlayer.setIsVenged(0);
+			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.V, myPlayer.getIsVenged()));
+		}
+
 		if (c.getGameState() == GameState.LOGIN_SCREEN)
 		{
-
 			if (myPlayer.getWorld() == 0)
 			{
 				return;
 			}
 
-			myPlayer.setWorld(0);
-			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.W, 0));
-			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, "Not Logged In"));
+			int world = getWorld();
+
+			myPlayer.setWorld(world);
+			myPlayer.setIsVenged(0);
+
+			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.W, myPlayer.getWorld()));
+			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.V, myPlayer.getIsVenged()));
 
 			if (currentChange.isValid())
 			{
@@ -342,7 +352,7 @@ public class DMWatchPlugin extends Plugin
 
 		clientThread.invoke(() ->
 		{
-			myPlayer = new PartyPlayer(partyService.getLocalMember(), client, itemManager);
+			myPlayer = new PartyPlayer(partyService.getLocalMember(), client, config, itemManager);
 			final DMPartyBatchedChange c = partyPlayerAsBatchedChange();
 			if (c.isValid())
 			{
@@ -375,10 +385,38 @@ public class DMWatchPlugin extends Plugin
 			colorAll();
 		}
 
-
 		if (event.getKey().equals("hideIDS"))
 		{
 			panel.renderSidebar();
+		}
+		if (event.getKey().equals("hideMyWorld"))
+		{
+			hideWorld();
+		}
+	}
+
+	private int getWorld()
+	{
+		if (config.hideWorld())
+		{
+			return -1;
+		}
+		if (client.getGameState() == GameState.LOGIN_SCREEN)
+		{
+			return 0;
+		}
+		return client.getWorld();
+	}
+
+	private void hideWorld()
+	{
+		myPlayer.setWorld(getWorld());
+		currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.W, myPlayer.getWorld()));
+
+		if (currentChange.isValid())
+		{
+			partyService.send(currentChange);
+			currentChange = new DMPartyBatchedChange();
 		}
 	}
 
@@ -582,7 +620,7 @@ public class DMWatchPlugin extends Plugin
 		// First time logging in or they changed accounts so resend the entire player object
 		if (myPlayer == null || !Objects.equals(client.getLocalPlayer().getName(), myPlayer.getUsername()))
 		{
-			myPlayer = new PartyPlayer(partyService.getLocalMember(), client, itemManager);
+			myPlayer = new PartyPlayer(partyService.getLocalMember(), client, config, itemManager);
 			final DMPartyBatchedChange c = partyPlayerAsBatchedChange();
 			partyService.send(c);
 			return;
@@ -603,23 +641,29 @@ public class DMWatchPlugin extends Plugin
 		}
 
 		DMPartyMiscChange e2 = null;
+		DMPartyMiscChange e3 = null;
 		if (caseManager.getByHWID(getHWID()) != null)
 		{
-			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.getByHWID(getHWID()).getStatus());
+			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.TIER, caseManager.getByHWID(getHWID()).getStatus());
+			e3 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.getByHWID(getHWID()).getReason());
 		}
 		else if (caseManager.getByAccountHash(getAccountID()) != null)
 		{
-			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.getByAccountHash(getAccountID()).getStatus());
+			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.TIER, caseManager.getByAccountHash(getAccountID()).getStatus());
+			e3 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.getByAccountHash(getAccountID()).getReason());
 		}
 		else if (caseManager.get(Text.toJagexName(client.getLocalPlayer().getName() == null ? "" : client.getLocalPlayer().getName())) != null)
 		{
-			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.getByHWID(client.getLocalPlayer().getName()).getStatus());
+			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.TIER, caseManager.get(client.getLocalPlayer().getName()).getStatus());
+			e3 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.get(client.getLocalPlayer().getName()).getReason());
 		}
 
 		if (e2 != null && !myPlayer.getStatus().equals(e2.getS()))
 		{
-			myPlayer.setStatus(caseManager.getByHWID(getHWID()).getStatus());
+			myPlayer.setReason(e3.getS());
+			myPlayer.setStatus(e2.getS());
 			currentChange.getM().add(e2);
+			currentChange.getM().add(e3);
 		}
 
 		if (currentChange.isValid())
@@ -794,6 +838,7 @@ public class DMWatchPlugin extends Plugin
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.P, myPlayer.getPluginEnabled()));
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.HWID, getHWID()));
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, getAccountID()));
+		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.TIER, myPlayer.getStatus()));
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, myPlayer.getStatus()));
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.LVL, myPlayer.getCombatLevel()));
 

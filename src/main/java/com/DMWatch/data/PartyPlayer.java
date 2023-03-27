@@ -1,5 +1,6 @@
 package com.DMWatch.data;
 
+import com.DMWatch.DMWatchConfig;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import net.runelite.api.Client;
@@ -25,6 +26,8 @@ public class PartyPlayer
 	private String userUnique;
 	private String pluginEnabled;
 	private String status;
+	private String reason;
+
 
 	public PartyPlayer(final PartyMember member)
 	{
@@ -39,14 +42,15 @@ public class PartyPlayer
 		this.status = "0";
 		this.HWID = "unknown";
 		this.userUnique = "";
+		this.reason = "";
 	}
 
-	public PartyPlayer(final PartyMember member, final Client client, final ItemManager itemManager)
+	public PartyPlayer(final PartyMember member, final Client client, DMWatchConfig config, final ItemManager itemManager)
 	{
 		this(member);
 		this.isVenged = client.getVarbitValue(Varbits.VENGEANCE_ACTIVE);
 		this.pluginEnabled = "No";
-		this.world = client.getWorld();
+		this.world = config.hideWorld() ? -1 : client.getWorld();
 		updatePlayerInfo(client, itemManager);
 	}
 

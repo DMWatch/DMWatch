@@ -106,4 +106,15 @@ public interface DMWatchConfig extends Config
 	{
 		return true;
 	}
+
+	@ConfigItem(
+		position = 10,
+		keyName = "hideMyWorld",
+		name = "Hide my world",
+		description = "Don't share world"
+	)
+	default boolean hideWorld()
+	{
+		return false;
+	}
 }
