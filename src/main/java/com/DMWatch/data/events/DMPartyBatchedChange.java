@@ -85,6 +85,7 @@ public class DMPartyBatchedChange extends PartyMemberMessage
 				|| e.getT() == DMPartyMiscChange.PartyMisc.LVL
 				|| e.getT() == DMPartyMiscChange.PartyMisc.HWID
 				|| e.getT() == DMPartyMiscChange.PartyMisc.ACCOUNT_HASH
+				|| e.getT() == DMPartyMiscChange.PartyMisc.REASON
 			);
 	}
 }

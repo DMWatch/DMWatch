@@ -93,7 +93,7 @@ public class DMPartyMiscChange implements PartyProcess
 		U, // Username
 		LVL, // Combat Level
 		REASON, // Status
-		HWID,
-		ACCOUNT_HASH,
+		HWID, // HWID
+		ACCOUNT_HASH, //
 	}
 }

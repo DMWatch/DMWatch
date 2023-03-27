@@ -286,6 +286,15 @@ public class DMWatchPlugin extends Plugin
 			myPlayer.setWorld(0);
 			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.W, 0));
 			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, "Not Logged In"));
+
+			if (currentChange.isValid())
+			{
+				currentChange.setMemberId(partyService.getLocalMember().getMemberId()); // Add member ID before sending
+				currentChange.removeDefaults();
+				partyService.send(currentChange);
+
+				currentChange = new DMPartyBatchedChange();
+			}
 		}
 	}
 
@@ -784,6 +793,8 @@ public class DMWatchPlugin extends Plugin
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.W, myPlayer.getWorld()));
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.P, myPlayer.getPluginEnabled()));
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.HWID, getHWID()));
+		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, getAccountID()));
+		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, myPlayer.getStatus()));
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.LVL, myPlayer.getCombatLevel()));
 
 		c.setMemberId(partyService.getLocalMember().getMemberId()); // Add member ID before sending
