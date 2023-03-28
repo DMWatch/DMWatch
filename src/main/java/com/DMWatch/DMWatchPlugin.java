@@ -13,6 +13,7 @@ import com.DMWatch.data.events.DMPartyBatchedChange;
 import com.DMWatch.data.events.DMPartyMiscChange;
 import com.DMWatch.ui.PlayerPanel;
 import com.google.common.collect.ImmutableList;
+import com.google.gson.Gson;
 import com.google.inject.Inject;
 import com.google.inject.Provides;
 import java.awt.image.BufferedImage;
@@ -111,6 +112,8 @@ public class DMWatchPlugin extends Plugin
 	private static final BufferedImage ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "icon.png");
 	@Getter
 	private final Map<Long, PartyPlayer> partyMembers = new HashMap<>();
+	@Inject
+	Gson gson;
 	@Inject
 	CaseManager caseManager;
 	@Inject
