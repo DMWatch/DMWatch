@@ -654,7 +654,8 @@ public class DMWatchPlugin extends Plugin
 		{
 			if (!myPlayer.getUserUnique().equals(getAccountID()))
 			{
-				currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, getAccountID()));
+				myPlayer.setUserUnique(getAccountID());
+				currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, myPlayer.getUserUnique()));
 			}
 		}
 

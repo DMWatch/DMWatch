@@ -367,6 +367,7 @@ public class PlayerBanner extends JPanel
 		{
 			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
 			ImageIcon hoverIC = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
+			label.setIcon(ic);
 			SwingUtilities.invokeLater(() ->
 			{
 				if (label.getMouseListeners().length == 0)
@@ -403,6 +404,8 @@ public class PlayerBanner extends JPanel
 		{
 			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
 			ImageIcon hoverIC = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
+			label.setIcon(ic);
+
 			SwingUtilities.invokeLater(() ->
 			{
 				if (label.getMouseListeners().length == 0)

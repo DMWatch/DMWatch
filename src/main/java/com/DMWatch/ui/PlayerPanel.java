@@ -209,7 +209,10 @@ public class PlayerPanel extends JPanel
 		{
 			banner.setStreamerIcon(true, TWITCH_ICON, spriteManager);
 		}
-		else banner.setStreamerIcon(player.getStatus().equals("7"), KICK_ICON, spriteManager);
+		else
+		{
+			banner.setStreamerIcon(player.getStatus().equals("7"), KICK_ICON, spriteManager);
+		}
 
 		if (!showInfo)
 		{
@@ -281,7 +284,7 @@ public class PlayerPanel extends JPanel
 			case "6": // streamer - twitch
 				color = new Color(186, 85, 211);
 				break;
-			case "7": // streamer - twitch
+			case "7": // streamer - kick
 				color = new Color(186, 85, 211);
 				break;
 			case "8": // top g
