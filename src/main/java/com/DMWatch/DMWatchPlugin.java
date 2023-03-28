@@ -1019,25 +1019,20 @@ public class DMWatchPlugin extends Plugin
 		}
 		else
 		{
-//			if (dmwCase.getStatus().equals("1"))
-//			{
-//				response.append(" is in good standing on DMWatch.");
-//			}
-//			else
+
 			if (dmwCase.getStatus().equals("2"))
 			{
 				response.append(" is accused.");
 			}
 			else if (dmwCase.getStatus().equals("3"))
 			{
-				response.append(String.format(" is a scammer for ", dmwCase.getReason()))
+				response.append(" is a scammer [")
 					.append(ChatColorType.HIGHLIGHT)
 					.append(dmwCase.getReason());
 				if (dmwCase.getDate().getTime() > 0)
 				{
-					response.append(" ")
-						.append(ChatColorType.NORMAL)
-						.append("on " + dmwCase.niceDate())
+					response.append(ChatColorType.NORMAL)
+						.append("] on " + dmwCase.niceDate())
 						.append(".");
 				}
 				else
