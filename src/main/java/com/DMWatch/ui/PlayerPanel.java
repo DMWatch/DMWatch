@@ -71,6 +71,7 @@ public class PlayerPanel extends JPanel
 	private static final Color BACKGROUND_HOVER_COLOR = ColorScheme.DARKER_GRAY_COLOR;
 	private static final BufferedImage EXPAND_ICON = ImageUtil.loadImageResource(PlayerPanel.class, "expand.png");
 	private static final BufferedImage TWITCH_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "twitch.png");
+	private static final BufferedImage KICK_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "kick.png");
 	private final SpriteManager spriteManager;
 	private final ItemManager itemManager;
 	private final PlayerBanner banner;
@@ -204,7 +205,11 @@ public class PlayerPanel extends JPanel
 
 		// TODO rename these methods to be way more clear/genericly recreate them
 		banner.setVenged(player.getIsVenged() == 1, spriteManager);
-		banner.setStreamerIcon(player.getStatus().equals("5"), TWITCH_ICON, spriteManager);
+		if (player.getStatus().equals("6"))
+		{
+			banner.setStreamerIcon(true, TWITCH_ICON, spriteManager);
+		}
+		else banner.setStreamerIcon(player.getStatus().equals("7"), KICK_ICON, spriteManager);
 
 		if (!showInfo)
 		{
@@ -253,39 +258,36 @@ public class PlayerPanel extends JPanel
 
 		switch (player.getStatus())
 		{
-			case "0":
+			case "0": // unregistered
 				color = Color.GREEN;
 				break;
-			case "1":
+			case "1": // registered
 				color = Color.GREEN;
 				break;
-			case "2":
+			case "2": // accused
 				color = Color.YELLOW;
 				thickness = 4;
 				break;
-			case "3":
+			case "3": // scammer
 				color = Color.RED;
 				thickness = 4;
 				break;
-			case "4":
-				color = Color.BLACK;
+			case "4": // trusted
+				color = Color.BLUE;
 				break;
-			case "5":
+			case "5": // developer (idk what else)
 				color = Color.CYAN;
 				break;
-			case "6":
-				color = Color.BLUE;
+			case "6": // streamer - twitch
+				color = new Color(186, 85, 211);
 				break;
-			case "7":
-				color = Color.BLUE;
+			case "7": // streamer - twitch
+				color = new Color(186, 85, 211);
 				break;
-			case "8":
-				color = Color.BLUE;
+			case "8": // top g
+				color = Color.BLACK;
 				break;
-			case "9":
-				color = Color.BLUE;
-				break;
-			default:
+			default: // unknown (shouldnt ever be this)
 				color = Color.ORANGE;
 				break;
 		}

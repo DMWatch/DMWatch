@@ -129,7 +129,7 @@ public class PlayerBanner extends JPanel
 	{
 		if (status.equals("0"))
 		{
-			return "User";
+			return "Unregistered";
 		}
 		if (status.equals("1"))
 		{
@@ -153,15 +153,15 @@ public class PlayerBanner extends JPanel
 		}
 		if (status.equals("6"))
 		{
-			return "Twitch streamer";
+			return "Streamer";
 		}
 		if (status.equals("7"))
 		{
-			return "A Tier";
+			return "Streamer";
 		}
 		if (status.equals("8"))
 		{
-			return "S Tier";
+			return "Top G";
 		}
 		return "Unknown";
 	}
@@ -350,7 +350,7 @@ public class PlayerBanner extends JPanel
 	private void setBufferedIcon(String statLabelKey, final BufferedImage img)
 	{
 		final JLabel label = iconLabels.get(statLabelKey);
-		if (!player.getStatus().equals("5"))
+		if (!player.getStatus().equals("5") && !player.getStatus().equals("6"))
 		{
 			SwingUtilities.invokeLater(() ->
 			{
@@ -362,7 +362,7 @@ public class PlayerBanner extends JPanel
 			return;
 		}
 
-		if (player.getStatus().equals("5"))
+		if (player.getStatus().equals("6"))
 		{
 			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
 			ImageIcon hoverIC = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
@@ -378,6 +378,42 @@ public class PlayerBanner extends JPanel
 							if (SwingUtilities.isLeftMouseButton(e))
 							{
 								LinkBrowser.browse("https://www.twitch.tv/" + player.getReason());
+							}
+						}
+
+						@Override
+						public void mouseEntered(MouseEvent e)
+						{
+							label.setIcon(hoverIC);
+						}
+
+						@Override
+						public void mouseExited(MouseEvent e)
+						{
+							label.setIcon(ic);
+						}
+					});
+					label.revalidate();
+				}
+			});
+		}
+
+		if (player.getStatus().equals("7"))
+		{
+			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
+			ImageIcon hoverIC = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
+			SwingUtilities.invokeLater(() ->
+			{
+				if (label.getMouseListeners().length == 0)
+				{
+					label.addMouseListener(new MouseAdapter()
+					{
+						@Override
+						public void mousePressed(MouseEvent e)
+						{
+							if (SwingUtilities.isLeftMouseButton(e))
+							{
+								LinkBrowser.browse("https://www.kick.com/" + player.getReason());
 							}
 						}
 

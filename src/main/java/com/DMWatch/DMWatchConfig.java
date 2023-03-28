@@ -13,6 +13,12 @@ public interface DMWatchConfig extends Config
 	String PLAYER_OPTION = "playerOption";
 	String PLAYER_TEXT_COLOR = "playerTextColor";
 	@ConfigSection(
+		name = "Overlay Stuff",
+		description = "All the options for Overlays behavior",
+		position = 30
+	)
+	String OVERLAY_SECTION = "Overlay";
+	@ConfigSection(
 		name = "Menu",
 		description = "All the options for menu behavior",
 		position = 99
@@ -50,7 +56,7 @@ public interface DMWatchConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 5,
+		position = 6,
 		keyName = "useHotkey",
 		name = "Require Shift-Click",
 		description = "Require Shift-Right-Click to view Challenge in DM option in menus",
@@ -62,7 +68,44 @@ public interface DMWatchConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 6,
+		position = 100,
+		keyName = "drawOnSelf",
+		name = "Draw own color",
+		description = "Show own color code",
+		section = OVERLAY_SECTION
+	)
+	default boolean drawOnSelf()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		position = 101,
+		keyName = "playerNamePosition",
+		name = "Name position",
+		description = "Configures the position of drawn player names, or if they should be disabled",
+		section = OVERLAY_SECTION
+	)
+	default PlayerNameLocation playerNamePosition()
+	{
+		return PlayerNameLocation.ABOVE_HEAD;
+	}
+
+	@ConfigItem(
+		position = 102,
+		keyName = "drawPlayerTiles",
+		name = "Draw tiles under players",
+		description = "Configures whether or not tiles under highlighted players should be drawn",
+		section = OVERLAY_SECTION
+
+	)
+	default boolean drawTiles()
+	{
+		return false;
+	}
+
+	@ConfigItem(
+		position = 7,
 		keyName = PLAYER_TEXT_COLOR,
 		name = "Highlight color",
 		description = "Allows you to change the color of the reported player's rsn in most player lists"
@@ -73,7 +116,7 @@ public interface DMWatchConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 7,
+		position = 8,
 		keyName = "notifyOnJoin",
 		name = "Alert On Join",
 		description = "Send an alert message when a player on the watchlist enters a Clan/Friends Chat",
@@ -85,7 +128,7 @@ public interface DMWatchConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 8,
+		position = 9,
 		keyName = "notifyOnNearby",
 		name = "Alert On Nearby",
 		description = "Send an alert message when you're nearby a player on the watch list",
@@ -97,7 +140,7 @@ public interface DMWatchConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 9,
+		position = 10,
 		keyName = "hideIDS",
 		name = "Hide ID info",
 		description = "Hide the IDs on the Party Panel"
@@ -108,7 +151,7 @@ public interface DMWatchConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 10,
+		position = 11,
 		keyName = "hideMyWorld",
 		name = "Hide my world",
 		description = "Don't share world"

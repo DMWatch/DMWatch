@@ -81,6 +81,7 @@ import net.runelite.client.plugins.PluginManager;
 import net.runelite.client.task.Schedule;
 import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
+import net.runelite.client.ui.overlay.OverlayManager;
 import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.Text;
 import org.slf4j.LoggerFactory;
@@ -144,20 +145,29 @@ public class DMWatchPlugin extends Plugin
 	private PartyService partyService;
 	@Getter
 	private PartyPlayer myPlayer = null;
-	private PartyPanel panel;
-	private DMPartyBatchedChange currentChange = new DMPartyBatchedChange();
-	private NavigationButton navButton;
 
 	@Inject
 	private ClientToolbar clientToolbar;
 	@Inject
 	private PluginManager pluginManager;
 
+	@Inject
+	private OverlayManager overlayManager;
+
+	@Inject
+	private PartyMemberTierOverlay partyMemberTierOverlay;
+
+	@Inject
+	private PlayerMemberTileTierOverlay playerMemberTileTierOverlay;
+
+
+	// globals
 	private Instant lastLogout;
-
 	private Logger dmwLogger;
-
 	private LinkedHashSet<String> uniqueIDs;
+	private PartyPanel panel;
+	private DMPartyBatchedChange currentChange = new DMPartyBatchedChange();
+	private NavigationButton navButton;
 
 	@Provides
 	public DMWatchConfig provideConfig(ConfigManager configManager)
@@ -168,6 +178,8 @@ public class DMWatchPlugin extends Plugin
 	@Override
 	protected void startUp()
 	{
+		overlayManager.add(playerMemberTileTierOverlay);
+		overlayManager.add(partyMemberTierOverlay);
 		uniqueIDs = new LinkedHashSet<>();
 		dmwLogger = setupLogger("DMWatchLogger", "DMWatch");
 		panel = new PartyPanel(this, config);
@@ -213,6 +225,9 @@ public class DMWatchPlugin extends Plugin
 	@Override
 	protected void shutDown()
 	{
+		overlayManager.remove(partyMemberTierOverlay);
+		overlayManager.remove(playerMemberTileTierOverlay);
+
 		lastLogout = null;
 		uniqueIDs = new LinkedHashSet<>();
 		clientToolbar.removeNavigation(navButton);
@@ -1108,5 +1123,29 @@ public class DMWatchPlugin extends Plugin
 		{
 			return message;
 		}
+	}
+
+	public boolean otherPlayerInParty(String rsn)
+	{
+		for (Long id : partyMembers.keySet())
+		{
+			if (partyMembers.get(id).getUsername().equals(rsn))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public String getPlayerTier(String rsn)
+	{
+		for (Long id : partyMembers.keySet())
+		{
+			if (partyMembers.get(id).getUsername().equals(rsn))
+			{
+				return partyMembers.get(id).getStatus();
+			}
+		}
+		return "0";
 	}
 }
