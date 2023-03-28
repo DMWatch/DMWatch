@@ -925,13 +925,13 @@ public class DMWatchPlugin extends Plugin
 
 	private String getAccountID()
 	{
-		if (client != null)
+		if (client != null && client.getLocalPlayer() != null)
 		{
 			String toEncrypt = String.valueOf(client.getAccountHash());
 			return getEncrypt(toEncrypt);
 		}
 
-		return "Unknown";
+		return "";
 	}
 
 	private String getEncrypt(String input)
