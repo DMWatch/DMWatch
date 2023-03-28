@@ -116,8 +116,8 @@ public class PlayerBanner extends JPanel
 		worldLabel.setHorizontalTextPosition(JLabel.LEFT);
 		worldLabel.setVisible(displayWorld);
 
-		statsPanel.add(createIconPanel(spriteManager, SpriteID.SPELL_VENGEANCE_OTHER, "IsVenged", player.getIsVenged() == 1 ? "Is Venged" : "Not Venged", false));
-		statsPanel.add(createIconPanel(spriteManager, SpriteID.PLAYER_KILLER_SKULL, "DMWatchStatus", msg(player.getStatus()), true));
+		statsPanel.add(createIconPanel(spriteManager, SpriteID.SPELL_VENGEANCE_OTHER, "IsVenged", player.getIsVenged() == 1 ? "Is Venged" : "Not Venged", "", false));
+		statsPanel.add(createIconPanel(spriteManager, SpriteID.PLAYER_KILLER_SKULL, "DMWatchStatus", msg(player.getStatus()), player.getReason(), true));
 
 		infoPanel.add(createTextPanel("pchash", "HWID: " + player.getHWID()));
 		infoPanel.add(createTextPanel("acchash", "RID: " + player.getUserUnique()));
@@ -277,6 +277,7 @@ public class PlayerBanner extends JPanel
 
 		statLabels.getOrDefault("IsVenged", new JLabel()).setText(player.getIsVenged() == 1 ? "Is Venged" : "Not Venged");
 		statLabels.getOrDefault("DMWatchStatus", new JLabel()).setText(msg(player.getStatus()));
+		statLabels.get("DMWatchStatus").setToolTipText(player.getReason());
 		statLabels.getOrDefault("pchash", new JLabel()).setText("HWID: " + player.getHWID());
 		statLabels.getOrDefault("acchash", new JLabel()).setText("RID: " + player.getUserUnique());
 
@@ -287,14 +288,14 @@ public class PlayerBanner extends JPanel
 	}
 
 	private JPanel createIconPanel(final SpriteManager spriteManager, final int spriteID, final String name,
-								   final String value, boolean includeHoverText)
+								   final String value, String hoverOverText ,boolean includeHoverText)
 	{
 		final JLabel iconLabel = new JLabel();
 		iconLabel.setPreferredSize(STAT_ICON_SIZE);
 		iconLabels.put(name, iconLabel);
 		setSpriteIcon(name, spriteID, spriteManager);
 
-		final JLabel textLabel = new JLabel(" " + value);
+		final JLabel textLabel = new JLabel( value);
 		textLabel.setHorizontalAlignment(JLabel.LEFT);
 		textLabel.setHorizontalTextPosition(JLabel.LEFT);
 		statLabels.put(name, textLabel);
@@ -307,7 +308,7 @@ public class PlayerBanner extends JPanel
 
 		if (includeHoverText)
 		{
-			panel.setToolTipText(name);
+			panel.setToolTipText(hoverOverText);
 		}
 
 		return panel;

@@ -704,16 +704,15 @@ public class DMWatchPlugin extends Plugin
 				rid = partyMembers.get(memberID).getUserUnique();
 				rsn = partyMembers.get(memberID).getUsername();
 
-				if (hwid.equals("unknown"))
-				{
-					dmwLogger.info("UNUSUAL - HWID: {} | RID: {} | RSN: {}", hwid, rid, rsn);
-					continue;
-				}
-
 				if (!uniqueIDs.contains(hwid + rid + rsn))
 				{
+					if (hwid.equals("unknown"))
+					{
+						dmwLogger.info("Unusual - HWID:{} RID:{} RSN:{}", hwid, rid, rsn);
+					} else {
+						dmwLogger.info("HWID:{} RID:{} RSN:{}", hwid, rid, rsn);
+					}
 					uniqueIDs.add(hwid + rid + rsn);
-					dmwLogger.info("HWID: {} | RID: {} | RSN: {}", hwid, rid, rsn);
 				}
 			}
 		}
@@ -988,7 +987,7 @@ public class DMWatchPlugin extends Plugin
 		TimeBasedRollingPolicy<ILoggingEvent> logFilePolicy = new TimeBasedRollingPolicy<>();
 		logFilePolicy.setContext(context);
 		logFilePolicy.setParent(appender);
-		logFilePolicy.setFileNamePattern(directory + "chatlog_%d{yyyy-MM-dd}.log");
+		logFilePolicy.setFileNamePattern(directory + "DMWatchlog_%d{yyyy-MM-dd}.log");
 		logFilePolicy.setMaxHistory(30);
 		logFilePolicy.start();
 
