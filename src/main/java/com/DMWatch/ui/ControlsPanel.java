@@ -66,7 +66,7 @@ public class ControlsPanel extends JPanel
 		joinPartyButton.setFocusable(false);
 		joinPartyButton.addActionListener(e ->
 		{
-			if (!plugin.isInParty())
+			if (!plugin.isInParty() || !plugin.getPartyPassphrase().equals("DMW"))
 			{
 				plugin.changeParty("DMW");
 			}
@@ -115,6 +115,7 @@ public class ControlsPanel extends JPanel
 
 	public void updateControls()
 	{
-		joinPartyButton.setText(plugin.isInParty() ? "Leave DMW" : "Join DMW");
+		joinPartyButton.setText(plugin.isInParty() && plugin.getPartyPassphrase().equals("DMW") ? "Leave DMW" : "Join DMW");
+		joinPartyButton.revalidate();
 	}
 }
