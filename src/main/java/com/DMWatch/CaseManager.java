@@ -19,6 +19,7 @@ import java.util.function.Consumer;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import lombok.extern.slf4j.Slf4j;
+import net.runelite.api.Client;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.util.Text;
 import okhttp3.Call;
@@ -32,35 +33,35 @@ import okhttp3.Response;
 @Singleton
 public class CaseManager
 {
+
 	private static final HttpUrl DMWatch_LIST_URL = HttpUrl.parse("https://raw.githubusercontent.com/DMWatch/DMWatch/main/data/mixedlist.json");
 
 	private static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 	private static final Type typeToken = new TypeToken<List<Case>>()
 	{
 	}.getType();
-	final Gson GSON = new GsonBuilder().registerTypeAdapter(Date.class, (JsonDeserializer<Date>) (json, typeOfT, context) -> {
-		try
-		{
-			// Allow handling of the occasional empty string as a date.
-			return df.parse(json.getAsString());
-		}
-		catch (ParseException e)
-		{
-			return Date.from(Instant.ofEpochSecond(0));
-		}
-	}).create();
+
 	private final OkHttpClient client;
 	private final Map<String, Case> dmCases = new ConcurrentHashMap<>();
-	private final Map<Long, Case> dmCasesHash = new ConcurrentHashMap<>();
 	private final ClientThread clientThread;
-	private final DMWatchConfig config;
+	private Gson gson;
 
 	@Inject
-	private CaseManager(OkHttpClient client, ClientThread clientThread, DMWatchConfig config)
+	private CaseManager(OkHttpClient client, ClientThread clientThread, Gson gson)
 	{
 		this.client = client;
 		this.clientThread = clientThread;
-		this.config = config;
+		this.gson = gson.newBuilder().registerTypeAdapter(Date.class, (JsonDeserializer<Date>) (json, typeOfT, context) -> {
+			try
+			{
+				// Allow handling of the occasional empty string as a date.
+				return df.parse(json.getAsString());
+			}
+			catch (ParseException e)
+			{
+				return Date.from(Instant.ofEpochSecond(0));
+			}
+		}).create();;
 	}
 
 	/**
@@ -90,7 +91,7 @@ public class CaseManager
 					}
 					else
 					{
-						List<Case> cases = GSON.fromJson(new InputStreamReader(response.body().byteStream()), typeToken);
+						List<Case> cases = gson.fromJson(new InputStreamReader(response.body().byteStream()), typeToken);
 						dmCases.clear();
 						for (Case c : cases)
 						{

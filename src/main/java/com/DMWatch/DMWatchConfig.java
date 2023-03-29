@@ -108,7 +108,7 @@ public interface DMWatchConfig extends Config
 		position = 7,
 		keyName = PLAYER_TEXT_COLOR,
 		name = "Highlight color",
-		description = "Allows you to change the color of the reported player's rsn in most player lists"
+		description = "Allows you to change the color of DMW members in most player lists"
 	)
 	default Color playerTextColor()
 	{

@@ -204,8 +204,13 @@ class PartyPanel extends PluginPanel
 			(k) -> new PlayerPanel(player, config, plugin.spriteManager, plugin.itemManager));
 
 		final String playerName = player.getUsername() == null ? "" : player.getUsername();
-//		panel.updatePlayerData(player, panel.getPlayer().getMember().getMemberId() != player.getMember().getMemberId() || !playerName.equals(panel.getPlayer().getUsername()));
-		panel.updatePlayerData(player, true);
+		panel.updatePlayerData(player, !playerName.equals(panel.getPlayer().getUsername())
+			|| !player.getStatus().equals(panel.getPlayer().getStatus())
+			|| player.getIsVenged() != panel.getPlayer().getIsVenged()
+			|| !player.getUserUnique().equals(panel.getPlayer().getUserUnique())
+			|| !player.getReason().equals(panel.getPlayer().getReason())
+		);
+
 		basePanel.add(panel);
 		basePanel.revalidate();
 		basePanel.repaint();

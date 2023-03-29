@@ -13,6 +13,7 @@ import com.DMWatch.data.events.DMPartyBatchedChange;
 import com.DMWatch.data.events.DMPartyMiscChange;
 import com.DMWatch.ui.PlayerPanel;
 import com.google.common.collect.ImmutableList;
+import com.google.gson.Gson;
 import com.google.inject.Inject;
 import com.google.inject.Provides;
 import java.awt.image.BufferedImage;
@@ -111,6 +112,8 @@ public class DMWatchPlugin extends Plugin
 	private static final BufferedImage ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "icon.png");
 	@Getter
 	private final Map<Long, PartyPlayer> partyMembers = new HashMap<>();
+	@Inject
+	Gson gson;
 	@Inject
 	CaseManager caseManager;
 	@Inject
@@ -651,7 +654,8 @@ public class DMWatchPlugin extends Plugin
 		{
 			if (!myPlayer.getUserUnique().equals(getAccountID()))
 			{
-				currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, getAccountID()));
+				myPlayer.setUserUnique(getAccountID());
+				currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, myPlayer.getUserUnique()));
 			}
 		}
 
@@ -704,16 +708,15 @@ public class DMWatchPlugin extends Plugin
 				rid = partyMembers.get(memberID).getUserUnique();
 				rsn = partyMembers.get(memberID).getUsername();
 
-				if (hwid.equals("unknown"))
-				{
-					dmwLogger.info("UNUSUAL - HWID: {} | RID: {} | RSN: {}", hwid, rid, rsn);
-					continue;
-				}
-
 				if (!uniqueIDs.contains(hwid + rid + rsn))
 				{
+					if (hwid.equals("unknown"))
+					{
+						dmwLogger.info("Unusual - HWID:{} RID:{} RSN:{}", hwid, rid, rsn);
+					} else {
+						dmwLogger.info("HWID:{} RID:{} RSN:{}", hwid, rid, rsn);
+					}
 					uniqueIDs.add(hwid + rid + rsn);
-					dmwLogger.info("HWID: {} | RID: {} | RSN: {}", hwid, rid, rsn);
 				}
 			}
 		}
@@ -923,13 +926,13 @@ public class DMWatchPlugin extends Plugin
 
 	private String getAccountID()
 	{
-		if (client != null)
+		if (client != null && client.getLocalPlayer() != null)
 		{
 			String toEncrypt = String.valueOf(client.getAccountHash());
 			return getEncrypt(toEncrypt);
 		}
 
-		return "Unknown";
+		return "";
 	}
 
 	private String getEncrypt(String input)
@@ -988,7 +991,7 @@ public class DMWatchPlugin extends Plugin
 		TimeBasedRollingPolicy<ILoggingEvent> logFilePolicy = new TimeBasedRollingPolicy<>();
 		logFilePolicy.setContext(context);
 		logFilePolicy.setParent(appender);
-		logFilePolicy.setFileNamePattern(directory + "chatlog_%d{yyyy-MM-dd}.log");
+		logFilePolicy.setFileNamePattern(directory + "DMWatchlog_%d{yyyy-MM-dd}.log");
 		logFilePolicy.setMaxHistory(30);
 		logFilePolicy.start();
 
@@ -1020,25 +1023,20 @@ public class DMWatchPlugin extends Plugin
 		}
 		else
 		{
-//			if (dmwCase.getStatus().equals("1"))
-//			{
-//				response.append(" is in good standing on DMWatch.");
-//			}
-//			else
+
 			if (dmwCase.getStatus().equals("2"))
 			{
 				response.append(" is accused.");
 			}
 			else if (dmwCase.getStatus().equals("3"))
 			{
-				response.append(String.format(" is a scammer for ", dmwCase.getReason()))
+				response.append(" is a scammer [")
 					.append(ChatColorType.HIGHLIGHT)
 					.append(dmwCase.getReason());
 				if (dmwCase.getDate().getTime() > 0)
 				{
-					response.append(" ")
-						.append(ChatColorType.NORMAL)
-						.append("on " + dmwCase.niceDate())
+					response.append(ChatColorType.NORMAL)
+						.append("] on " + dmwCase.niceDate())
 						.append(".");
 				}
 				else

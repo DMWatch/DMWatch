@@ -78,7 +78,7 @@ public class DMPartyBatchedChange extends PartyMemberMessage
 
 	public boolean hasBreakingBannerChange()
 	{
-		return m != null
+		return m != null && m.size() > 0
 			&& m.stream()
 			.anyMatch(e -> e.getT() == DMPartyMiscChange.PartyMisc.V
 				|| e.getT() == DMPartyMiscChange.PartyMisc.W
