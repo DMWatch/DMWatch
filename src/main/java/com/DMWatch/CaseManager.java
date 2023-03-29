@@ -1,7 +1,6 @@
 package com.DMWatch;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
@@ -19,7 +18,6 @@ import java.util.function.Consumer;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import lombok.extern.slf4j.Slf4j;
-import net.runelite.api.Client;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.util.Text;
 import okhttp3.Call;
@@ -44,7 +42,7 @@ public class CaseManager
 	private final OkHttpClient client;
 	private final Map<String, Case> dmCases = new ConcurrentHashMap<>();
 	private final ClientThread clientThread;
-	private Gson gson;
+	private final Gson gson;
 
 	@Inject
 	private CaseManager(OkHttpClient client, ClientThread clientThread, Gson gson)
@@ -61,7 +59,7 @@ public class CaseManager
 			{
 				return Date.from(Instant.ofEpochSecond(0));
 			}
-		}).create();;
+		}).create();
 	}
 
 	/**
@@ -95,7 +93,7 @@ public class CaseManager
 						dmCases.clear();
 						for (Case c : cases)
 						{
-							String rsn = c.getRsn().toLowerCase();
+							String rsn = Text.removeTags(Text.toJagexName(c.getRsn())).toLowerCase();
 							Map<String, Case> sourceCases = dmCases;
 
 							Case old = sourceCases.get(rsn);

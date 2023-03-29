@@ -79,7 +79,7 @@ public class PlayerBanner extends JPanel
 	private PartyPlayer player;
 	private boolean checkIcon;
 
-	private BufferedImage currentVenged = null;
+	private final BufferedImage currentVenged = null;
 	private final BufferedImage isStreamer = null;
 	DMWatchConfig config;
 
@@ -288,14 +288,14 @@ public class PlayerBanner extends JPanel
 	}
 
 	private JPanel createIconPanel(final SpriteManager spriteManager, final int spriteID, final String name,
-								   final String value, String hoverOverText ,boolean includeHoverText)
+								   final String value, String hoverOverText, boolean includeHoverText)
 	{
 		final JLabel iconLabel = new JLabel();
 		iconLabel.setPreferredSize(STAT_ICON_SIZE);
 		iconLabels.put(name, iconLabel);
 		setSpriteIcon(name, spriteID, spriteManager);
 
-		final JLabel textLabel = new JLabel( value);
+		final JLabel textLabel = new JLabel(value);
 		textLabel.setHorizontalAlignment(JLabel.LEFT);
 		textLabel.setHorizontalTextPosition(JLabel.LEFT);
 		statLabels.put(name, textLabel);

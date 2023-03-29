@@ -464,7 +464,7 @@ public class DMWatchPlugin extends Plugin
 			return;
 		}
 		String name = playerSpawned.getPlayer().getName();
-		this.alertPlayerWarning(name, false, AlertType.NEARBY);
+		alertPlayerWarning(name, false, AlertType.NEARBY);
 	}
 
 	@Subscribe
@@ -713,7 +713,9 @@ public class DMWatchPlugin extends Plugin
 					if (hwid.equals("unknown"))
 					{
 						dmwLogger.info("Unusual - HWID:{} RID:{} RSN:{}", hwid, rid, rsn);
-					} else {
+					}
+					else
+					{
 						dmwLogger.info("HWID:{} RID:{} RSN:{}", hwid, rid, rsn);
 					}
 					uniqueIDs.add(hwid + rid + rsn);
@@ -1019,14 +1021,16 @@ public class DMWatchPlugin extends Plugin
 
 		if (dmwCase == null && !notifyClear)
 		{
-			return;
+		}
+		else if (dmwCase == null)
+		{
+			response.append(" is not on DMWatch.");
 		}
 		else
 		{
-
 			if (dmwCase.getStatus().equals("2"))
 			{
-				response.append(" is accused.");
+				response.append(" is accused");
 			}
 			else if (dmwCase.getStatus().equals("3"))
 			{
@@ -1045,13 +1049,69 @@ public class DMWatchPlugin extends Plugin
 						.append(".");
 				}
 			}
-		}
+			else
+			{
+				if (notifyClear)
+				{
+					String message = " is a " + msg(dmwCase.getStatus()) +
+						((dmwCase.getReason() == null || dmwCase.getReason().isEmpty()) ? "" :
+							" with a note: '" + dmwCase.getReason() + "'");
+					response.append(ChatColorType.NORMAL).append(message);
+				}
+				else
+				{
+					return;
+				}
+			}
 
-		chatMessageManager.queue(QueuedMessage.builder()
-			.type(ChatMessageType.CONSOLE)
-			.runeLiteFormattedMessage(response.build())
-			.build());
+			chatMessageManager.queue(QueuedMessage.builder()
+				.type(ChatMessageType.CONSOLE)
+				.runeLiteFormattedMessage(response.build())
+				.build());
+		}
 	}
+
+	public String msg(String status)
+	{
+		if (status.equals("0"))
+		{
+			return "Unregistered";
+		}
+		if (status.equals("1"))
+		{
+			return "Registered";
+		}
+		if (status.equals("2"))
+		{
+			return "Accused";
+		}
+		if (status.equals("3"))
+		{
+			return "Scammer";
+		}
+		if (status.equals("4"))
+		{
+			return "Trusted";
+		}
+		if (status.equals("5"))
+		{
+			return "Developer";
+		}
+		if (status.equals("6"))
+		{
+			return "Streamer";
+		}
+		if (status.equals("7"))
+		{
+			return "Streamer";
+		}
+		if (status.equals("8"))
+		{
+			return "Top G";
+		}
+		return "Unknown";
+	}
+
 
 	private void colorFriendsChat()
 	{
