@@ -30,6 +30,7 @@ import com.DMWatch.data.GameItem;
 import com.DMWatch.data.PartyPlayer;
 import com.DMWatch.ui.equipment.EquipmentPanelSlot;
 import com.DMWatch.ui.equipment.PlayerEquipmentPanel;
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
@@ -58,6 +59,7 @@ import net.runelite.client.game.ItemManager;
 import net.runelite.client.game.SpriteManager;
 import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.DynamicGridLayout;
+import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.ui.components.materialtabs.MaterialTab;
 import net.runelite.client.ui.components.materialtabs.MaterialTabGroup;
 import net.runelite.client.util.AsyncBufferedImage;
@@ -91,7 +93,7 @@ public class PlayerPanel extends JPanel
 		this.spriteManager = spriteManager;
 		this.itemManager = itemManager;
 		this.showInfo = false;
-		this.banner = new PlayerBanner(selectedPlayer, showInfo, true, spriteManager, config);
+		this.banner = new PlayerBanner(selectedPlayer, showInfo, spriteManager, config);
 		this.inventoryPanel = new PlayerInventoryPanel(selectedPlayer.getInventory(), itemManager);
 		this.equipmentPanel = new PlayerEquipmentPanel(selectedPlayer.getEquipment(), spriteManager, itemManager);
 
@@ -132,6 +134,16 @@ public class PlayerPanel extends JPanel
 							BufferedImage buffered = (BufferedImage) retrieve.getImage();
 
 							showInfo = !showInfo;
+							if (showInfo)
+							{
+								banner.hideIcon();
+								banner.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, config.hideIDS() ? 80 : 100));
+							}
+							else
+							{
+								banner.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 40));
+								banner.readdIcon(showInfo);
+							}
 							expandIcon.setIcon(new ImageIcon(ImageUtil.rotateImage(buffered, Math.PI)));
 							updatePanel();
 						}
@@ -200,7 +212,7 @@ public class PlayerPanel extends JPanel
 
 		if (hasBreakingBannerChange)
 		{
-			banner.recreatePanel(config.hideIDS());
+			banner.recreatePanel(showInfo);
 		}
 
 		// TODO rename these methods to be way more clear/genericly recreate them
@@ -213,6 +225,7 @@ public class PlayerPanel extends JPanel
 		{
 			banner.setStreamerIcon(player.getStatus().equals("7"), KICK_ICON, spriteManager);
 		}
+
 
 		if (!showInfo)
 		{
@@ -323,6 +336,19 @@ public class PlayerPanel extends JPanel
 		{
 			add(tabGroup);
 			add(view);
+		}
+
+		if (!showInfo) {
+			banner.getStatsPanel().setVisible(false);
+			banner.getInfoPanel().setVisible(false);
+		} else {
+			banner.getStatsPanel().setVisible(true);
+			if (config.hideIDS())
+			{
+				banner.getInfoPanel().setVisible(false);
+			} else {
+				banner.getInfoPanel().setVisible(true);
+			}
 		}
 
 		revalidate();

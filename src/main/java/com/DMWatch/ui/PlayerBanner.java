@@ -25,6 +25,7 @@
 package com.DMWatch.ui;
 
 import com.DMWatch.DMWatchConfig;
+import com.DMWatch.DMWatchPlugin;
 import com.DMWatch.data.PartyPlayer;
 import com.google.common.base.Strings;
 import java.awt.BorderLayout;
@@ -68,8 +69,16 @@ public class PlayerBanner extends JPanel
 	private final Map<String, JLabel> iconLabels = new HashMap<>();
 	@Getter
 	private final JLabel expandIcon = new JLabel();
+	private final JLabel rankIcon = new JLabel();
 	private final JLabel worldLabel = new JLabel();
 	private final JLabel iconLabel = new JLabel();
+
+	private static final BufferedImage SMILEY = ImageUtil.loadImageResource(DMWatchPlugin.class, "smiley.png");
+	private static final BufferedImage CAPTAIN = ImageUtil.loadImageResource(DMWatchPlugin.class, "captain.png");
+	private static final BufferedImage GENERAL = ImageUtil.loadImageResource(DMWatchPlugin.class, "general.png");
+	private static final BufferedImage LIEUTENANT = ImageUtil.loadImageResource(DMWatchPlugin.class, "lieutenant.png");
+	private static final BufferedImage TWITCH_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "twitch.png");
+	private static final BufferedImage KICK_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "kick.png");
 
 	private final ImageIcon expandIconUp;
 	private final ImageIcon expandIconDown;
@@ -78,18 +87,14 @@ public class PlayerBanner extends JPanel
 	@Getter
 	private PartyPlayer player;
 	private boolean checkIcon;
-
-	private final BufferedImage currentVenged = null;
-	private final BufferedImage isStreamer = null;
 	DMWatchConfig config;
 
-	public PlayerBanner(final PartyPlayer player, boolean expanded, boolean displayWorld, SpriteManager spriteManager, DMWatchConfig config)
+	public PlayerBanner(final PartyPlayer player, boolean expanded, SpriteManager spriteManager, DMWatchConfig config)
 	{
 		super();
 		this.config = config;
 		this.player = player;
 		this.setLayout(new GridBagLayout());
-		this.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 100));
 		this.setBorder(new EmptyBorder(5, 5, 0, 5));
 
 		statsPanel.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH, 60));
@@ -106,80 +111,24 @@ public class PlayerBanner extends JPanel
 		expandIconUp = new ImageIcon(ImageUtil.rotateImage(EXPAND_ICON, Math.PI));
 		if (expanded)
 		{
+//			this.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 100));
 			expandIcon.setIcon(expandIconUp);
 		}
 		else
 		{
+//			this.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 40));
 			expandIcon.setIcon(expandIconDown);
 		}
-
-		worldLabel.setHorizontalTextPosition(JLabel.LEFT);
-		worldLabel.setVisible(displayWorld);
 
 		statsPanel.add(createIconPanel(spriteManager, SpriteID.SPELL_VENGEANCE_OTHER, "IsVenged", player.getIsVenged() == 1 ? "Is Venged" : "Not Venged", "", false));
 		statsPanel.add(createIconPanel(spriteManager, SpriteID.PLAYER_KILLER_SKULL, "DMWatchStatus", msg(player.getStatus()), player.getReason(), true));
-
 		infoPanel.add(createTextPanel("pchash", "HWID: " + player.getHWID()));
 		infoPanel.add(createTextPanel("acchash", "RID: " + player.getUserUnique()));
 
-		recreatePanel(config.hideIDS());
+		recreatePanel(expanded);
 	}
 
-	private String msg(String status)
-	{
-		if (status.equals("0"))
-		{
-			return "Unregistered";
-		}
-		if (status.equals("1"))
-		{
-			return "Registered";
-		}
-		if (status.equals("2"))
-		{
-			return "Accused";
-		}
-		if (status.equals("3"))
-		{
-			return "Scammer";
-		}
-		if (status.equals("4"))
-		{
-			return "Trusted";
-		}
-		if (status.equals("5"))
-		{
-			return "Developer";
-		}
-		if (status.equals("6"))
-		{
-			return "Streamer";
-		}
-		if (status.equals("7"))
-		{
-			return "Streamer";
-		}
-		if (status.equals("8"))
-		{
-			return "Top G";
-		}
-		return "Unknown";
-	}
-
-	// True = arrow up; False = arrow down
-	public void setExpandIcon(boolean direction)
-	{
-		if (direction)
-		{
-			expandIcon.setIcon(expandIconUp);
-		}
-		else
-		{
-			expandIcon.setIcon(expandIconDown);
-		}
-	}
-
-	public void recreatePanel(boolean includeIDs)
+	public void recreatePanel(boolean expanded)
 	{
 		removeAll();
 
@@ -227,7 +176,22 @@ public class PlayerBanner extends JPanel
 		usernameLabel.add(expandIcon, BorderLayout.EAST);
 		nameContainer.add(usernameLabel);
 
+		worldLabel.setLayout(new OverlayLayout(worldLabel));
+		worldLabel.setHorizontalTextPosition(JLabel.RIGHT);
 		worldLabel.setText("Not logged in");
+
+		rankIcon.setAlignmentX(Component.CENTER_ALIGNMENT);
+		BufferedImage img = getImageFromTier(player.getStatus());
+
+		if (!expanded)
+		{
+			if (img != null)
+			{
+				rankIcon.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
+				worldLabel.add(rankIcon, BorderLayout.CENTER);
+			}
+		}
+
 		if (Strings.isNullOrEmpty(player.getUsername()))
 		{
 			worldLabel.setText("");
@@ -246,14 +210,12 @@ public class PlayerBanner extends JPanel
 		c.gridwidth = 2;
 		add(statsPanel, c);
 
-		if (!includeIDs)
-		{
-			c.gridy++;
-			c.weightx = 0;
-			c.gridx = 0;
-			c.gridwidth = 2;
-			add(infoPanel, c);
-		}
+		c.gridy++;
+		c.weightx = 0;
+		c.gridx = 0;
+		c.gridwidth = 2;
+		add(infoPanel, c);
+
 		revalidate();
 		repaint();
 	}
@@ -263,6 +225,7 @@ public class PlayerBanner extends JPanel
 		final BufferedImage resized = ImageUtil.resizeImage(player.getMember().getAvatar(), Constants.ITEM_SPRITE_WIDTH - 8, Constants.ITEM_SPRITE_HEIGHT - 4);
 		iconLabel.setIcon(new ImageIcon(resized));
 	}
+
 
 	public void refreshStats()
 	{
@@ -278,8 +241,8 @@ public class PlayerBanner extends JPanel
 		statLabels.getOrDefault("IsVenged", new JLabel()).setText(player.getIsVenged() == 1 ? "Is Venged" : "Not Venged");
 		statLabels.getOrDefault("DMWatchStatus", new JLabel()).setText(msg(player.getStatus()));
 		statLabels.get("DMWatchStatus").setToolTipText(player.getReason());
-		statLabels.getOrDefault("pchash", new JLabel()).setText("HWID: " + player.getHWID());
-		statLabels.getOrDefault("acchash", new JLabel()).setText("RID: " + player.getUserUnique());
+		iconLabels.getOrDefault("pchash", new JLabel()).setText("HWID: " + player.getHWID());
+		iconLabels.getOrDefault("acchash", new JLabel()).setText("RID: " + player.getUserUnique());
 
 		statsPanel.revalidate();
 		statsPanel.repaint();
@@ -460,6 +423,7 @@ public class PlayerBanner extends JPanel
 		if (b)
 		{
 			setBufferedIcon("DMWatchStatus", bufferedImage);
+
 		}
 		else
 		{
@@ -468,6 +432,99 @@ public class PlayerBanner extends JPanel
 		statsPanel.revalidate();
 		statsPanel.repaint();
 	}
+
+	public void hideIcon() {
+		if (worldLabel.getComponents().length != 0) {
+			worldLabel.remove(rankIcon);
+			worldLabel.revalidate();
+			worldLabel.repaint();
+		}
+	}
+
+	public void readdIcon(boolean isExpanded) {
+		if (worldLabel.getComponents().length == 0 && !isExpanded) {
+			BufferedImage img = getImageFromTier(player.getStatus());
+			if (img != null)
+			{
+				rankIcon.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
+				worldLabel.add(rankIcon, BorderLayout.CENTER);
+			}
+
+			worldLabel.revalidate();
+			worldLabel.repaint();
+		}
+	}
+
+
+	private BufferedImage getImageFromTier(String status)
+	{
+		BufferedImage img = null;
+		switch (status) {
+			case "1":
+				img = SMILEY;
+				break;
+			case "4":
+				img = LIEUTENANT;
+				break;
+			case "5":
+				img = CAPTAIN;
+				break;
+			case "8":
+				img = GENERAL;
+				break;
+			case "6":
+				img = TWITCH_ICON;
+				break;
+			case "7":
+				img = KICK_ICON;
+				break;
+			default:
+				img = null;
+		}
+		return img;
+	}
+
+	public String msg(String status)
+	{
+		if (status.equals("0"))
+		{
+			return "User";
+		}
+		if (status.equals("1"))
+		{
+			return "Smiley";
+		}
+		if (status.equals("2"))
+		{
+			return "Accused";
+		}
+		if (status.equals("3"))
+		{
+			return "Scammer";
+		}
+		if (status.equals("4"))
+		{
+			return "Lieutenant";
+		}
+		if (status.equals("5"))
+		{
+			return "Captain";
+		}
+		if (status.equals("6"))
+		{
+			return "Streamer";
+		}
+		if (status.equals("7"))
+		{
+			return "Streamer";
+		}
+		if (status.equals("8"))
+		{
+			return "General";
+		}
+		return "Unknown";
+	}
+
 
 	public void updateWorld(int world)
 	{

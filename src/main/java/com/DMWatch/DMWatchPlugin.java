@@ -1075,11 +1075,11 @@ public class DMWatchPlugin extends Plugin
 	{
 		if (status.equals("0"))
 		{
-			return "Unregistered";
+			return "User";
 		}
 		if (status.equals("1"))
 		{
-			return "Registered";
+			return "Smiley";
 		}
 		if (status.equals("2"))
 		{
@@ -1091,11 +1091,11 @@ public class DMWatchPlugin extends Plugin
 		}
 		if (status.equals("4"))
 		{
-			return "Trusted";
+			return "Lieutenant";
 		}
 		if (status.equals("5"))
 		{
-			return "Developer";
+			return "Captain";
 		}
 		if (status.equals("6"))
 		{
@@ -1107,11 +1107,10 @@ public class DMWatchPlugin extends Plugin
 		}
 		if (status.equals("8"))
 		{
-			return "Top G";
+			return "General";
 		}
 		return "Unknown";
 	}
-
 
 	private void colorFriendsChat()
 	{
