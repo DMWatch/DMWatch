@@ -137,17 +137,15 @@ public class PlayerPanel extends JPanel
 							showInfo = !showInfo;
 							if (showInfo)
 							{
-								banner.hideIcon();
 								banner.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, config.hideIDS() ? 80 : 100));
 								expandIcon.setIcon(expandIconUp);
-
+								banner.hideAndShowIcon(false, showInfo);
 							}
 							else
 							{
 								banner.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 40));
-								banner.readdIcon(showInfo);
+								banner.hideAndShowIcon(true, showInfo);
 								expandIcon.setIcon(expandIconDown);
-
 							}
 							updatePanel();
 						}

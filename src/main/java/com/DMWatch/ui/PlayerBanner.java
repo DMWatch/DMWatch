@@ -446,19 +446,13 @@ public class PlayerBanner extends JPanel
 		statsPanel.repaint();
 	}
 
-	public void hideIcon()
+	public void hideAndShowIcon(boolean isAdding, boolean isExpanded)
 	{
 		if (worldLabel.getComponents().length != 0)
 		{
 			worldLabel.remove(rankIcon);
-			worldLabel.revalidate();
-			worldLabel.repaint();
 		}
-	}
-
-	public void readdIcon(boolean isExpanded)
-	{
-		if (worldLabel.getComponents().length == 0 && !isExpanded)
+		if (isAdding && worldLabel.getComponents().length == 0 && !isExpanded)
 		{
 			BufferedImage img = getImageFromTier(player.getStatus());
 			if (img != null)
@@ -471,11 +465,10 @@ public class PlayerBanner extends JPanel
 				worldLabel.add(rankIcon, BorderLayout.WEST);
 			}
 
-			worldLabel.revalidate();
-			worldLabel.repaint();
 		}
+		worldLabel.revalidate();
+		worldLabel.repaint();
 	}
-
 
 	private BufferedImage getImageFromTier(String status)
 	{
