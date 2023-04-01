@@ -86,8 +86,8 @@ public class ControlsPanel extends JPanel
 		c.gridy = 0;
 		DISCORD_ICON = new ImageIcon(ImageUtil.resizeImage(DISCORD_IMG, 24,18));
 		DISCORD_HOVER_ICON = new ImageIcon(ImageUtil.alphaOffset(ImageUtil.resizeImage(DISCORD_IMG, 24,18), 0.53f));
-		JLabel joinDiscordLabel = new JLabel(DISCORD_ICON);
 
+		JLabel joinDiscordLabel = new JLabel(DISCORD_ICON);
 		this.add(joinDiscordLabel, c);
 		joinDiscordLabel.setToolTipText("Click to join our discord");
 		joinDiscordLabel.addMouseListener(new MouseAdapter()
@@ -113,6 +113,30 @@ public class ControlsPanel extends JPanel
 				joinDiscordLabel.setIcon(DISCORD_ICON);
 			}
 		});
+
+		discordTextLabel.addMouseListener(new MouseAdapter()
+		{
+			@Override
+			public void mousePressed(MouseEvent e)
+			{
+				if (SwingUtilities.isLeftMouseButton(e))
+				{
+					LinkBrowser.browse("https://discord.gg/dm");
+				}
+			}
+			@Override
+			public void mouseEntered(MouseEvent e)
+			{
+				joinDiscordLabel.setIcon(DISCORD_HOVER_ICON);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e)
+			{
+				joinDiscordLabel.setIcon(DISCORD_ICON);
+			}
+		});
+
 
 		updateControls();
 	}

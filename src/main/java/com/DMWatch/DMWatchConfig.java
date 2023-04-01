@@ -117,6 +117,17 @@ public interface DMWatchConfig extends Config
 
 	@ConfigItem(
 		position = 8,
+		keyName = "recolorRSNonBanner",
+		name = "Recolor RSN on Party Panel",
+		description = "Shows the color of a rank on the party panel"
+	)
+	default boolean recolorRSNonBanner()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		position = 8,
 		keyName = "notifyOnJoin",
 		name = "Alert On Join",
 		description = "Send an alert message when a player on the watchlist enters a Clan/Friends Chat",

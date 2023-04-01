@@ -173,10 +173,12 @@ public class PlayerBanner extends JPanel
 			final String levelText = player.getCombatLevel() == -1 ? "" : " (level-" + player.getCombatLevel() + ")";
 			usernameLabel.setText(player.getUsername() + levelText);
 
-			Color color = getColorFromTier(player.getStatus());
-			if (color != null)
-			{
-				usernameLabel.setForeground(color);
+			if (config.recolorRSNonBanner()){
+				Color color = getColorFromTier(player.getStatus());
+				if (color != null)
+				{
+					usernameLabel.setForeground(color);
+				}
 			}
 		}
 
