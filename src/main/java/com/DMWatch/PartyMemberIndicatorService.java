@@ -37,7 +37,7 @@ public class PartyMemberIndicatorService
 		COLORHM.put("3", Color.RED);
 		COLORHM.put("4", new Color(188,84,4));
 		COLORHM.put("5", new Color(236,236,220));
-		COLORHM.put("6", new Color(37, 150, 190));
+		COLORHM.put("6",  new Color(104, 68, 164));
 		COLORHM.put("7", new Color(84,252,28));
 		COLORHM.put("8", new Color(244,204,64));
 	}
