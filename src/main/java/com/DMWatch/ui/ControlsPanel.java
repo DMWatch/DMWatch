@@ -43,10 +43,11 @@ import net.runelite.client.util.LinkBrowser;
 // A copy of the controls from the `net.runelite.client.plugins.party.PartyPanel` class
 public class ControlsPanel extends JPanel
 {
-	private static final BufferedImage DISCORD_IMG = ImageUtil.loadImageResource(DMWatchPlugin.class, "discord-mark-white.png");
+	private static final BufferedImage DISCORD_IMG = ImageUtil.loadImageResource(DMWatchPlugin.class, "discord-mark-blue.png");
 	private static ImageIcon DISCORD_ICON;
 	private static ImageIcon DISCORD_HOVER_ICON;
 	private final JButton joinPartyButton = new JButton();
+	private final JLabel discordTextLabel = new JLabel();
 	private final DMWatchPlugin plugin;
 
 	public ControlsPanel(DMWatchPlugin plugin)
@@ -76,37 +77,40 @@ public class ControlsPanel extends JPanel
 			}
 		});
 
-		DISCORD_ICON = new ImageIcon(DISCORD_IMG);
-		DISCORD_HOVER_ICON = new ImageIcon(ImageUtil.alphaOffset(DISCORD_IMG, 0.53f));
-
 		c.gridx = 1;
 		c.gridy = 0;
+		this.add(discordTextLabel, c);
+		discordTextLabel.setText("Join the Discord");
 
-		JLabel helpButton = new JLabel(DISCORD_ICON);
+		c.gridx = 2;
+		c.gridy = 0;
+		DISCORD_ICON = new ImageIcon(ImageUtil.resizeImage(DISCORD_IMG, 24,18));
+		DISCORD_HOVER_ICON = new ImageIcon(ImageUtil.alphaOffset(ImageUtil.resizeImage(DISCORD_IMG, 24,18), 0.53f));
+		JLabel joinDiscordLabel = new JLabel(DISCORD_ICON);
 
-		this.add(helpButton, c);
-		helpButton.setToolTipText("Click to join our discord");
-		helpButton.addMouseListener(new MouseAdapter()
+		this.add(joinDiscordLabel, c);
+		joinDiscordLabel.setToolTipText("Click to join our discord");
+		joinDiscordLabel.addMouseListener(new MouseAdapter()
 		{
 			@Override
 			public void mousePressed(MouseEvent e)
 			{
 				if (SwingUtilities.isLeftMouseButton(e))
 				{
-					LinkBrowser.browse("https://discord.com/invite/dm");
+					LinkBrowser.browse("https://discord.gg/dm");
 				}
 			}
 
 			@Override
 			public void mouseEntered(MouseEvent e)
 			{
-				helpButton.setIcon(DISCORD_HOVER_ICON);
+				joinDiscordLabel.setIcon(DISCORD_HOVER_ICON);
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e)
 			{
-				helpButton.setIcon(DISCORD_ICON);
+				joinDiscordLabel.setIcon(DISCORD_ICON);
 			}
 		});
 

@@ -29,6 +29,7 @@ import com.DMWatch.DMWatchPlugin;
 import com.DMWatch.data.PartyPlayer;
 import com.google.common.base.Strings;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -114,12 +115,10 @@ public class PlayerBanner extends JPanel
 		expandIconUp = new ImageIcon(COLLAPSED_ICON);
 		if (expanded)
 		{
-//			this.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 100));
 			expandIcon.setIcon(expandIconUp);
 		}
 		else
 		{
-//			this.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 40));
 			expandIcon.setIcon(expandIconDown);
 		}
 
@@ -173,6 +172,10 @@ public class PlayerBanner extends JPanel
 		{
 			final String levelText = player.getCombatLevel() == -1 ? "" : " (level-" + player.getCombatLevel() + ")";
 			usernameLabel.setText(player.getUsername() + levelText);
+
+			Color color = getColorFromTier(player.getStatus());
+			if (color != null)
+			usernameLabel.setForeground(color);
 		}
 
 		expandIcon.setAlignmentX(Component.RIGHT_ALIGNMENT);
@@ -232,7 +235,6 @@ public class PlayerBanner extends JPanel
 		final BufferedImage resized = ImageUtil.resizeImage(player.getMember().getAvatar(), Constants.ITEM_SPRITE_WIDTH - 8, Constants.ITEM_SPRITE_HEIGHT - 4);
 		iconLabel.setIcon(new ImageIcon(resized));
 	}
-
 
 	public void refreshStats()
 	{
@@ -540,6 +542,34 @@ public class PlayerBanner extends JPanel
 		return "Unknown";
 	}
 
+	private Color getColorFromTier(String status)
+	{
+		Color color;
+		switch (status)
+		{
+			case "1":
+				color = new Color(252,242,4);
+				break;
+			case "4":
+				color = new Color(188,84,4);
+				break;
+			case "5":
+				color = new Color(236,236,220);
+				break;
+			case "8":
+				color = new Color(244,204,64);
+				break;
+			case "6":
+				color = new Color(37, 150, 190);
+				break;
+			case "7":
+				color = new Color(84,252,28);
+				break;
+			default:
+				color = null;
+		}
+		return color;
+	}
 
 	public void updateWorld(int world)
 	{

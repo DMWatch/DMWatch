@@ -96,6 +96,7 @@ public class DMWatchPlugin extends Plugin
 {
 	private static final String CHALLENGE = "Challenge in DM";
 	private static final String BASE_DIRECTORY = System.getProperty("user.home") + "/.runelite/";
+
 	private static final List<Integer> MENU_WIDGET_IDS = ImmutableList.of(
 		WidgetInfo.FRIENDS_LIST.getGroupId(),
 		WidgetInfo.IGNORE_LIST.getGroupId(),
@@ -107,51 +108,71 @@ public class DMWatchPlugin extends Plugin
 		WidgetInfo.CLAN_MEMBER_LIST.getGroupId(),
 		WidgetInfo.CLAN_GUEST_MEMBER_LIST.getGroupId()
 	);
+
 	private static final ImmutableList<String> AFTER_OPTIONS = ImmutableList.of(
 		"Message", "Add ignore", "Remove friend", "Delete", "Kick", "Reject"
 	);
+
 	private static final BufferedImage ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "icon.png");
+
 	@Getter
 	private final Map<Long, PartyPlayer> partyMembers = new HashMap<>();
+
 	@Inject
 	Gson gson;
+
 	@Inject
 	CaseManager caseManager;
+
 	@Inject
 	ClientThread clientThread;
+
 	@Inject
 	DMWatchInputListener hotkeyListener;
+
 	@Inject
 	KeyManager keyManager;
+
 	@Inject
 	ItemManager itemManager;
+
 	@Inject
 	SpriteManager spriteManager;
+
 	@Inject
 	private Client client;
+
 	@Inject
 	private DMWatchConfig config;
+
 	@Inject
 	private ChatMessageManager chatMessageManager;
+
 	@Inject
 	private MenuManager menuManager;
+
 	@Inject
 	private ScheduledExecutorService executor;
+
 	@Getter(AccessLevel.PACKAGE)
 	private BufferedImage reportButton;
+
 	@Inject
 	private WSClient wsClient;
+
 	@Getter(AccessLevel.PACKAGE)
 	@Setter(AccessLevel.PACKAGE)
 	private boolean hotKeyPressed;
 
 	@Inject
 	private PartyService partyService;
+
 	@Getter
 	private PartyPlayer myPlayer = null;
 
 	@Inject
 	private ClientToolbar clientToolbar;
+
 	@Inject
 	private PluginManager pluginManager;
 
@@ -163,7 +184,6 @@ public class DMWatchPlugin extends Plugin
 
 	@Inject
 	private PlayerMemberTileTierOverlay playerMemberTileTierOverlay;
-
 
 	// globals
 	private Instant lastLogout;

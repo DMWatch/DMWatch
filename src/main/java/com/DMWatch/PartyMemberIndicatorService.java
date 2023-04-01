@@ -31,17 +31,16 @@ public class PartyMemberIndicatorService
 	static
 	{
 		COLORHM = new HashMap<>();
-		COLORHM.put("0", Color.GREEN);
-		COLORHM.put("1", Color.GREEN);
+		COLORHM.put("0", new Color(234, 123, 91));
+		COLORHM.put("1", new Color(252,242,4));
 		COLORHM.put("2", Color.YELLOW);
 		COLORHM.put("3", Color.RED);
-		COLORHM.put("4", Color.BLUE);
-		COLORHM.put("5", Color.CYAN);
-		COLORHM.put("6", new Color(186, 85, 211));
-		COLORHM.put("7", new Color(186, 85, 211));
-		COLORHM.put("8", Color.BLACK);
+		COLORHM.put("4", new Color(188,84,4));
+		COLORHM.put("5", new Color(236,236,220));
+		COLORHM.put("6", new Color(37, 150, 190));
+		COLORHM.put("7", new Color(84,252,28));
+		COLORHM.put("8", new Color(244,204,64));
 	}
-
 
 	@Inject
 	private PartyMemberIndicatorService(Client client, DMWatchConfig config, DMWatchPlugin plugin)
@@ -67,12 +66,18 @@ public class PartyMemberIndicatorService
 			{
 				if (config.drawOnSelf() && plugin.getMyPlayer() != null)
 				{
-					consumer.accept(player, COLORHM.get(plugin.getMyPlayer().getStatus()));
+					if (COLORHM.containsKey(plugin.getMyPlayer().getStatus()))
+					{
+						consumer.accept(player, COLORHM.get(plugin.getMyPlayer().getStatus()));
+					}
 				}
 			}
 			else if (plugin.isInParty() && plugin.otherPlayerInParty(player.getName()))
 			{
-				consumer.accept(player, COLORHM.get(plugin.getPlayerTier(player.getName())));
+				if (COLORHM.containsKey(plugin.getPlayerTier(player.getName())))
+				{
+					consumer.accept(player, COLORHM.get(plugin.getPlayerTier(player.getName())));
+				}
 			}
 		}
 	}

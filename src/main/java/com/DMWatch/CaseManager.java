@@ -31,7 +31,6 @@ import okhttp3.Response;
 @Singleton
 public class CaseManager
 {
-
 	private static final HttpUrl DMWatch_LIST_URL = HttpUrl.parse("https://raw.githubusercontent.com/DMWatch/DMWatch/main/data/mixedlist.json");
 
 	private static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
