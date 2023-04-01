@@ -60,7 +60,8 @@ public class PlayerBanner extends JPanel
 {
 	private static final Dimension STAT_ICON_SIZE = new Dimension(18, 18);
 	private static final Dimension ICON_SIZE = new Dimension(Constants.ITEM_SPRITE_WIDTH - 6, Constants.ITEM_SPRITE_HEIGHT - 4);
-	private static final BufferedImage EXPAND_ICON = ImageUtil.loadImageResource(PlayerPanel.class, "expand.png");
+	private static final BufferedImage COLLAPSED_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "collapsed.png");
+	private static final BufferedImage EXPANDED_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "expanded.png");
 	@Getter
 	private final JPanel statsPanel = new JPanel();
 	@Getter
@@ -80,7 +81,9 @@ public class PlayerBanner extends JPanel
 	private static final BufferedImage TWITCH_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "twitch.png");
 	private static final BufferedImage KICK_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "kick.png");
 
+	@Getter
 	private final ImageIcon expandIconUp;
+	@Getter
 	private final ImageIcon expandIconDown;
 
 	@Setter
@@ -107,8 +110,8 @@ public class PlayerBanner extends JPanel
 		infoPanel.setBorder(new EmptyBorder(5, 0, 0, 0));
 		infoPanel.setOpaque(true);
 
-		expandIconDown = new ImageIcon(EXPAND_ICON);
-		expandIconUp = new ImageIcon(ImageUtil.rotateImage(EXPAND_ICON, Math.PI));
+		expandIconDown = new ImageIcon(EXPANDED_ICON);
+		expandIconUp = new ImageIcon(COLLAPSED_ICON);
 		if (expanded)
 		{
 //			this.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 100));
@@ -433,16 +436,20 @@ public class PlayerBanner extends JPanel
 		statsPanel.repaint();
 	}
 
-	public void hideIcon() {
-		if (worldLabel.getComponents().length != 0) {
+	public void hideIcon()
+	{
+		if (worldLabel.getComponents().length != 0)
+		{
 			worldLabel.remove(rankIcon);
 			worldLabel.revalidate();
 			worldLabel.repaint();
 		}
 	}
 
-	public void readdIcon(boolean isExpanded) {
-		if (worldLabel.getComponents().length == 0 && !isExpanded) {
+	public void readdIcon(boolean isExpanded)
+	{
+		if (worldLabel.getComponents().length == 0 && !isExpanded)
+		{
 			BufferedImage img = getImageFromTier(player.getStatus());
 			if (img != null)
 			{
@@ -459,7 +466,8 @@ public class PlayerBanner extends JPanel
 	private BufferedImage getImageFromTier(String status)
 	{
 		BufferedImage img = null;
-		switch (status) {
+		switch (status)
+		{
 			case "1":
 				img = SMILEY;
 				break;

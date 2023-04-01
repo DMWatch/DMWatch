@@ -20,6 +20,7 @@ import java.awt.image.BufferedImage;
 import java.security.MessageDigest;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -244,6 +245,14 @@ public class DMWatchPlugin extends Plugin
 		partyMembers.clear();
 		wsClient.unregisterMessage(DMPartyBatchedChange.class);
 		currentChange = new DMPartyBatchedChange();
+
+		if (isInParty()) {
+			final DMPartyBatchedChange cleanUserInfo = partyPlayerAsBatchedChange();
+			cleanUserInfo.setI(new int[0]);
+			cleanUserInfo.setE(new int[0]);
+			cleanUserInfo.setM(Collections.emptySet());
+			partyService.send(cleanUserInfo);
+		}
 	}
 
 	@Subscribe

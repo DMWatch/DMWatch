@@ -30,7 +30,6 @@ import com.DMWatch.data.GameItem;
 import com.DMWatch.data.PartyPlayer;
 import com.DMWatch.ui.equipment.EquipmentPanelSlot;
 import com.DMWatch.ui.equipment.PlayerEquipmentPanel;
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
@@ -103,6 +102,11 @@ public class PlayerPanel extends JPanel
 		JLabel expandIcon = this.banner.getExpandIcon();
 
 
+		final ImageIcon expandIconUp = banner.getExpandIconUp();
+
+		final ImageIcon expandIconDown = banner.getExpandIconDown();
+
+
 		final JMenuItem copyOpt = new JMenuItem("Copy IDs");
 		copyOpt.addActionListener(e ->
 		{
@@ -130,21 +134,21 @@ public class PlayerPanel extends JPanel
 					{
 						if (e.getButton() == MouseEvent.BUTTON1)
 						{
-							ImageIcon retrieve = (ImageIcon) expandIcon.getIcon();
-							BufferedImage buffered = (BufferedImage) retrieve.getImage();
-
 							showInfo = !showInfo;
 							if (showInfo)
 							{
 								banner.hideIcon();
 								banner.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, config.hideIDS() ? 80 : 100));
+								expandIcon.setIcon(expandIconUp);
+
 							}
 							else
 							{
 								banner.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 40));
 								banner.readdIcon(showInfo);
+								expandIcon.setIcon(expandIconDown);
+
 							}
-							expandIcon.setIcon(new ImageIcon(ImageUtil.rotateImage(buffered, Math.PI)));
 							updatePanel();
 						}
 					}
@@ -229,7 +233,7 @@ public class PlayerPanel extends JPanel
 
 		if (!showInfo)
 		{
-			updatePanel();
+//			updatePanel();
 			return;
 		}
 
@@ -269,44 +273,8 @@ public class PlayerPanel extends JPanel
 	public void updatePanel()
 	{
 		this.removeAll();
-		Color color;
+		Color color = new Color(87, 80, 64);
 		int thickness = 2;
-
-		switch (player.getStatus())
-		{
-			case "0": // unregistered
-				color = Color.GREEN;
-				break;
-			case "1": // registered
-				color = Color.GREEN;
-				break;
-			case "2": // accused
-				color = Color.YELLOW;
-				thickness = 4;
-				break;
-			case "3": // scammer
-				color = Color.RED;
-				thickness = 4;
-				break;
-			case "4": // trusted
-				color = Color.BLUE;
-				break;
-			case "5": // developer (idk what else)
-				color = Color.CYAN;
-				break;
-			case "6": // streamer - twitch
-				color = new Color(186, 85, 211);
-				break;
-			case "7": // streamer - kick
-				color = new Color(186, 85, 211);
-				break;
-			case "8": // top g
-				color = Color.BLACK;
-				break;
-			default: // unknown (shouldnt ever be this)
-				color = Color.ORANGE;
-				break;
-		}
 
 		if (showInfo)
 		{
@@ -338,17 +306,15 @@ public class PlayerPanel extends JPanel
 			add(view);
 		}
 
-		if (!showInfo) {
+		if (!showInfo)
+		{
 			banner.getStatsPanel().setVisible(false);
 			banner.getInfoPanel().setVisible(false);
-		} else {
+		}
+		else
+		{
 			banner.getStatsPanel().setVisible(true);
-			if (config.hideIDS())
-			{
-				banner.getInfoPanel().setVisible(false);
-			} else {
-				banner.getInfoPanel().setVisible(true);
-			}
+			banner.getInfoPanel().setVisible(!config.hideIDS());
 		}
 
 		revalidate();

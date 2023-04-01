@@ -26,28 +26,13 @@ public class PartyMemberIndicatorService
 	private final DMWatchConfig config;
 	private final DMWatchPlugin plugin;
 
+
 	@Inject
 	private PartyMemberIndicatorService(Client client, DMWatchConfig config, DMWatchPlugin plugin)
 	{
 		this.config = config;
 		this.client = client;
 		this.plugin = plugin;
-	}
-
-	final static HashMap<String, Color> COLORHM;
-
-	static
-	{
-		COLORHM = new HashMap<>();
-		COLORHM.put("0", Color.GREEN);
-		COLORHM.put("1", Color.GREEN);
-		COLORHM.put("2", Color.YELLOW);
-		COLORHM.put("3", Color.RED);
-		COLORHM.put("4", Color.BLUE);
-		COLORHM.put("5", Color.CYAN);
-		COLORHM.put("6", new Color(186, 85, 211));
-		COLORHM.put("7", new Color(186, 85, 211));
-		COLORHM.put("8", Color.BLACK);
 	}
 
 	public void forEachPlayer(final BiConsumer<Player, Color> consumer)
@@ -64,14 +49,14 @@ public class PartyMemberIndicatorService
 
 			if (player == localPlayer)
 			{
-				if (config.drawOnSelf())
+				if (config.drawOnSelf() && plugin.getMyPlayer() != null)
 				{
-					consumer.accept(player, COLORHM.get(plugin.getMyPlayer().getStatus()));
+					consumer.accept(player, new Color(87, 80, 64));
 				}
 			}
 			else if (plugin.isInParty() && plugin.otherPlayerInParty(player.getName()))
 			{
-				consumer.accept(player, COLORHM.get(plugin.getPlayerTier(player.getName())));
+				consumer.accept(player, new Color(87, 80, 64));
 			}
 		}
 	}
