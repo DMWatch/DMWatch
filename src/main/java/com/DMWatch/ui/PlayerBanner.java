@@ -175,7 +175,9 @@ public class PlayerBanner extends JPanel
 
 			Color color = getColorFromTier(player.getStatus());
 			if (color != null)
-			usernameLabel.setForeground(color);
+			{
+				usernameLabel.setForeground(color);
+			}
 		}
 
 		expandIcon.setAlignmentX(Component.RIGHT_ALIGNMENT);
@@ -194,8 +196,11 @@ public class PlayerBanner extends JPanel
 			if (img != null)
 			{
 				if (player.getStatus().equals("6") || player.getStatus().equals("7"))
+				{
 					rankIcon.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
-				else {
+				}
+				else
+				{
 					rankIcon.setIcon(new ImageIcon(img));
 				}
 				worldLabel.add(rankIcon, BorderLayout.WEST);
@@ -460,8 +465,11 @@ public class PlayerBanner extends JPanel
 			if (img != null)
 			{
 				if (player.getStatus().equals("6") || player.getStatus().equals("7"))
+				{
 					rankIcon.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
-				else {
+				}
+				else
+				{
 					rankIcon.setIcon(new ImageIcon(img));
 				}
 				worldLabel.add(rankIcon, BorderLayout.WEST);
@@ -548,22 +556,22 @@ public class PlayerBanner extends JPanel
 		switch (status)
 		{
 			case "1":
-				color = new Color(252,242,4);
+				color = new Color(252, 242, 4);
 				break;
 			case "4":
-				color = new Color(188,84,4);
+				color = new Color(188, 84, 4);
 				break;
 			case "5":
-				color = new Color(236,236,220);
+				color = new Color(236, 236, 220);
 				break;
 			case "8":
-				color = new Color(244,204,64);
+				color = new Color(244, 204, 64);
 				break;
 			case "6":
-				color = new Color(37, 150, 190);
+				color = new Color(104, 68, 164);
 				break;
 			case "7":
-				color = new Color(84,252,28);
+				color = new Color(84, 252, 28);
 				break;
 			default:
 				color = null;
