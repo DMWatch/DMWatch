@@ -183,15 +183,19 @@ public class PlayerBanner extends JPanel
 		worldLabel.setHorizontalTextPosition(JLabel.RIGHT);
 		worldLabel.setText("Not logged in");
 
-		rankIcon.setAlignmentX(Component.CENTER_ALIGNMENT);
+		rankIcon.setAlignmentX(Component.RIGHT_ALIGNMENT);
 		BufferedImage img = getImageFromTier(player.getStatus());
 
 		if (!expanded)
 		{
 			if (img != null)
 			{
-				rankIcon.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
-				worldLabel.add(rankIcon, BorderLayout.CENTER);
+				if (player.getStatus().equals("6") || player.getStatus().equals("7"))
+					rankIcon.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
+				else {
+					rankIcon.setIcon(new ImageIcon(img));
+				}
+				worldLabel.add(rankIcon, BorderLayout.WEST);
 			}
 		}
 
@@ -272,7 +276,7 @@ public class PlayerBanner extends JPanel
 		panel.add(textLabel, BorderLayout.CENTER);
 		panel.setOpaque(false);
 
-		if (includeHoverText)
+		if (includeHoverText && hoverOverText.length() != 1)
 		{
 			panel.setToolTipText(hoverOverText);
 		}
@@ -317,11 +321,11 @@ public class PlayerBanner extends JPanel
 	private void setBufferedIcon(String statLabelKey, final BufferedImage img)
 	{
 		final JLabel label = iconLabels.get(statLabelKey);
-		if (!player.getStatus().equals("5") && !player.getStatus().equals("6"))
+		if (!player.getStatus().equals("6") && !player.getStatus().equals("7"))
 		{
 			SwingUtilities.invokeLater(() ->
 			{
-				ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
+				ImageIcon ic = new ImageIcon(img);
 				label.setIcon(ic);
 				label.revalidate();
 				label.repaint();
@@ -334,36 +338,39 @@ public class PlayerBanner extends JPanel
 			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
 			ImageIcon hoverIC = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
 			label.setIcon(ic);
-			SwingUtilities.invokeLater(() ->
+			if (player.getReason().length() != 1)
 			{
-				if (label.getMouseListeners().length == 0)
+				SwingUtilities.invokeLater(() ->
 				{
-					label.addMouseListener(new MouseAdapter()
+					if (label.getMouseListeners().length == 0)
 					{
-						@Override
-						public void mousePressed(MouseEvent e)
+						label.addMouseListener(new MouseAdapter()
 						{
-							if (SwingUtilities.isLeftMouseButton(e))
+							@Override
+							public void mousePressed(MouseEvent e)
 							{
-								LinkBrowser.browse("https://www.twitch.tv/" + player.getReason());
+								if (SwingUtilities.isLeftMouseButton(e))
+								{
+									LinkBrowser.browse("https://www.twitch.tv/" + player.getReason());
+								}
 							}
-						}
 
-						@Override
-						public void mouseEntered(MouseEvent e)
-						{
-							label.setIcon(hoverIC);
-						}
+							@Override
+							public void mouseEntered(MouseEvent e)
+							{
+								label.setIcon(hoverIC);
+							}
 
-						@Override
-						public void mouseExited(MouseEvent e)
-						{
-							label.setIcon(ic);
-						}
-					});
-					label.revalidate();
-				}
-			});
+							@Override
+							public void mouseExited(MouseEvent e)
+							{
+								label.setIcon(ic);
+							}
+						});
+						label.revalidate();
+					}
+				});
+			}
 		}
 
 		if (player.getStatus().equals("7"))
@@ -372,36 +379,39 @@ public class PlayerBanner extends JPanel
 			ImageIcon hoverIC = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
 			label.setIcon(ic);
 
-			SwingUtilities.invokeLater(() ->
+			if (player.getReason().length() != 1)
 			{
-				if (label.getMouseListeners().length == 0)
+				SwingUtilities.invokeLater(() ->
 				{
-					label.addMouseListener(new MouseAdapter()
+					if (label.getMouseListeners().length == 0)
 					{
-						@Override
-						public void mousePressed(MouseEvent e)
+						label.addMouseListener(new MouseAdapter()
 						{
-							if (SwingUtilities.isLeftMouseButton(e))
+							@Override
+							public void mousePressed(MouseEvent e)
 							{
-								LinkBrowser.browse("https://www.kick.com/" + player.getReason());
+								if (SwingUtilities.isLeftMouseButton(e))
+								{
+									LinkBrowser.browse("https://www.kick.com/" + player.getReason());
+								}
 							}
-						}
 
-						@Override
-						public void mouseEntered(MouseEvent e)
-						{
-							label.setIcon(hoverIC);
-						}
+							@Override
+							public void mouseEntered(MouseEvent e)
+							{
+								label.setIcon(hoverIC);
+							}
 
-						@Override
-						public void mouseExited(MouseEvent e)
-						{
-							label.setIcon(ic);
-						}
-					});
-					label.revalidate();
-				}
-			});
+							@Override
+							public void mouseExited(MouseEvent e)
+							{
+								label.setIcon(ic);
+							}
+						});
+						label.revalidate();
+					}
+				});
+			}
 		}
 	}
 
@@ -421,12 +431,12 @@ public class PlayerBanner extends JPanel
 	}
 
 	// TODO make this more generic
-	public void setStreamerIcon(boolean b, BufferedImage bufferedImage, SpriteManager spriteManager)
+	public void setStreamerIcon(String rank, SpriteManager spriteManager)
 	{
-		if (b)
+		BufferedImage img = getImageFromTier(rank);
+		if (img != null)
 		{
-			setBufferedIcon("DMWatchStatus", bufferedImage);
-
+			setBufferedIcon("DMWatchStatus", img);
 		}
 		else
 		{
@@ -453,8 +463,12 @@ public class PlayerBanner extends JPanel
 			BufferedImage img = getImageFromTier(player.getStatus());
 			if (img != null)
 			{
-				rankIcon.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
-				worldLabel.add(rankIcon, BorderLayout.CENTER);
+				if (player.getStatus().equals("6") || player.getStatus().equals("7"))
+					rankIcon.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
+				else {
+					rankIcon.setIcon(new ImageIcon(img));
+				}
+				worldLabel.add(rankIcon, BorderLayout.WEST);
 			}
 
 			worldLabel.revalidate();
@@ -465,7 +479,7 @@ public class PlayerBanner extends JPanel
 
 	private BufferedImage getImageFromTier(String status)
 	{
-		BufferedImage img = null;
+		BufferedImage img;
 		switch (status)
 		{
 			case "1":

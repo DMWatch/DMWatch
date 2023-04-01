@@ -221,19 +221,10 @@ public class PlayerPanel extends JPanel
 
 		// TODO rename these methods to be way more clear/genericly recreate them
 		banner.setVenged(player.getIsVenged() == 1, spriteManager);
-		if (player.getStatus().equals("6"))
-		{
-			banner.setStreamerIcon(true, TWITCH_ICON, spriteManager);
-		}
-		else
-		{
-			banner.setStreamerIcon(player.getStatus().equals("7"), KICK_ICON, spriteManager);
-		}
-
+		banner.setStreamerIcon(player.getStatus(), spriteManager);
 
 		if (!showInfo)
 		{
-//			updatePanel();
 			return;
 		}
 
