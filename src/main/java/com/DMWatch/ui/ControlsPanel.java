@@ -26,6 +26,8 @@
 package com.DMWatch.ui;
 
 import com.DMWatch.DMWatchPlugin;
+import java.awt.Component;
+import java.awt.Container;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -40,36 +42,31 @@ import javax.swing.SwingUtilities;
 import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.LinkBrowser;
 
-// A copy of the controls from the `net.runelite.client.plugins.party.PartyPanel` class
 public class ControlsPanel extends JPanel
 {
 	private static final BufferedImage DISCORD_IMG = ImageUtil.loadImageResource(DMWatchPlugin.class, "discord-mark-blue.png");
+	private static final BufferedImage FRIENDS_CHAT_ICON_IMG = ImageUtil.loadImageResource(DMWatchPlugin.class, "friends-chat-icon.png");
 	private static ImageIcon DISCORD_ICON;
 	private static ImageIcon DISCORD_HOVER_ICON;
 	private final JButton joinPartyButton = new JButton();
 	private final JLabel discordTextLabel = new JLabel();
 	private final DMWatchPlugin plugin;
 
+	private static final Insets insets = new Insets(0, 0, 0, 0);
+
 	public ControlsPanel(DMWatchPlugin plugin)
 	{
 		this.plugin = plugin;
 		this.setLayout(new GridBagLayout());
 
-		GridBagConstraints c = new GridBagConstraints();
-		c.fill = GridBagConstraints.HORIZONTAL;
-		c.insets = new Insets(0, 2, 4, 2);
 
-		c.gridx = 0;
-		c.gridy = 0;
-		this.add(joinPartyButton, c);
-
-		joinPartyButton.setText("Join DMWatch");
+		joinPartyButton.setText("Join DMWatch Party");
 		joinPartyButton.setFocusable(false);
 		joinPartyButton.addActionListener(e ->
 		{
-			if (!plugin.isInParty() || !plugin.getPartyPassphrase().equals("DMW"))
+			if (!plugin.isInParty() || !plugin.getPartyPassphrase().equals("DMWatch"))
 			{
-				plugin.changeParty("DMW");
+				plugin.changeParty("DMWatch");
 			}
 			else
 			{
@@ -77,43 +74,22 @@ public class ControlsPanel extends JPanel
 			}
 		});
 
-		c.gridx = 1;
-		c.gridy = 0;
-		this.add(discordTextLabel, c);
-		discordTextLabel.setText("Join the Discord");
+		JLabel inGameFC = new JLabel();
+		inGameFC.setText("DMWatch");
+		inGameFC.setToolTipText("Join DMWatch chat in game!");
+		inGameFC.setIcon(new ImageIcon(FRIENDS_CHAT_ICON_IMG));
 
-		c.gridx = 2;
-		c.gridy = 0;
 		DISCORD_ICON = new ImageIcon(ImageUtil.resizeImage(DISCORD_IMG, 24,18));
 		DISCORD_HOVER_ICON = new ImageIcon(ImageUtil.alphaOffset(ImageUtil.resizeImage(DISCORD_IMG, 24,18), 0.53f));
 
-		JLabel joinDiscordLabel = new JLabel(DISCORD_ICON);
-		this.add(joinDiscordLabel, c);
-		joinDiscordLabel.setToolTipText("Click to join our discord");
-		joinDiscordLabel.addMouseListener(new MouseAdapter()
-		{
-			@Override
-			public void mousePressed(MouseEvent e)
-			{
-				if (SwingUtilities.isLeftMouseButton(e))
-				{
-					LinkBrowser.browse("https://discord.gg/dm");
-				}
-			}
+		discordTextLabel.setIcon(DISCORD_ICON);
 
-			@Override
-			public void mouseEntered(MouseEvent e)
-			{
-				joinDiscordLabel.setIcon(DISCORD_HOVER_ICON);
-			}
+		addComponent(this, discordTextLabel,0 , 0, 1, 1, GridBagConstraints.WEST, GridBagConstraints.WEST);
+		addComponent(this, inGameFC,2 , 0, 2, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH);
+		addComponent(this, joinPartyButton,0 , 1, 3, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH);
 
-			@Override
-			public void mouseExited(MouseEvent e)
-			{
-				joinDiscordLabel.setIcon(DISCORD_ICON);
-			}
-		});
-
+		discordTextLabel.setText("Join the Discord");
+		discordTextLabel.setToolTipText("Click to join our discord!");
 		discordTextLabel.addMouseListener(new MouseAdapter()
 		{
 			@Override
@@ -127,23 +103,29 @@ public class ControlsPanel extends JPanel
 			@Override
 			public void mouseEntered(MouseEvent e)
 			{
-				joinDiscordLabel.setIcon(DISCORD_HOVER_ICON);
+				discordTextLabel.setIcon(DISCORD_HOVER_ICON);
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e)
 			{
-				joinDiscordLabel.setIcon(DISCORD_ICON);
+				discordTextLabel.setIcon(DISCORD_ICON);
 			}
 		});
-
 
 		updateControls();
 	}
 
 	public void updateControls()
 	{
-		joinPartyButton.setText(plugin.isInParty() && plugin.getPartyPassphrase().equals("DMW") ? "Leave DMW" : "Join DMW");
+		joinPartyButton.setText(plugin.isInParty() && plugin.getPartyPassphrase().equals("DMWatch") ? "Leave DMWatch Party" : "Join DMWatch Party");
 		joinPartyButton.revalidate();
+	}
+
+	private void addComponent(Container container, Component component, int gridx, int gridy,
+							  int gridwidth, int gridheight, int anchor, int fill) {
+		GridBagConstraints gbc = new GridBagConstraints(gridx, gridy, gridwidth, gridheight, 1.0, 1.0,
+			anchor, fill, insets, 0, 0);
+		container.add(component, gbc);
 	}
 }

@@ -37,6 +37,7 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -170,7 +171,7 @@ class PartyPanel extends PluginPanel
 		// Sort by their RSN first; If it doesn't exist sort by their Discord name instead
 		final List<PartyPlayer> players = plugin.getPartyMembers().values()
 			.stream()
-			.sorted(Comparator.comparing(o -> Strings.isNullOrEmpty(o.getUsername()) ? o.getMember().getDisplayName() : o.getUsername()))
+			.sorted(Comparator.comparing(o -> orderByTier(o.getStatus())))
 			.collect(Collectors.toList());
 
 		for (final PartyPlayer player : players)
@@ -196,6 +197,33 @@ class PartyPanel extends PluginPanel
 
 		basePanel.revalidate();
 		basePanel.repaint();
+	}
+
+	private int orderByTier(String tier)
+	{
+		switch (tier)
+		{
+			case "0":
+				return 6; // unknown
+			case "1":
+				return 5; // smiley
+			case "2":
+				return 101; // accused
+			case "3":
+				return 100; // scammer
+			case "4":
+				return 3; // lt
+			case "5":
+				return 2; // captain
+			case "8":
+				return 1; // general
+			case "6":
+				return 4; // twitch
+			case "7":
+				return 4; // kick
+			default: // ?
+				return 10000;
+		}
 	}
 
 	void drawPlayerPanel(PartyPlayer player)
