@@ -614,23 +614,27 @@ public class DMWatchPlugin extends Plugin
 
 			if (target != null)
 			{
-				partyService.changeParty(getPrivateDM(target).toLowerCase().replaceAll(" ", ""));
+				partyService.changeParty(getPrivateDM(target));
 			}
 		}
 	}
 
 	private String getPrivateDM(String otherRSN)
 	{
-		String myName = Text.toJagexName(client.getLocalPlayer().getName().toLowerCase());
-		int compare = myName.compareTo(otherRSN);
+		if (client.getLocalPlayer() == null || client.getLocalPlayer().getName() == null)
+			return "Error";
 
-		if (compare > 0)
+		String theirName = Text.toJagexName(otherRSN).replaceAll(" ", "").toLowerCase();
+		String myName = Text.toJagexName(client.getLocalPlayer().getName()).replaceAll(" ", "").toLowerCase();
+		int compare = myName.compareTo(theirName);
+
+		if (compare < 0)
 		{
-			return myName + otherRSN;
+			return myName + theirName;
 		}
 		else
 		{
-			return otherRSN + myName;
+			return theirName + myName;
 		}
 	}
 
@@ -826,6 +830,7 @@ public class DMWatchPlugin extends Plugin
 
 		if (event.getVarbitId() == Varbits.VENGEANCE_ACTIVE)
 		{
+			myPlayer.setIsVenged(event.getValue());
 			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.V, event.getValue()));
 		}
 	}
@@ -1225,6 +1230,13 @@ public class DMWatchPlugin extends Plugin
 
 	public String getPlayerTier(String rsn)
 	{
+		// use the case manager first
+		Case c = caseManager.get(rsn);
+		if (c != null) {
+			return c.getStatus();
+		}
+
+		// rely on party tier second
 		for (Long id : partyMembers.keySet())
 		{
 			if (partyMembers.get(id).getUsername().equals(rsn))
