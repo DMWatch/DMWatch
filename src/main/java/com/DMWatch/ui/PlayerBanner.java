@@ -345,7 +345,8 @@ public class PlayerBanner extends JPanel
 		if (player.getStatus().equals("6"))
 		{
 			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
-			ImageIcon hoverIC = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
+			ImageIcon hoverIC  = new ImageIcon(ImageUtil.alphaOffset(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height), 0.53f));
+
 			label.setIcon(ic);
 			if (player.getReason().length() != 1)
 			{
@@ -385,7 +386,7 @@ public class PlayerBanner extends JPanel
 		if (player.getStatus().equals("7"))
 		{
 			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
-			ImageIcon hoverIC = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
+			ImageIcon hoverIC = new ImageIcon(ImageUtil.alphaOffset(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height), 0.53f));
 			label.setIcon(ic);
 
 			if (player.getReason().length() != 1)
