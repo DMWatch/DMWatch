@@ -1080,7 +1080,7 @@ public class DMWatchPlugin extends Plugin
 				else
 				{
 					response.append(ChatColorType.NORMAL)
-						.append(".");
+						.append("].");
 				}
 			}
 			else

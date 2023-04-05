@@ -561,6 +561,12 @@ public class PlayerBanner extends JPanel
 			case "1":
 				color = new Color(252, 242, 4);
 				break;
+			case "2":
+				color = Color.RED;
+				break;
+			case "3":
+				color = Color.RED;
+				break;
 			case "4":
 				color = new Color(188, 84, 4);
 				break;

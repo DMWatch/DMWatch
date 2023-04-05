@@ -1,8 +1,9 @@
 package com.DMWatch;
 
 import com.google.gson.annotations.SerializedName;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,7 +12,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class Case
 {
-	private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("MMM d, yyyy");
+	private static final DateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
 	// "Stella"
 	@SerializedName("display_rsn")
@@ -39,6 +40,6 @@ public class Case
 
 	public String niceDate()
 	{
-		return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate().format(DATE_FORMAT);
+		return DateFormat.format(date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
 	}
 }
