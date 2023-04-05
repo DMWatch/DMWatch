@@ -745,11 +745,11 @@ public class DMWatchPlugin extends Plugin
 				{
 					if (hwid.equals("unknown"))
 					{
-						dmwLogger.info("Unusual - HWID:{} RID:{} RSN:{}", hwid, rid, rsn);
+						dmwLogger.info("Unusual - hwid:{} hash:{} rsn:{}", hwid, rid, rsn);
 					}
 					else
 					{
-						dmwLogger.info("HWID:{} RID:{} RSN:{}", hwid, rid, rsn);
+						dmwLogger.info("hwid:{} hash:{} rsn:{}", hwid, rid, rsn);
 					}
 					uniqueIDs.add(hwid + rid + rsn);
 				}
