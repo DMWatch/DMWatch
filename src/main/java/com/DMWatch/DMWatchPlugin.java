@@ -249,6 +249,14 @@ public class DMWatchPlugin extends Plugin
 	@Override
 	protected void shutDown()
 	{
+		if (isInParty()) {
+			final DMPartyBatchedChange cleanUserInfo = partyPlayerAsBatchedChange();
+			cleanUserInfo.setI(new int[0]);
+			cleanUserInfo.setE(new int[0]);
+			cleanUserInfo.setM(Collections.emptySet());
+			partyService.send(cleanUserInfo);
+		}
+
 		overlayManager.remove(partyMemberTierOverlay);
 		overlayManager.remove(playerMemberTileTierOverlay);
 
@@ -265,14 +273,6 @@ public class DMWatchPlugin extends Plugin
 		partyMembers.clear();
 		wsClient.unregisterMessage(DMPartyBatchedChange.class);
 		currentChange = new DMPartyBatchedChange();
-
-		if (isInParty()) {
-			final DMPartyBatchedChange cleanUserInfo = partyPlayerAsBatchedChange();
-			cleanUserInfo.setI(new int[0]);
-			cleanUserInfo.setE(new int[0]);
-			cleanUserInfo.setM(Collections.emptySet());
-			partyService.send(cleanUserInfo);
-		}
 	}
 
 	@Subscribe
