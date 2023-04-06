@@ -56,18 +56,6 @@ public interface DMWatchConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 6,
-		keyName = "useHotkey",
-		name = "Require Shift-Click",
-		description = "Require Shift-Right-Click to view Challenge in DM option in menus",
-		section = MENU_SECTION
-	)
-	default boolean useHotkey()
-	{
-		return false;
-	}
-
-	@ConfigItem(
 		position = 100,
 		keyName = "drawOnSelf",
 		name = "Draw own color",
@@ -102,17 +90,6 @@ public interface DMWatchConfig extends Config
 	default boolean drawTiles()
 	{
 		return false;
-	}
-
-	@ConfigItem(
-		position = 7,
-		keyName = PLAYER_TEXT_COLOR,
-		name = "Highlight color",
-		description = "Allows you to change the color of DMW members in most player lists"
-	)
-	default Color playerTextColor()
-	{
-		return new Color(255, 77, 0);
 	}
 
 	@ConfigItem(

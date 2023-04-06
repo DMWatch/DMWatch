@@ -27,7 +27,6 @@ package com.DMWatch;
 import com.DMWatch.data.PartyPlayer;
 import com.DMWatch.ui.ControlsPanel;
 import com.DMWatch.ui.PlayerPanel;
-import com.google.common.base.Strings;
 import com.google.inject.Inject;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -37,7 +36,6 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -171,7 +169,7 @@ class PartyPanel extends PluginPanel
 		// Sort by their RSN first; If it doesn't exist sort by their Discord name instead
 		final List<PartyPlayer> players = plugin.getPartyMembers().values()
 			.stream()
-			.sorted(Comparator.comparing(o -> orderByTier(o.getStatus())))
+			.sorted(Comparator.comparing(o -> orderByTier(o.getStatus(), o.getWorld())))
 			.collect(Collectors.toList());
 
 		for (final PartyPlayer player : players)
@@ -199,8 +197,11 @@ class PartyPanel extends PluginPanel
 		basePanel.repaint();
 	}
 
-	private int orderByTier(String tier)
+	private int orderByTier(String tier, int world)
 	{
+		if (world == 0) {
+			return 1000;
+		}
 		switch (tier)
 		{
 			case "0":

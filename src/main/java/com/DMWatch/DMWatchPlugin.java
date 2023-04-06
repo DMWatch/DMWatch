@@ -16,7 +16,10 @@ import com.google.common.collect.ImmutableList;
 import com.google.gson.Gson;
 import com.google.inject.Inject;
 import com.google.inject.Provides;
+import java.awt.Color;
 import java.awt.image.BufferedImage;
+import java.net.SocketException;
+import java.net.UnknownHostException;
 import java.security.MessageDigest;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -32,7 +35,6 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import lombok.AccessLevel;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
@@ -47,7 +49,6 @@ import net.runelite.api.SpriteID;
 import net.runelite.api.Varbits;
 import net.runelite.api.events.ClanMemberJoined;
 import net.runelite.api.events.CommandExecuted;
-import net.runelite.api.events.FocusChanged;
 import net.runelite.api.events.FriendsChatMemberJoined;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
@@ -128,12 +129,6 @@ public class DMWatchPlugin extends Plugin
 	ClientThread clientThread;
 
 	@Inject
-	DMWatchInputListener hotkeyListener;
-
-	@Inject
-	KeyManager keyManager;
-
-	@Inject
 	ItemManager itemManager;
 
 	@Inject
@@ -159,10 +154,6 @@ public class DMWatchPlugin extends Plugin
 
 	@Inject
 	private WSClient wsClient;
-
-	@Getter(AccessLevel.PACKAGE)
-	@Setter(AccessLevel.PACKAGE)
-	private boolean hotKeyPressed;
 
 	@Inject
 	private PartyService partyService;
@@ -240,7 +231,6 @@ public class DMWatchPlugin extends Plugin
 			pluginManager.setPluginEnabled(partyPlugin.get(), true);
 		}
 
-		keyManager.registerKeyListener(hotkeyListener);
 		spriteManager.getSpriteAsync(SpriteID.CHATBOX_REPORT_BUTTON, 0, s -> reportButton = s);
 		caseManager.refresh(this::colorAll);
 		lastLogout = Instant.now();
@@ -269,7 +259,6 @@ public class DMWatchPlugin extends Plugin
 			menuManager.removePlayerMenuItem(CHALLENGE);
 		}
 
-		keyManager.unregisterKeyListener(hotkeyListener);
 		partyMembers.clear();
 		wsClient.unregisterMessage(DMPartyBatchedChange.class);
 		currentChange = new DMPartyBatchedChange();
@@ -341,8 +330,13 @@ public class DMWatchPlugin extends Plugin
 			myPlayer.setWorld(world);
 			myPlayer.setIsVenged(0);
 
-			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.W, myPlayer.getWorld()));
-			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.V, myPlayer.getIsVenged()));
+			if (isInParty()) {
+				final DMPartyBatchedChange cleanUserInfo = partyPlayerAsBatchedChange();
+				cleanUserInfo.setI(new int[0]);
+				cleanUserInfo.setE(new int[0]);
+				cleanUserInfo.setM(Collections.emptySet());
+				partyService.send(cleanUserInfo);
+			}
 
 			if (currentChange.isValid())
 			{
@@ -366,7 +360,7 @@ public class DMWatchPlugin extends Plugin
 			return;
 		}
 
-		if (lastLogout != null && lastLogout.isBefore(Instant.now().minus(30, ChronoUnit.MINUTES))
+		if (lastLogout != null && lastLogout.isBefore(Instant.now().minus(10, ChronoUnit.MINUTES))
 			&& partyService.isInParty())
 		{
 			log.info("Leaving party due to inactivity");
@@ -467,15 +461,6 @@ public class DMWatchPlugin extends Plugin
 		}
 	}
 
-	@Subscribe
-	public void onFocusChanged(FocusChanged focusChanged)
-	{
-		if (!focusChanged.isFocused())
-		{
-			hotKeyPressed = false;
-		}
-	}
-
 	private void colorAll()
 	{
 		clientThread.invokeLater(() -> {
@@ -503,11 +488,6 @@ public class DMWatchPlugin extends Plugin
 		String option = event.getOption();
 
 		if (!MENU_WIDGET_IDS.contains(groupId) || !AFTER_OPTIONS.contains(option))
-		{
-			return;
-		}
-
-		if (!config.menuOption() || (!hotKeyPressed && config.useHotkey()))
 		{
 			return;
 		}
@@ -660,6 +640,11 @@ public class DMWatchPlugin extends Plugin
 		if (!isInParty() || client.getLocalPlayer() == null || partyService.getLocalMember() == null)
 		{
 			return;
+		}
+
+		if (partyMembers.size() > 1)
+		{
+			clientThread.invoke(() -> SwingUtilities.invokeLater(() -> panel.renderSidebar()));
 		}
 
 		// To reduce server load we should only process changes every X ticks
@@ -1184,13 +1169,17 @@ public class DMWatchPlugin extends Plugin
 				continue;
 			}
 
-			Case rwCase = caseManager.get(player.getText());
-			if (rwCase == null)
+			Case dmwCase = caseManager.get(player.getText());
+			if (dmwCase == null)
 			{
 				continue;
 			}
 
-			player.setTextColor(config.playerTextColor().getRGB());
+			if (dmwCase.getStatus().equals("3") || dmwCase.getStatus().equals("2"))
+			{
+				player.setTextColor(Color.RED.getRGB());
+			}
+
 			player.revalidate();
 		}
 	}

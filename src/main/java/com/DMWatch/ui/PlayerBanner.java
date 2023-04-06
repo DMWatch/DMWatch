@@ -81,6 +81,7 @@ public class PlayerBanner extends JPanel
 	private static final BufferedImage LIEUTENANT = ImageUtil.loadImageResource(DMWatchPlugin.class, "lieutenant.png");
 	private static final BufferedImage TWITCH_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "twitch.png");
 	private static final BufferedImage KICK_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "kick.png");
+	private static final BufferedImage SCAMMER_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "scammer.png");
 
 	@Getter
 	private final ImageIcon expandIconUp;
@@ -197,7 +198,7 @@ public class PlayerBanner extends JPanel
 		{
 			if (img != null)
 			{
-				if (player.getStatus().equals("6") || player.getStatus().equals("7"))
+				if (player.getStatus().equals("3") || player.getStatus().equals("6") || player.getStatus().equals("7"))
 				{
 					rankIcon.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
 				}
@@ -330,7 +331,7 @@ public class PlayerBanner extends JPanel
 	private void setBufferedIcon(String statLabelKey, final BufferedImage img)
 	{
 		final JLabel label = iconLabels.get(statLabelKey);
-		if (!player.getStatus().equals("6") && !player.getStatus().equals("7"))
+		if (!player.getStatus().equals("6") && !player.getStatus().equals("7") && !player.getStatus().equals("3"))
 		{
 			SwingUtilities.invokeLater(() ->
 			{
@@ -340,6 +341,12 @@ public class PlayerBanner extends JPanel
 				label.repaint();
 			});
 			return;
+		}
+
+		if (player.getStatus().equals("3"))
+		{
+			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
+			label.setIcon(ic);
 		}
 
 		if (player.getStatus().equals("6"))
@@ -467,7 +474,7 @@ public class PlayerBanner extends JPanel
 			BufferedImage img = getImageFromTier(player.getStatus());
 			if (img != null)
 			{
-				if (player.getStatus().equals("6") || player.getStatus().equals("7"))
+				if (player.getStatus().equals("3") || player.getStatus().equals("6") || player.getStatus().equals("7"))
 				{
 					rankIcon.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
 				}
@@ -505,6 +512,9 @@ public class PlayerBanner extends JPanel
 				break;
 			case "7":
 				img = KICK_ICON;
+				break;
+			case "3":
+				img = SCAMMER_ICON;
 				break;
 			default:
 				img = null;
