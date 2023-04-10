@@ -111,7 +111,7 @@ class PartyPanel extends PluginPanel
 		passphrasePanel.add(passphraseTopLabel);
 		passphrasePanel.add(passphraseLabel);
 
-		controlsPanel = new ControlsPanel(plugin);
+		controlsPanel = new ControlsPanel(plugin, config);
 		topPanel.add(controlsPanel);
 		topPanel.add(passphrasePanel);
 

@@ -1,6 +1,5 @@
 package com.DMWatch;
 
-import java.awt.Color;
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
@@ -85,7 +84,6 @@ public interface DMWatchConfig extends Config
 		name = "Draw tiles under players",
 		description = "Configures whether or not tiles under highlighted players should be drawn",
 		section = OVERLAY_SECTION
-
 	)
 	default boolean drawTiles()
 	{
@@ -104,25 +102,12 @@ public interface DMWatchConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 8,
-		keyName = "notifyOnJoin",
-		name = "Alert On Join",
-		description = "Send an alert message when a player on the watchlist enters a Clan/Friends Chat",
-		section = NOTIFICATIONS_SECTION
-	)
-	default boolean notifyOnJoin()
-	{
-		return true;
-	}
-
-	@ConfigItem(
 		position = 9,
-		keyName = "notifyOnNearby",
-		name = "Alert On Nearby",
-		description = "Send an alert message when you're nearby a player on the watch list",
-		section = NOTIFICATIONS_SECTION
+		keyName = "showLogsButton",
+		name = "Show Logs button",
+		description = "Shows a logs button on side panel"
 	)
-	default boolean notifyOnNearby()
+	default boolean showLogsButton()
 	{
 		return true;
 	}
@@ -148,4 +133,29 @@ public interface DMWatchConfig extends Config
 	{
 		return false;
 	}
+
+	@ConfigItem(
+		position = 8,
+		keyName = "notifyOnJoin",
+		name = "Alert On Join",
+		description = "Send an alert message when a player on the watchlist enters a Clan/Friends Chat",
+		section = NOTIFICATIONS_SECTION
+	)
+	default boolean notifyOnJoin()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		position = 9,
+		keyName = "notifyOnNearby",
+		name = "Alert On Nearby",
+		description = "Send an alert message when you're nearby a player on the watch list",
+		section = NOTIFICATIONS_SECTION
+	)
+	default boolean notifyOnNearby()
+	{
+		return true;
+	}
 }
+
