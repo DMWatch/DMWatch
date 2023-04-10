@@ -32,14 +32,14 @@ public class PartyMemberIndicatorService
 	{
 		COLORHM = new HashMap<>();
 		COLORHM.put("0", new Color(234, 123, 91));
-		COLORHM.put("1", new Color(252,242,4));
+		COLORHM.put("1", new Color(252, 242, 4));
 		COLORHM.put("2", Color.YELLOW);
 		COLORHM.put("3", Color.RED);
-		COLORHM.put("4", new Color(188,84,4));
-		COLORHM.put("5", new Color(236,236,220));
-		COLORHM.put("6",  new Color(104, 68, 164));
-		COLORHM.put("7", new Color(84,252,28));
-		COLORHM.put("8", new Color(244,204,64));
+		COLORHM.put("4", new Color(188, 84, 4));
+		COLORHM.put("5", new Color(236, 236, 220));
+		COLORHM.put("6", new Color(104, 68, 164));
+		COLORHM.put("7", new Color(84, 252, 28));
+		COLORHM.put("8", new Color(244, 204, 64));
 	}
 
 	@Inject
@@ -77,6 +77,17 @@ public class PartyMemberIndicatorService
 				if (COLORHM.containsKey(plugin.getPlayerTier(player.getName())))
 				{
 					consumer.accept(player, COLORHM.get(plugin.getPlayerTier(player.getName())));
+				}
+			}
+			for (int i = 0; i < plugin.getLocalList().size(); i++)
+			{
+				Case c = plugin.getLocalList().get(i);
+				if (player.getName().equals(c.getRsn()))
+				{
+					if (COLORHM.containsKey(c.getStatus()))
+					{
+						consumer.accept(player, COLORHM.get(c.getStatus()));
+					}
 				}
 			}
 		}

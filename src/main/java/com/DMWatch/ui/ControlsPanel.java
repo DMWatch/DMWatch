@@ -26,6 +26,7 @@
 package com.DMWatch.ui;
 
 import com.DMWatch.DMWatchPlugin;
+import static com.DMWatch.DMWatchPlugin.DMWATCH_DIR;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.GridBagConstraints;
@@ -49,6 +50,7 @@ public class ControlsPanel extends JPanel
 	private static ImageIcon DISCORD_ICON;
 	private static ImageIcon DISCORD_HOVER_ICON;
 	private final JButton joinPartyButton = new JButton();
+	private final JButton openLogs = new JButton();
 	private final JLabel discordTextLabel = new JLabel();
 	private final DMWatchPlugin plugin;
 
@@ -59,6 +61,12 @@ public class ControlsPanel extends JPanel
 		this.plugin = plugin;
 		this.setLayout(new GridBagLayout());
 
+		openLogs.setText("Open Logs");
+		openLogs.setFocusable(false);
+		openLogs.addActionListener(e ->
+		{
+			LinkBrowser.open(DMWATCH_DIR.toString());
+		});
 
 		joinPartyButton.setText("Join DMWatch Party");
 		joinPartyButton.setFocusable(false);
@@ -79,14 +87,15 @@ public class ControlsPanel extends JPanel
 		inGameFC.setToolTipText("Join DMWatch chat in game!");
 		inGameFC.setIcon(new ImageIcon(FRIENDS_CHAT_ICON_IMG));
 
-		DISCORD_ICON = new ImageIcon(ImageUtil.resizeImage(DISCORD_IMG, 24,18));
-		DISCORD_HOVER_ICON = new ImageIcon(ImageUtil.alphaOffset(ImageUtil.resizeImage(DISCORD_IMG, 24,18), 0.53f));
+		DISCORD_ICON = new ImageIcon(ImageUtil.resizeImage(DISCORD_IMG, 24, 18));
+		DISCORD_HOVER_ICON = new ImageIcon(ImageUtil.alphaOffset(ImageUtil.resizeImage(DISCORD_IMG, 24, 18), 0.53f));
 
 		discordTextLabel.setIcon(DISCORD_ICON);
 
-		addComponent(this, discordTextLabel,0 , 0, 1, 1, GridBagConstraints.WEST, GridBagConstraints.WEST);
-		addComponent(this, inGameFC,2 , 0, 2, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH);
-		addComponent(this, joinPartyButton,0 , 1, 3, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH);
+		addComponent(this, discordTextLabel, 0, 0, 1, 1, GridBagConstraints.WEST, GridBagConstraints.WEST);
+		addComponent(this, inGameFC, 2, 0, 2, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH);
+		addComponent(this, joinPartyButton, 0, 1, 2, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH);
+		addComponent(this, openLogs, 3, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH);
 
 		discordTextLabel.setText("Join the Discord");
 		discordTextLabel.setToolTipText("Click to join our discord!");
@@ -100,6 +109,7 @@ public class ControlsPanel extends JPanel
 					LinkBrowser.browse("https://discord.gg/dm");
 				}
 			}
+
 			@Override
 			public void mouseEntered(MouseEvent e)
 			{
@@ -123,7 +133,8 @@ public class ControlsPanel extends JPanel
 	}
 
 	private void addComponent(Container container, Component component, int gridx, int gridy,
-							  int gridwidth, int gridheight, int anchor, int fill) {
+							  int gridwidth, int gridheight, int anchor, int fill)
+	{
 		GridBagConstraints gbc = new GridBagConstraints(gridx, gridy, gridwidth, gridheight, 1.0, 1.0,
 			anchor, fill, insets, 0, 0);
 		container.add(component, gbc);
