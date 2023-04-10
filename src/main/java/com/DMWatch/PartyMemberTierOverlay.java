@@ -15,6 +15,7 @@ import net.runelite.client.ui.overlay.Overlay;
 import net.runelite.client.ui.overlay.OverlayPosition;
 import net.runelite.client.ui.overlay.OverlayPriority;
 import net.runelite.client.ui.overlay.OverlayUtil;
+import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.Text;
 
 @Singleton
@@ -26,11 +27,15 @@ public class PartyMemberTierOverlay extends Overlay
 	private final PartyMemberIndicatorService playerIndicatorsService;
 	private final DMWatchConfig config;
 	private final ChatIconManager chatIconManager;
+	private final DMWatchPlugin plugin;
+	private static final BufferedImage SCAMMER_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "scammer.png");
+
 
 	@Inject
 	private PartyMemberTierOverlay(DMWatchConfig config, PartyMemberIndicatorService playerIndicatorsService,
-								   ChatIconManager chatIconManager)
+								   ChatIconManager chatIconManager, DMWatchPlugin plugin)
 	{
+		this.plugin = plugin;
 		this.config = config;
 		this.playerIndicatorsService = playerIndicatorsService;
 		this.chatIconManager = chatIconManager;
@@ -100,6 +105,16 @@ public class PartyMemberTierOverlay extends Overlay
 			if (clanTitle != null)
 			{
 				rankImage = chatIconManager.getRankImage(clanTitle);
+			}
+		}
+
+		for (int i = 0; i < plugin.getLocalList().size(); i++)
+		{
+			Case c = plugin.getLocalList().get(i);
+
+			if (actor.getName().equals(c.getRsn()))
+			{
+				rankImage = ImageUtil.resizeImage(SCAMMER_ICON, 16, 16);
 			}
 		}
 
