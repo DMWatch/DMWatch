@@ -25,6 +25,7 @@
  */
 package com.DMWatch.ui;
 
+import com.DMWatch.DMWatchConfig;
 import com.DMWatch.DMWatchPlugin;
 import static com.DMWatch.DMWatchPlugin.DMWATCH_DIR;
 import java.awt.Component;
@@ -56,7 +57,7 @@ public class ControlsPanel extends JPanel
 
 	private static final Insets insets = new Insets(0, 0, 0, 0);
 
-	public ControlsPanel(DMWatchPlugin plugin)
+	public ControlsPanel(DMWatchPlugin plugin, DMWatchConfig config)
 	{
 		this.plugin = plugin;
 		this.setLayout(new GridBagLayout());
@@ -95,8 +96,10 @@ public class ControlsPanel extends JPanel
 		addComponent(this, discordTextLabel, 0, 0, 1, 1, GridBagConstraints.WEST, GridBagConstraints.WEST);
 		addComponent(this, inGameFC, 2, 0, 2, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH);
 		addComponent(this, joinPartyButton, 0, 1, 2, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH);
-		addComponent(this, openLogs, 3, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH);
-
+		if (config.showLogsButton())
+		{
+			addComponent(this, openLogs, 3, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH);
+		}
 		discordTextLabel.setText("Join the Discord");
 		discordTextLabel.setToolTipText("Click to join our discord!");
 		discordTextLabel.addMouseListener(new MouseAdapter()
