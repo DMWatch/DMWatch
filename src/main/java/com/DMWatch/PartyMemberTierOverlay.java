@@ -114,7 +114,7 @@ public class PartyMemberTierOverlay extends Overlay
 
 			if (actor.getName().equals(c.getRsn()))
 			{
-				rankImage = ImageUtil.resizeImage(SCAMMER_ICON, 16, 16);
+				rankImage = ImageUtil.resizeImage(SCAMMER_ICON, 11, 11);
 			}
 		}
 

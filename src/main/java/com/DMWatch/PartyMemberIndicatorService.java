@@ -57,29 +57,13 @@ public class PartyMemberIndicatorService
 
 		for (Player player : client.getPlayers())
 		{
+			boolean recolored = false;
 			if (player == null || player.getName() == null)
 			{
 				continue;
 			}
 
-			if (player == localPlayer)
-			{
-				if (config.drawOnSelf() && plugin.getMyPlayer() != null)
-				{
-					if (COLORHM.containsKey(plugin.getMyPlayer().getStatus()))
-					{
-						consumer.accept(player, COLORHM.get(plugin.getMyPlayer().getStatus()));
-					}
-				}
-			}
-			else if (plugin.isInParty() && plugin.otherPlayerInParty(player.getName()))
-			{
-				if (COLORHM.containsKey(plugin.getPlayerTier(player.getName())))
-				{
-					consumer.accept(player, COLORHM.get(plugin.getPlayerTier(player.getName())));
-				}
-			}
-			for (int i = 0; i < plugin.getLocalList().size(); i++)
+			for (int i = 0; i < plugin.getLocalList().size() && !recolored; i++)
 			{
 				Case c = plugin.getLocalList().get(i);
 				if (player.getName().equals(c.getRsn()))
@@ -87,9 +71,32 @@ public class PartyMemberIndicatorService
 					if (COLORHM.containsKey(c.getStatus()))
 					{
 						consumer.accept(player, COLORHM.get(c.getStatus()));
+						recolored = true;
 					}
 				}
 			}
+
+			if (!recolored)
+			{
+				if (player == localPlayer)
+				{
+					if (config.drawOnSelf() && plugin.getMyPlayer() != null)
+					{
+						if (COLORHM.containsKey(plugin.getMyPlayer().getStatus()))
+						{
+							consumer.accept(player, COLORHM.get(plugin.getMyPlayer().getStatus()));
+						}
+					}
+				}
+				else if (plugin.isInParty() && plugin.otherPlayerInParty(player.getName()))
+				{
+					if (COLORHM.containsKey(plugin.getPlayerTier(player.getName())))
+					{
+						consumer.accept(player, COLORHM.get(plugin.getPlayerTier(player.getName())));
+					}
+				}
+			}
+
 		}
 	}
 
