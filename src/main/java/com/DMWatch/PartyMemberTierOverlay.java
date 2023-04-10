@@ -30,7 +30,6 @@ public class PartyMemberTierOverlay extends Overlay
 	private final DMWatchPlugin plugin;
 	private static final BufferedImage SCAMMER_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "scammer.png");
 
-
 	@Inject
 	private PartyMemberTierOverlay(DMWatchConfig config, PartyMemberIndicatorService playerIndicatorsService,
 								   ChatIconManager chatIconManager, DMWatchPlugin plugin)
@@ -108,13 +107,15 @@ public class PartyMemberTierOverlay extends Overlay
 			}
 		}
 
-		for (int i = 0; i < plugin.getLocalList().size(); i++)
+		boolean useScammerIcon = false;
+		for (int i = 0; i < plugin.getLocalList().size() && !useScammerIcon; i++)
 		{
 			Case c = plugin.getLocalList().get(i);
 
 			if (actor.getName().equals(c.getRsn()))
 			{
 				rankImage = ImageUtil.resizeImage(SCAMMER_ICON, 11, 11);
+				useScammerIcon = true;
 			}
 		}
 
@@ -136,11 +137,20 @@ public class PartyMemberTierOverlay extends Overlay
 			}
 
 			final int textHeight = graphics.getFontMetrics().getHeight() - graphics.getFontMetrics().getMaxDescent();
-			final Point imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 1, textLocation.getY() - textHeight / 2 - rankImage.getHeight() / 2);
-			OverlayUtil.renderImageLocation(graphics, imageLocation, rankImage);
 
-			// move text
-			textLocation = new Point(textLocation.getX() + imageTextMargin, textLocation.getY());
+			if (useScammerIcon) {
+				final Point imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 8, textLocation.getY() - textHeight / 2 - rankImage.getHeight() / 2);
+				OverlayUtil.renderImageLocation(graphics, imageLocation, rankImage);
+			} else {
+				final Point imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 1, textLocation.getY() - textHeight / 2 - rankImage.getHeight() / 2);
+				OverlayUtil.renderImageLocation(graphics, imageLocation, rankImage);
+			}
+
+			if (useScammerIcon) {
+				textLocation = new Point(textLocation.getX() - 5 + imageTextMargin, textLocation.getY());
+			} else {
+				textLocation = new Point(textLocation.getX() + imageTextMargin, textLocation.getY());
+			}
 		}
 
 		OverlayUtil.renderTextLocation(graphics, textLocation, name, color);
