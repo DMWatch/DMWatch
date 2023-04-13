@@ -28,6 +28,7 @@ import lombok.AllArgsConstructor;
 import lombok.Value;
 import net.runelite.api.Item;
 import net.runelite.api.ItemComposition;
+import net.runelite.api.ItemID;
 import net.runelite.client.game.ItemManager;
 
 @Value
@@ -66,6 +67,9 @@ public class GameItem
 			{
 				output[i / 2] = null;
 			}
+			else if (items[i] == ItemID.COINS_995 || items[i] == ItemID.PLATINUM_TOKEN) {
+				output[i / 2] = null;
+			}
 			else
 			{
 				output[i / 2] = new GameItem(items[i], items[i + 1], itemManager);
@@ -83,6 +87,9 @@ public class GameItem
 			final Item item = items[i];
 			if (item == null || item.getId() == -1)
 			{
+				output[i] = null;
+			}
+			else if (item.getId() == ItemID.COINS_995 || item.getId() == ItemID.PLATINUM_TOKEN) {
 				output[i] = null;
 			}
 			else
