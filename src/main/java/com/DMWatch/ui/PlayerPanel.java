@@ -87,6 +87,8 @@ public class PlayerPanel extends JPanel
 	@Setter
 	private boolean showInfo;
 
+	private boolean JOptionPaneOpened;
+
 	public PlayerPanel(final PartyPlayer selectedPlayer, final DMWatchConfig config,
 					   final SpriteManager spriteManager, final ItemManager itemManager)
 	{
@@ -173,24 +175,26 @@ public class PlayerPanel extends JPanel
 		banner.getTrustedPlayerButton().addItemListener((i) -> {
 			if (i.getStateChange() != ItemEvent.SELECTED) {
 				// Ensure we update inventory on deselects
-				inventoryPanel.updateInventory(player.getInventory(), banner.getTrustedPlayerButton().isSelected());
+				inventoryPanel.updateInventory(player.getInventory(), banner.getTrustedPlayerButton().isSelected(), JOptionPaneOpened);
 				return;
 			}
 
 			SwingUtilities.invokeLater(() -> {
+				JOptionPaneOpened = true;
 				final int confirm = JOptionPane.showConfirmDialog(
 					this,
 					"<html>Are you sure you want to trust this player?<br/>By clicking this box you are indicating you fully trust this player not to spoof any of their data.",
 					"Trust player " + player.getUsername() + "?",
 					JOptionPane.YES_NO_OPTION);
 
-				if (confirm == JOptionPane.NO_OPTION) {
+				if (confirm == JOptionPane.NO_OPTION || confirm == -1) {
 					banner.getTrustedPlayerButton().setSelected(false);
 					return;
 				}
 
 				// Delay inventory update until they click the confirm the button
-				inventoryPanel.updateInventory(player.getInventory(), banner.getTrustedPlayerButton().isSelected());
+				inventoryPanel.updateInventory(player.getInventory(), banner.getTrustedPlayerButton().isSelected(), JOptionPaneOpened);
+				JOptionPaneOpened = false;
 			});
 		});
 
@@ -254,7 +258,7 @@ public class PlayerPanel extends JPanel
 
 		if (tabMap.getOrDefault(SpriteID.TAB_INVENTORY, false))
 		{
-			inventoryPanel.updateInventory(player.getInventory(), banner.getTrustedPlayerButton().isSelected());
+			inventoryPanel.updateInventory(player.getInventory(), banner.getTrustedPlayerButton().isSelected(), JOptionPaneOpened);
 		}
 
 		if (tabMap.getOrDefault(SpriteID.TAB_EQUIPMENT, false))
