@@ -43,7 +43,7 @@ public class PlayerInventoryPanel extends JPanel
 
 	private final ItemManager itemManager;
 
-	public PlayerInventoryPanel(final GameItem[] items, final ItemManager itemManager)
+	public PlayerInventoryPanel(final GameItem[] items, final Boolean trustedPlayer, final ItemManager itemManager)
 	{
 		super();
 
@@ -53,10 +53,10 @@ public class PlayerInventoryPanel extends JPanel
 		setBackground(INVI_BACKGROUND);
 		setPreferredSize(PANEL_SIZE);
 
-		updateInventory(items);
+		updateInventory(items, trustedPlayer);
 	}
 
-	public void updateInventory(final GameItem[] items)
+	public void updateInventory(final GameItem[] items, final Boolean trustedPlayer)
 	{
 		this.removeAll();
 
@@ -71,7 +71,7 @@ public class PlayerInventoryPanel extends JPanel
 			if (i != null)
 			{
 				// Adds an empty box in place of GP and plat coins
-				if (i.getId() == ItemID.COINS_995 || i.getId() == ItemID.PLATINUM_TOKEN) {
+				if (!trustedPlayer && (i.getId() == ItemID.COINS_995 || i.getId() == ItemID.PLATINUM_TOKEN)) {
 					add(label);
 					continue;
 				}
