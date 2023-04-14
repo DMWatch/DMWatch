@@ -96,18 +96,6 @@ public class PartyMemberIndicatorService
 					}
 				}
 			}
-
-			for (int i = 0; i < plugin.getLocalList().size(); i++)
-			{
-				Case c = plugin.getLocalList().get(i);
-				if (player.getName().equals(c.getRsn()))
-				{
-					if (COLORHM.containsKey(c.getStatus()))
-					{
-						consumer.accept(player, COLORHM.get(c.getStatus()));
-					}
-				}
-			}
 		}
 	}
 
