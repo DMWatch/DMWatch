@@ -65,6 +65,15 @@ public class PartyMemberIndicatorService
 
 			for (int i = 0; i < plugin.getLocalList().size() && !recolored; i++)
 			{
+				if (player.getName().equals(plugin.getSearchBarText()))
+				{
+					consumer.accept(player, config.opponentColor());
+					recolored = true;
+				}
+			}
+
+			for (int i = 0; i < plugin.getLocalList().size() && !recolored; i++)
+			{
 				Case c = plugin.getLocalList().get(i);
 				if (player.getName().equals(c.getRsn()))
 				{

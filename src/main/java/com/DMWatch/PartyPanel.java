@@ -64,6 +64,7 @@ class PartyPanel extends PluginPanel
 	private final JPanel basePanel = new JPanel();
 	private final JPanel passphrasePanel = new JPanel();
 	private final JLabel passphraseLabel = new JLabel();
+	@Getter
 	private final IconTextField searchBar;
 
 	@Getter
@@ -171,6 +172,8 @@ class PartyPanel extends PluginPanel
 			.stream()
 			.sorted(Comparator.comparing(o -> orderByTier(o.getStatus(), o.getWorld())))
 			.collect(Collectors.toList());
+
+		plugin.setSearchBarText(searchBar.getText());
 
 		for (final PartyPlayer player : players)
 		{
