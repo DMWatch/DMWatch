@@ -29,10 +29,13 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Collectors;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
@@ -71,6 +74,7 @@ import net.runelite.client.events.PartyMemberAvatar;
 import net.runelite.client.game.ItemManager;
 import net.runelite.client.game.SpriteManager;
 import net.runelite.client.menus.MenuManager;
+import net.runelite.client.party.PartyMember;
 import net.runelite.client.party.PartyService;
 import net.runelite.client.party.WSClient;
 import net.runelite.client.party.events.UserPart;
@@ -167,7 +171,6 @@ public class DMWatchPlugin extends Plugin
 	@Inject
 	private PlayerMemberTileTierOverlay playerMemberTileTierOverlay;
 
-
 	// globals
 	private Instant lastLogout;
 	private Logger dmwLogger;
@@ -176,6 +179,10 @@ public class DMWatchPlugin extends Plugin
 	private DMPartyBatchedChange currentChange = new DMPartyBatchedChange();
 	private NavigationButton navButton;
 	private List<Case> localDMCases;
+
+	@Getter
+	@Setter
+	private String searchBarText;
 
 	@Provides
 	public DMWatchConfig provideConfig(ConfigManager configManager)
@@ -338,25 +345,6 @@ public class DMWatchPlugin extends Plugin
 
 				currentChange = new DMPartyBatchedChange();
 			}
-		}
-	}
-
-	@Schedule(
-		period = 10,
-		unit = ChronoUnit.SECONDS
-	)
-	public void checkIdle()
-	{
-		if (client.getGameState() != GameState.LOGIN_SCREEN)
-		{
-			return;
-		}
-
-		if (lastLogout != null && lastLogout.isBefore(Instant.now().minus(10, ChronoUnit.MINUTES))
-			&& partyService.isInParty())
-		{
-			log.info("Leaving party due to inactivity");
-			partyService.changeParty(null);
 		}
 	}
 
@@ -586,36 +574,16 @@ public class DMWatchPlugin extends Plugin
 
 			if (target != null)
 			{
-				partyService.changeParty(getPrivateDM(target));
+				searchBarText = target;
+				clientThread.invoke(() -> SwingUtilities.invokeLater(() -> panel.getSearchBar().setText(target)));
+				if (!isInParty()) {
+					partyService.changeParty("DMWatch");
+				} else if (isInParty() && !partyService.getPartyPassphrase().equals("DMWatch")) {
+					partyService.changeParty("DMWatch");
+					searchBarText = "";
+				}
 			}
 		}
-	}
-
-	private String getPrivateDM(String otherRSN)
-	{
-		if (client.getLocalPlayer() == null || client.getLocalPlayer().getName() == null)
-		{
-			return "Error";
-		}
-
-		String theirName = Text.toJagexName(otherRSN).replaceAll(" ", "").toLowerCase();
-		String myName = Text.toJagexName(client.getLocalPlayer().getName()).replaceAll(" ", "").toLowerCase();
-		int compare = myName.compareTo(theirName);
-
-		if (compare < 0)
-		{
-			return myName + theirName;
-		}
-		else
-		{
-			return theirName + myName;
-		}
-	}
-
-	@Schedule(period = 5, unit = ChronoUnit.MINUTES)
-	public void refreshList()
-	{
-		caseManager.refresh(this::colorAll);
 	}
 
 	@Subscribe
@@ -710,35 +678,6 @@ public class DMWatchPlugin extends Plugin
 
 			currentChange = new DMPartyBatchedChange();
 		}
-
-		for (long memberID : partyMembers.keySet())
-		{
-			if (memberID == myPlayer.getMember().getMemberId())
-			{
-				continue;
-			}
-
-			if (partyMembers.get(memberID) != null)
-			{
-				String hwid, rid, rsn;
-				hwid = partyMembers.get(memberID).getHWID();
-				rid = partyMembers.get(memberID).getUserUnique();
-				rsn = partyMembers.get(memberID).getUsername();
-
-				if (!uniqueIDs.contains(hwid + rid + rsn))
-				{
-					if (hwid.equals("unknown"))
-					{
-						dmwLogger.info("Unusual - hwid:{} hash:{} rsn:{}", hwid, rid, rsn);
-					}
-					else
-					{
-						dmwLogger.info("hwid:{} hash:{} rsn:{}", hwid, rid, rsn);
-					}
-					uniqueIDs.add(hwid + rid + rsn);
-				}
-			}
-		}
 	}
 
 	private static int messageFreq(int partySize)
@@ -787,6 +726,10 @@ public class DMWatchPlugin extends Plugin
 					JOptionPane.ERROR_MESSAGE);
 				return;
 			}
+		}
+
+		if (passphrase.equals("DMWatch")) {
+			clientThread.invoke(() -> SwingUtilities.invokeLater(() -> panel.getSearchBar().setText("")));
 		}
 
 		partyService.changeParty(passphrase);
@@ -1166,55 +1109,33 @@ public class DMWatchPlugin extends Plugin
 		period = 500,
 		unit = ChronoUnit.MILLIS
 	)
-	public void addUserToList()
+	public void addUsersToLog()
 	{
-		if (!isInParty())
+		for (long memberID : partyMembers.keySet())
 		{
-			return;
-		}
-		for (long memberid : getPartyMembers().keySet())
-		{
-			PartyPlayer player = getPartyMembers().get(memberid);
-
-			Case dmwCase = caseManager.get(player.getUsername());
-			if (dmwCase != null)
+			if (memberID == myPlayer.getMember().getMemberId())
 			{
-				if (dmwCase.getStatus().equals("2") || dmwCase.getStatus().equals("3"))
-				{
-
-					Case newCase = new Case(player.getUsername(), dmwCase.getDate(), player.getUserUnique(), player.getHWID(), dmwCase.getReason(), dmwCase.getStatus());
-					if (!localDMCases.contains(newCase))
-					{
-						localDMCases.add(newCase);
-					}
-				}
+				continue;
 			}
 
-			dmwCase = caseManager.getByHWID(player.getHWID());
-
-			if (dmwCase != null)
+			if (partyMembers.get(memberID) != null)
 			{
-				if (dmwCase.getStatus().equals("2") || dmwCase.getStatus().equals("3"))
-				{
-					Case newCase = new Case(player.getUsername(), dmwCase.getDate(), player.getUserUnique(), player.getHWID(), dmwCase.getReason(), dmwCase.getStatus());
-					if (!localDMCases.contains(newCase))
-					{
-						localDMCases.add(newCase);
-					}
-				}
-			}
+				String hwid, rid, rsn;
+				hwid = partyMembers.get(memberID).getHWID();
+				rid = partyMembers.get(memberID).getUserUnique();
+				rsn = partyMembers.get(memberID).getUsername();
 
-			dmwCase = caseManager.getByAccountHash(player.getUserUnique());
-
-			if (dmwCase != null)
-			{
-				if (dmwCase.getStatus().equals("2") || dmwCase.getStatus().equals("3"))
+				if (!uniqueIDs.contains(hwid + rid + rsn))
 				{
-					Case newCase = new Case(player.getUsername(), dmwCase.getDate(), player.getUserUnique(), player.getHWID(), dmwCase.getReason(), dmwCase.getStatus());
-					if (!localDMCases.contains(newCase))
+					if (hwid.equals("unknown"))
 					{
-						localDMCases.add(newCase);
+						dmwLogger.info("Unusual - hwid:{} hash:{} rsn:{}", hwid, rid, rsn);
 					}
+					else
+					{
+						dmwLogger.info("hwid:{} hash:{} rsn:{}", hwid, rid, rsn);
+					}
+					uniqueIDs.add(hwid + rid + rsn);
 				}
 			}
 		}
@@ -1318,4 +1239,108 @@ public class DMWatchPlugin extends Plugin
 		}
 		return "0";
 	}
+
+	@Schedule(
+		period = 500,
+		unit = ChronoUnit.MILLIS
+	)
+	public void addUserToList()
+	{
+		if (!isInParty())
+		{
+			return;
+		}
+		for (long memberid : getPartyMembers().keySet())
+		{
+			PartyPlayer player = getPartyMembers().get(memberid);
+
+			Case dmwCase = caseManager.get(player.getUsername());
+			if (dmwCase != null)
+			{
+				if (dmwCase.getStatus().equals("2") || dmwCase.getStatus().equals("3"))
+				{
+
+					Case newCase = new Case(player.getUsername(), dmwCase.getDate(), player.getUserUnique(), player.getHWID(), dmwCase.getReason(), dmwCase.getStatus());
+					if (!localDMCases.contains(newCase))
+					{
+						localDMCases.add(newCase);
+					}
+				}
+			}
+
+			dmwCase = caseManager.getByHWID(player.getHWID());
+
+			if (dmwCase != null)
+			{
+				if (dmwCase.getStatus().equals("2") || dmwCase.getStatus().equals("3"))
+				{
+					Case newCase = new Case(player.getUsername(), dmwCase.getDate(), player.getUserUnique(), player.getHWID(), dmwCase.getReason(), dmwCase.getStatus());
+					if (!localDMCases.contains(newCase))
+					{
+						localDMCases.add(newCase);
+					}
+				}
+			}
+
+			dmwCase = caseManager.getByAccountHash(player.getUserUnique());
+
+			if (dmwCase != null)
+			{
+				if (dmwCase.getStatus().equals("2") || dmwCase.getStatus().equals("3"))
+				{
+					Case newCase = new Case(player.getUsername(), dmwCase.getDate(), player.getUserUnique(), player.getHWID(), dmwCase.getReason(), dmwCase.getStatus());
+					if (!localDMCases.contains(newCase))
+					{
+						localDMCases.add(newCase);
+					}
+				}
+			}
+		}
+	}
+
+	@Schedule(period = 30, unit = ChronoUnit.SECONDS)
+	public void removeUsersFromPartyPanel()
+	{
+		if (!isInParty())
+		{
+			return;
+		}
+		final Set<Long> members = partyService.getMembers().stream()
+			.map(PartyMember::getMemberId)
+			.collect(Collectors.toSet());
+		for (final long memberId : partyMembers.keySet())
+		{
+			if (!members.contains(memberId))
+			{
+				SwingUtilities.invokeLater(() -> panel.removePartyPlayer(partyMembers.get(memberId)));
+				partyMembers.remove(memberId);
+			}
+		}
+	}
+
+	@Schedule(
+		period = 10,
+		unit = ChronoUnit.SECONDS
+	)
+	public void checkIdle()
+	{
+		if (client.getGameState() != GameState.LOGIN_SCREEN)
+		{
+			return;
+		}
+
+		if (lastLogout != null && lastLogout.isBefore(Instant.now().minus(10, ChronoUnit.MINUTES))
+			&& partyService.isInParty())
+		{
+			log.info("Leaving party due to inactivity");
+			partyService.changeParty(null);
+		}
+	}
+
+	@Schedule(period = 5, unit = ChronoUnit.MINUTES)
+	public void refreshList()
+	{
+		caseManager.refresh(this::colorAll);
+	}
+
 }

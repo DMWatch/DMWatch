@@ -1,5 +1,6 @@
 package com.DMWatch;
 
+import java.awt.Color;
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
@@ -88,6 +89,18 @@ public interface DMWatchConfig extends Config
 	default boolean drawTiles()
 	{
 		return false;
+	}
+
+	@ConfigItem(
+		position = 103,
+		keyName = "opponentColor",
+		name = "Challenger Color",
+		description = "Configures the the color of the challenged player",
+		section = OVERLAY_SECTION
+	)
+	default Color opponentColor()
+	{
+		return new Color(236, 66, 245);
 	}
 
 	@ConfigItem(
