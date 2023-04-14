@@ -36,14 +36,17 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.ImageIcon;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.SwingUtilities;
@@ -93,7 +96,7 @@ public class PlayerPanel extends JPanel
 		this.itemManager = itemManager;
 		this.showInfo = false;
 		this.banner = new PlayerBanner(selectedPlayer, showInfo, spriteManager, config);
-		this.inventoryPanel = new PlayerInventoryPanel(selectedPlayer.getInventory(), itemManager);
+		this.inventoryPanel = new PlayerInventoryPanel(selectedPlayer.getInventory(), banner.getTrustedPlayerButton().isSelected(), itemManager);
 		this.equipmentPanel = new PlayerEquipmentPanel(selectedPlayer.getEquipment(), spriteManager, itemManager);
 
 		// Non-optimal way to attach a mouse listener to
@@ -137,13 +140,11 @@ public class PlayerPanel extends JPanel
 							showInfo = !showInfo;
 							if (showInfo)
 							{
-								banner.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, config.hideIDS() ? 80 : 100));
 								expandIcon.setIcon(expandIconUp);
 								banner.hideAndShowIcon(false, showInfo);
 							}
 							else
 							{
-								banner.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 40));
 								banner.hideAndShowIcon(true, showInfo);
 								expandIcon.setIcon(expandIconDown);
 							}
@@ -167,6 +168,31 @@ public class PlayerPanel extends JPanel
 				});
 			}
 		}
+
+		// Add event listener here as we want to update their inventory when the state changes and we cant access it from inside PlayerBanner
+		banner.getTrustedPlayerButton().addItemListener((i) -> {
+			if (i.getStateChange() != ItemEvent.SELECTED) {
+				// Ensure we update inventory on deselects
+				inventoryPanel.updateInventory(player.getInventory(), banner.getTrustedPlayerButton().isSelected());
+				return;
+			}
+
+			SwingUtilities.invokeLater(() -> {
+				final int confirm = JOptionPane.showConfirmDialog(
+					this,
+					"<html>Are you sure you want to trust this player?<br/>By clicking this box you are indicating you fully trust this player not to spoof any of their data.",
+					"Trust player " + player.getUsername() + "?",
+					JOptionPane.YES_NO_OPTION);
+
+				if (confirm == JOptionPane.NO_OPTION) {
+					banner.getTrustedPlayerButton().setSelected(false);
+					return;
+				}
+
+				// Delay inventory update until they click the confirm the button
+				inventoryPanel.updateInventory(player.getInventory(), banner.getTrustedPlayerButton().isSelected());
+			});
+		});
 
 		updatePanel();
 
@@ -228,7 +254,7 @@ public class PlayerPanel extends JPanel
 
 		if (tabMap.getOrDefault(SpriteID.TAB_INVENTORY, false))
 		{
-			inventoryPanel.updateInventory(player.getInventory());
+			inventoryPanel.updateInventory(player.getInventory(), banner.getTrustedPlayerButton().isSelected());
 		}
 
 		if (tabMap.getOrDefault(SpriteID.TAB_EQUIPMENT, false))

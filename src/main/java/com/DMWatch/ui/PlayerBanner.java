@@ -41,6 +41,7 @@ import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.ImageIcon;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.OverlayLayout;
@@ -88,6 +89,9 @@ public class PlayerBanner extends JPanel
 	@Getter
 	private final ImageIcon expandIconDown;
 
+	@Getter
+	private final JCheckBox trustedPlayerButton = new JCheckBox();
+
 	@Setter
 	@Getter
 	private PartyPlayer player;
@@ -102,12 +106,12 @@ public class PlayerBanner extends JPanel
 		this.setLayout(new GridBagLayout());
 		this.setBorder(new EmptyBorder(5, 5, 0, 5));
 
-		statsPanel.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH, 60));
-		statsPanel.setLayout(new GridLayout(1, 2));
+		statsPanel.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 50));
+		statsPanel.setLayout(new GridLayout(0, 2));
 		statsPanel.setBorder(new EmptyBorder(5, 0, 0, 0));
 		statsPanel.setOpaque(true);
 
-		infoPanel.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH, 60));
+		infoPanel.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 25));
 		infoPanel.setLayout(new GridLayout(2, 1));
 		infoPanel.setBorder(new EmptyBorder(5, 0, 0, 0));
 		infoPanel.setOpaque(true);
@@ -125,6 +129,13 @@ public class PlayerBanner extends JPanel
 
 		statsPanel.add(createIconPanel(spriteManager, SpriteID.SPELL_VENGEANCE_OTHER, "IsVenged", player.getIsVenged() == 1 ? "Is Venged" : "Not Venged", "", false));
 		statsPanel.add(createIconPanel(spriteManager, SpriteID.PLAYER_KILLER_SKULL, "DMWatchStatus", msg(player.getStatus()), player.getReason(), true));
+
+		final JLabel trustLabel = new JLabel("Trust this player:");
+		trustLabel.setToolTipText("If selected the inventory will show the players GP and/or Platinum tokens.");
+
+		statsPanel.add(trustLabel);
+		statsPanel.add(trustedPlayerButton);
+
 		infoPanel.add(createTextPanel("pchash", "HWID: " + player.getHWID()));
 		infoPanel.add(createTextPanel("acchash", "RID: " + player.getUserUnique()));
 
