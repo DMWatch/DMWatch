@@ -33,6 +33,9 @@ public class PartyMemberIndicatorService
 		COLORHM = new HashMap<>();
 		COLORHM.put("0", new Color(234, 123, 91));
 		COLORHM.put("1", new Color(252, 242, 4));
+		COLORHM.put("9", new Color(252, 242, 4));
+		COLORHM.put("10", new Color(252, 242, 4));
+		COLORHM.put("11", new Color(252, 242, 4));
 		COLORHM.put("2", Color.YELLOW);
 		COLORHM.put("3", Color.RED);
 		COLORHM.put("4", new Color(188, 84, 4));

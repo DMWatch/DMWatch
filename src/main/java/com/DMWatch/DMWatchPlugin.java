@@ -20,6 +20,7 @@ import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.security.MessageDigest;
+import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -179,6 +180,7 @@ public class DMWatchPlugin extends Plugin
 	private DMPartyBatchedChange currentChange = new DMPartyBatchedChange();
 	private NavigationButton navButton;
 	private List<Case> localDMCases;
+	private HashMap<String, Instant> nameNotifier;
 
 	@Getter
 	@Setter
@@ -200,6 +202,7 @@ public class DMWatchPlugin extends Plugin
 		uniqueIDs = new LinkedHashSet<>();
 		dmwLogger = setupLogger("DMWatchLogger", "DMWatch");
 		panel = new PartyPanel(this, config);
+		nameNotifier = new HashMap<>();
 
 		wsClient.registerMessage(DMPartyBatchedChange.class);
 
@@ -236,6 +239,7 @@ public class DMWatchPlugin extends Plugin
 	protected void shutDown()
 	{
 		localDMCases = new ArrayList<>();
+		nameNotifier = new HashMap<>();
 		if (isInParty())
 		{
 			final DMPartyBatchedChange cleanUserInfo = partyPlayerAsBatchedChange();
@@ -413,6 +417,10 @@ public class DMWatchPlugin extends Plugin
 		if (event.getKey().equals("hideMyWorld"))
 		{
 			hideWorld();
+		}
+		if (event.getKey().equals("notifyReminder"))
+		{
+			nameNotifier.clear();
 		}
 	}
 
@@ -987,6 +995,7 @@ public class DMWatchPlugin extends Plugin
 
 		if (dmwCase == null && !notifyClear)
 		{
+			// do nothing
 		}
 		else if (dmwCase == null)
 		{
@@ -1003,17 +1012,8 @@ public class DMWatchPlugin extends Plugin
 				response.append(" is a scammer [")
 					.append(ChatColorType.HIGHLIGHT)
 					.append(dmwCase.getReason());
-				if (dmwCase.getDate().getTime() > 0)
-				{
-					response.append(ChatColorType.NORMAL)
-						.append("] on " + dmwCase.niceDate())
-						.append(".");
-				}
-				else
-				{
-					response.append(ChatColorType.NORMAL)
-						.append("].");
-				}
+				response.append(ChatColorType.NORMAL)
+					.append("].");
 			}
 			else
 			{
@@ -1030,52 +1030,58 @@ public class DMWatchPlugin extends Plugin
 				}
 			}
 
-			chatMessageManager.queue(QueuedMessage.builder()
-				.type(ChatMessageType.CONSOLE)
-				.runeLiteFormattedMessage(response.build())
-				.build());
+			if (nameNotifier.containsKey(rsn)) {
+				if (config.notifyReminder() == -1) {
+					return;
+				}
+				if (Instant.now().isAfter(nameNotifier.get(rsn))) {
+					chatMessageManager.queue(QueuedMessage.builder()
+						.type(ChatMessageType.CONSOLE)
+						.runeLiteFormattedMessage(response.build())
+						.build());
+					nameNotifier.put(rsn, Instant.now().plus(Duration.ofMinutes(config.notifyReminder())));
+				}
+			} else {
+				chatMessageManager.queue(QueuedMessage.builder()
+					.type(ChatMessageType.CONSOLE)
+					.runeLiteFormattedMessage(response.build())
+					.build());
+
+				nameNotifier.put(rsn, Instant.now().plus(Duration.ofMinutes(config.notifyReminder())));
+			}
 		}
 	}
 
 	public String msg(String status)
 	{
-		if (status.equals("0"))
+		switch (status)
 		{
-			return "User";
+			case "0":
+				return "User";
+			case "1":
+				return "Smiley";
+			case "9":
+				return "Recruit";
+			case "10":
+				return "Corporal";
+			case "11":
+				return "Sergeant";
+			case "2":
+				return "Accused";
+			case "3":
+				return "Scammer";
+			case "4":
+				return "Lieutenant";
+			case "5":
+				return "Captain";
+			case "6":
+			case "7":
+				return "Streamer";
+			case "8":
+				return "General";
+			default:
+				return "Unknown";
 		}
-		if (status.equals("1"))
-		{
-			return "Smiley";
-		}
-		if (status.equals("2"))
-		{
-			return "Accused";
-		}
-		if (status.equals("3"))
-		{
-			return "Scammer";
-		}
-		if (status.equals("4"))
-		{
-			return "Lieutenant";
-		}
-		if (status.equals("5"))
-		{
-			return "Captain";
-		}
-		if (status.equals("6"))
-		{
-			return "Streamer";
-		}
-		if (status.equals("7"))
-		{
-			return "Streamer";
-		}
-		if (status.equals("8"))
-		{
-			return "General";
-		}
-		return "Unknown";
 	}
 
 	private void colorFriendsChat()
@@ -1342,5 +1348,4 @@ public class DMWatchPlugin extends Plugin
 	{
 		caseManager.refresh(this::colorAll);
 	}
-
 }

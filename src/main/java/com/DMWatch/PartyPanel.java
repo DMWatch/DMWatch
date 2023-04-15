@@ -209,8 +209,11 @@ class PartyPanel extends PluginPanel
 		{
 			case "0":
 				return 6; // unknown
-			case "1":
-				return 5; // smiley
+			case "1": // smiley
+			case "11": // sergeant
+			case "10": // corporal
+			case "9": // recruit
+				return 5; // order these thee same
 			case "2":
 				return 101; // accused
 			case "3":

@@ -5,6 +5,7 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 import net.runelite.client.config.ConfigSection;
+import net.runelite.client.config.Range;
 
 @ConfigGroup(DMWatchConfig.CONFIG_GROUP)
 public interface DMWatchConfig extends Config
@@ -169,6 +170,19 @@ public interface DMWatchConfig extends Config
 	default boolean notifyOnNearby()
 	{
 		return true;
+	}
+
+	@Range(min = -1, max = 30)
+	@ConfigItem(
+		position = 10,
+		keyName = "notifyReminder",
+		name = "Same name notify timeout",
+		description = "Minutes to notify on same player again, -1 to do it only once",
+		section = NOTIFICATIONS_SECTION
+	)
+	default int notifyReminder()
+	{
+		return 3;
 	}
 }
 
