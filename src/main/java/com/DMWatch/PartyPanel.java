@@ -64,6 +64,7 @@ class PartyPanel extends PluginPanel
 	private final JPanel basePanel = new JPanel();
 	private final JPanel passphrasePanel = new JPanel();
 	private final JLabel passphraseLabel = new JLabel();
+	@Getter
 	private final IconTextField searchBar;
 
 	@Getter
@@ -111,7 +112,7 @@ class PartyPanel extends PluginPanel
 		passphrasePanel.add(passphraseTopLabel);
 		passphrasePanel.add(passphraseLabel);
 
-		controlsPanel = new ControlsPanel(plugin);
+		controlsPanel = new ControlsPanel(plugin, config);
 		topPanel.add(controlsPanel);
 		topPanel.add(passphrasePanel);
 
@@ -172,6 +173,8 @@ class PartyPanel extends PluginPanel
 			.sorted(Comparator.comparing(o -> orderByTier(o.getStatus(), o.getWorld())))
 			.collect(Collectors.toList());
 
+		plugin.setSearchBarText(searchBar.getText());
+
 		for (final PartyPlayer player : players)
 		{
 			if (!searchBar.getText().isEmpty())
@@ -206,8 +209,11 @@ class PartyPanel extends PluginPanel
 		{
 			case "0":
 				return 6; // unknown
-			case "1":
-				return 5; // smiley
+			case "1": // smiley
+			case "11": // sergeant
+			case "10": // corporal
+			case "9": // recruit
+				return 5; // order these thee same
 			case "2":
 				return 101; // accused
 			case "3":

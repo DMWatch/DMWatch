@@ -5,6 +5,7 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 import net.runelite.client.config.ConfigSection;
+import net.runelite.client.config.Range;
 
 @ConfigGroup(DMWatchConfig.CONFIG_GROUP)
 public interface DMWatchConfig extends Config
@@ -85,11 +86,22 @@ public interface DMWatchConfig extends Config
 		name = "Draw tiles under players",
 		description = "Configures whether or not tiles under highlighted players should be drawn",
 		section = OVERLAY_SECTION
-
 	)
 	default boolean drawTiles()
 	{
 		return false;
+	}
+
+	@ConfigItem(
+		position = 103,
+		keyName = "opponentColor",
+		name = "Challenger Color",
+		description = "Configures the the color of the challenged player",
+		section = OVERLAY_SECTION
+	)
+	default Color opponentColor()
+	{
+		return new Color(236, 66, 245);
 	}
 
 	@ConfigItem(
@@ -101,6 +113,39 @@ public interface DMWatchConfig extends Config
 	default boolean recolorRSNonBanner()
 	{
 		return true;
+	}
+
+	@ConfigItem(
+		position = 9,
+		keyName = "showLogsButton",
+		name = "Show Logs button",
+		description = "Shows a logs button on side panel"
+	)
+	default boolean showLogsButton()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		position = 10,
+		keyName = "hideIDS",
+		name = "Hide ID info",
+		description = "Hide the IDs on the Party Panel"
+	)
+	default boolean hideIDS()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		position = 11,
+		keyName = "hideMyWorld",
+		name = "Hide my world",
+		description = "Don't share world"
+	)
+	default boolean hideWorld()
+	{
+		return false;
 	}
 
 	@ConfigItem(
@@ -127,25 +172,17 @@ public interface DMWatchConfig extends Config
 		return true;
 	}
 
+	@Range(min = -1, max = 30)
 	@ConfigItem(
 		position = 10,
-		keyName = "hideIDS",
-		name = "Hide ID info",
-		description = "Hide the IDs on the Party Panel"
+		keyName = "notifyReminder",
+		name = "Same name notify timeout",
+		description = "Minutes to notify on same player again, -1 to do it only once",
+		section = NOTIFICATIONS_SECTION
 	)
-	default boolean hideIDS()
+	default int notifyReminder()
 	{
-		return true;
-	}
-
-	@ConfigItem(
-		position = 11,
-		keyName = "hideMyWorld",
-		name = "Hide my world",
-		description = "Don't share world"
-	)
-	default boolean hideWorld()
-	{
-		return false;
+		return 3;
 	}
 }
+

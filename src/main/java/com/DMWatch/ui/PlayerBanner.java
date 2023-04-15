@@ -41,6 +41,7 @@ import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.ImageIcon;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.OverlayLayout;
@@ -76,6 +77,9 @@ public class PlayerBanner extends JPanel
 	private final JLabel iconLabel = new JLabel();
 
 	private static final BufferedImage SMILEY = ImageUtil.loadImageResource(DMWatchPlugin.class, "smiley.png");
+	private static final BufferedImage RECRUIT = ImageUtil.loadImageResource(DMWatchPlugin.class, "recruit.png");
+	private static final BufferedImage CORPORAL = ImageUtil.loadImageResource(DMWatchPlugin.class, "corporal.png");
+	private static final BufferedImage SERGEANT = ImageUtil.loadImageResource(DMWatchPlugin.class, "sergeant.png");
 	private static final BufferedImage CAPTAIN = ImageUtil.loadImageResource(DMWatchPlugin.class, "captain.png");
 	private static final BufferedImage GENERAL = ImageUtil.loadImageResource(DMWatchPlugin.class, "general.png");
 	private static final BufferedImage LIEUTENANT = ImageUtil.loadImageResource(DMWatchPlugin.class, "lieutenant.png");
@@ -87,6 +91,9 @@ public class PlayerBanner extends JPanel
 	private final ImageIcon expandIconUp;
 	@Getter
 	private final ImageIcon expandIconDown;
+
+	@Getter
+	private final JCheckBox trustedPlayerButton = new JCheckBox();
 
 	@Setter
 	@Getter
@@ -102,12 +109,12 @@ public class PlayerBanner extends JPanel
 		this.setLayout(new GridBagLayout());
 		this.setBorder(new EmptyBorder(5, 5, 0, 5));
 
-		statsPanel.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH, 60));
-		statsPanel.setLayout(new GridLayout(1, 2));
+		statsPanel.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 50));
+		statsPanel.setLayout(new GridLayout(0, 2));
 		statsPanel.setBorder(new EmptyBorder(5, 0, 0, 0));
 		statsPanel.setOpaque(true);
 
-		infoPanel.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH, 60));
+		infoPanel.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 25));
 		infoPanel.setLayout(new GridLayout(2, 1));
 		infoPanel.setBorder(new EmptyBorder(5, 0, 0, 0));
 		infoPanel.setOpaque(true);
@@ -125,6 +132,13 @@ public class PlayerBanner extends JPanel
 
 		statsPanel.add(createIconPanel(spriteManager, SpriteID.SPELL_VENGEANCE_OTHER, "IsVenged", player.getIsVenged() == 1 ? "Is Venged" : "Not Venged", "", false));
 		statsPanel.add(createIconPanel(spriteManager, SpriteID.PLAYER_KILLER_SKULL, "DMWatchStatus", msg(player.getStatus()), player.getReason(), true));
+
+		final JLabel trustLabel = new JLabel("Trust this player:");
+		trustLabel.setToolTipText("If selected the inventory will show the players GP and/or Platinum tokens.");
+
+		statsPanel.add(trustLabel);
+		statsPanel.add(trustedPlayerButton);
+
 		infoPanel.add(createTextPanel("pchash", "HWID: " + player.getHWID()));
 		infoPanel.add(createTextPanel("acchash", "RID: " + player.getUserUnique()));
 
@@ -498,6 +512,15 @@ public class PlayerBanner extends JPanel
 			case "1":
 				img = SMILEY;
 				break;
+			case "9":
+				img = RECRUIT;
+				break;
+			case "10":
+				img = SERGEANT;
+				break;
+			case "11":
+				img = CORPORAL;
+				break;
 			case "4":
 				img = LIEUTENANT;
 				break;
@@ -524,43 +547,34 @@ public class PlayerBanner extends JPanel
 
 	public String msg(String status)
 	{
-		if (status.equals("0"))
+		switch (status)
 		{
-			return "User";
+			case "0":
+				return "User";
+			case "1":
+				return "Smiley";
+			case "9":
+				return "Recruit";
+			case "10":
+				return "Corporal";
+			case "11":
+				return "Sergeant";
+			case "2":
+				return "Accused";
+			case "3":
+				return "Scammer";
+			case "4":
+				return "Lieutenant";
+			case "5":
+				return "Captain";
+			case "6":
+			case "7":
+				return "Streamer";
+			case "8":
+				return "General";
+			default:
+				return "Unknown";
 		}
-		if (status.equals("1"))
-		{
-			return "Smiley";
-		}
-		if (status.equals("2"))
-		{
-			return "Accused";
-		}
-		if (status.equals("3"))
-		{
-			return "Scammer";
-		}
-		if (status.equals("4"))
-		{
-			return "Lieutenant";
-		}
-		if (status.equals("5"))
-		{
-			return "Captain";
-		}
-		if (status.equals("6"))
-		{
-			return "Streamer";
-		}
-		if (status.equals("7"))
-		{
-			return "Streamer";
-		}
-		if (status.equals("8"))
-		{
-			return "General";
-		}
-		return "Unknown";
 	}
 
 	private Color getColorFromTier(String status)

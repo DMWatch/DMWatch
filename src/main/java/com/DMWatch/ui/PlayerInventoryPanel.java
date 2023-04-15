@@ -29,6 +29,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import net.runelite.api.ItemID;
 import net.runelite.client.game.ItemManager;
 import net.runelite.client.ui.DynamicGridLayout;
 import net.runelite.client.ui.PluginPanel;
@@ -42,7 +43,7 @@ public class PlayerInventoryPanel extends JPanel
 
 	private final ItemManager itemManager;
 
-	public PlayerInventoryPanel(final GameItem[] items, final ItemManager itemManager)
+	public PlayerInventoryPanel(final GameItem[] items, final Boolean trustedPlayer, final ItemManager itemManager)
 	{
 		super();
 
@@ -52,10 +53,10 @@ public class PlayerInventoryPanel extends JPanel
 		setBackground(INVI_BACKGROUND);
 		setPreferredSize(PANEL_SIZE);
 
-		updateInventory(items);
+		updateInventory(items, trustedPlayer, false);
 	}
 
-	public void updateInventory(final GameItem[] items)
+	public void updateInventory(final GameItem[] items, final Boolean trustedPlayer, boolean trustedJOptionPaneOpened)
 	{
 		this.removeAll();
 
@@ -69,6 +70,12 @@ public class PlayerInventoryPanel extends JPanel
 
 			if (i != null)
 			{
+				// Adds an empty box in place of GP and plat coins
+				if (!(trustedPlayer && !trustedJOptionPaneOpened) && (i.getId() == ItemID.COINS_995 || i.getId() == ItemID.PLATINUM_TOKEN)) {
+					add(label);
+					continue;
+				}
+
 				String name = i.getName();
 				if (i.getQty() > 1)
 				{

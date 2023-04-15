@@ -32,14 +32,17 @@ public class PartyMemberIndicatorService
 	{
 		COLORHM = new HashMap<>();
 		COLORHM.put("0", new Color(234, 123, 91));
-		COLORHM.put("1", new Color(252,242,4));
+		COLORHM.put("1", new Color(252, 242, 4));
+		COLORHM.put("9", new Color(252, 242, 4));
+		COLORHM.put("10", new Color(252, 242, 4));
+		COLORHM.put("11", new Color(252, 242, 4));
 		COLORHM.put("2", Color.YELLOW);
 		COLORHM.put("3", Color.RED);
-		COLORHM.put("4", new Color(188,84,4));
-		COLORHM.put("5", new Color(236,236,220));
-		COLORHM.put("6",  new Color(104, 68, 164));
-		COLORHM.put("7", new Color(84,252,28));
-		COLORHM.put("8", new Color(244,204,64));
+		COLORHM.put("4", new Color(188, 84, 4));
+		COLORHM.put("5", new Color(236, 236, 220));
+		COLORHM.put("6", new Color(104, 68, 164));
+		COLORHM.put("7", new Color(84, 252, 28));
+		COLORHM.put("8", new Color(244, 204, 64));
 	}
 
 	@Inject
@@ -57,28 +60,55 @@ public class PartyMemberIndicatorService
 
 		for (Player player : client.getPlayers())
 		{
+			boolean recolored = false;
 			if (player == null || player.getName() == null)
 			{
 				continue;
 			}
 
-			if (player == localPlayer)
+			for (int i = 0; i < plugin.getLocalList().size() && !recolored; i++)
 			{
-				if (config.drawOnSelf() && plugin.getMyPlayer() != null)
+				if (player.getName().equals(plugin.getSearchBarText()))
 				{
-					if (COLORHM.containsKey(plugin.getMyPlayer().getStatus()))
+					consumer.accept(player, config.opponentColor());
+					recolored = true;
+				}
+			}
+
+			for (int i = 0; i < plugin.getLocalList().size() && !recolored; i++)
+			{
+				Case c = plugin.getLocalList().get(i);
+				if (player.getName().equals(c.getRsn()))
+				{
+					if (COLORHM.containsKey(c.getStatus()))
 					{
-						consumer.accept(player, COLORHM.get(plugin.getMyPlayer().getStatus()));
+						consumer.accept(player, COLORHM.get(c.getStatus()));
+						recolored = true;
 					}
 				}
 			}
-			else if (plugin.isInParty() && plugin.otherPlayerInParty(player.getName()))
+
+			if (!recolored)
 			{
-				if (COLORHM.containsKey(plugin.getPlayerTier(player.getName())))
+				if (player == localPlayer)
 				{
-					consumer.accept(player, COLORHM.get(plugin.getPlayerTier(player.getName())));
+					if (config.drawOnSelf() && plugin.getMyPlayer() != null)
+					{
+						if (COLORHM.containsKey(plugin.getMyPlayer().getStatus()))
+						{
+							consumer.accept(player, COLORHM.get(plugin.getMyPlayer().getStatus()));
+						}
+					}
+				}
+				else if (plugin.isInParty() && plugin.otherPlayerInParty(player.getName()))
+				{
+					if (COLORHM.containsKey(plugin.getPlayerTier(player.getName())))
+					{
+						consumer.accept(player, COLORHM.get(plugin.getPlayerTier(player.getName())));
+					}
 				}
 			}
+
 		}
 	}
 
