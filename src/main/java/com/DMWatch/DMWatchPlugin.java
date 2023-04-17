@@ -690,7 +690,7 @@ public class DMWatchPlugin extends Plugin
 
 	private static int messageFreq(int partySize)
 	{
-		return Math.max(2, partySize - 6);
+		return Math.min(Math.max(2, partySize - 6), 8);
 	}
 
 	@Subscribe
