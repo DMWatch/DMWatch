@@ -3245,7 +3245,7 @@
         "account_hash": "35b7-9018-5548-6e0c",
         "hardware_id": "b647-0d39-6fee-fc13",
         "reason": "scammed DH set",
-        "evidence_rating": "3"
+        "evidence_rating": "0"
     },
     {
         "display_rsn": "bjj jake",
@@ -3293,6 +3293,30 @@
         "account_hash": "c05a-725c-44c8-b12c",
         "hardware_id": "a4ba-c22e-6f80-523f",
         "reason": "DH Fury AGS Brimstone | Victim: BamsYams",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "kings dada",
+        "signup_date": "2023-04-20 10:17:32",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Tabbed",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Anyelocampxx",
+        "signup_date": "2023-04-20 10:46:58",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Voidwaker+Bandos+Set - Victim: OWN AGE",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Gi Wijnaldum",
+        "signup_date": "2023-04-20 11:39:16",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS+DH+Set - Victim: Chito OSRS",
         "evidence_rating": "3"
     },
     {
