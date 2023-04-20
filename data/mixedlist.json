@@ -1600,7 +1600,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "dragonfuryy",
+        "display_rsn": "arctic lce",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "",
         "hardware_id": "null",
@@ -1765,14 +1765,6 @@
         "account_hash": "unknown",
         "hardware_id": "unknown",
         "reason": "Tabbed",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "stella cc",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "ddd",
         "evidence_rating": "3"
     },
     {
@@ -3224,7 +3216,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "m1ststaker",
+        "display_rsn": "r0ckcrab",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -3277,6 +3269,30 @@
         "account_hash": "74e6-6759-40d0-b76d",
         "hardware_id": "a03f-cab8-b561-58a3",
         "reason": "Scammed.",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Felixpendix",
+        "signup_date": "2023-04-20 09:25:46",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Imp boxed 400m",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Gong Bao",
+        "signup_date": "2023-04-20 09:44:05",
+        "account_hash": "329a-b59c-9e87-8ab2",
+        "hardware_id": "bc09-379a-8add-a075",
+        "reason": "DH + Base Set | Victim: a luck",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Tua1",
+        "signup_date": "2023-04-20 09:57:13",
+        "account_hash": "c05a-725c-44c8-b12c",
+        "hardware_id": "a4ba-c22e-6f80-523f",
+        "reason": "DH Fury AGS Brimstone | Victim: BamsYams",
         "evidence_rating": "3"
     },
     {
