@@ -3424,6 +3424,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "WookRezz420",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "094e-0113-c445-0bf5",
+        "hardware_id": "531d-f701-413e-ec5f",
+        "reason": "Claw+DH+Set - Victim: SFST",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "GIMZedany",
+        "signup_date": "2023-04-20 16:58:42",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+Elder+Bandos+Set - Victim: SFST",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
