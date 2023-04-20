@@ -1869,7 +1869,7 @@
         "account_hash": "unknown",
         "hardware_id": "unknown",
         "reason": "Abuse",
-        "evidence_rating": "3"
+        "evidence_rating": "0"
     },
     {
         "display_rsn": "KroTark-LL",
@@ -3264,19 +3264,19 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "11111111111ff",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "11111111111ff",
-        "hardware_id": "11111111111ff",
-        "reason": "f",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "iabojuze",
         "signup_date": "2023-04-20 07:39:28",
         "account_hash": "3ace-2f14-79b2-5299",
         "hardware_id": "2e51-38c5-e55b-d636",
         "reason": "Teleported",
+        "evidence_rating": "0"
+    },
+    {
+        "display_rsn": "Big Kono",
+        "signup_date": "2023-04-20 07:54:02",
+        "account_hash": "74e6-6759-40d0-b76d",
+        "hardware_id": "a03f-cab8-b561-58a3",
+        "reason": "Scammed.",
         "evidence_rating": "3"
     },
     {
@@ -3829,7 +3829,7 @@
         "account_hash": "3586-6555-8f0e-bfa2",
         "hardware_id": "d4be-6d7c-cefe-98d9",
         "reason": "Claw DH Set - Scammed legna4seven",
-        "evidence_rating": "3"
+        "evidence_rating": "0"
     },
     {
         "display_rsn": "HarvardKush",
