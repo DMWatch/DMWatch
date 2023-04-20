@@ -3304,7 +3304,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Gi Wijnaldum",
+        "display_rsn": "owen wijndal",
         "signup_date": "2023-04-20 11:39:16",
         "account_hash": "null",
         "hardware_id": "null",
@@ -3413,6 +3413,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Imp Box",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Milzoh",
+        "signup_date": "2023-04-20 16:44:09",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "DH+Set - Victim: Milzoh",
         "evidence_rating": "3"
     },
     {
