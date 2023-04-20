@@ -3133,7 +3133,7 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Stole 1b",
-        "evidence_rating": "3"
+        "evidence_rating": "0"
     },
     {
         "display_rsn": "purrplezz",
@@ -3317,6 +3317,22 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "AGS+DH+Set - Victim: Chito OSRS",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "p1geon",
+        "signup_date": "2023-04-20 11:45:49",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "DH+Budget - Victim: CometPngPong",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "lips on",
+        "signup_date": "2023-04-20 12:15:39",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+Set - Victim: wsh1wasu",
         "evidence_rating": "3"
     },
     {
