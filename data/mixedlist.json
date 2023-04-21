@@ -3632,11 +3632,19 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "kk",
-        "signup_date": "2023-04-21 13:19:01",
-        "account_hash": "55",
-        "hardware_id": "55",
-        "reason": "kk",
+        "display_rsn": "gimzedany",
+        "signup_date": "2023-04-21 13:19:26",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+Elder+Set - Victim: H00ll00W",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "potatooboii",
+        "signup_date": "2023-04-21 13:27:12",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS+DH+Set - Victim: S_uperman",
         "evidence_rating": "3"
     },
     {
