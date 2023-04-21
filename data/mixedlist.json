@@ -352,7 +352,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "offerfeest",
+        "display_rsn": "torvaavrot",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -3437,6 +3437,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Claws+Elder+Bandos+Set - Victim: SFST",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Taspan",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Abuse",
         "evidence_rating": "3"
     },
     {
