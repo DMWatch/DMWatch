@@ -1498,10 +1498,10 @@
     {
         "display_rsn": "kieeeee",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
+        "account_hash": "f8d0-72e3-c2bb-7410",
+        "hardware_id": "5fab-f997-5676-58e4",
         "reason": "Safe Zone, refuses to RM",
-        "evidence_rating": "3"
+        "evidence_rating": "0"
     },
     {
         "display_rsn": "Tony 2 T1M3S",
@@ -3573,6 +3573,22 @@
         "account_hash": "4157-1b7a-a289-0279",
         "hardware_id": "622f-c156-940f-35e8",
         "reason": "Void + Base Set + Elder | Victim: IMissDuel",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Transblender",
+        "signup_date": "2023-04-21 10:48:33",
+        "account_hash": "ukn",
+        "hardware_id": "unk",
+        "reason": "AGS DH + Base Set | Victim: XITEHPING",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Mamakii",
+        "signup_date": "2023-04-21 10:51:07",
+        "account_hash": "ukn",
+        "hardware_id": "unk",
+        "reason": "AGS DH Fury | Victim: chito osrs",
         "evidence_rating": "3"
     },
     {
