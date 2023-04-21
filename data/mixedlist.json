@@ -1248,7 +1248,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "wetankit",
+        "display_rsn": "upper decky",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "",
         "hardware_id": "0f29-c926-457e-5787",
@@ -3477,6 +3477,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "AGS+DH+Set - Victim: Gim Gurusmi",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "2nd account",
+        "signup_date": "2023-04-20 21:39:42",
+        "account_hash": "a26f-8634-2e34-1fe1",
+        "hardware_id": "acd0-d4e7-b768-1d6d",
+        "reason": "Claws+DH+Set - Victim: iidca",
         "evidence_rating": "3"
     },
     {
