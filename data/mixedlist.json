@@ -2712,7 +2712,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "lmdr",
+        "display_rsn": "dmtillrich",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -3469,6 +3469,14 @@
         "account_hash": "8d60-77ef-5815-1b62",
         "hardware_id": "67b9-8bfd-3e0e-b893",
         "reason": "Claw+DH+Set - Victim: Lick Time",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Need Protein",
+        "signup_date": "2023-04-20 19:56:44",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS+DH+Set - Victim: Gim Gurusmi",
         "evidence_rating": "3"
     },
     {
