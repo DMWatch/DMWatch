@@ -2714,8 +2714,8 @@
     {
         "display_rsn": "0822",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "account_hash": "1e08-64ae-8667-0e81",
+        "hardware_id": "a307-901b-c7d8-b5b4",
         "reason": "Tabbed",
         "evidence_rating": "3"
     },
