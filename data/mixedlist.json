@@ -3592,6 +3592,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "BomGroupS",
+        "signup_date": "2023-04-21 11:10:48",
+        "account_hash": "5836-ec22-dd19-5713",
+        "hardware_id": "3f81-782f-be65-641e",
+        "reason": "Claw DH Base Set | Victim: Crud Cartel",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
