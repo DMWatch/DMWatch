@@ -3504,6 +3504,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "k v l",
+        "signup_date": "2023-04-21 01:31:40",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+Set - Victim: powerstroked",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "m 71",
+        "signup_date": "2023-04-21 01:42:01",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "DH+Set - Victim: dudas wild",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
