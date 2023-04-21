@@ -3456,6 +3456,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zukeal",
+        "signup_date": "2023-04-20 19:21:52",
+        "account_hash": "322b-b754-cd63-984f",
+        "hardware_id": "d712-f9a5-651b-f3e7",
+        "reason": "AGS+DH+Set - Victim: Srnk Dat K0",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
