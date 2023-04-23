@@ -30,6 +30,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 import javax.swing.JOptionPane;
@@ -82,6 +83,7 @@ import net.runelite.client.party.events.UserPart;
 import net.runelite.client.party.messages.UserSync;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
+import net.runelite.client.plugins.PluginManager;
 import net.runelite.client.task.Schedule;
 import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
@@ -167,6 +169,9 @@ public class DMWatchPlugin extends Plugin
 	private OverlayManager overlayManager;
 
 	@Inject
+	private PluginManager pluginManager;
+
+	@Inject
 	private PartyMemberTierOverlay partyMemberTierOverlay;
 
 	@Inject
@@ -228,6 +233,12 @@ public class DMWatchPlugin extends Plugin
 				partyService.send(new UserSync());
 				partyService.send(partyPlayerAsBatchedChange());
 			});
+		}
+
+		final Optional<Plugin> partyPlugin = pluginManager.getPlugins().stream().filter(p -> p.getName().equals("Party")).findFirst();
+		if (partyPlugin.isPresent() && !pluginManager.isPluginEnabled(partyPlugin.get()))
+		{
+			pluginManager.setPluginEnabled(partyPlugin.get(), true);
 		}
 
 		spriteManager.getSpriteAsync(SpriteID.CHATBOX_REPORT_BUTTON, 0, s -> reportButton = s);
@@ -690,7 +701,7 @@ public class DMWatchPlugin extends Plugin
 
 	private static int messageFreq(int partySize)
 	{
-		return Math.max(2, partySize - 6);
+		return Math.min(Math.max(2, partySize - 6), 8);
 	}
 
 	@Subscribe
@@ -702,6 +713,12 @@ public class DMWatchPlugin extends Plugin
 		}
 
 		if (c.getContainerId() == InventoryID.INVENTORY.getId())
+		{
+			myPlayer.setInventory(GameItem.convertItemsToGameItems(c.getItemContainer().getItems(), itemManager));
+			int[] items = convertItemsToArray(c.getItemContainer().getItems());
+			currentChange.setI(items);
+		}
+		else if (c.getContainerId() == InventoryID.TRADE.getId())
 		{
 			myPlayer.setInventory(GameItem.convertItemsToGameItems(c.getItemContainer().getItems(), itemManager));
 			int[] items = convertItemsToArray(c.getItemContainer().getItems());
@@ -1009,6 +1026,9 @@ public class DMWatchPlugin extends Plugin
 			}
 			else if (dmwCase.getStatus().equals("3"))
 			{
+				if (!localDMCases.contains(dmwCase)) {
+					localDMCases.add(dmwCase);
+				}
 				response.append(" is a scammer [")
 					.append(ChatColorType.HIGHLIGHT)
 					.append(dmwCase.getReason());
@@ -1271,6 +1291,17 @@ public class DMWatchPlugin extends Plugin
 					{
 						localDMCases.add(newCase);
 					}
+				} else {
+					Case newCase1 = new Case(player.getUsername(), dmwCase.getDate(), player.getUserUnique(), player.getHWID(), dmwCase.getReason(), "3");
+					Case newCase2 = new Case(player.getUsername(), dmwCase.getDate(), player.getUserUnique(), player.getHWID(), dmwCase.getReason(), "2");
+					if (dmwCase.getStatus().equals("0")) {
+						if (localDMCases.contains(newCase1)) {
+							localDMCases.remove(newCase1);
+						}
+						if (localDMCases.contains(newCase2)) {
+							localDMCases.remove(newCase2);
+						}
+					}
 				}
 			}
 
@@ -1285,6 +1316,17 @@ public class DMWatchPlugin extends Plugin
 					{
 						localDMCases.add(newCase);
 					}
+				} else {
+					Case newCase1 = new Case(player.getUsername(), dmwCase.getDate(), player.getUserUnique(), player.getHWID(), dmwCase.getReason(), "3");
+					Case newCase2 = new Case(player.getUsername(), dmwCase.getDate(), player.getUserUnique(), player.getHWID(), dmwCase.getReason(), "2");
+					if (dmwCase.getStatus().equals("0")) {
+						if (localDMCases.contains(newCase1)) {
+							localDMCases.remove(newCase1);
+						}
+						if (localDMCases.contains(newCase2)) {
+							localDMCases.remove(newCase2);
+						}
+					}
 				}
 			}
 
@@ -1298,6 +1340,17 @@ public class DMWatchPlugin extends Plugin
 					if (!localDMCases.contains(newCase))
 					{
 						localDMCases.add(newCase);
+					}
+				} else {
+					Case newCase1 = new Case(player.getUsername(), dmwCase.getDate(), player.getUserUnique(), player.getHWID(), dmwCase.getReason(), "3");
+					Case newCase2 = new Case(player.getUsername(), dmwCase.getDate(), player.getUserUnique(), player.getHWID(), dmwCase.getReason(), "2");
+					if (dmwCase.getStatus().equals("0")) {
+						if (localDMCases.contains(newCase1)) {
+							localDMCases.remove(newCase1);
+						}
+						if (localDMCases.contains(newCase2)) {
+							localDMCases.remove(newCase2);
+						}
 					}
 				}
 			}
@@ -1314,6 +1367,7 @@ public class DMWatchPlugin extends Plugin
 		final Set<Long> members = partyService.getMembers().stream()
 			.map(PartyMember::getMemberId)
 			.collect(Collectors.toSet());
+
 		for (final long memberId : partyMembers.keySet())
 		{
 			if (!members.contains(memberId))
