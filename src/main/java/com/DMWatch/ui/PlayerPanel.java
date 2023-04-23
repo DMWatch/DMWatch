@@ -116,7 +116,7 @@ public class PlayerPanel extends JPanel
 		copyOpt.addActionListener(e ->
 		{
 			final Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-			clipboard.setContents(new StringSelection("rsn: " + player.getUsername() +  " hwid: " + player.getHWID() + " hash: " + player.getUserUnique()), null);
+			clipboard.setContents(new StringSelection("HWID: " + player.getHWID() + "\nRID: " + player.getUserUnique()), null);
 		});
 		final JPopupMenu copyPopup = new JPopupMenu();
 		copyPopup.setBorder(new EmptyBorder(5, 5, 5, 5));
