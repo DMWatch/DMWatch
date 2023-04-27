@@ -5104,7 +5104,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Spoons OSRS",
+        "display_rsn": "i am not oda",
         "signup_date": "2023-04-27 11:45:38",
         "account_hash": "null",
         "hardware_id": "null",
@@ -5189,6 +5189,14 @@
         "account_hash": "22a9-ffe5-ae4b-2f81",
         "hardware_id": "6920-736f-f0fd-1535",
         "reason": "AGS+DH+Set - Victim: Lootbeamz",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "arkki",
+        "signup_date": "2023-04-27 13:32:04",
+        "account_hash": "0beb-b719-6fbe-489e",
+        "hardware_id": "77a4-b3f6-60a1-9b54",
+        "reason": "DH+Set - Victim: arkki",
         "evidence_rating": "3"
     },
     {
