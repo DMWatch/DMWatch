@@ -164,7 +164,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "2914-35cb-b7e0-79bc",
         "hardware_id": "e2b0-97b4-509e-4708",
-        "reason": "Lied about veng",
+        "reason": "Scammed claw dh set - Victim: The Fishbait",
         "evidence_rating": "3"
     },
     {
@@ -180,7 +180,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "a4fe-22b3-96e5-36bb",
         "hardware_id": "ecb7-ed8b-8af0-b6f1",
-        "reason": "Tabbed",
+        "reason": "AGS+DH+BudgetSet - Victim: R e k k t",
         "evidence_rating": "3"
     },
     {
@@ -626,9 +626,9 @@
     {
         "display_rsn": "ML KE",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Safe Zone, refused to communicate",
+        "account_hash": "6885-739e-9dfe-26aa",
+        "hardware_id": "3976-9a8f-f886-b451",
+        "reason": "AGS+DH+Set - Victim: Rage Devil",
         "evidence_rating": "3"
     },
     {
@@ -970,9 +970,9 @@
     {
         "display_rsn": "coin 1cc crk",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Tabbed",
+        "account_hash": "b3c4-9f6b-07f1-313b",
+        "hardware_id": "d8dc-cd3b-57e8-7970",
+        "reason": "Voidwaker+DH+Set - Victim: iam baked",
         "evidence_rating": "3"
     },
     {
@@ -1194,9 +1194,9 @@
     {
         "display_rsn": "jewish black",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Tabbed",
+        "account_hash": "2f8f-6438-d5e1-f4e0",
+        "hardware_id": "3d1a-f15d-6b64-2070",
+        "reason": "DH+Set+1b - Victim: Arizonas",
         "evidence_rating": "3"
     },
     {
@@ -1205,6 +1205,14 @@
         "account_hash": "unknown",
         "hardware_id": "unknown",
         "reason": "Safe Zone",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "jewish black",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "unknown",
+        "hardware_id": "unknown",
+        "reason": "tabbed",
         "evidence_rating": "3"
     },
     {
@@ -1266,9 +1274,9 @@
     {
         "display_rsn": "mmmmnmmnm",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "tabbed",
+        "account_hash": "eab5-86a1-c2c0-63e4",
+        "hardware_id": "3615-5fd3-56d0-7b96",
+        "reason": "Claws+DH+Set+500m - Victim: Haz Trucking",
         "evidence_rating": "3"
     },
     {
@@ -1498,9 +1506,9 @@
     {
         "display_rsn": "Masta Piff",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "tabbed",
+        "account_hash": "4fe7-4c10-6879-79ee",
+        "hardware_id": "37ec-4fc2-acf3-ef5f",
+        "reason": "AGS DH Prim Tort | Victim: i tob",
         "evidence_rating": "3"
     },
     {
@@ -1842,9 +1850,9 @@
     {
         "display_rsn": "Tim Sack",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Safe Zone, refused to RM and logged",
+        "account_hash": "eb90-9650-4f79-ede4",
+        "hardware_id": "9e25-bbf1-c4f0-b288",
+        "reason": "Voidwaker+Inq+Set - Victim: VolatileOrb",
         "evidence_rating": "3"
     },
     {
@@ -2068,7 +2076,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
-        "reason": "Venged",
+        "reason": "DH set + Korasi : Victim: Kick Vanc",
         "evidence_rating": "3"
     },
     {
@@ -2178,9 +2186,9 @@
     {
         "display_rsn": "Zials",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Tabbed",
+        "account_hash": "f30d-7a3a-784c-9fe4",
+        "hardware_id": "5f7a-ecd5-7f6e-e4fb",
+        "reason": "AGS+DH+Set - Victim: Janipur",
         "evidence_rating": "3"
     },
     {
@@ -5136,6 +5144,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "McGlee",
+        "signup_date": "2023-04-27 12:41:35",
+        "account_hash": "unknown",
+        "hardware_id": "unknown",
+        "reason": "1x DH set & AGS - Victim: Brew Burglar",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
@@ -5776,22 +5792,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Jewish Black",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "2f8f-6438-d5e1-f4e0",
-        "hardware_id": "3d1a-f15d-6b64-2070",
-        "reason": "DH+Set+1b - Victim: Arizonas",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "Jr vesta",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "a4fe-22b3-96e5-36bb",
-        "hardware_id": "ecb7-ed8b-8af0-b6f1",
-        "reason": "AGS+DH+BudgetSet - Victim: R e k k t",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "Katili",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "8e6b-6d11-3950-7edf",
@@ -5805,38 +5805,6 @@
         "account_hash": "d186-cf59-4403-d701",
         "hardware_id": "e5fb-2425-8abb-4c97",
         "reason": "Korasi DH - Victim: Deniability",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "King n0ur",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "4f8c9bf2-e36e-47ec-bac1-1f6d6ab2e996",
-        "hardware_id": "b808ebbf-c2d0-4646-9962-4993eca700fc",
-        "reason": "Voidwaker+DH+Set - Victim: iam baked",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "King n0ur",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "b3c4-9f6b-07f1-313b",
-        "hardware_id": "d8dc-cd3b-57e8-7970",
-        "reason": "Voidwaker+DH+Set - Victim: iam baked",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "Knufffel Koe",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "e1c4dfed-09a5-4f4f-8f54-3535c5d0f770",
-        "hardware_id": "4afc17cb-73e2-4bcc-a7ac-cfbb35321822",
-        "reason": "DH set + Korasi : Victim: Kick Vanc",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "KroTark-ll",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "4b5a41e9-7526-4033-9fcd-4f1421ecafba",
-        "hardware_id": "92d5001a-4c9b-4db1-b14a-750763d37a56",
-        "reason": "AGS+DH+Set x2 - Victims: Wakeup IRL & king feather",
         "evidence_rating": "3"
     },
     {
@@ -5869,14 +5837,6 @@
         "account_hash": "7c661a4a-0ba2-43e5-972a-2df6bdd96014",
         "hardware_id": "a683d006-492d-4ff7-a281-ba94f8b0adaf",
         "reason": "Bandos Set + Korasi - Victim: ComesToAnEnd",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "MASTA PIFF",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "4fe7-4c10-6879-79ee",
-        "hardware_id": "37ec-4fc2-acf3-ef5f",
-        "reason": "AGS DH Prim Tort | Victim: i tob",
         "evidence_rating": "3"
     },
     {
@@ -5920,30 +5880,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "McGlee",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "476dd61d-0614-4ba0-9248-ecfc651e677c",
-        "hardware_id": "1b3b63f6-2a45-4fcc-8a5b-bd5913403ac3",
-        "reason": "1x DH set + AGS",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "McGlee",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "2a17aec0-0d7d-4f0b-a022-b662a657b0d4",
-        "hardware_id": "717aa844-96c8-49c1-b5f0-c962c3e10cb6",
-        "reason": "1x DH set & AGS - Victim: Brew Burglar",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "McMutrie",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "2914-35cb-b7e0-79bc",
-        "hardware_id": "e2b0-97b4-509e-4708",
-        "reason": "Scammed claw dh set - Victim: The Fishbait",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "Mesiahhh",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "7ccf-27c7-1a15-be52",
@@ -5965,22 +5901,6 @@
         "account_hash": "39fc-9853-42e2-d98b",
         "hardware_id": "0d71-9223-24bd-ca99",
         "reason": "Inq Korasi Set - Victim: Blue Arms",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "Ml KE",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "6885-739e-9dfe-26aa",
-        "hardware_id": "3976-9a8f-f886-b451",
-        "reason": "AGS+DH+Set - Victim: Rage Devil",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "Mmmmnmmnm",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "eab5-86a1-c2c0-63e4",
-        "hardware_id": "3615-5fd3-56d0-7b96",
-        "reason": "Claws+DH+Set+500m - Victim: Haz Trucking",
         "evidence_rating": "3"
     },
     {
@@ -6280,14 +6200,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Tim sack",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "eb90-9650-4f79-ede4",
-        "hardware_id": "9e25-bbf1-c4f0-b288",
-        "reason": "Voidwaker+Inq+Set - Victim: VolatileOrb",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "Tl4",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "6a0c-894d-db03-4657",
@@ -6381,14 +6293,6 @@
         "account_hash": "dabd-1e5d-d4ea-7b3c",
         "hardware_id": "bd8b-b3ed-22ed-433b",
         "reason": "Fang+Bandos+Set - Victim: Grew Up Solo",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "Zials",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "f30d-7a3a-784c-9fe4",
-        "hardware_id": "5f7a-ecd5-7f6e-e4fb",
-        "reason": "AGS+DH+Set - Victim: Janipur",
         "evidence_rating": "3"
     },
     {
