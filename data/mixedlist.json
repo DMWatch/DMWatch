@@ -978,9 +978,9 @@
     {
         "display_rsn": "Bac0n Grease",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Ate+Tabbed",
+        "account_hash": "2b5e-e83d-ddec-8d21",
+        "hardware_id": "53fe-9155-ff2b-adc4",
+        "reason": "AGS+Bandos+Set - Victim: Jizzames",
         "evidence_rating": "3"
     },
     {
@@ -2092,7 +2092,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
-        "reason": "Ate food",
+        "reason": "Set + Claws - Victim: mr dca",
         "evidence_rating": "3"
     },
     {
@@ -6408,27 +6408,11 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "bac0n grease",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "2b5e-e83d-ddec-8d21",
-        "hardware_id": "53fe-9155-ff2b-adc4",
-        "reason": "AGS+Bandos+Set - Victim: Jizzames",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "badabooochi",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "f60a-a6b3-c770-d0d4",
         "hardware_id": "bd2d-c7c6-50b1-5c47",
         "reason": "AGS+DH+Set - Victim: HarvardKush",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "barkieaffoee",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "d9b356dc-5fcd-4520-b592-d8cdbf93fb3c",
-        "hardware_id": "6a3f-b5ae-f0e3-e592 RID: 3204-f09b-3398-aa9b",
-        "reason": "Set + Claws - Victim: mr dca",
         "evidence_rating": "3"
     },
     {
