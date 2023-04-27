@@ -5056,6 +5056,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "CCTV cal",
+        "signup_date": "2023-04-27 09:21:01",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Scammer alt & bot. Report to Jagex.",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
