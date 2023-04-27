@@ -4208,7 +4208,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "northisa",
+        "display_rsn": "nine live",
         "signup_date": "2023-04-24 11:07:45",
         "account_hash": "Null",
         "hardware_id": "Null",
@@ -5069,6 +5069,22 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "AGS+DH+Budget - Victim: d m attitude",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "PVLL Lever",
+        "signup_date": "2023-04-27 11:27:18",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+DH+Set - Victim: Dr Khalifa",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "38 lil top",
+        "signup_date": "2023-04-27 11:31:00",
+        "account_hash": "47f4-440c-acb7-b73b",
+        "hardware_id": "9143-bbe5-2f42-6b17",
+        "reason": "Claws+Elder+Set - Victim: IMissDuell",
         "evidence_rating": "3"
     },
     {
