@@ -5128,6 +5128,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "bazzdemsugar",
+        "signup_date": "2023-04-27 12:32:41",
+        "account_hash": "8db7-1b36-d197-db97",
+        "hardware_id": "4ea2-cf13-d77a-497f",
+        "reason": "Claw DH Set - Victim: Hit Feather",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
@@ -5272,6 +5280,14 @@
         "evidence_rating": "1"
     },
     {
+        "display_rsn": "Scared You",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "5f93-2934-b1de-4239",
+        "hardware_id": "ebda-d6f3-774d-0ca7",
+        "reason": "lance",
+        "evidence_rating": "8"
+    },
+    {
         "display_rsn": "0l8",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "2dbe-e87b-79a0-3d9b",
@@ -5389,14 +5405,6 @@
         "account_hash": "9e4e-3f8c-b3cf-009c",
         "hardware_id": "dfc3-d119-cbba-dc47",
         "reason": "AGS+DH+Set+650m - Victim: nK",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "BazzDemSugar",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "8db7-1b36-d197-db97",
-        "hardware_id": "4ea2-cf13-d77a-497f",
-        "reason": "Claw DH Set - Victim: Hit Feather",
         "evidence_rating": "3"
     },
     {
@@ -6424,14 +6432,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "bazzdemsugar",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "59e19ac9-df57-4553-9562-5642c5548a7b",
-        "hardware_id": "742020c4-f489-4553-8311-0769894a69e8",
-        "reason": "DH set + Claws - Victim: HIT FEATHER",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "big Friday",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "7fde-bebe-c2a9-65d4",
@@ -6517,22 +6517,6 @@
         "account_hash": "a0a1-d56a-dae2-d84d",
         "hardware_id": "66ca-fe0d-4f7c-92fc",
         "reason": "2B Cash - Victim: Jamieson D3",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "cornfarmer98",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "a0d5d6d0-2b27-40e7-b910-f80193c01a1b",
-        "hardware_id": "63563dd7-8f79-49ba-a9b0-b44ce6be48c6",
-        "reason": "DH set + Claws. Victim: WildNZ",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "cornfarmer98",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "39087d36-44e5-465e-9511-c299a58e623c",
-        "hardware_id": "d99474db-bfbc-4e20-846c-bae22de43466",
-        "reason": "DH set + Claws - Victim: mr dca",
         "evidence_rating": "3"
     },
     {
