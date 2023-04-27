@@ -3248,7 +3248,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mc duub",
+        "display_rsn": "777 shark",
         "signup_date": "2023-04-21 13:55:30",
         "account_hash": "null",
         "hardware_id": "null",
@@ -5061,6 +5061,14 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "Scammer alt & bot. Report to Jagex.",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "sworbs",
+        "signup_date": "2023-04-27 10:42:54",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS+DH+Budget - Victim: d m attitude",
         "evidence_rating": "3"
     },
     {
