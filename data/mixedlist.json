@@ -5208,6 +5208,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Rendored",
+        "signup_date": "2023-04-27 13:48:09",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+DH+Set - Victim: Sinisterly",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
