@@ -514,9 +514,9 @@
     {
         "display_rsn": "Filled Kebab",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Prayed melee",
+        "account_hash": "31e6-295e-3d70-6466",
+        "hardware_id": "7e42-dda8-b153-578a",
+        "reason": "AGS+DH+Set - Victim: Condo | Claws+DH+Set - Victim: Young li",
         "evidence_rating": "3"
     },
     {
@@ -1066,9 +1066,9 @@
     {
         "display_rsn": "dmgisdone",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "tabbed",
+        "account_hash": "2b61-ffce-c319-a94c",
+        "hardware_id": "771c-50ca-3ff7-2bed",
+        "reason": "claw dh base set | victim: exlog",
         "evidence_rating": "3"
     },
     {
@@ -1202,9 +1202,9 @@
     {
         "display_rsn": "HLDRA",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Safe Zone",
+        "account_hash": "9e03-bbd6-985f-13d7",
+        "hardware_id": "7487-bdf6-2397-6f35",
+        "reason": "Voidwaker+Elder+Set - Victim: No Life AMK",
         "evidence_rating": "3"
     },
     {
@@ -1732,7 +1732,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
-        "reason": "Tabbed",
+        "reason": "Claws+DH+Set - Victim: Smartas s",
         "evidence_rating": "3"
     },
     {
@@ -1754,9 +1754,9 @@
     {
         "display_rsn": "africa_face",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Tabbed",
+        "account_hash": "f267-7f93-8aac-9b67",
+        "hardware_id": "bf37-cb27-681e-4b95",
+        "reason": "AGS+DH+Set - Victim: luffy gear5",
         "evidence_rating": "3"
     },
     {
@@ -2028,7 +2028,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
-        "reason": "Tabbed",
+        "reason": "DH+Set - Victim: uzzzy",
         "evidence_rating": "3"
     },
     {
@@ -2082,9 +2082,9 @@
     {
         "display_rsn": "DrujKa",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Teleported",
+        "account_hash": "9995-0f7b-bb75-0088",
+        "hardware_id": "a345-34dc-f8aa-ad5b",
+        "reason": "DH set + ags + 250m Cash - Victim:laagvliet",
         "evidence_rating": "3"
     },
     {
@@ -4544,7 +4544,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "wtih omar",
+        "display_rsn": "with halsey",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -5336,14 +5336,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "4dvoe",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "15dcdb53-fd2f-4f56-b844-568d1611aaa6",
-        "hardware_id": "f2adfca9-a6dc-4e3e-a3d4-d66f5c02cfda",
-        "reason": "RUSHER",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "666 Dior",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "57d9-2651-20cc-291c",
@@ -5392,14 +5384,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Africa_Face",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "f267-7f93-8aac-9b67",
-        "hardware_id": "bf37-cb27-681e-4b95",
-        "reason": "AGS+DH+Set - Victim: luffy gear5",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "ArmandoFFa",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "214a589c-eff5-4fa2-ab42-32ddd54dfc43",
@@ -5440,14 +5424,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Blue Pikolas",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "e5c3a83d-5700-4b9b-b83e-62f40b20e184",
-        "hardware_id": "3b4251fe-d5d9-49da-be01-7b9bd11a274c",
-        "reason": "DH+Set - Victim: uzzzy",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "BoopBeepBeep",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "c4d6-8c3e-9ce5-b8f3",
@@ -5461,14 +5437,6 @@
         "account_hash": "02cf-704e-4b6a-44d4",
         "hardware_id": "a7eb-bc46-8e6f-c68f",
         "reason": "claw dh + base set | victim: Rhoback",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "CHADSKl",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "1cb97101-834d-4349-8ccc-edcddbef62fc",
-        "hardware_id": "b155f06b-76de-469d-80e1-fc33dc6d3e61",
-        "reason": "Claws+DH+Set - Victim: Smartas s",
         "evidence_rating": "3"
     },
     {
@@ -5536,22 +5504,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Dmgisdone",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "2b61-ffce-c319-a94c",
-        "hardware_id": "771c-50ca-3ff7-2bed",
-        "reason": "claw dh base set | victim: exlog",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "Drujka",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "9995-0f7b-bb75-0088",
-        "hardware_id": "a345-34dc-f8aa-ad5b",
-        "reason": "DH set + ags + 250m Cash - Victim:laagvliet",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "Dudes Wild",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "13da-131a-a48e-65fc",
@@ -5613,14 +5565,6 @@
         "account_hash": "b991-8c2e-9c9a-dbf2",
         "hardware_id": "f7d5-25b8-4142-aa2e",
         "reason": "Claw DH Set",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "Filled kebab",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "31e6-295e-3d70-6466",
-        "hardware_id": "7e42-dda8-b153-578a",
-        "reason": "AGS+DH+Set - Victim: Condo | Claws+DH+Set - Victim: Young li",
         "evidence_rating": "3"
     },
     {
@@ -5717,14 +5661,6 @@
         "account_hash": "9d74-a34f-5dcf-fdf4",
         "hardware_id": "2be4-a492-21e3-c9f1",
         "reason": "Claw DH Set - Victim: Bruce Scape",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "HlDRA",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "9e03-bbd6-985f-13d7",
-        "hardware_id": "7487-bdf6-2397-6f35",
-        "reason": "Voidwaker+Elder+Set - Victim: No Life AMK",
         "evidence_rating": "3"
     },
     {
