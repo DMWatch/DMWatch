@@ -1818,9 +1818,9 @@
     {
         "display_rsn": "yizzy yet",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Ate",
+        "account_hash": "6cc2-b8ce-20ba-647e",
+        "hardware_id": "2023-04-04 22:07:36",
+        "reason": "Voidwaker+Elder+Bandos+Set - Victim: Hustle",
         "evidence_rating": "3"
     },
     {
@@ -5104,6 +5104,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Mouse Houses",
+        "signup_date": "2023-04-27 12:07:18",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+DH+Setx2 - Victim: WastingMills",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
@@ -6845,14 +6853,6 @@
         "account_hash": "41b9-d83c-7bf2-2de2",
         "hardware_id": "c694-14a5-e30a-997d",
         "reason": "ags torture | victim klon pvm",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "trapbag",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "9845-b633-ca24-efaf",
-        "hardware_id": "cf3e-7776-1280-bf71",
-        "reason": "scammed PUFFING",
         "evidence_rating": "3"
     },
     {
