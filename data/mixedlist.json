@@ -4680,7 +4680,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "jodonx",
+        "display_rsn": "dmwatachtemp",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -5152,6 +5152,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "18 80",
+        "signup_date": "2023-04-27 12:59:18",
+        "account_hash": "unknown",
+        "hardware_id": "unknown",
+        "reason": "DH Set + Claws",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
@@ -5309,22 +5317,6 @@
         "account_hash": "2dbe-e87b-79a0-3d9b",
         "hardware_id": "a0d6-6e9d-5724-38f6",
         "reason": "Claw DH set - Owes pezza54",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "18 80",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "362473cd-ea12-494b-acda-6bf9a206795a",
-        "hardware_id": "4bc4f28c-f06a-4738-b209-e52f58c057ab",
-        "reason": "DH Set + Claws",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "23am",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "6956-e62e-922b-cfb2",
-        "hardware_id": "b9a4-d66a-2033-cf6f",
-        "reason": "Claws DH Set - Victim: H amza \/ Voidwaker Set - Victim: Zwfd",
         "evidence_rating": "3"
     },
     {
