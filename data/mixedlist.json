@@ -2122,9 +2122,9 @@
     {
         "display_rsn": "ANGLECALITO",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Tabbed",
+        "account_hash": "6915-4a9c-85e9-5183",
+        "hardware_id": "3a56-7aca-4dc9-76f4",
+        "reason": "Claws+DH+Set - Victim: AKKHA FL0CKA",
         "evidence_rating": "3"
     },
     {
@@ -6397,14 +6397,6 @@
         "account_hash": "4ca4-7263-091c-533c",
         "hardware_id": "e622-998e-4a6e-75e8",
         "reason": "AGS+DH+Set+600m - Victim SampleBottle",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "anglecalito",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "6915-4a9c-85e9-5183",
-        "hardware_id": "3a56-7aca-4dc9-76f4",
-        "reason": "Claws+DH+Set - Victim: AKKHA FL0CKA",
         "evidence_rating": "3"
     },
     {
