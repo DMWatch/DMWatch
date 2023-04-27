@@ -2968,7 +2968,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "alphabet rng",
+        "display_rsn": "not my duty",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -5008,19 +5008,27 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "lisalovesos",
-        "signup_date": "2023-04-27 07:36:13",
-        "account_hash": "unk",
-        "hardware_id": "unk",
-        "reason": "spoofer",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "lazy n grazy",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "cd9d-bc6f-92d2-e6c1",
         "hardware_id": "aa28-af4a-12ec-9c33",
         "reason": "Claw DH Set - Victim: Jizzames",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Chicagoland",
+        "signup_date": "2023-04-27 08:19:07",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Voidwaker+Bandos+Set - Victim: Zuuq",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Tall Chicana",
+        "signup_date": "2023-04-27 08:31:32",
+        "account_hash": "9786-e522-6f95-beb2",
+        "hardware_id": "afde-f13b-777a-9559",
+        "reason": "DH+500m - Victim: max puffs",
         "evidence_rating": "3"
     },
     {
@@ -5129,7 +5137,7 @@
     },
     {
         "display_rsn": "Main Wombat",
-        "signup_date": null,
+        "signup_date": "2023-04-04 22:07:36",
         "account_hash": "6419-100d-09ea-37fb",
         "hardware_id": "0053-ef60-bd9d-dda4",
         "reason": "Captain",
@@ -5137,11 +5145,27 @@
     },
     {
         "display_rsn": "Tayzzir",
-        "signup_date": null,
+        "signup_date": "2023-04-04 22:07:36",
         "account_hash": "e3e1-4b36-ff08-4ce0",
         "hardware_id": "9900-ab66-5f15-7c44",
         "reason": "Smiley rank",
         "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Loading Bars",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "c321-8445-a53b-515",
+        "hardware_id": "1aa1-ef18-cdc7-df11",
+        "reason": "Smiley Rank",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Low Tech",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "7ef7-1fc3-bb85-1a8a",
+        "hardware_id": "9707-1bd6-54cd-01a0",
+        "reason": "Recruit Rank",
+        "evidence_rating": "9"
     },
     {
         "display_rsn": "0l8",
@@ -5726,14 +5750,6 @@
         "hardware_id": "f098-1d32-b774-7dd1",
         "reason": "DH Set + 450m - Scammed: siton75hp",
         "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "Low Tech",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "7ef7-1fc3-bb85-1a8a",
-        "hardware_id": "9707-1bd6-54cd-01a0",
-        "reason": "Insured for 500M Pot Max",
-        "evidence_rating": "1"
     },
     {
         "display_rsn": "M1ch1gan",
