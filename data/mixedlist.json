@@ -42,8 +42,8 @@
     {
         "display_rsn": "P5 for 40",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
+        "account_hash": "a9db-3d1b-7da1-003a",
+        "hardware_id": "b88c-9a7c-c22b-7095",
         "reason": "Tabbed",
         "evidence_rating": "3"
     },
@@ -132,7 +132,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "a770-59f1-dc35-a286",
         "hardware_id": "75b2-adbe-fdbf-95fa",
-        "reason": "Tabbed",
+        "reason": "DH+SET - Victim: Cup n Handle",
         "evidence_rating": "3"
     },
     {
@@ -464,7 +464,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "hunt jelly",
+        "display_rsn": "juic me up",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -593,9 +593,9 @@
     },
     {
         "display_rsn": "sh0wmeurtds",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
+        "signup_date": "2023-04-10 17:32:16",
+        "account_hash": "5fe0-4551-032d-088b",
+        "hardware_id": "a0af-73a2-5890-caa4",
         "reason": "RM'd, ran out again, won't reply",
         "evidence_rating": "3"
     },
@@ -865,10 +865,10 @@
     },
     {
         "display_rsn": "Jamxs",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Tabbed",
+        "signup_date": "2023-04-11 16:14:01",
+        "account_hash": "10f2-7ecb-497d-700d",
+        "hardware_id": "cb3b-142e-8a3d-a010",
+        "reason": "Claw DH Set - Scammed: PUFFING",
         "evidence_rating": "3"
     },
     {
@@ -1738,8 +1738,8 @@
     {
         "display_rsn": "Oneal",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
+        "account_hash": "1757-cd6f-eefd-8618",
+        "hardware_id": "20de-ba7a-de9b-4f15",
         "reason": "Safe zone, refused to RM",
         "evidence_rating": "3"
     },
@@ -5112,6 +5112,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "cornfarmer98",
+        "signup_date": "2023-04-27 12:28:18",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Claws DH Base Set | Victims mr dca | WildNZ",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "pvmandpking",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Alt | Voidwaker+Bandos+Set - Victim: Zuuq",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
@@ -6360,14 +6376,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Yizzy Yet",
-        "signup_date": "2023-04-05 22:07:36",
-        "account_hash": "6cc2-b8ce-20ba-647e",
-        "hardware_id": "09ca-fee6-4e61-4739",
-        "reason": "Voidwaker+Elder+Bandos+Set - Victim: Hustlez",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "Zials",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "f30d-7a3a-784c-9fe4",
@@ -6616,14 +6624,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "jamxs",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "10f2-7ecb-497d-700d",
-        "hardware_id": "cb3b-142e-8a3d-a010",
-        "reason": "Claw DH Set - Scammed: PUFFING",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "jay from amb",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "2098-d4ba-571c-5af7",
@@ -6744,22 +6744,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "oneal",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "1757-cd6f-eefd-8618",
-        "hardware_id": "20de-ba7a-de9b-4f15",
-        "reason": "AbbyDagger+Set+24m - Victim: Ice Pice",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "p5 for 40",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "a9db-3d1b-7da1-003a",
-        "hardware_id": "b88c-9a7c-c22b-7095",
-        "reason": "Added with evidence",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "plebloo69",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "a91c-8456-d816-ccb0",
@@ -6808,14 +6792,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "sh0wmeurTDs",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "5fe0-4551-032d-088b",
-        "hardware_id": "a0af-73a2-5890-caa4",
-        "reason": "AGS+DH+Set - Victim: Rage Devil",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "skeebadeeba",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "c889-22ea-beaa-047c",
@@ -6829,14 +6805,6 @@
         "account_hash": "c52e-b9da-2af2-37d0",
         "hardware_id": "4608-22c4-5a5f-a833",
         "reason": "Torva Claws - Victim: lokifloki",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "sry mate",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "a770-59f1-dc35-a286",
-        "hardware_id": "75b2-adbe-fdbf-95fa",
-        "reason": "DH+SET - Victim: Cup n Handle",
         "evidence_rating": "3"
     },
     {
