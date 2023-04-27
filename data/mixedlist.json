@@ -5200,6 +5200,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Lord-snorki",
+        "signup_date": "2023-04-27 13:45:48",
+        "account_hash": "d845-02a0-ff6a-97d3",
+        "hardware_id": "d531-7c26-3661-5f82",
+        "reason": "AGS+DH+Budget - Victim: CorePower",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
