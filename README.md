@@ -16,7 +16,7 @@ Features
 
 License
 -------
-DMWatch External Plugin is based on DMWatch External Plugin which is licensed under the BSD 2-Clause License. See LICENSE for details.
+DMWatch External Plugin is based on Runewatch External Plugin which is licensed under the BSD 2-Clause License. See LICENSE for details.
 
 Author
 ------
