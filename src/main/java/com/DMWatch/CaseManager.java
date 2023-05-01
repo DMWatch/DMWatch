@@ -31,7 +31,7 @@ import okhttp3.Response;
 @Singleton
 public class CaseManager
 {
-	private static final HttpUrl DMWatch_LIST_URL = HttpUrl.parse("https://raw.githubusercontent.com/DMWatch/DMWatch/main/data/mixedlist.json");
+	private static final HttpUrl DMWatch_LIST_URL_DEFAULT = HttpUrl.parse("https://raw.githubusercontent.com/DMWatch/DMWatch/main/data/mixedlist.json");
 
 	private static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 	private static final Type typeToken = new TypeToken<List<Case>>()
@@ -39,14 +39,16 @@ public class CaseManager
 	}.getType();
 
 	private final OkHttpClient client;
+	private final DMWatchConfig config;
 	private final Map<String, Case> dmCases = new ConcurrentHashMap<>();
 	private final ClientThread clientThread;
 	private final Gson gson;
 
 	@Inject
-	private CaseManager(OkHttpClient client, ClientThread clientThread, Gson gson)
+	private CaseManager(OkHttpClient client, ClientThread clientThread, Gson gson, DMWatchConfig config)
 	{
 		this.client = client;
+		this.config = config;
 		this.clientThread = clientThread;
 		this.gson = gson.newBuilder().registerTypeAdapter(Date.class, (JsonDeserializer<Date>) (json, typeOfT, context) -> {
 			try
@@ -66,7 +68,15 @@ public class CaseManager
 	 */
 	public void refresh(Runnable onComplete)
 	{
-		Request rwReq = new Request.Builder().url(DMWatch_LIST_URL).build();
+		Request rwReq;
+
+		if (config.watchListEndpoint().endsWith("mixedlist.json") && config.watchListEndpoint().startsWith("https://"))
+		{
+			rwReq = new Request.Builder().url(config.watchListEndpoint()).build();
+		} else {
+			rwReq = new Request.Builder().url(DMWatch_LIST_URL_DEFAULT).build();
+		}
+
 
 		// call on background thread
 		client.newCall(rwReq).enqueue(new Callback()

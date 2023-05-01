@@ -186,6 +186,7 @@ public class DMWatchPlugin extends Plugin
 	private NavigationButton navButton;
 	private List<Case> localDMCases;
 	private HashMap<String, Instant> nameNotifier;
+	private Instant lastSync;
 
 	@Getter
 	@Setter
@@ -215,7 +216,6 @@ public class DMWatchPlugin extends Plugin
 		{
 			menuManager.addPlayerMenuItem(CHALLENGE);
 		}
-
 		navButton = NavigationButton.builder()
 			.tooltip("DMWatch Panel")
 			.icon(ICON)
@@ -243,6 +243,7 @@ public class DMWatchPlugin extends Plugin
 
 		spriteManager.getSpriteAsync(SpriteID.CHATBOX_REPORT_BUTTON, 0, s -> reportButton = s);
 		caseManager.refresh(this::colorAll);
+		lastSync = Instant.now();
 		lastLogout = Instant.now();
 	}
 
@@ -266,7 +267,7 @@ public class DMWatchPlugin extends Plugin
 		lastLogout = null;
 		uniqueIDs = new LinkedHashSet<>();
 		clientToolbar.removeNavigation(navButton);
-
+		lastSync = null;
 		if (config.playerOption() && client != null)
 		{
 			menuManager.removePlayerMenuItem(CHALLENGE);
@@ -593,17 +594,31 @@ public class DMWatchPlugin extends Plugin
 
 			if (target != null)
 			{
-				searchBarText = target;
-				clientThread.invoke(() -> SwingUtilities.invokeLater(() -> panel.getSearchBar().setText(target)));
-				if (!isInParty()) {
-					partyService.changeParty("DMWatch");
-				} else if (isInParty() && !partyService.getPartyPassphrase().equals("DMWatch")) {
-					partyService.changeParty("DMWatch");
-					searchBarText = "";
-				}
+				partyService.changeParty(getPrivateDM(target));
 			}
 		}
 	}
+	private String getPrivateDM(String otherRSN)
+	{
+		if (client.getLocalPlayer() == null || client.getLocalPlayer().getName() == null)
+		{
+			return "Error";
+		}
+
+		String theirName = Text.toJagexName(otherRSN).replaceAll(" ", "").toLowerCase();
+		String myName = Text.toJagexName(client.getLocalPlayer().getName()).replaceAll(" ", "").toLowerCase();
+		int compare = myName.compareTo(theirName);
+
+		if (compare < 0)
+		{
+			return myName + theirName;
+		}
+		else
+		{
+			return theirName + myName;
+		}
+	}
+
 
 	@Subscribe
 	public void onCommandExecuted(CommandExecuted ce)
@@ -623,7 +638,20 @@ public class DMWatchPlugin extends Plugin
 	@Subscribe
 	private void onGameTick(GameTick e)
 	{
-		if (!isInParty() || client.getLocalPlayer() == null || partyService.getLocalMember() == null)
+
+		if (client.getLocalPlayer() == null) return;
+		colorAll();
+		// scan local players consitently
+		if (config.scanLocalPlayers())
+		{
+			for (Player p : client.getPlayers())
+			{
+				String rsn = Text.removeTags(Text.toJagexName(p.getName())).toLowerCase();
+				alertPlayerWarning(rsn, false, AlertType.NEARBY);
+			}
+		}
+
+		if (!isInParty() || partyService.getLocalMember() == null)
 		{
 			return;
 		}
@@ -768,8 +796,11 @@ public class DMWatchPlugin extends Plugin
 
 	public void leaveParty()
 	{
-		partyService.changeParty(null);
-		panel.updateParty();
+		if (isInParty())
+		{
+			partyService.changeParty(null);
+			panel.updateParty();
+		}
 	}
 
 	@Subscribe
@@ -1020,7 +1051,19 @@ public class DMWatchPlugin extends Plugin
 		}
 		else
 		{
-			if (dmwCase.getStatus().equals("2"))
+			if (dmwCase.getStatus().equals("0")) {
+				Case newCase1 = new Case(dmwCase.getRsn(), dmwCase.getDate(), dmwCase.getAccountHash(), dmwCase.getHardwareID(), dmwCase.getReason(), "3");
+				Case newCase2 = new Case(dmwCase.getRsn(), dmwCase.getDate(), dmwCase.getAccountHash(), dmwCase.getHardwareID(), dmwCase.getReason(), "2");
+
+					if (localDMCases.contains(newCase1)) {
+						localDMCases.remove(newCase1);
+					}
+					if (localDMCases.contains(newCase2)) {
+						localDMCases.remove(newCase2);
+					}
+
+			}
+			else if (dmwCase.getStatus().equals("2"))
 			{
 				response.append(" is accused");
 			}
@@ -1137,6 +1180,7 @@ public class DMWatchPlugin extends Plugin
 	)
 	public void addUsersToLog()
 	{
+		if (!isInParty()) return;
 		for (long memberID : partyMembers.keySet())
 		{
 			if (memberID == myPlayer.getMember().getMemberId())
@@ -1171,7 +1215,7 @@ public class DMWatchPlugin extends Plugin
 	{
 		Widget[] players = chatWidget.getDynamicChildren();
 
-		for (int i = 0; i < players.length; i += 3)
+		for (int i = 0; i < players.length; i++)
 		{
 			boolean drewFromLocal = false;
 			Widget player = players[i];
@@ -1180,12 +1224,15 @@ public class DMWatchPlugin extends Plugin
 				continue;
 			}
 
+			String rsn = Text.toJagexName(Text.removeTags(player.getText())).toLowerCase();
+			if (rsn.isEmpty()) continue;
+
 			for (int j = 0; j < localDMCases.size() && !drewFromLocal; j++)
 			{
 				Case c = localDMCases.get(j);
 				if (c.getStatus().equals("3") || c.getStatus().equals("2"))
 				{
-					if (player.getText().equals(c.getRsn()))
+					if (rsn.equalsIgnoreCase(Text.toJagexName(c.getRsn())))
 					{
 						player.setTextColor(Color.RED.getRGB());
 						player.revalidate();
@@ -1199,7 +1246,7 @@ public class DMWatchPlugin extends Plugin
 				continue;
 			}
 
-			Case dmwCase = caseManager.get(player.getText());
+			Case dmwCase = caseManager.get(rsn);
 			if (dmwCase == null)
 			{
 				continue;
@@ -1208,9 +1255,8 @@ public class DMWatchPlugin extends Plugin
 			if (dmwCase.getStatus().equals("3") || dmwCase.getStatus().equals("2"))
 			{
 				player.setTextColor(Color.RED.getRGB());
+				player.revalidate();
 			}
-
-			player.revalidate();
 		}
 	}
 
@@ -1397,9 +1443,16 @@ public class DMWatchPlugin extends Plugin
 		}
 	}
 
-	@Schedule(period = 5, unit = ChronoUnit.MINUTES)
+	@Schedule(period = 1, unit = ChronoUnit.SECONDS)
 	public void refreshList()
 	{
+		// if using default end point, only update list every 2 minutes because github's list only updates every 5 minutes anyways
+		if (config.watchListEndpoint().isEmpty() && lastSync.plus(120, ChronoUnit.SECONDS).isAfter(Instant.now())) return;
+
+		// if not using default end point, update at the user configured cycle
+		if (!config.watchListEndpoint().isEmpty() && lastSync.plus(config.syncLists(), ChronoUnit.SECONDS).isAfter(Instant.now())) return;
+
 		caseManager.refresh(this::colorAll);
+		lastSync = Instant.now();
 	}
 }

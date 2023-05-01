@@ -13,24 +13,34 @@ public interface DMWatchConfig extends Config
 	String CONFIG_GROUP = "DMWatch";
 	String PLAYER_OPTION = "playerOption";
 	String PLAYER_TEXT_COLOR = "playerTextColor";
+
 	@ConfigSection(
 		name = "Overlay Stuff",
 		description = "All the options for Overlays behavior",
 		position = 30
 	)
 	String OVERLAY_SECTION = "Overlay";
-	@ConfigSection(
-		name = "Menu",
-		description = "All the options for menu behavior",
-		position = 99
-	)
-	String MENU_SECTION = "Menu";
+
 	@ConfigSection(
 		name = "Notifications",
 		description = "All the notification options",
 		position = 70
 	)
 	String NOTIFICATIONS_SECTION = "Notifications";
+
+	@ConfigSection(
+		name = "Menu",
+		description = "All the options for menu behavior",
+		position = 80
+	)
+	String MENU_SECTION = "Menu";
+
+	@ConfigSection(
+		name = "Watchlist",
+		description = "All the Watchlist stuff",
+		position = 90
+	)
+	String WATCHLIST_SECION = "Watch List Endpoint";
 
 	@ConfigItem(
 		position = 3,
@@ -90,18 +100,6 @@ public interface DMWatchConfig extends Config
 	default boolean drawTiles()
 	{
 		return false;
-	}
-
-	@ConfigItem(
-		position = 103,
-		keyName = "opponentColor",
-		name = "Challenger Color",
-		description = "Configures the the color of the challenged player",
-		section = OVERLAY_SECTION
-	)
-	default Color opponentColor()
-	{
-		return new Color(236, 66, 245);
 	}
 
 	@ConfigItem(
@@ -177,12 +175,49 @@ public interface DMWatchConfig extends Config
 		position = 10,
 		keyName = "notifyReminder",
 		name = "Same name notify timeout",
-		description = "Minutes to notify on same player again, -1 to do it only once",
+		description = "Minutes to wait to notify on same player again, -1 to do it only once",
 		section = NOTIFICATIONS_SECTION
 	)
 	default int notifyReminder()
 	{
 		return 3;
+	}
+
+	@ConfigItem(
+		position = 11,
+		keyName = "scanLocalPlayers",
+		name = "Scan local players",
+		description = "Scan players around you rather than only on player spawned (can be spammy)",
+		section = NOTIFICATIONS_SECTION
+	)
+	default boolean scanLocalPlayers()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		position = 12,
+		keyName = "watchListEndpoint",
+		name = "Watch list end point",
+		description = "Minutes to notify on same player again, -1 to do it only once",
+		section = WATCHLIST_SECION
+	)
+	default String watchListEndpoint()
+	{
+		return "";
+	}
+
+	@Range(min = 5, max = 180)
+	@ConfigItem(
+		position = 13,
+		keyName = "syncLists",
+		name = "Sync interval (secs)",
+		description = "How often to sync data with the list in seconds",
+		section = WATCHLIST_SECION
+	)
+	default int syncLists()
+	{
+		return 30;
 	}
 }
 
