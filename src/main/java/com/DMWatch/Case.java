@@ -7,6 +7,7 @@ import java.time.ZoneId;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import net.runelite.client.util.Text;
 
 @Data
 @AllArgsConstructor
@@ -37,6 +38,10 @@ public class Case
 	@SerializedName("evidence_rating")
 	private String status;
 
+
+	public String getNiceRSN() {
+		return Text.toJagexName(rsn.toLowerCase());
+	}
 
 	public String niceDate()
 	{

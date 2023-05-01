@@ -635,6 +635,27 @@ public class DMWatchPlugin extends Plugin
 		}
 	}
 
+	public void tryAddingName(String rsn) {
+		Case c = caseManager.get(rsn);
+		if (c == null) return;
+		if (localDMCases.contains(c)) return;
+		localDMCases.add(c);
+	}
+
+	public void tryAddingHWID(String hwid) {
+		Case c = caseManager.getByHWID(hwid);
+		if (c == null) return;
+		if (localDMCases.contains(c)) return;
+		localDMCases.add(c);
+	}
+
+	public void tryAddingHash(String hash) {
+		Case c = caseManager.getByAccountHash(hash);
+		if (c == null) return;
+		if (localDMCases.contains(c)) return;
+		localDMCases.add(c);
+	}
+
 	@Subscribe
 	private void onGameTick(GameTick e)
 	{
@@ -646,7 +667,7 @@ public class DMWatchPlugin extends Plugin
 		{
 			for (Player p : client.getPlayers())
 			{
-				String rsn = Text.removeTags(Text.toJagexName(p.getName())).toLowerCase();
+				String rsn = Text.removeTags(Text.toJagexName(p.getName()));
 				alertPlayerWarning(rsn, false, AlertType.NEARBY);
 			}
 		}

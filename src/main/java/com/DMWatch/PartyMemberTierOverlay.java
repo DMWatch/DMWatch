@@ -112,7 +112,7 @@ public class PartyMemberTierOverlay extends Overlay
 		{
 			Case c = plugin.getLocalList().get(i);
 
-			if (actor.getName().equals(c.getRsn()))
+			if (Text.toJagexName(actor.getName()).toLowerCase().equals(c.getNiceRSN()))
 			{
 				rankImage = ImageUtil.resizeImage(SCAMMER_ICON, 11, 11);
 				useScammerIcon = true;
