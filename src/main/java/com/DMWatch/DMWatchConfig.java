@@ -220,4 +220,3 @@ public interface DMWatchConfig extends Config
 		return 30;
 	}
 }
-

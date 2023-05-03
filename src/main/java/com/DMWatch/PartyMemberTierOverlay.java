@@ -4,6 +4,9 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import net.runelite.api.FriendsChatRank;
@@ -11,6 +14,8 @@ import net.runelite.api.Player;
 import net.runelite.api.Point;
 import net.runelite.api.clan.ClanTitle;
 import net.runelite.client.game.ChatIconManager;
+import net.runelite.client.party.PartyMember;
+import net.runelite.client.plugins.Plugin;
 import net.runelite.client.ui.overlay.Overlay;
 import net.runelite.client.ui.overlay.OverlayPosition;
 import net.runelite.client.ui.overlay.OverlayPriority;
@@ -108,15 +113,13 @@ public class PartyMemberTierOverlay extends Overlay
 		}
 
 		boolean useScammerIcon = false;
-		for (int i = 0; i < plugin.getLocalList().size() && !useScammerIcon; i++)
-		{
-			Case c = plugin.getLocalList().get(i);
 
-			if (Text.toJagexName(actor.getName()).toLowerCase().equals(c.getNiceRSN()))
-			{
-				rankImage = ImageUtil.resizeImage(SCAMMER_ICON, 11, 11);
-				useScammerIcon = true;
-			}
+		final Optional<Case> nameOnlocalList = plugin.getLocalList().stream().filter(p -> p.getNiceRSN().equalsIgnoreCase(Text.toJagexName(actor.getName()))).findFirst();
+
+		if (nameOnlocalList.isPresent())
+		{
+			rankImage = ImageUtil.resizeImage(SCAMMER_ICON, 11, 11);
+			useScammerIcon = true;
 		}
 
 		if (rankImage != null)

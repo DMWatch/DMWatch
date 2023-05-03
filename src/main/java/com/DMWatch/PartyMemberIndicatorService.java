@@ -2,6 +2,7 @@ package com.DMWatch;
 
 import java.awt.Color;
 import java.util.HashMap;
+import java.util.Optional;
 import java.util.function.BiConsumer;
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -66,16 +67,14 @@ public class PartyMemberIndicatorService
 				continue;
 			}
 
-			for (int i = 0; i < plugin.getLocalList().size() && !recolored; i++)
-			{
-				Case c = plugin.getLocalList().get(i);
-				if (Text.toJagexName(player.getName()).equalsIgnoreCase(Text.toJagexName(c.getRsn())))
+			final Optional<Case> nameOnlocalList = plugin.getLocalList().stream().filter(p -> p.getNiceRSN().equalsIgnoreCase(Text.toJagexName(player.getName()))).findFirst();
+
+			if (nameOnlocalList.isPresent()) {
+				Case c = nameOnlocalList.get();
+				if (COLORHM.containsKey(c.getStatus()))
 				{
-					if (COLORHM.containsKey(c.getStatus()))
-					{
-						consumer.accept(player, COLORHM.get(c.getStatus()));
-						recolored = true;
-					}
+					consumer.accept(player, COLORHM.get(c.getStatus()));
+					recolored = true;
 				}
 			}
 
@@ -99,7 +98,6 @@ public class PartyMemberIndicatorService
 					}
 				}
 			}
-
 		}
 	}
 

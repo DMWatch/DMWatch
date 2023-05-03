@@ -1054,6 +1054,7 @@ public class DMWatchPlugin extends Plugin
 
 	private void alertPlayerWarning(String rsn, boolean notifyClear, AlertType alertType)
 	{
+		if (caseManager.getListSize() == 0) return;
 		rsn = Text.toJagexName(rsn);
 		Case dmwCase = caseManager.get(rsn);
 		ChatMessageBuilder response = new ChatMessageBuilder();
@@ -1248,9 +1249,12 @@ public class DMWatchPlugin extends Plugin
 			String rsn = Text.toJagexName(Text.removeTags(player.getText())).toLowerCase();
 			if (rsn.isEmpty()) continue;
 
-			for (int j = 0; j < localDMCases.size() && !drewFromLocal; j++)
-			{
-				Case c = localDMCases.get(j);
+
+			final Optional<Case> nameOnlocalList = localDMCases.stream().filter(p -> p.getNiceRSN().equalsIgnoreCase(Text.toJagexName(player.getName()))).findFirst();
+
+			if (nameOnlocalList.isPresent()) {
+				Case c = nameOnlocalList.get();
+
 				if (c.getStatus().equals("3") || c.getStatus().equals("2"))
 				{
 					if (rsn.equalsIgnoreCase(Text.toJagexName(c.getRsn())))
