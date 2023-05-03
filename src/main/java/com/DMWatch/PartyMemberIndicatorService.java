@@ -61,40 +61,36 @@ public class PartyMemberIndicatorService
 
 		for (Player player : client.getPlayers())
 		{
-			boolean recolored = false;
 			if (player == null || player.getName() == null)
 			{
 				continue;
 			}
 
-			final Optional<Case> nameOnlocalList = plugin.getLocalList().stream().filter(p -> p.getNiceRSN().equalsIgnoreCase(Text.toJagexName(player.getName()))).findFirst();
-
-			if (nameOnlocalList.isPresent()) {
-				Case c = nameOnlocalList.get();
-				if (COLORHM.containsKey(c.getStatus()))
-				{
-					consumer.accept(player, COLORHM.get(c.getStatus()));
-					recolored = true;
-				}
-			}
-
-			if (!recolored)
+			if (player == localPlayer)
 			{
-				if (player == localPlayer)
+				if (config.drawOnSelf() && plugin.getMyPlayer() != null)
 				{
-					if (config.drawOnSelf() && plugin.getMyPlayer() != null)
+					if (COLORHM.containsKey(plugin.getMyPlayer().getStatus()))
 					{
-						if (COLORHM.containsKey(plugin.getMyPlayer().getStatus()))
-						{
-							consumer.accept(player, COLORHM.get(plugin.getMyPlayer().getStatus()));
-						}
+						consumer.accept(player, COLORHM.get(plugin.getMyPlayer().getStatus()));
 					}
 				}
-				else if (plugin.isInParty() && plugin.otherPlayerInParty(player.getName()))
-				{
-					if (COLORHM.containsKey(plugin.getPlayerTier(player.getName())))
+			} else {
+				final Optional<Case> nameOnlocalList = plugin.getLocalList().stream().filter(p -> p.getNiceRSN().equalsIgnoreCase(Text.toJagexName(player.getName()))).findFirst();
+
+				if (nameOnlocalList.isPresent()) {
+					Case c = nameOnlocalList.get();
+					if (COLORHM.containsKey(c.getStatus()))
 					{
-						consumer.accept(player, COLORHM.get(plugin.getPlayerTier(player.getName())));
+						consumer.accept(player, COLORHM.get(c.getStatus()));
+					}
+				} else {
+					if (plugin.isInParty() && plugin.otherPlayerInParty(player.getName()))
+					{
+						if (COLORHM.containsKey(plugin.getPlayerTier(player.getName())))
+						{
+							consumer.accept(player, COLORHM.get(plugin.getPlayerTier(player.getName())));
+						}
 					}
 				}
 			}

@@ -661,8 +661,7 @@ public class DMWatchPlugin extends Plugin
 	{
 
 		if (client.getLocalPlayer() == null) return;
-		colorAll();
-		// scan local players consitently
+		// scan local players consistently
 		if (config.scanLocalPlayers())
 		{
 			for (Player p : client.getPlayers())

@@ -5,8 +5,6 @@ import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.util.Optional;
-import java.util.Set;
-import java.util.stream.Collectors;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import net.runelite.api.FriendsChatRank;
@@ -14,8 +12,6 @@ import net.runelite.api.Player;
 import net.runelite.api.Point;
 import net.runelite.api.clan.ClanTitle;
 import net.runelite.client.game.ChatIconManager;
-import net.runelite.client.party.PartyMember;
-import net.runelite.client.plugins.Plugin;
 import net.runelite.client.ui.overlay.Overlay;
 import net.runelite.client.ui.overlay.OverlayPosition;
 import net.runelite.client.ui.overlay.OverlayPriority;
@@ -33,7 +29,7 @@ public class PartyMemberTierOverlay extends Overlay
 	private final DMWatchConfig config;
 	private final ChatIconManager chatIconManager;
 	private final DMWatchPlugin plugin;
-	private static final BufferedImage SCAMMER_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "scammer.png");
+	private static final BufferedImage SCAMMER_ICON = ImageUtil.resizeImage(ImageUtil.loadImageResource(DMWatchPlugin.class, "scammer.png"), 11, 11);
 
 	@Inject
 	private PartyMemberTierOverlay(DMWatchConfig config, PartyMemberIndicatorService playerIndicatorsService,
@@ -118,7 +114,7 @@ public class PartyMemberTierOverlay extends Overlay
 
 		if (nameOnlocalList.isPresent())
 		{
-			rankImage = ImageUtil.resizeImage(SCAMMER_ICON, 11, 11);
+			rankImage = SCAMMER_ICON;
 			useScammerIcon = true;
 		}
 

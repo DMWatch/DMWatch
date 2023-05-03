@@ -6,6 +6,7 @@ import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 import net.runelite.client.config.ConfigSection;
 import net.runelite.client.config.Range;
+import net.runelite.client.config.Units;
 
 @ConfigGroup(DMWatchConfig.CONFIG_GROUP)
 public interface DMWatchConfig extends Config
@@ -94,7 +95,7 @@ public interface DMWatchConfig extends Config
 		position = 102,
 		keyName = "drawPlayerTiles",
 		name = "Draw tiles under players",
-		description = "Configures whether or not tiles under highlighted players should be drawn",
+		description = "Configures whether or not tiles under highlighted players should be drawn, this can cause lag",
 		section = OVERLAY_SECTION
 	)
 	default boolean drawTiles()
@@ -208,10 +209,11 @@ public interface DMWatchConfig extends Config
 	}
 
 	@Range(min = 5, max = 180)
+	@Units(Units.SECONDS)
 	@ConfigItem(
 		position = 13,
 		keyName = "syncLists",
-		name = "Sync interval (secs)",
+		name = "Sync interval",
 		description = "How often to sync data with the list in seconds",
 		section = WATCHLIST_SECION
 	)
