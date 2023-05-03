@@ -473,10 +473,6 @@ public class DMWatchPlugin extends Plugin
 	@Subscribe
 	public void onPlayerSpawned(PlayerSpawned playerSpawned)
 	{
-		if (!config.notifyOnNearby())
-		{
-			return;
-		}
 		String name = playerSpawned.getPlayer().getName();
 		alertPlayerWarning(name, false, AlertType.NEARBY);
 	}
@@ -1056,6 +1052,19 @@ public class DMWatchPlugin extends Plugin
 		if (caseManager.getListSize() == 0) return;
 		rsn = Text.toJagexName(rsn);
 		Case dmwCase = caseManager.get(rsn);
+
+		if (!config.notifyOnNearby())
+		{
+			if (dmwCase != null && dmwCase.getStatus().equals("3"))
+			{
+				if (!localDMCases.contains(dmwCase))
+				{
+					localDMCases.add(dmwCase);
+				}
+			}
+			return;
+		}
+
 		ChatMessageBuilder response = new ChatMessageBuilder();
 		response.append(alertType.getMessage())
 			.append(ChatColorType.HIGHLIGHT)
