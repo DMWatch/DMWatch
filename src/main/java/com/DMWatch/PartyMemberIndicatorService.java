@@ -1,11 +1,15 @@
 package com.DMWatch;
 
 import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.nio.Buffer;
 import java.util.HashMap;
 import java.util.Optional;
 import java.util.function.BiConsumer;
+import java.util.function.Predicate;
 import javax.inject.Inject;
 import javax.inject.Singleton;
+import lombok.Value;
 import net.runelite.api.Client;
 import net.runelite.api.FriendsChatManager;
 import net.runelite.api.FriendsChatMember;
@@ -16,6 +20,7 @@ import net.runelite.api.clan.ClanChannelMember;
 import net.runelite.api.clan.ClanRank;
 import net.runelite.api.clan.ClanSettings;
 import net.runelite.api.clan.ClanTitle;
+import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.Text;
 
 @Singleton
@@ -27,8 +32,12 @@ public class PartyMemberIndicatorService
 	private final DMWatchConfig config;
 	private final DMWatchPlugin plugin;
 
-	final static HashMap<String, Color> COLORHM;
+	@Inject
+	CaseManager caseManager;
 
+	private static final BufferedImage SCAMMER_ICON = ImageUtil.resizeImage(ImageUtil.loadImageResource(DMWatchPlugin.class, "scammer.png"), 11, 11);
+
+	final static HashMap<String, Color> COLORHM;
 	static
 	{
 		COLORHM = new HashMap<>();
@@ -54,11 +63,8 @@ public class PartyMemberIndicatorService
 		this.plugin = plugin;
 	}
 
-	public void forEachPlayer(final BiConsumer<Player, Color> consumer)
+	public void forEachPlayer(final BiConsumer<Player, Decorations> consumer)
 	{
-
-		final Player localPlayer = client.getLocalPlayer();
-
 		for (Player player : client.getPlayers())
 		{
 			if (player == null || player.getName() == null)
@@ -66,65 +72,51 @@ public class PartyMemberIndicatorService
 				continue;
 			}
 
-			if (player == localPlayer)
+			Decorations decorations = getDecorations(player);
+			if (decorations != null && decorations.getColor() != null)
 			{
-				if (config.drawOnSelf() && plugin.getMyPlayer() != null)
-				{
-					if (COLORHM.containsKey(plugin.getMyPlayer().getStatus()))
-					{
-						consumer.accept(player, COLORHM.get(plugin.getMyPlayer().getStatus()));
-					}
-				}
-			} else {
-				final Optional<Case> nameOnlocalList = plugin.getLocalList().stream().filter(p -> p.getNiceRSN().equalsIgnoreCase(Text.toJagexName(player.getName()))).findFirst();
-
-				if (nameOnlocalList.isPresent()) {
-					Case c = nameOnlocalList.get();
-					if (COLORHM.containsKey(c.getStatus()))
-					{
-						consumer.accept(player, COLORHM.get(c.getStatus()));
-					}
-				} else {
-					if (plugin.isInParty() && plugin.otherPlayerInParty(player.getName()))
-					{
-						if (COLORHM.containsKey(plugin.getPlayerTier(player.getName())))
-						{
-							consumer.accept(player, COLORHM.get(plugin.getPlayerTier(player.getName())));
-						}
-					}
-				}
+				consumer.accept(player, decorations);
 			}
 		}
 	}
 
-	ClanTitle getClanTitle(Player player)
+	Decorations getDecorations(Player player)
 	{
-		ClanChannel clanChannel = client.getClanChannel();
-		ClanSettings clanSettings = client.getClanSettings();
-		if (clanChannel == null || clanSettings == null)
+		if (player.getName() == null)
 		{
 			return null;
 		}
 
-		ClanChannelMember member = clanChannel.findMember(player.getName());
-		if (member == null)
+		Color color = null;
+		if (player == client.getLocalPlayer())
 		{
-			return null;
+			if (config.drawOnSelf() && plugin.getMyPlayer() != null)
+			{
+				color = COLORHM.get(plugin.getMyPlayer().getStatus());
+			}
 		}
 
-		ClanRank rank = member.getRank();
-		return clanSettings.titleForRank(rank);
+		BufferedImage rankImage = null;
+		final Optional<Case> c = plugin.getLocalList().stream().filter(p -> p.getNiceRSN().equalsIgnoreCase(Text.toJagexName(player.getName()))).findFirst();
+
+		if (c.isPresent()) {
+			Case c1 = c.get();
+			if (COLORHM.containsKey(c1.getStatus()))
+			{
+				color = COLORHM.get(c1.getStatus());
+			}
+			if (c1.getStatus().equals("3")) {
+				rankImage = SCAMMER_ICON;
+			}
+		}
+
+		return new Decorations(color, rankImage);
 	}
 
-	FriendsChatRank getFriendsChatRank(Player player)
+	@Value
+	static class Decorations
 	{
-		final FriendsChatManager friendsChatManager = client.getFriendsChatManager();
-		if (friendsChatManager == null)
-		{
-			return FriendsChatRank.UNRANKED;
-		}
-
-		FriendsChatMember friendsChatMember = friendsChatManager.findByName(Text.removeTags(player.getName()));
-		return friendsChatMember != null ? friendsChatMember.getRank() : FriendsChatRank.UNRANKED;
+		Color color;
+		BufferedImage scammerIcon;
 	}
 }

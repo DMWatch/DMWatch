@@ -27,18 +27,12 @@ public class PartyMemberTierOverlay extends Overlay
 
 	private final PartyMemberIndicatorService playerIndicatorsService;
 	private final DMWatchConfig config;
-	private final ChatIconManager chatIconManager;
-	private final DMWatchPlugin plugin;
-	private static final BufferedImage SCAMMER_ICON = ImageUtil.resizeImage(ImageUtil.loadImageResource(DMWatchPlugin.class, "scammer.png"), 11, 11);
 
 	@Inject
-	private PartyMemberTierOverlay(DMWatchConfig config, PartyMemberIndicatorService playerIndicatorsService,
-								   ChatIconManager chatIconManager, DMWatchPlugin plugin)
+	private PartyMemberTierOverlay(DMWatchConfig config, PartyMemberIndicatorService playerIndicatorsService)
 	{
-		this.plugin = plugin;
 		this.config = config;
 		this.playerIndicatorsService = playerIndicatorsService;
-		this.chatIconManager = chatIconManager;
 		setPosition(OverlayPosition.DYNAMIC);
 		setPriority(OverlayPriority.MED);
 	}
@@ -46,11 +40,11 @@ public class PartyMemberTierOverlay extends Overlay
 	@Override
 	public Dimension render(Graphics2D graphics)
 	{
-		playerIndicatorsService.forEachPlayer((player, color) -> renderPlayerOverlay(graphics, player, color));
+		playerIndicatorsService.forEachPlayer((player, decorations) -> renderPlayerOverlay(graphics, player, decorations));
 		return null;
 	}
 
-	private void renderPlayerOverlay(Graphics2D graphics, Player actor, Color color)
+	private void renderPlayerOverlay(Graphics2D graphics, Player actor, PartyMemberIndicatorService.Decorations decorations)
 	{
 		final PlayerNameLocation drawPlayerNamesConfig = config.playerNamePosition();
 		if (drawPlayerNamesConfig == PlayerNameLocation.DISABLED)
@@ -89,38 +83,11 @@ public class PartyMemberTierOverlay extends Overlay
 			return;
 		}
 
-		BufferedImage rankImage = null;
-		if (actor.isFriendsChatMember())
+		BufferedImage scammerImage = decorations.getScammerIcon();
+
+		if (scammerImage != null)
 		{
-			final FriendsChatRank rank = playerIndicatorsService.getFriendsChatRank(actor);
-
-			if (rank != FriendsChatRank.UNRANKED)
-			{
-				rankImage = chatIconManager.getRankImage(rank);
-			}
-		}
-		else if (actor.isClanMember())
-		{
-			ClanTitle clanTitle = playerIndicatorsService.getClanTitle(actor);
-			if (clanTitle != null)
-			{
-				rankImage = chatIconManager.getRankImage(clanTitle);
-			}
-		}
-
-		boolean useScammerIcon = false;
-
-		final Optional<Case> nameOnlocalList = plugin.getLocalList().stream().filter(p -> p.getNiceRSN().equalsIgnoreCase(Text.toJagexName(actor.getName()))).findFirst();
-
-		if (nameOnlocalList.isPresent())
-		{
-			rankImage = SCAMMER_ICON;
-			useScammerIcon = true;
-		}
-
-		if (rankImage != null)
-		{
-			final int imageWidth = rankImage.getWidth();
+			final int imageWidth = scammerImage.getWidth();
 			final int imageTextMargin;
 			final int imageNegativeMargin;
 
@@ -137,21 +104,11 @@ public class PartyMemberTierOverlay extends Overlay
 
 			final int textHeight = graphics.getFontMetrics().getHeight() - graphics.getFontMetrics().getMaxDescent();
 
-			if (useScammerIcon) {
-				final Point imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 8, textLocation.getY() - textHeight / 2 - rankImage.getHeight() / 2);
-				OverlayUtil.renderImageLocation(graphics, imageLocation, rankImage);
-			} else {
-				final Point imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 1, textLocation.getY() - textHeight / 2 - rankImage.getHeight() / 2);
-				OverlayUtil.renderImageLocation(graphics, imageLocation, rankImage);
-			}
-
-			if (useScammerIcon) {
-				textLocation = new Point(textLocation.getX() - 5 + imageTextMargin, textLocation.getY());
-			} else {
-				textLocation = new Point(textLocation.getX() + imageTextMargin, textLocation.getY());
-			}
+			final Point imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 8, textLocation.getY() - textHeight / 2 - scammerImage.getHeight() / 2);
+			OverlayUtil.renderImageLocation(graphics, imageLocation, scammerImage);
+			textLocation = new Point(textLocation.getX() - 5 + imageTextMargin, textLocation.getY());
 		}
 
-		OverlayUtil.renderTextLocation(graphics, textLocation, name, color);
+		OverlayUtil.renderTextLocation(graphics, textLocation, name, decorations.getColor());
 	}
 }
