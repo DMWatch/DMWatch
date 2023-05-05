@@ -8618,9 +8618,17 @@
     {
         "display_rsn": "vt",
         "signup_date": "2023-05-04 21:35:18",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "DH+Set - Victim: Clapping Mfs",
+        "account_hash": "e5e2-ae70-f6de-6e0f",
+        "hardware_id": "b6ed-2556-2666-0d0c",
+        "reason": "DH+Set+3b - Victim: Clapping Mfs",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "redrumze",
+        "signup_date": "2023-05-04 22:00:33",
+        "account_hash": "redrumze",
+        "hardware_id": "redrumze",
+        "reason": "redrumze",
         "evidence_rating": "3"
     },
     {
