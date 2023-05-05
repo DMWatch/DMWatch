@@ -8032,7 +8032,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Food Burn3r",
+        "display_rsn": "grrrpopop",
         "signup_date": "2023-05-03 13:01:08",
         "account_hash": "Null",
         "hardware_id": "Null",
@@ -8040,7 +8040,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Food Burn3r",
+        "display_rsn": "grrrpopop",
         "signup_date": "2023-05-03 13:02:20",
         "account_hash": "c415-4df7-66a8-19e1",
         "hardware_id": "db5d-e713-5ca6-5243",
@@ -8048,7 +8048,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Food burn3r",
+        "display_rsn": "grrrpopop",
         "signup_date": "2023-05-03 13:03:29",
         "account_hash": "Null",
         "hardware_id": "Null",
@@ -8056,7 +8056,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Food burn3r",
+        "display_rsn": "grrrpopop",
         "signup_date": "2023-05-03 13:05:29",
         "account_hash": "c415-4df7-66a8-19e1",
         "hardware_id": "db5d-e713-5ca6-5243",
@@ -8685,6 +8685,14 @@
         "account_hash": "f676-c893-2ae0-b242",
         "hardware_id": "5e33-37c4-19d9-fe0e",
         "reason": "AGS+DH+Set - Victim: 02 07",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "sivpule",
+        "signup_date": "2023-05-05 06:09:01",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGSx2+Setx2 - Victim: iuxia",
         "evidence_rating": "3"
     },
     {
