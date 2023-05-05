@@ -8696,14 +8696,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "redrumyliad",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "redrumyliad",
-        "hardware_id": "redrumyliad",
-        "reason": "redrumyliad",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "J0Xz",
         "signup_date": "2023-05-05 11:20:39",
         "account_hash": "9333-ee5f-3f08-068a",
@@ -8773,6 +8765,14 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "Eats\/Tabs\/Prays melee",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Nao\u00a0Creio",
+        "signup_date": "2023-05-05 15:55:47",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Harrassment",
         "evidence_rating": "3"
     },
     {
