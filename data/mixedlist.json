@@ -840,7 +840,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "aphexitez",
+        "display_rsn": "jobbo maboo",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -8757,6 +8757,14 @@
         "account_hash": "5855-c056-c5b7-5376",
         "hardware_id": "af1b-542a-b52b-bc77",
         "reason": "Claws+DH+Set - Victim: Marks Proj",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "redrumyliad",
+        "signup_date": "2023-05-05 14:18:27",
+        "account_hash": "8",
+        "hardware_id": "8",
+        "reason": "8",
         "evidence_rating": "3"
     },
     {
