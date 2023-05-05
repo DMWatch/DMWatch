@@ -4824,7 +4824,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "funny die1",
+        "display_rsn": "the tittoo",
         "signup_date": "2023-04-26 20:21:14",
         "account_hash": "null",
         "hardware_id": "null",
@@ -5240,7 +5240,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "funny die1",
+        "display_rsn": "the tittoo",
         "signup_date": "2023-04-28 14:27:58",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8709,6 +8709,14 @@
         "account_hash": "redrumyliad",
         "hardware_id": "redrumyliad",
         "reason": "redrumyliad",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "J0Xz",
+        "signup_date": "2023-05-05 11:20:39",
+        "account_hash": "9333-ee5f-3f08-068a",
+        "hardware_id": "ad4a-3827-d05d-3a64",
+        "reason": "Claws+Elder+Torva+Set - Victim: SP0TIFY",
         "evidence_rating": "3"
     },
     {
