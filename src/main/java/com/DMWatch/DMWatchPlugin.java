@@ -1118,8 +1118,18 @@ public class DMWatchPlugin extends Plugin
 		rsn = Text.toJagexName(rsn);
 		Case dmwCase = caseManager.get(rsn);
 
+		if (dmwCase != null && dmwCase.getStatus().equals("0"))
+		{
+			removeResolvedCase(dmwCase);
+			return;
+		}
+
 		if (!config.notifyOnNearby() && alertType.getMessage().equals("Nearby player, "))
 		{
+			if (dmwCase != null && dmwCase.getStatus().equals("3") && !caseList.contains(dmwCase))
+			{
+				caseList.add(dmwCase);
+			}
 			return;
 		}
 
@@ -1189,6 +1199,17 @@ public class DMWatchPlugin extends Plugin
 				nameNotifier.put(rsn, Instant.now().plus(Duration.ofMinutes(config.notifyReminder())));
 			}
 		}
+	}
+
+	private void removeResolvedCase(Case c)
+	{
+		Case unResolvedCase2 = new Case(c.getRsn(), c.getDate(), c.getAccountHash(), c.getHardwareID(), c.getReason(), "2");
+		Optional<Case> findResolved2 = getLocalList().stream().filter(resolvedCase -> resolvedCase.equals(unResolvedCase2)).findFirst();
+		findResolved2.ifPresent(aCase -> caseList.remove(aCase));
+
+		Case unResolvedCase3 = new Case(c.getRsn(), c.getDate(), c.getAccountHash(), c.getHardwareID(), c.getReason(), "3");
+		Optional<Case> findResolved3 = getLocalList().stream().filter(resolvedCase -> resolvedCase.equals(unResolvedCase3)).findFirst();
+		findResolved3.ifPresent(aCase -> caseList.remove(aCase));
 	}
 
 	public String msg(String status)

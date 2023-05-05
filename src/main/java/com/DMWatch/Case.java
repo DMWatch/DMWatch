@@ -47,4 +47,21 @@ public class Case
 	{
 		return DateFormat.format(date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
 	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o) return true;
+
+		if (o == null || getClass() != o.getClass()) return false;
+
+		Case c = (Case) o;
+
+		return this.rsn.equals(c.getRsn())
+			&& this.accountHash.equals(c.getAccountHash())
+			&& this.hardwareID.equals(c.getHardwareID())
+//			&& this.reason.equals(c.getReason()) // the reason on unbanned people are not the same reason as the one found on people
+			&& this.status.equals(c.getStatus())
+			&& this.date.compareTo(c.getDate()) == 0;
+	}
 }
