@@ -440,7 +440,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "gbgshoater",
+        "display_rsn": "high_tachs",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -6536,7 +6536,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "gbgshoater",
+        "display_rsn": "high_tachs",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "c52e-b9da-2af2-37d0",
         "hardware_id": "4608-22c4-5a5f-a833",
@@ -8685,6 +8685,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "AGS+DH+Budget - Victim: GrindStoned",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Rabbit IRL",
+        "signup_date": "2023-05-05 05:51:39",
+        "account_hash": "f676-c893-2ae0-b242",
+        "hardware_id": "5e33-37c4-19d9-fe0e",
+        "reason": "AGS+DH+Set - Victim: 02 07",
         "evidence_rating": "3"
     },
     {
