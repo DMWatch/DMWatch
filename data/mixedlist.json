@@ -2104,7 +2104,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "alexzaff1998",
+        "display_rsn": "sivpule",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -8669,6 +8669,22 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "DH+Budget - Victim: a luck",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "TickbabyTick",
+        "signup_date": "2023-05-05 05:45:37",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS+DH+Set - Victim: CorePower",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "t a v 0 sama",
+        "signup_date": "2023-05-05 05:46:56",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS+DH+Budget - Victim: GrindStoned",
         "evidence_rating": "3"
     },
     {
