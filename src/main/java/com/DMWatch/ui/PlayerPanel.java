@@ -90,14 +90,14 @@ public class PlayerPanel extends JPanel
 	private boolean JOptionPaneOpened;
 
 	public PlayerPanel(final PartyPlayer selectedPlayer, final DMWatchConfig config,
-					   final SpriteManager spriteManager, final ItemManager itemManager)
+					   final SpriteManager spriteManager, final ItemManager itemManager, DMWatchPlugin plugin)
 	{
 		this.player = selectedPlayer;
 		this.config = config;
 		this.spriteManager = spriteManager;
 		this.itemManager = itemManager;
 		this.showInfo = false;
-		this.banner = new PlayerBanner(selectedPlayer, showInfo, spriteManager, config);
+		this.banner = new PlayerBanner(selectedPlayer, showInfo, spriteManager, config, plugin);
 		this.inventoryPanel = new PlayerInventoryPanel(selectedPlayer.getInventory(), banner.getTrustedPlayerButton().isSelected(), itemManager);
 		this.equipmentPanel = new PlayerEquipmentPanel(selectedPlayer.getEquipment(), spriteManager, itemManager);
 

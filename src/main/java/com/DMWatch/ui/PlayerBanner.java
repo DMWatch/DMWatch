@@ -100,12 +100,14 @@ public class PlayerBanner extends JPanel
 	private PartyPlayer player;
 	private boolean checkIcon;
 	DMWatchConfig config;
+	DMWatchPlugin plugin;
 
-	public PlayerBanner(final PartyPlayer player, boolean expanded, SpriteManager spriteManager, DMWatchConfig config)
+	public PlayerBanner(final PartyPlayer player, boolean expanded, SpriteManager spriteManager, DMWatchConfig config, DMWatchPlugin plugin)
 	{
 		super();
 		this.config = config;
 		this.player = player;
+		this.plugin = plugin;
 		this.setLayout(new GridBagLayout());
 		this.setBorder(new EmptyBorder(5, 5, 0, 5));
 
@@ -132,6 +134,12 @@ public class PlayerBanner extends JPanel
 
 		statsPanel.add(createIconPanel(spriteManager, SpriteID.SPELL_VENGEANCE_OTHER, "IsVenged", player.getIsVenged() == 1 ? "Is Venged" : "Not Venged", "", false));
 		statsPanel.add(createIconPanel(spriteManager, SpriteID.PLAYER_KILLER_SKULL, "DMWatchStatus", msg(player.getStatus()), player.getReason(), true));
+
+		if (player.getStatus().equals("3") || player.getStatus().equals("2")) {
+			plugin.tryAddingHash(player.getUserUnique());
+			plugin.tryAddingName(player.getUsername());
+			plugin.tryAddingHWID(player.getHWID());
+		}
 
 		final JLabel trustLabel = new JLabel("Trust this player:");
 		trustLabel.setToolTipText("If selected the inventory will show the players GP and/or Platinum tokens.");

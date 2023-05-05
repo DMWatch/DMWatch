@@ -12,8 +12,9 @@ import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Optional;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.function.Consumer;
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -40,7 +41,7 @@ public class CaseManager
 
 	private final OkHttpClient client;
 	private final DMWatchConfig config;
-	private final Map<String, Case> dmCases = new ConcurrentHashMap<>();
+	private final Queue<Case> dmCases = new ConcurrentLinkedQueue<>();
 	private final ClientThread clientThread;
 	private final Gson gson;
 
@@ -102,14 +103,11 @@ public class CaseManager
 						dmCases.clear();
 						for (Case c : cases)
 						{
-							String rsn = Text.removeTags(Text.toJagexName(c.getRsn())).toLowerCase();
-							Map<String, Case> sourceCases = dmCases;
-
-							Case old = sourceCases.get(rsn);
+							Case old = get(c.getNiceRSN());
 							// keep the newest case
 							if (old == null || old.getDate().before(c.getDate()))
 							{
-								sourceCases.put(rsn, c);
+								dmCases.add(c);
 							}
 						}
 						log.debug("saved {}/{} dm cases", dmCases.size(), cases.size());
@@ -135,34 +133,44 @@ public class CaseManager
 	 */
 	public Case get(String rsn)
 	{
+		if (dmCases.size() == 0) return null;
 		String cleanRsn = Text.removeTags(Text.toJagexName(rsn)).toLowerCase();
+		Optional<Case> foundCase = dmCases.stream().filter(c -> c.getNiceRSN().equals(cleanRsn)).findFirst();
 
-		Case c = dmCases.get(cleanRsn);
-		return c;
+		if (foundCase.isPresent()) {
+			return foundCase.get();
+		} else {
+			return null;
+		}
 	}
 
 	public Case getByAccountHash(String hashID)
 	{
-		for (String s : dmCases.keySet())
-		{
-			if (dmCases.get(s).getAccountHash().equals(hashID))
-			{
-				return dmCases.get(s);
-			}
+		if (dmCases.size() == 0) return null;
+		Optional<Case> foundCase = dmCases.stream().filter(c -> c.getAccountHash().equals(hashID)).findFirst();
+
+		if (foundCase.isPresent()) {
+			return foundCase.get();
+		} else {
+			return null;
 		}
-		return null;
 	}
 
 	public Case getByHWID(String hwid)
 	{
-		for (String s : dmCases.keySet())
-		{
-			if (dmCases.get(s).getHardwareID().equals(hwid))
-			{
-				return dmCases.get(s);
-			}
+		if (dmCases.size() == 0) return null;
+		Optional<Case> foundCase = dmCases.stream().filter(c -> c.getHardwareID().equals(hwid)).findFirst();
+
+		if (foundCase.isPresent()) {
+			return foundCase.get();
+		} else {
+			return null;
 		}
-		return null;
+	}
+
+	public int getListSize()
+	{
+		return dmCases.size();
 	}
 
 	/**
