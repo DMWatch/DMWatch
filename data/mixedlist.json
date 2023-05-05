@@ -2952,7 +2952,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "rizzvancy",
+        "display_rsn": "1 hit tick",
         "signup_date": "2023-04-20 15:50:58",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8757,6 +8757,14 @@
         "account_hash": "5855-c056-c5b7-5376",
         "hardware_id": "af1b-542a-b52b-bc77",
         "reason": "Claws+DH+Set - Victim: Marks Proj",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "no veins",
+        "signup_date": "2023-05-05 14:48:49",
+        "account_hash": "d3a9-17fb-bed5-9697",
+        "hardware_id": "854d-8540-03b9-a04d",
+        "reason": "AGS DH Base Set | Victim: d a t h i t",
         "evidence_rating": "3"
     },
     {
