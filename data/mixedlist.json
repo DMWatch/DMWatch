@@ -8928,6 +8928,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "hilligegrun",
+        "signup_date": "2023-05-06 10:00:38",
+        "account_hash": "9be0-a058-5cc5-efbc",
+        "hardware_id": "2951-55f2-03d8-19e1",
+        "reason": "AGS + DH + Set - Teled - Victim: padme",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
