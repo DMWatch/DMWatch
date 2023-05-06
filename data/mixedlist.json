@@ -8968,6 +8968,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "H00llo0w",
+        "signup_date": "2023-05-06 15:07:04",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Claws DH Base Set | Victim: Sorteper62",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "759m",
+        "signup_date": "2023-05-06 15:10:13",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Voidwaker Base Set | Victim: till sun up",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
