@@ -8760,14 +8760,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Aarhuus",
-        "signup_date": "2023-05-05 19:47:04",
-        "account_hash": "db0b-2f7c-f6ea-82bf",
-        "hardware_id": "f2ae-9dbb-9b36-3eec",
-        "reason": "AGS+DH+Set - Victim: Zuuq",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "stocco",
         "signup_date": "2023-05-05 19:49:52",
         "account_hash": "null",
@@ -9029,6 +9021,38 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "AGS DH Base Set| Victim: Sorteper62",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "f2w",
+        "signup_date": "2023-05-06 15:48:50",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Claws DH Base Set: Victim: akkha fl0cka",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "j2w",
+        "signup_date": "2023-05-06 15:53:41",
+        "account_hash": "cfd7-b87a-51f5-8aea",
+        "hardware_id": "604a-5544-849d-a981",
+        "reason": "Claws DH Base Set| Victim: Anubis Pet",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Nut on chest",
+        "signup_date": "2023-05-06 15:55:05",
+        "account_hash": "cfd7-b87a-51f5-8aea",
+        "hardware_id": "604a-5544-849d-a981",
+        "reason": "Claws DH Base Set| Victim: Anubis Pet",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "ItsOwenM8",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "ff33-6f59-a374-cf75",
+        "hardware_id": "c4e9-8589-b0ce-207d",
+        "reason": "Imp boxed 2b",
         "evidence_rating": "3"
     },
     {
