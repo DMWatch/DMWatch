@@ -9024,6 +9024,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "nut on chest",
+        "signup_date": "2023-05-06 15:42:03",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "AGS DH Base Set| Victim: Sorteper62",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
