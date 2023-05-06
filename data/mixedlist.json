@@ -8784,6 +8784,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "EXILE K0",
+        "signup_date": "2023-05-05 20:35:29",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+DH+Set - Victim: Chavi",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "br0keagain",
         "signup_date": "2023-05-05 20:39:10",
         "account_hash": "null",
