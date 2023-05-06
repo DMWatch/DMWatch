@@ -8944,6 +8944,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Toxicmys",
+        "signup_date": "2023-05-06 10:21:48",
+        "account_hash": "1c88-381f-6f31-b447",
+        "hardware_id": "23d5-cac6-d93f-f444",
+        "reason": "Claws + DH + Set - Teled - Victim: Litu",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
