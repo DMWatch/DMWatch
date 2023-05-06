@@ -8824,7 +8824,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "peepo chad",
+        "display_rsn": "peeepo chad",
         "signup_date": "2023-05-06 00:44:23",
         "account_hash": "b3f3-d322-d9ef-53e5",
         "hardware_id": "307e-018d-f2b3-bad8",
@@ -8848,7 +8848,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "peepo chad",
+        "display_rsn": "peeepo chad",
         "signup_date": "2023-05-06 00:53:02",
         "account_hash": "b3f3-d322-d9ef-53e5",
         "hardware_id": "307e-018d-f2b3-bad8",
@@ -9045,6 +9045,14 @@
         "account_hash": "facc-9803-4f56-8e94",
         "hardware_id": "e793-d386-b67c-b5f8",
         "reason": "Abuse",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "hall0watcher",
+        "signup_date": "2023-05-06 16:49:23",
+        "account_hash": "3018-1795-8122-c25e",
+        "hardware_id": "3603-789c-b9cd-5fc7",
+        "reason": "Impboxed 200m",
         "evidence_rating": "3"
     },
     {
