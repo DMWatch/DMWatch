@@ -2920,7 +2920,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "canadian ko",
+        "display_rsn": "r3location",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8184,7 +8184,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "bendeg",
+        "display_rsn": "nft jassy",
         "signup_date": "2023-05-03 18:57:26",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8424,7 +8424,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "canadian ko",
+        "display_rsn": "r3location",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8957,6 +8957,22 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Claws + DH + Set - Teled - Victim: day1of3six5",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "hogrider97",
+        "signup_date": "2023-05-06 11:48:26",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS + DH + Set - Veng - Victim: Al Paco",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "fianl38338",
+        "signup_date": "2023-05-06 12:04:19",
+        "account_hash": "0",
+        "hardware_id": "0",
+        "reason": "0",
         "evidence_rating": "3"
     },
     {
