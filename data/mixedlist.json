@@ -9296,6 +9296,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "dayanS P",
+        "signup_date": "2023-05-07 11:35:10",
+        "account_hash": "5eb6-45d1-cec6-406a",
+        "hardware_id": "f7f0-e833-4de9-6f6f",
+        "reason": "DH + AGS + Budget - Teled - Victim: CDR",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "sportas",
+        "signup_date": "2023-05-07 11:38:33",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws + DH + Set - Ate\/Ran - Victim: sly c0per",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
