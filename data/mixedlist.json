@@ -9256,6 +9256,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "hason",
+        "signup_date": "2023-05-07 11:08:07",
+        "account_hash": "4405-ec86-052d-a959",
+        "hardware_id": "106a-5fc0-a36c-37fb",
+        "reason": "Abuse | DH+Set+1b - Victim: Dunk",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "BMQ2",
+        "signup_date": "2023-05-07 11:19:27",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS+DH+Set - Victim: sly c0per",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
