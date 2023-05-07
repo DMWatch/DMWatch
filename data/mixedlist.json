@@ -4459,7 +4459,7 @@
         "display_rsn": "noob ogs",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "a5ee-6da3-bb6b-a87a",
-        "hardware_id": "b5a3-2d6e-7421-1a3redrum",
+        "hardware_id": "b5a3-2d6e-7421-1a3r",
         "reason": "Scammer & Bot. Report to Jagex.",
         "evidence_rating": "3"
     },
@@ -9221,6 +9221,14 @@
         "account_hash": "55b0-2501-72fe-5619",
         "hardware_id": "2c25-6eb7-cf88-8bb7",
         "reason": "AGS+DH+Set - Victim: Korasis",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "strengerz",
+        "signup_date": "2023-05-07 00:58:57",
+        "account_hash": "8d40-3e06-62cc-772a",
+        "hardware_id": "2283-6347-4057-efe6",
+        "reason": "Abuse | DH+Set+2b - Victim: 240 hertz",
         "evidence_rating": "3"
     },
     {
