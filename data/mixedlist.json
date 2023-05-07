@@ -9104,6 +9104,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "mike is 1it",
+        "signup_date": "2023-05-06 20:17:22",
+        "account_hash": "574d-9907-b171-35ad",
+        "hardware_id": "1fd1-199f-0d25-d9c0",
+        "reason": "DH + Budget + Maul - Teled - Victim: N0 CLIP",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "R00T 0F EV1L",
+        "signup_date": "2023-05-06 20:17:59",
+        "account_hash": "3a1d-2069-6fae-236d",
+        "hardware_id": "6503-ed7e-7b98-dbe1",
+        "reason": "Tabbed",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
