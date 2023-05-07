@@ -9342,5 +9342,13 @@
         "hardware_id": "redrumze",
         "reason": "redrumze",
         "evidence_rating": "8"
+    },
+    {
+        "display_rsn": "seaman700",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "a",
+        "evidence_rating": "8"
     }
 ]
