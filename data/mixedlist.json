@@ -4240,7 +4240,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mullberry",
+        "display_rsn": "duogh boy 69",
         "signup_date": "2023-04-24 17:35:45",
         "account_hash": "null",
         "hardware_id": "null",
@@ -6936,7 +6936,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mullberry",
+        "display_rsn": "duogh boy 69",
         "signup_date": "2023-04-29 18:47:39",
         "account_hash": "e962-c88a-6f12-e66c",
         "hardware_id": "cbf2-5c24-7b30-636e",
@@ -8152,7 +8152,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mullberry",
+        "display_rsn": "duogh boy 69",
         "signup_date": "2023-05-03 16:45:38",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8661,6 +8661,14 @@
         "account_hash": "2357-8e73-0a36-ee73",
         "hardware_id": "4e0c-7bba-3232-0198",
         "reason": "Claws+DH+Set - Victim: Francs",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "redrumyliad",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "redrumyliad",
+        "hardware_id": "redrumyliad",
+        "reason": "redrumyliad",
         "evidence_rating": "3"
     },
     {
