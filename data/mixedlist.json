@@ -3904,7 +3904,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "featherfly",
+        "display_rsn": "drayonste",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "ced9-5ab0-cc72-90a0",
         "hardware_id": "d4b8-ddc5-e86c-46f1",
@@ -9133,6 +9133,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Owes Brimstone - Victim: DM ME FREAK",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "d3fc0n 1",
+        "signup_date": "2023-05-06 20:31:06",
+        "account_hash": "d983-743a-c6d5-2ea1",
+        "hardware_id": "cc38-0ea2-9434-f48c",
+        "reason": "250M+DH+Set - Inventory Abuse - Victim: akkha fl0cka",
         "evidence_rating": "3"
     },
     {
