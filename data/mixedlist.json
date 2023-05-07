@@ -8344,7 +8344,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "guakamolie",
+        "display_rsn": "metroinosrs",
         "signup_date": "2023-05-04 08:47:23",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9064,7 +9064,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "guakamolie",
+        "display_rsn": "metroinosrs",
         "signup_date": "2023-05-06 20:15:29",
         "account_hash": "6956-e62e-922b-cfb2",
         "hardware_id": "b9a4-d66a-2033-cf6f",
@@ -9378,9 +9378,25 @@
     {
         "display_rsn": "Mita Vitu",
         "signup_date": "2023-05-07 14:15:19",
-        "account_hash": "Loading Bars",
+        "account_hash": "fdac-6f7d-938d-7a84",
         "hardware_id": "cf77-7e6d-c7a0-f251",
         "reason": "AGS + Set - Veng - Victim: Loading Bars",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "wtih kkz",
+        "signup_date": "2023-05-07 14:17:30",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Imposter",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Mita Vitu",
+        "signup_date": "2023-05-07 14:21:46",
+        "account_hash": "fdac-6f7d-938d-7a84",
+        "hardware_id": "cf77-7e6d-c7a0-f251",
+        "reason": "Claw + DH + Set - Teled - Victim:  Forward Sail",
         "evidence_rating": "3"
     },
     {
