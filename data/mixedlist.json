@@ -8344,7 +8344,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "sly c0per",
+        "display_rsn": "guakamolie",
         "signup_date": "2023-05-04 08:47:23",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9064,7 +9064,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "sly c0per",
+        "display_rsn": "guakamolie",
         "signup_date": "2023-05-06 20:15:29",
         "account_hash": "6956-e62e-922b-cfb2",
         "hardware_id": "b9a4-d66a-2033-cf6f",
@@ -9357,6 +9357,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Fang+Set - Victim: Scared You",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "No Much bluk",
+        "signup_date": "2023-05-07 13:46:27",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Imposter",
         "evidence_rating": "3"
     },
     {
