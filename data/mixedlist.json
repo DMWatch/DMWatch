@@ -3176,7 +3176,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mic is on",
+        "display_rsn": "w1hte p0wder",
         "signup_date": "2023-04-21 13:55:30",
         "account_hash": "3586-6555-8f0e-bfa2",
         "hardware_id": "d4be-6d7c-cefe-98d9",
@@ -4104,7 +4104,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mic is on",
+        "display_rsn": "w1hte p0wder",
         "signup_date": "2023-04-24 11:07:45",
         "account_hash": "3586-6555-8f0e-bfa2",
         "hardware_id": "d4be-6d7c-cefe-98d9",
@@ -5168,7 +5168,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mic is on",
+        "display_rsn": "w1hte p0wder",
         "signup_date": "2023-04-28 02:50:18",
         "account_hash": "3586-6555-8f0e-bfa2",
         "hardware_id": "d4be-6d7c-cefe-98d9",
@@ -7936,7 +7936,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mic is on",
+        "display_rsn": "w1hte p0wder",
         "signup_date": "2023-05-03 08:59:25",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -9348,7 +9348,15 @@
         "signup_date": "2023-05-07 12:48:30",
         "account_hash": "x",
         "hardware_id": "x",
-        "reason": "Scammed 8b infront of edm staff\/highrollers - explain rest if he ever appeals",
+        "reason": "Scammed 8b DM",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "CarlosHUAN",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Fang+Set - Victim: Scared You",
         "evidence_rating": "3"
     },
     {
