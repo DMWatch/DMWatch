@@ -9160,20 +9160,12 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Cedric Diggory",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
-        "hardware_id": "4fb62144-f47b-4ac6-895a-01ca082f7b3a",
-        "reason": "BTCs",
-        "evidence_rating": "6"
-    },
-    {
         "display_rsn": "GBGShooter",
-        "signup_date": "2023-04-04 22:07:36",
+        "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
         "hardware_id": "e3e4af8b-59dc-4a17-b1d1-2234a3816cb9",
         "reason": "BTCs",
-        "evidence_rating": "6"
+        "evidence_rating": "8"
     },
     {
         "display_rsn": "Sparc Mac",
@@ -9246,14 +9238,6 @@
         "hardware_id": "dc55-7313-1fcf-ffd0",
         "reason": "eliop14",
         "evidence_rating": "6"
-    },
-    {
-        "display_rsn": "Turrets",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "395e-eefe-6ad8-133f",
-        "hardware_id": "ac73-c636-6192-1e3f",
-        "reason": "Ranked Member",
-        "evidence_rating": "4"
     },
     {
         "display_rsn": "Main Wombat",
