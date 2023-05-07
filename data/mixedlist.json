@@ -9080,6 +9080,30 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Bastia",
+        "signup_date": "2023-05-06 20:14:45",
+        "account_hash": "d7f7-f87d-676e-4a1a",
+        "hardware_id": "24d2-3165-0b7e-06e4",
+        "reason": "Tabbed",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Bastia",
+        "signup_date": "2023-05-06 20:15:10",
+        "account_hash": "d7f7-f87d-676e-4a1a",
+        "hardware_id": "24d2-3165-0b7e-06e4",
+        "reason": "Tabbed",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "sly c0per",
+        "signup_date": "2023-05-06 20:15:29",
+        "account_hash": "6956-e62e-922b-cfb2",
+        "hardware_id": "b9a4-d66a-2033-cf6f",
+        "reason": "AGS+DH+Set - Victim: Atonea",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
