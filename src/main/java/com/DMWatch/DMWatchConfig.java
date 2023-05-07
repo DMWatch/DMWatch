@@ -185,6 +185,18 @@ public interface DMWatchConfig extends Config
 	}
 
 	@ConfigItem(
+		position = 11,
+		keyName = "scanLocalPlayers",
+		name = "Scan local players",
+		description = "Scan players around you rather than only on player spawned",
+		section = NOTIFICATIONS_SECTION
+	)
+	default boolean scanLocalPlayers()
+	{
+		return true;
+	}
+
+	@ConfigItem(
 		position = 12,
 		keyName = "watchListEndpoint",
 		name = "Watch list end point",

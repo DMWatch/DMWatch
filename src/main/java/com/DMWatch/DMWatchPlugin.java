@@ -190,7 +190,6 @@ public class DMWatchPlugin extends Plugin
 	private Instant lastSync;
 	private List<Case> caseList;
 	private HashSet<String> dmwatchScammerList;
-	private int ticksLoggedIn;
 
 	@Getter
 	@Setter
@@ -263,13 +262,6 @@ public class DMWatchPlugin extends Plugin
 		if (c.getGameState() == GameState.LOGIN_SCREEN)
 		{
 			lastLogout = Instant.now();
-			ticksLoggedIn = 0;
-		}
-
-		if (c.getGameState() == GameState.LOGGED_IN
-			|| c.getGameState() == GameState.HOPPING)
-		{
-			ticksLoggedIn = 0;
 		}
 
 		if (!isInParty())
@@ -300,7 +292,6 @@ public class DMWatchPlugin extends Plugin
 
 		if (c.getGameState() == GameState.HOPPING)
 		{
-			ticksLoggedIn = 0;
 			myPlayer.setIsVenged(0);
 			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.V, myPlayer.getIsVenged()));
 		}
@@ -695,13 +686,21 @@ public class DMWatchPlugin extends Plugin
 
 		if (client.getLocalPlayer() == null) return;
 
-		ticksLoggedIn++;
-		if (ticksLoggedIn == 3)
-		{
+		if (config.scanLocalPlayers() && client.getTickCount() % 9 == 0) {  // update the local lists based on the scan
 			for (Player p : client.getPlayers())
 			{
 				String rsn = Text.removeTags(Text.toJagexName(p.getName()));
-				alertPlayerWarning(rsn, false, AlertType.NEARBY);
+				rsn = Text.toJagexName(rsn);
+				Case dmwCase = caseManager.get(rsn);
+
+				if (dmwCase != null && dmwCase.getStatus().equals("0"))
+				{
+					removeResolvedCase(dmwCase);
+				}
+				else if (dmwCase != null && dmwCase.getStatus().equals("3") && !caseList.contains(dmwCase))
+				{
+					caseList.add(dmwCase);
+				}
 			}
 		}
 
@@ -1358,7 +1357,6 @@ public class DMWatchPlugin extends Plugin
 
 	private void reset(boolean turningOn)
 	{
-		ticksLoggedIn = 0;
 		caseList = new ArrayList<>();
 		dmwatchScammerList = new HashSet<>();
 		DMWATCH_DIR.mkdirs();
