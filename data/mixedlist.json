@@ -2432,7 +2432,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "shametif",
+        "display_rsn": "ploxrngg",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -7754,8 +7754,8 @@
     {
         "display_rsn": "cot on joe",
         "signup_date": "2023-05-02 16:35:25",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "account_hash": "4082-de78-5823-99ac",
+        "hardware_id": "e147-d449-5d48-4a52",
         "reason": "Abuse | DH+Set+500m - Victim: x0xh1x0x",
         "evidence_rating": "3"
     },
@@ -7914,8 +7914,8 @@
     {
         "display_rsn": "cot on joe",
         "signup_date": "2023-05-03 02:48:03",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "account_hash": "4082-de78-5823-99ac",
+        "hardware_id": "e147-d449-5d48-4a52",
         "reason": "Abuse | Claws+Elder+Inq+Set - Victim: bilzal",
         "evidence_rating": "3"
     },
@@ -9170,8 +9170,8 @@
     {
         "display_rsn": "cot on joe",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "account_hash": "4082-de78-5823-99ac",
+        "hardware_id": "e147-d449-5d48-4a52",
         "reason": "Abuse | Voidwaker+DH+Set - Victim: Faded Cucx",
         "evidence_rating": "3"
     },
@@ -9413,6 +9413,22 @@
         "account_hash": "c621-8fad-772b-447e",
         "hardware_id": "8ad8-0604-6523-7665",
         "reason": "Claws+DH+Set - Victim: rtic",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "cot on joe",
+        "signup_date": "2023-05-07 16:49:04",
+        "account_hash": "4082-de78-5823-99ac",
+        "hardware_id": "e147-d449-5d48-4a52",
+        "reason": "Voidwaker+Elder+Set - Victim: ultra miami",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "cot on joe",
+        "signup_date": "2023-05-07 16:54:25",
+        "account_hash": "4082-de78-5823-99ac",
+        "hardware_id": "e147-d449-5d48-4a52",
+        "reason": "Torva+Elder+Set - Victim: pfcheng",
         "evidence_rating": "3"
     },
     {
