@@ -173,6 +173,10 @@ public class CaseManager
 		return dmCases.size();
 	}
 
+	public Queue<Case> getList() {
+		return dmCases;
+	}
+
 	/**
 	 * Lookup a non-cached DMWatch case.
 	 *
