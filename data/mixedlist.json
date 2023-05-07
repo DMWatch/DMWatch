@@ -6048,14 +6048,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "syrupofbutta",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "f289-5b07-56a7-137b",
-        "hardware_id": "9f5e-1100-a32e-e9b5",
-        "reason": "Fang Set (ate) - Scammed hawkeye909",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "n_tzz",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "86f2-8b81-e4d6-fb12",
@@ -9232,14 +9224,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Sly C0per",
-        "signup_date": "2023-05-07 08:09:19",
-        "account_hash": "6956-e62e-922b-cfb2",
-        "hardware_id": "b9a4-d66a-2033-cf6f",
-        "reason": "AGS + DH + Set - Teled - Victim: Bulbasaurop",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "dulay",
         "signup_date": "2023-05-07 08:10:44",
         "account_hash": "ca29-49ca-6b2b-c6b9",
@@ -9269,6 +9253,14 @@
         "account_hash": "c0ce-c367-a024-6696",
         "hardware_id": "a1c1-778e-fc11-9ed2",
         "reason": "Abuse | 700m - Victim: ",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Diana ovl",
+        "signup_date": "2023-05-07 10:01:40",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Bandos + VQ + Set + Elder - Veng - Victim: WizCalifa",
         "evidence_rating": "3"
     },
     {
