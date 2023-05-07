@@ -196,6 +196,7 @@ public class DMWatchPlugin extends Plugin
 	private HashMap<String, Instant> nameNotifier;
 	private Instant lastSync;
 	private List<Case> caseList;
+	private int ticksLoggedIn;
 
 	@Getter
 	@Setter
@@ -210,38 +211,20 @@ public class DMWatchPlugin extends Plugin
 	@Override
 	protected void startUp()
 	{
-		caseList = new ArrayList<>();
-		DMWATCH_DIR.mkdirs();
-		overlayManager.add(playerMemberTileTierOverlay);
-		overlayManager.add(partyMemberTierOverlay);
-		uniqueIDs = new LinkedHashSet<>();
-		dmwLogger = setupLogger("DMWatchLogger", "DMWatch");
-		panel = new PartyPanel(this, config);
-		nameNotifier = new HashMap<>();
+		reset(true);
 
 		wsClient.registerMessage(DMPartyBatchedChange.class);
+		navButton = NavigationButton.builder()
+		.tooltip("DMWatch Panel")
+		.icon(ICON)
+		.priority(7)
+		.panel(panel)
+		.build();
+		clientToolbar.addNavigation(navButton);
 
 		if (config.playerOption() && client != null)
 		{
 			menuManager.addPlayerMenuItem(CHALLENGE);
-		}
-		navButton = NavigationButton.builder()
-			.tooltip("DMWatch Panel")
-			.icon(ICON)
-			.priority(7)
-			.panel(panel)
-			.build();
-
-		clientToolbar.addNavigation(navButton);
-
-		if (isInParty())
-		{
-			clientThread.invokeLater(() ->
-			{
-				myPlayer = new PartyPlayer(partyService.getLocalMember(), client, config, itemManager);
-				partyService.send(new UserSync());
-				partyService.send(partyPlayerAsBatchedChange());
-			});
 		}
 
 		final Optional<Plugin> partyPlugin = pluginManager.getPlugins().stream().filter(p -> p.getName().equals("Party")).findFirst();
@@ -249,42 +232,20 @@ public class DMWatchPlugin extends Plugin
 		{
 			pluginManager.setPluginEnabled(partyPlugin.get(), true);
 		}
-
-		spriteManager.getSpriteAsync(SpriteID.CHATBOX_REPORT_BUTTON, 0, s -> reportButton = s);
-		caseManager.refresh(this::colorAll);
-		lastSync = Instant.now();
-		lastLogout = Instant.now();
 	}
 
 	@Override
 	protected void shutDown()
 	{
-		caseList = new ArrayList<>();
-		nameNotifier = new HashMap<>();
-		if (isInParty())
-		{
-			final DMPartyBatchedChange cleanUserInfo = partyPlayerAsBatchedChange();
-			cleanUserInfo.setI(new int[0]);
-			cleanUserInfo.setE(new int[0]);
-			cleanUserInfo.setM(Collections.emptySet());
-			partyService.send(cleanUserInfo);
-		}
+		reset(false);
 
-		overlayManager.remove(partyMemberTierOverlay);
-		overlayManager.remove(playerMemberTileTierOverlay);
-
-		lastLogout = null;
-		uniqueIDs = new LinkedHashSet<>();
+		wsClient.unregisterMessage(DMPartyBatchedChange.class);
 		clientToolbar.removeNavigation(navButton);
-		lastSync = null;
+
 		if (config.playerOption() && client != null)
 		{
 			menuManager.removePlayerMenuItem(CHALLENGE);
 		}
-
-		partyMembers.clear();
-		wsClient.unregisterMessage(DMPartyBatchedChange.class);
-		currentChange = new DMPartyBatchedChange();
 	}
 
 	@Subscribe
@@ -305,14 +266,10 @@ public class DMWatchPlugin extends Plugin
 	@Subscribe
 	public void onGameStateChanged(GameStateChanged c)
 	{
-		if (!isInParty())
-		{
-			return;
-		}
-
 		if (c.getGameState() == GameState.LOGIN_SCREEN)
 		{
 			lastLogout = Instant.now();
+			ticksLoggedIn = 0;
 		}
 
 		if (myPlayer == null)
@@ -325,6 +282,8 @@ public class DMWatchPlugin extends Plugin
 
 		if (c.getGameState() == GameState.LOGGED_IN)
 		{
+
+			ticksLoggedIn = 0;
 			int world = getWorld();
 			DMPartyMiscChange e = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.W, world);
 
@@ -333,10 +292,12 @@ public class DMWatchPlugin extends Plugin
 				myPlayer.setWorld(e.getV());
 				currentChange.getM().add(e);
 			}
+
 		}
 
 		if (c.getGameState() == GameState.HOPPING)
 		{
+			ticksLoggedIn = 0;
 			myPlayer.setIsVenged(0);
 			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.V, myPlayer.getIsVenged()));
 		}
@@ -728,7 +689,8 @@ public class DMWatchPlugin extends Plugin
 
 		if (client.getLocalPlayer() == null) return;
 
-		if (config.scanLocalPlayers() && client.getTickCount() % 9 == 0)
+		ticksLoggedIn++;
+		if (ticksLoggedIn == 3)
 		{
 			for (Player p : client.getPlayers())
 			{
@@ -1362,6 +1324,57 @@ public class DMWatchPlugin extends Plugin
 	public List<Case> getLocalList()
 	{
 		return caseList;
+	}
+
+	private void reset(boolean turningOn)
+	{
+		ticksLoggedIn = 0;
+		caseList = new ArrayList<>();
+		DMWATCH_DIR.mkdirs();
+		uniqueIDs = new LinkedHashSet<>();
+		dmwLogger = setupLogger("DMWatchLogger", "DMWatch");
+		panel = new PartyPanel(this, config);
+		nameNotifier = new HashMap<>();
+
+		if (turningOn)
+		{
+			overlayManager.add(playerMemberTileTierOverlay);
+			overlayManager.add(partyMemberTierOverlay);
+
+			caseManager.refresh(this::colorAll);
+			lastSync = Instant.now();
+			lastLogout = Instant.now();
+
+			if (isInParty())
+			{
+				clientThread.invokeLater(() ->
+				{
+					myPlayer = new PartyPlayer(partyService.getLocalMember(), client, config, itemManager);
+					partyService.send(new UserSync());
+					partyService.send(partyPlayerAsBatchedChange());
+				});
+			}
+		}
+		else
+		{
+			overlayManager.remove(playerMemberTileTierOverlay);
+			overlayManager.remove(partyMemberTierOverlay);
+
+			lastSync = null;
+			lastLogout = null;
+
+			partyMembers.clear();
+			currentChange = new DMPartyBatchedChange();
+
+			if (isInParty())
+			{
+				final DMPartyBatchedChange cleanUserInfo = partyPlayerAsBatchedChange();
+				cleanUserInfo.setI(new int[0]);
+				cleanUserInfo.setE(new int[0]);
+				cleanUserInfo.setM(Collections.emptySet());
+				partyService.send(cleanUserInfo);
+			}
+		}
 	}
 
 	private enum AlertType
