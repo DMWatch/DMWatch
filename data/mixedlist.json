@@ -7932,7 +7932,7 @@
         "signup_date": "2023-05-03 02:48:03",
         "account_hash": "null",
         "hardware_id": "null",
-        "reason": "Claws+Elder+Inq+Set - Victim: bilzal",
+        "reason": "Abuse | Claws+Elder+Inq+Set - Victim: bilzal",
         "evidence_rating": "3"
     },
     {
@@ -9205,6 +9205,22 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Abuse",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "luifi",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Abuse | Voidwaker+DH+Set - Victim: Faded Cucx",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Boss at PVM",
+        "signup_date": "2023-05-07 00:40:44",
+        "account_hash": "55b0-2501-72fe-5619",
+        "hardware_id": "2c25-6eb7-cf88-8bb7",
+        "reason": "AGS+DH+Set - Victim: Korasis",
         "evidence_rating": "3"
     },
     {
