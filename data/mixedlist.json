@@ -9328,6 +9328,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Stabillity",
+        "signup_date": "2023-05-07 12:24:12",
+        "account_hash": "a5a8-0f1e-2894-d528",
+        "hardware_id": "6677-c0df-0dac-3fae",
+        "reason": "AGS+DH+Budget - Teled - Victim: Stabillity",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "BBQ cuck",
+        "signup_date": "2023-05-07 12:26:05",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS+DH+Set - Teled - Victim: Death Fee",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
