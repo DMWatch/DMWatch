@@ -9184,6 +9184,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "stake rip4",
+        "signup_date": "2023-05-06 23:53:01",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS+DH+Set - Victim: Korasis",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -9497,9 +9505,9 @@
     },
     {
         "display_rsn": "12sw",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "signup_date": "2023-05-06 23:38:34",
+        "account_hash": "7f1d-7c06-2b66-42ab",
+        "hardware_id": "be06-1cc5-c684-35d3",
         "reason": "tjfx",
         "evidence_rating": "9"
     }
