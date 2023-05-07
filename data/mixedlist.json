@@ -9400,6 +9400,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Plykis",
+        "signup_date": "2023-05-07 16:00:59",
+        "account_hash": "e47c-6fa6-9ca3-265e",
+        "hardware_id": "cc39-4242-9750-fbce",
+        "reason": "AGS+DH+Set - Victim: Death Fee",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
