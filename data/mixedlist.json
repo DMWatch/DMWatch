@@ -252,7 +252,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
-        "reason": "Claw Poke after 2 specs",
+        "reason": "Claws+Elder+Set - Victim: Aksarian",
         "evidence_rating": "3"
     },
     {
@@ -868,7 +868,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
-        "reason": "Tabbed",
+        "reason": "Claws+Elder+Bandos+Set - Victim: hot barbi",
         "evidence_rating": "3"
     },
     {
@@ -9494,5 +9494,13 @@
         "hardware_id": "null",
         "reason": "Strangerz",
         "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "12sw",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "tjfx",
+        "evidence_rating": "9"
     }
 ]
