@@ -7768,7 +7768,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "utlil",
+        "display_rsn": "cotton can",
         "signup_date": "2023-05-02 16:35:25",
         "account_hash": "null",
         "hardware_id": "null",
@@ -7928,7 +7928,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "utlil",
+        "display_rsn": "cotton can",
         "signup_date": "2023-05-03 02:48:03",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9152,6 +9152,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "bmq2",
+        "signup_date": "2023-05-06 20:46:24",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+DH+Set - Teled - Victim: kid nice try",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Cedric Diggory",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "af5533b6-d9be-4dbf-9ec7-6a71c46440ed",
@@ -9326,5 +9334,13 @@
         "hardware_id": "WeDrinkTitos",
         "reason": "WeDrinkTitos smiley rank",
         "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "redrumze",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "redrumze",
+        "hardware_id": "redrumze",
+        "reason": "redrumze",
+        "evidence_rating": "8"
     }
 ]
