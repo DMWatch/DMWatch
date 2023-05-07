@@ -9192,6 +9192,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "joope",
+        "signup_date": "2023-05-07 00:05:14",
+        "account_hash": "75cd-363a-ed9a-9710",
+        "hardware_id": "201e-a5cc-4e2e-c109",
+        "reason": "Claws+DH+Set - Victim: her mager",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
