@@ -4824,7 +4824,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "i am nice g",
+        "display_rsn": "killa exp3",
         "signup_date": "2023-04-26 20:21:14",
         "account_hash": "null",
         "hardware_id": "null",
@@ -5240,7 +5240,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "i am nice g",
+        "display_rsn": "killa exp3",
         "signup_date": "2023-04-28 14:27:58",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8680,7 +8680,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "i am nice g",
+        "display_rsn": "killa exp3",
         "signup_date": "2023-05-05 13:50:04",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9573,6 +9573,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "AGS+DH+Set - Victim: BBQ Cuck",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "my pants nfs",
+        "signup_date": "2023-05-07 23:44:48",
+        "account_hash": "b539-c669-77c7-e3f9",
+        "hardware_id": "ef85-2d27-b87c-27ba",
+        "reason": "Claws+DH+Set - Victim: BBQ Cuck",
         "evidence_rating": "3"
     },
     {
