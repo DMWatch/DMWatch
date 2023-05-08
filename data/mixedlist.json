@@ -9448,6 +9448,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Create Party",
+        "signup_date": "2023-05-07 18:00:15",
+        "account_hash": "6ee3-0df0-db5b-ab2f",
+        "hardware_id": "97b7-5f0f-2d1d-8a05",
+        "reason": "claws + DH + Set - ran\/DQed - Victim: Yakusa",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Lavvy",
+        "signup_date": "2023-05-07 18:01:51",
+        "account_hash": "ef52-b61e-afdd-65a9",
+        "hardware_id": "c891-184d-91c9-e5ae",
+        "reason": "AGS + DH + Budget - DQed without pay - Victim: CaldoSoup",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
