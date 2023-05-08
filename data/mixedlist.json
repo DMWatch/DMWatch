@@ -2432,7 +2432,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "sadlyfail",
+        "display_rsn": "geenxo",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9437,6 +9437,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Abuse - Do not unban",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "unoparatodos",
+        "signup_date": "2023-05-07 17:58:44",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Set + Elder - ate\/teled -Victim: N0 CLIP",
         "evidence_rating": "3"
     },
     {
