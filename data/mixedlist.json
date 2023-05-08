@@ -8920,7 +8920,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "blamegagex",
+        "display_rsn": "759m",
         "signup_date": "2023-05-06 15:10:13",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -9501,6 +9501,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "VW + DH + Set - Teled - Victim: Darksquall91",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "moreninh0",
+        "signup_date": "2023-05-07 19:53:32",
+        "account_hash": "6934-9c95-7efa-7974",
+        "hardware_id": "0ea2-aa39-0463-f0ed",
+        "reason": "Claw + DH + Set - Teled - Victim: llmon",
         "evidence_rating": "3"
     },
     {
