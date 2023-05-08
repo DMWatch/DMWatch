@@ -9512,6 +9512,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "moreninh0",
+        "signup_date": "2023-05-07 19:54:23",
+        "account_hash": "6934-9c95-7efa-7974",
+        "hardware_id": "0ea2-aa39-0463-f0ed",
+        "reason": "Claw + DH + Set - Teled - Victim: llmon",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
