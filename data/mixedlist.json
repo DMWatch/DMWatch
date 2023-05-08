@@ -9428,7 +9428,7 @@
         "signup_date": "2023-05-07 17:56:31",
         "account_hash": "null",
         "hardware_id": "null",
-        "reason": "Abuse - Do not unban",
+        "reason": "Abuse",
         "evidence_rating": "3"
     },
     {
@@ -9516,7 +9516,7 @@
         "signup_date": "2023-05-07 20:00:55",
         "account_hash": "null",
         "hardware_id": "null",
-        "reason": "Inventory Abuse - Do not unban",
+        "reason": "Abuse",
         "evidence_rating": "3"
     },
     {
@@ -9556,7 +9556,7 @@
         "signup_date": "2023-05-07 20:40:08",
         "account_hash": "null",
         "hardware_id": "null",
-        "reason": "Inventory Abuse - Do not unban",
+        "reason": "Abuse",
         "evidence_rating": "3"
     },
     {
