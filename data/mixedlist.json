@@ -7424,7 +7424,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "lingling v10",
+        "display_rsn": "big hunchie",
         "signup_date": "2023-05-01 16:18:27",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9541,6 +9541,14 @@
         "account_hash": "70c1-b081-c880-bf09",
         "hardware_id": "232b-a550-8c25-6d2a",
         "reason": "INQ + Set + VW + Elder - Teled -  Victim: xlogmore",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "FamIsKey",
+        "signup_date": "2023-05-07 20:28:40",
+        "account_hash": "217e-9efb-45be-54b5",
+        "hardware_id": "0154-7918-dc04-1e36",
+        "reason": "Claws + Set + Elder - Teled - Victim: Aris 77",
         "evidence_rating": "3"
     },
     {
