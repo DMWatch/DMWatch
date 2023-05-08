@@ -9600,6 +9600,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "ItsTJFX",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "7f1d-7c06-2b66-42ab",
+        "hardware_id": "be06-1cc5-c684-35d3",
+        "reason": "Free-rolled 2b - Victim: Strangerz",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "leafs in 2",
+        "signup_date": "2023-05-08 00:32:32",
+        "account_hash": "33b9-1113-6005-e069",
+        "hardware_id": "79d6-4bca-63d5-70bf",
+        "reason": "Claws+DH+Set - Victim: 2latesgloves",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -9910,14 +9926,6 @@
         "hardware_id": "null",
         "reason": "Strangerz",
         "evidence_rating": "1"
-    },
-    {
-        "display_rsn": "12sw",
-        "signup_date": "2023-05-06 23:38:34",
-        "account_hash": "7f1d-7c06-2b66-42ab",
-        "hardware_id": "be06-1cc5-c684-35d3",
-        "reason": "tjfx",
-        "evidence_rating": "9"
     },
     {
         "display_rsn": "mr xanni",
