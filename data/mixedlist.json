@@ -880,7 +880,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "snopobkictv",
+        "display_rsn": "leagueofpker",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -7500,8 +7500,8 @@
         "signup_date": "2023-05-02 05:13:31",
         "account_hash": "7552-97c6-e4ed-307a",
         "hardware_id": "5a9c-5c62-c1d9-0ab6",
-        "reason": "Multiple cases open.",
-        "evidence_rating": "3"
+        "reason": "Case(s) resolved.",
+        "evidence_rating": "0"
     },
     {
         "display_rsn": "vtnc",
@@ -8944,7 +8944,7 @@
         "evidence_rating": "0"
     },
     {
-        "display_rsn": "fallini",
+        "display_rsn": "riskmeags",
         "signup_date": "2023-05-06 23:53:01",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9422,14 +9422,6 @@
         "hardware_id": "null",
         "reason": "AGS+DH+Budget - Victim: Loading Bars",
         "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "redrumze",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "redrumze",
-        "hardware_id": "redrumze",
-        "reason": "Case(s) resolved.",
-        "evidence_rating": "0"
     },
     {
         "display_rsn": "GBGShooter",
