@@ -9456,7 +9456,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "MugenTrain",
+        "display_rsn": "Mugen Train",
         "signup_date": "2023-05-07 18:18:11",
         "account_hash": "3b02-c1d1-eee2-0dab",
         "hardware_id": "265b-2633-a407-afa8",
@@ -9557,14 +9557,6 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Abuse",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "red",
-        "signup_date": "2023-05-07 22:01:05",
-        "account_hash": "red",
-        "hardware_id": "red",
-        "reason": "red",
         "evidence_rating": "3"
     },
     {
@@ -9886,5 +9878,13 @@
         "hardware_id": "be06-1cc5-c684-35d3",
         "reason": "tjfx",
         "evidence_rating": "9"
+    },
+    {
+        "display_rsn": "mr xanni",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "mr xanny",
+        "evidence_rating": "1"
     }
 ]
