@@ -7648,7 +7648,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "wlzzye",
+        "display_rsn": "saphiriiuss",
         "signup_date": "2023-05-02 10:53:52",
         "account_hash": "1f0f-8952-4621-6791",
         "hardware_id": "75cc-ff3f-988a-d8cd",
@@ -9533,6 +9533,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Imposter",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Rest 1n Pusy",
+        "signup_date": "2023-05-07 20:20:15",
+        "account_hash": "70c1-b081-c880-bf09",
+        "hardware_id": "232b-a550-8c25-6d2a",
+        "reason": "INQ + Set + VW + Elder - Teled -  Victim: xlogmore",
         "evidence_rating": "3"
     },
     {
