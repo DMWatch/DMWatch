@@ -7752,7 +7752,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "doomsvile",
+        "display_rsn": "jumaician",
         "signup_date": "2023-05-02 16:35:25",
         "account_hash": "4082-de78-5823-99ac",
         "hardware_id": "e147-d449-5d48-4a52",
@@ -7912,7 +7912,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "doomsvile",
+        "display_rsn": "jumaician",
         "signup_date": "2023-05-03 02:48:03",
         "account_hash": "4082-de78-5823-99ac",
         "hardware_id": "e147-d449-5d48-4a52",
@@ -9168,7 +9168,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "doomsvile",
+        "display_rsn": "jumaician",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "4082-de78-5823-99ac",
         "hardware_id": "e147-d449-5d48-4a52",
@@ -9416,7 +9416,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "doomsvile",
+        "display_rsn": "jumaician",
         "signup_date": "2023-05-07 16:49:04",
         "account_hash": "4082-de78-5823-99ac",
         "hardware_id": "e147-d449-5d48-4a52",
@@ -9424,7 +9424,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "doomsvile",
+        "display_rsn": "jumaician",
         "signup_date": "2023-05-07 16:54:25",
         "account_hash": "4082-de78-5823-99ac",
         "hardware_id": "e147-d449-5d48-4a52",
@@ -9453,14 +9453,6 @@
         "account_hash": "6ee3-0df0-db5b-ab2f",
         "hardware_id": "97b7-5f0f-2d1d-8a05",
         "reason": "claws + DH + Set - ran\/DQed - Victim: Yakusa",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "Lavvy",
-        "signup_date": "2023-05-07 18:01:51",
-        "account_hash": "ef52-b61e-afdd-65a9",
-        "hardware_id": "c891-184d-91c9-e5ae",
-        "reason": "AGS + DH + Budget - DQed without pay - Victim: CaldoSoup",
         "evidence_rating": "3"
     },
     {
