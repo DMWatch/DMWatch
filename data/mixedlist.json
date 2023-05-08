@@ -9128,14 +9128,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "drap trugs",
-        "signup_date": "2023-05-06 23:10:23",
-        "account_hash": "7af1-8e97-0aa4-9d2f",
-        "hardware_id": "45bd-ff0e-fb01-0610",
-        "reason": "Veracs+Set - Victim: n0 clip",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "weimer",
         "signup_date": "2023-05-06 23:20:55",
         "account_hash": "null",
@@ -9565,6 +9557,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Inventory Abuse - Do not unban",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "red",
+        "signup_date": "2023-05-07 22:01:05",
+        "account_hash": "red",
+        "hardware_id": "red",
+        "reason": "red",
         "evidence_rating": "3"
     },
     {
