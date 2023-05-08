@@ -7752,7 +7752,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "jaullaa",
+        "display_rsn": "jaulaa",
         "signup_date": "2023-05-02 16:35:25",
         "account_hash": "4082-de78-5823-99ac",
         "hardware_id": "e147-d449-5d48-4a52",
@@ -7912,7 +7912,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "jaullaa",
+        "display_rsn": "jaulaa",
         "signup_date": "2023-05-03 02:48:03",
         "account_hash": "4082-de78-5823-99ac",
         "hardware_id": "e147-d449-5d48-4a52",
@@ -9168,7 +9168,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "jaullaa",
+        "display_rsn": "jaulaa",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "4082-de78-5823-99ac",
         "hardware_id": "e147-d449-5d48-4a52",
@@ -9416,7 +9416,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "jaullaa",
+        "display_rsn": "jaulaa",
         "signup_date": "2023-05-07 16:49:04",
         "account_hash": "4082-de78-5823-99ac",
         "hardware_id": "e147-d449-5d48-4a52",
@@ -9424,7 +9424,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "jaullaa",
+        "display_rsn": "jaulaa",
         "signup_date": "2023-05-07 16:54:25",
         "account_hash": "4082-de78-5823-99ac",
         "hardware_id": "e147-d449-5d48-4a52",
@@ -9549,6 +9549,14 @@
         "account_hash": "217e-9efb-45be-54b5",
         "hardware_id": "0154-7918-dc04-1e36",
         "reason": "Claws + Set + Elder - Teled - Victim: Aris 77",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Rng so fire",
+        "signup_date": "2023-05-07 20:33:12",
+        "account_hash": "c9dc-7fad-ae6b-8c2f",
+        "hardware_id": "d638-f705-d9bc-7364",
+        "reason": "Claws + DH + Set - Teled - Victim: CaldoSoup",
         "evidence_rating": "3"
     },
     {
