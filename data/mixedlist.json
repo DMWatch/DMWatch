@@ -2192,14 +2192,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "zaza powa",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "Multiple cases open.",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "condeshorty",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
@@ -2213,6 +2205,14 @@
         "account_hash": "6915-4a9c-85e9-5183",
         "hardware_id": "3a56-7aca-4dc9-76f4",
         "reason": "Multiple cases open.",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "zaza powa",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "unknown",
+        "hardware_id": "unknown",
+        "reason": "450M + Set + DH - Eating in DM - Victim: H amza",
         "evidence_rating": "3"
     },
     {
@@ -4520,7 +4520,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "babaeyner",
+        "display_rsn": "ultre miami",
         "signup_date": "2023-04-24 17:35:45",
         "account_hash": "null",
         "hardware_id": "null",
@@ -7664,7 +7664,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "gb val",
+        "display_rsn": "gof dol",
         "signup_date": "2023-05-02 16:35:25",
         "account_hash": "4082-de78-5823-99ac",
         "hardware_id": "e147-d449-5d48-4a52",
@@ -9461,6 +9461,22 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Abuse",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Zezima",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "b1ab-d6fd-d715-3b8c",
+        "hardware_id": "cebe-468a-fedf-bfc9",
+        "reason": "DH + Claws + Set - Teled - Victim: 41x",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "1RNG STAKE",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS + Set + DH - Teled - Victim: spoonedpkr",
         "evidence_rating": "3"
     },
     {
