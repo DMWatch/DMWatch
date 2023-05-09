@@ -9360,7 +9360,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "bronney",
+        "display_rsn": "blillen",
         "signup_date": "2023-05-07 17:56:31",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9917,6 +9917,14 @@
         "account_hash": "bdf4-75ff-76c2-99e7",
         "hardware_id": "1a51-cc94-7a09-ea90",
         "reason": "Claws+DH+Set - Victim: forward sail",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "hayzar",
+        "signup_date": "2023-05-09 16:25:44",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+DH+Set - Victim: happiers",
         "evidence_rating": "3"
     },
     {
