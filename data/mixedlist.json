@@ -9360,7 +9360,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "itsknaptime",
+        "display_rsn": "ro-nal-do",
         "signup_date": "2023-05-07 17:56:31",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9965,6 +9965,14 @@
         "account_hash": "3ee0-6c23-5657-2f52",
         "hardware_id": "780f-cbff-b6a1-312d",
         "reason": "AGS + DH + Set - Teled - Victim: Silly spoons",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Os kill3r",
+        "signup_date": "2023-05-09 20:53:00",
+        "account_hash": "3ee0-6c23-5657-2f52",
+        "hardware_id": "780f-cbff-b6a1-312d",
+        "reason": "Claws + DH + Set - Teled - Victim: Volatileorb",
         "evidence_rating": "3"
     },
     {
