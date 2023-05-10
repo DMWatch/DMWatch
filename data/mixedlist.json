@@ -9784,14 +9784,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Z3DS",
-        "signup_date": "2023-05-09 12:59:28",
-        "account_hash": "dab3-882f-0629-e0a4",
-        "hardware_id": "fe5d-ea1b-50fc-1f46",
-        "reason": "AGS+DH+Set - Victim: Forward Sail",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "A Damn Unit",
         "signup_date": "2023-05-09 13:02:58",
         "account_hash": "null",
