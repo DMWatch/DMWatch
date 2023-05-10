@@ -10104,6 +10104,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Ultras Ams",
+        "signup_date": "2023-05-10 13:56:07",
+        "account_hash": "92bd-5459-fab7-1f6e",
+        "hardware_id": "9793-a279-6a48-3758",
+        "reason": "Claws + DH + Set - Teled - Victim: Tormentor",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "BUSCH LlGHT",
+        "signup_date": "2023-05-10 13:58:18",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS + DH + Set - DQ without paying - Victim: Pageyy",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
