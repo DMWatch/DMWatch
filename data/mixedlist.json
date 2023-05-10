@@ -2448,7 +2448,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "astronishing",
+        "display_rsn": "pethuntlolno",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9949,6 +9949,14 @@
         "account_hash": "0ce5-1c18-1e78-0645",
         "hardware_id": "b827-fc18-697d-99f5",
         "reason": "VW + Set - Teled - Victim: bat au vif",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Dark Moor",
+        "signup_date": "2023-05-09 19:37:23",
+        "account_hash": "5b1f-a6fd-ad84-4ebc",
+        "hardware_id": "ac1c-a3b0-b3b8-340c",
+        "reason": "AGS + DH + Set - Teled - Victim: Kermit",
         "evidence_rating": "3"
     },
     {
