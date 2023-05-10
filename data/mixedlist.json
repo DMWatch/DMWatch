@@ -10008,6 +10008,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Mr Bean24",
+        "signup_date": "2023-05-10 05:10:36",
+        "account_hash": "aa64-ee50-3a85-f80c",
+        "hardware_id": "bc71-ff03-4eb5-3e37",
+        "reason": "Claws + DH + Set - Teled - Victim: Tormentor",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
