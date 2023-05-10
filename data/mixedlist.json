@@ -10016,6 +10016,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "transwomen",
+        "signup_date": "2023-05-10 05:13:16",
+        "account_hash": "25fa-525f-376d-f891",
+        "hardware_id": "f66d-87f7-5756-b7db",
+        "reason": "Abuse",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
