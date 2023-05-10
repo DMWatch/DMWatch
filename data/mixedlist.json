@@ -9976,6 +9976,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "teh expert",
+        "signup_date": "2023-05-09 23:47:39",
+        "account_hash": "5ebd-9a00-73c5-0c1e",
+        "hardware_id": "d777-fd12-4aa7-ed7e",
+        "reason": "AGS DH Set | Victim: exlog",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
