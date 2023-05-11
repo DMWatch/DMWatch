@@ -8096,7 +8096,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "sooiey",
+        "display_rsn": "matzmain",
         "signup_date": "2023-05-03 18:57:26",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10229,6 +10229,30 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "VW + DH + Set - Eating - Victim: Mustybeef",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "shiftBTC",
+        "signup_date": "2023-05-11 16:11:26",
+        "account_hash": "020f-2777-a293-e452",
+        "hardware_id": "2d52-f99d-c91c-eaaf",
+        "reason": "Claws + DH + Set - Teled - Victim: Kermit",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "GOD THE K1NG",
+        "signup_date": "2023-05-11 16:22:28",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS + DH + Budget - Teled - Victim: Mascarado",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "METAV3RSE",
+        "signup_date": "2023-05-11 16:23:08",
+        "account_hash": "020f-2777-a293-e452",
+        "hardware_id": "2d52-f99d-c91c-eaaf",
+        "reason": "Claws + DH + Set - Teled - Victim: Kermit",
         "evidence_rating": "3"
     },
     {
