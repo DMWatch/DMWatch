@@ -10184,6 +10184,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "dui jeff",
+        "signup_date": "2023-05-11 07:40:42",
+        "account_hash": "bbb4-df30-40ac-565f",
+        "hardware_id": "0163-2ddf-410c-5e8b",
+        "reason": "Claws Dh base set| victim: panic update",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
