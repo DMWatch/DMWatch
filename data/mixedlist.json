@@ -10136,6 +10136,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Redp0rtal",
+        "signup_date": "2023-05-10 18:40:47",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Ragging CC Members",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "arf1305",
         "signup_date": "2023-05-10 20:47:10",
         "account_hash": "0ac0-76f0-9408-4f3a",
@@ -10157,6 +10165,14 @@
         "account_hash": "Unk",
         "hardware_id": "Unk",
         "reason": "Fang + Set - Teled - Victim: M-Es-si",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "canv1",
+        "signup_date": "2023-05-11 05:26:19",
+        "account_hash": "865b-36c1-cadd-907f",
+        "hardware_id": "b219-be46-db92-6b55",
+        "reason": "VW + DH + Set - Ran Away - Victim: llmon",
         "evidence_rating": "3"
     },
     {
