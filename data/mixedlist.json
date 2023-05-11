@@ -9040,14 +9040,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "totti rm",
-        "signup_date": "2023-05-06 23:53:01",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "AGS+DH+Set - Victim: Korasis",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "joope",
         "signup_date": "2023-05-07 00:05:14",
         "account_hash": "75cd-363a-ed9a-9710",
@@ -10192,6 +10184,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Riot-Land",
+        "signup_date": "2023-05-11 08:08:12",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "2B+DH+Set - Did not pay - Victim: Oliver1Tooth",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -10461,14 +10461,6 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "lastingbuzz",
-        "evidence_rating": "1"
-    },
-    {
-        "display_rsn": "riot-land",
-        "signup_date": "2023-05-09 17:51:40",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "riot-land\r\n1 warning",
         "evidence_rating": "1"
     },
     {
