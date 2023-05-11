@@ -9944,7 +9944,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "devilzdoor",
+        "display_rsn": "007 bonda",
         "signup_date": "2023-05-10 04:57:49",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -10181,6 +10181,22 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "2B+DH+Set - Did not pay - Victim: Oliver1Tooth",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "10000m",
+        "signup_date": "2023-05-11 09:38:37",
+        "account_hash": "0b37-4e91-e045-5ca1",
+        "hardware_id": "e91e-be43-6273-a80f",
+        "reason": "Void Waker + Inqus + Elder | victim: GOLF7R",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "1oooom",
+        "signup_date": "2023-05-11 09:42:40",
+        "account_hash": "0b37-4e91-e045-5ca1",
+        "hardware_id": "e91e-be43-6273-a80f",
+        "reason": "Void Waker + Inqus + Elder | victim: GOLF7R",
         "evidence_rating": "3"
     },
     {
