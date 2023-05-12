@@ -10432,6 +10432,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "after-saku",
+        "signup_date": "2023-05-12 11:24:21",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Claws DH Base Set | Victim :jhuy2",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
