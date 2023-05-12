@@ -8064,7 +8064,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "el proff",
+        "display_rsn": "darwichswish",
         "signup_date": "2023-05-03 18:57:26",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10429,6 +10429,14 @@
         "account_hash": "9852-97fb-4a89-7c60",
         "hardware_id": "1bc4-5556-4a4e-949f",
         "reason": "4m (lol broke) - Victim: 0x19",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "murderings",
+        "signup_date": "2023-05-12 10:32:37",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Rusher",
         "evidence_rating": "3"
     },
     {
