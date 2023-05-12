@@ -9640,7 +9640,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "lilzoor",
+        "display_rsn": "a q p suckmd",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10408,6 +10408,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Calilum",
+        "signup_date": "2023-05-12 07:13:58",
+        "account_hash": "945c-05db-cf88-9099",
+        "hardware_id": "a77a-dd04-9751-2d22",
+        "reason": "Voidwaker+Elder+Inq+Set - Victim: Glur",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -10710,5 +10718,13 @@
         "hardware_id": "null",
         "reason": "Chuck Acc 2\nLeniency for getting the URL",
         "evidence_rating": "9"
+    },
+    {
+        "display_rsn": "DEJARU22",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Skate",
+        "evidence_rating": "11"
     }
 ]
