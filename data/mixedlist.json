@@ -8712,7 +8712,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "juliilil",
+        "display_rsn": "james iems",
         "signup_date": "2023-05-06 00:44:23",
         "account_hash": "b3f3-d322-d9ef-53e5",
         "hardware_id": "307e-018d-f2b3-bad8",
@@ -8736,7 +8736,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "juliilil",
+        "display_rsn": "james iems",
         "signup_date": "2023-05-06 00:53:02",
         "account_hash": "b3f3-d322-d9ef-53e5",
         "hardware_id": "307e-018d-f2b3-bad8",
@@ -9968,7 +9968,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "juliilil",
+        "display_rsn": "james iems",
         "signup_date": "2023-05-10 05:15:59",
         "account_hash": "544c-f1d3-e0f3-45ce",
         "hardware_id": "b193-ace5-715e-3bd8",
@@ -10309,6 +10309,14 @@
         "account_hash": "ad19-e2a6-c9a5-00e8",
         "hardware_id": "bba3-6e43-c3aa-3e28",
         "reason": "Claws+DH+Set - Teled - Victim: Become Human",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Xraig Macc",
+        "signup_date": "2023-05-11 20:23:43",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Abuse",
         "evidence_rating": "3"
     },
     {
