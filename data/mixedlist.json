@@ -8336,7 +8336,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "notomatri",
+        "display_rsn": "bahaha urs",
         "signup_date": "2023-05-04 14:42:28",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10453,6 +10453,14 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "Imp boxed 750m",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "zezima",
+        "signup_date": "2023-05-12 11:53:48",
+        "account_hash": "0aa7-5579-f351-46b0",
+        "hardware_id": "4536-c5f8-35c0-494e",
+        "reason": "Serial Scammer | 2x Dh + Claws | Victim Forward Sail",
         "evidence_rating": "3"
     },
     {
