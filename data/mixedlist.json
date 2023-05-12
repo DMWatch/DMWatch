@@ -8336,7 +8336,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "450xp",
+        "display_rsn": "notomatri",
         "signup_date": "2023-05-04 14:42:28",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10437,6 +10437,22 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "Claws DH Base Set | Victim :jhuy2",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "casino blad",
+        "signup_date": "2023-05-12 11:41:44",
+        "account_hash": "02ee-55f7-7bd9-b87f",
+        "hardware_id": "5b36-7ad4-cbba-4bb3",
+        "reason": "Added by Staff watching",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "darnmwatch",
+        "signup_date": "2023-05-12 11:44:46",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Imp boxed 750m",
         "evidence_rating": "3"
     },
     {
