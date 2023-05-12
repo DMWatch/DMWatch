@@ -10466,9 +10466,17 @@
     {
         "display_rsn": "rigidrng",
         "signup_date": "2023-05-12 12:02:18",
-        "account_hash": "unk",
-        "hardware_id": "unk",
+        "account_hash": "0aa7-5579-f351-46b0",
+        "hardware_id": "4536-c5f8-35c0-494e",
         "reason": "serial scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "GetUrSkillUp",
+        "signup_date": "2023-05-12 12:04:37",
+        "account_hash": "f904-7e81-25a5-0c0d",
+        "hardware_id": "4d7c-9ab6-c645-2f67",
+        "reason": "Korasi DH Base Set | Victim till sun up",
         "evidence_rating": "3"
     },
     {
