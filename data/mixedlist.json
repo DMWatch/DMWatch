@@ -10432,6 +10432,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "max hit dum",
+        "signup_date": "2023-05-12 10:07:41",
+        "account_hash": "9852-97fb-4a89-7c60",
+        "hardware_id": "1bc4-5556-4a4e-949f",
+        "reason": "4m (lol broke) - Victim: 0x19",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
