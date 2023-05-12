@@ -10344,6 +10344,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Z1nny",
+        "signup_date": "2023-05-12 01:55:35",
+        "account_hash": "d276-977f-9e5d-9eb5",
+        "hardware_id": "7ba8-67a5-fef4-bc77",
+        "reason": "imp box scam -",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "hwack",
+        "signup_date": "2023-05-12 01:57:10",
+        "account_hash": "012d-7273-4aa6-8980",
+        "hardware_id": "8707-60ae-9546-7215",
+        "reason": "tabbed",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
