@@ -10320,6 +10320,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "StepStepSis",
+        "signup_date": "2023-05-11 20:33:31",
+        "account_hash": "a041-ef04-56bc-143e",
+        "hardware_id": "eb6e-873d-0120-9d56",
+        "reason": "Claws + Veracs + Set - Teled - Victim: Forward Sail",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
