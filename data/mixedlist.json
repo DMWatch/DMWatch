@@ -5256,7 +5256,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "fazzy m0bil3",
+        "display_rsn": "god only1",
         "signup_date": "2023-04-28 17:55:45",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9440,7 +9440,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "fazzy m0bil3",
+        "display_rsn": "god only1",
         "signup_date": "2023-05-08 06:14:04",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10533,6 +10533,14 @@
         "account_hash": "46a3-2a69-666e-5b8c",
         "hardware_id": "0f08-1b3c-ccf2-8680",
         "reason": "Claws + Set - DQ without paying - Victim: WhenDuelBack",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "forward sail",
+        "signup_date": "2023-05-12 16:35:35",
+        "account_hash": "6736-2771-2a56-b0c9",
+        "hardware_id": "899b-e54d-e513-0d0f",
+        "reason": "Torva+Claws+Elder+Set - teled - Victim: Clapped u",
         "evidence_rating": "3"
     },
     {
