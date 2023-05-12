@@ -7360,7 +7360,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "smailigic",
+        "display_rsn": "hexus yayo",
         "signup_date": "2023-05-01 16:18:27",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10333,6 +10333,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Fang + Bandos + Set - Tele - Victim: Aris 77",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "plsbro",
+        "signup_date": "2023-05-12 01:53:28",
+        "account_hash": "a566-29ce-eccf-aa31",
+        "hardware_id": "82d7-58b8-8064-5231",
+        "reason": "prayed melee and didnt pay set",
         "evidence_rating": "3"
     },
     {
