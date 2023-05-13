@@ -10544,6 +10544,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "cacique vida",
+        "signup_date": "2023-05-12 17:38:30",
+        "account_hash": "36b2-57cf-0403-48d0",
+        "hardware_id": "09ca-fee6-4e61-4739",
+        "reason": "Claws + DH + Set - Teled - Victim: Redn1netale",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Falestine",
+        "signup_date": "2023-05-12 17:40:16",
+        "account_hash": "153c-b429-1faf-dbe4",
+        "hardware_id": "4691-3789-e31b-71e2",
+        "reason": "200M + DDS + Set - Eating - Victim: helo and idc",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
