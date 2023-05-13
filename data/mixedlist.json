@@ -10616,6 +10616,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zhemnis",
+        "signup_date": "2023-05-13 07:24:59",
+        "account_hash": "9f1c-85aa-22b2-58e0",
+        "hardware_id": "1031-e776-dce2-877c",
+        "reason": "AGS+DH+Set - Victim: teh expert",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
