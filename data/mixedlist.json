@@ -4784,7 +4784,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "status win",
+        "display_rsn": "hapy crazzy",
         "signup_date": "2023-04-26 20:21:14",
         "account_hash": "null",
         "hardware_id": "null",
@@ -5192,7 +5192,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "status win",
+        "display_rsn": "hapy crazzy",
         "signup_date": "2023-04-28 14:27:58",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8552,7 +8552,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "status win",
+        "display_rsn": "hapy crazzy",
         "signup_date": "2023-05-05 13:50:04",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10693,6 +10693,14 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "Scammed 2b | Victim: 5701",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "casino",
+        "signup_date": "2023-05-13 13:52:22",
+        "account_hash": "b820-efe8-fe5c-2d4b",
+        "hardware_id": "83e0-d7b1-6712-2de2",
+        "reason": "Void Inquis Elder",
         "evidence_rating": "3"
     },
     {
