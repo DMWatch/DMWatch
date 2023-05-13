@@ -10632,6 +10632,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Dimeater I",
+        "signup_date": "2023-05-13 07:33:43",
+        "account_hash": "40b7-6621-d824-876c",
+        "hardware_id": "eb12-6592-12fc-4064",
+        "reason": "Claws+DH+Set - Victim: rppn",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Stick Stock",
+        "signup_date": "2023-05-13 07:34:54",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS+Torva+Set - Victim: im soupi",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
