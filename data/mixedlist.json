@@ -7872,14 +7872,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "advies",
-        "signup_date": "2023-05-03 12:50:59",
-        "account_hash": "d581-751f-3fba-6e81",
-        "hardware_id": "ec67-14b1-6694-2126",
-        "reason": "Self excluded, do not DM.",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "devils 4-2",
         "signup_date": "2023-05-03 13:01:08",
         "account_hash": "Null",
@@ -10629,6 +10621,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Voidwaker+DH+Set - Victim: spoonedpkr",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "kieranjamin",
+        "signup_date": "2023-05-13 07:30:17",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+DH+Set - Victim: favoo",
         "evidence_rating": "3"
     },
     {
