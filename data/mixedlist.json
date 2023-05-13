@@ -8672,7 +8672,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tom c tom",
+        "display_rsn": "tom c rs",
         "signup_date": "2023-05-06 00:44:23",
         "account_hash": "b3f3-d322-d9ef-53e5",
         "hardware_id": "307e-018d-f2b3-bad8",
@@ -8696,7 +8696,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tom c tom",
+        "display_rsn": "tom c rs",
         "signup_date": "2023-05-06 00:53:02",
         "account_hash": "b3f3-d322-d9ef-53e5",
         "hardware_id": "307e-018d-f2b3-bad8",
@@ -9904,7 +9904,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tom c tom",
+        "display_rsn": "tom c rs",
         "signup_date": "2023-05-10 05:15:59",
         "account_hash": "544c-f1d3-e0f3-45ce",
         "hardware_id": "b193-ace5-715e-3bd8",
@@ -10376,7 +10376,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tom c tom",
+        "display_rsn": "tom c rs",
         "signup_date": "2023-05-12 06:27:52",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10528,14 +10528,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "REALs RARE",
-        "signup_date": "2023-05-12 15:31:04",
-        "account_hash": "46a3-2a69-666e-5b8c",
-        "hardware_id": "0f08-1b3c-ccf2-8680",
-        "reason": "Claws + Set - DQ without paying - Victim: WhenDuelBack",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "forward sail",
         "signup_date": "2023-05-12 16:35:35",
         "account_hash": "6736-2771-2a56-b0c9",
@@ -10589,6 +10581,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Abuse - Victim: fatfetus",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "whenduelback",
+        "signup_date": "2023-05-12 20:05:35",
+        "account_hash": "e317-6af5-6086-504b",
+        "hardware_id": "a1da-b790-5b41-0387",
+        "reason": "Claws+Elder+Set - Victim: reals rare",
         "evidence_rating": "3"
     },
     {
