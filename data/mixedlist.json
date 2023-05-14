@@ -10912,6 +10912,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "BaggedMlLK",
+        "signup_date": "2023-05-14 16:53:40",
+        "account_hash": "d79a-d2e5-d578-19b8",
+        "hardware_id": "ba11-a9a7-d95c-f47d",
+        "reason": "Fang+DH+Set - Victim: theangryhog",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
