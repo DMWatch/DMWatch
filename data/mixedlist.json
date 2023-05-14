@@ -9704,7 +9704,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "yorat",
+        "display_rsn": "beaverman9",
         "signup_date": "2023-05-09 13:50:40",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10773,6 +10773,14 @@
         "account_hash": "6794-9ff9-aa69-4c94",
         "hardware_id": "345c-2961-a83c-f1f0",
         "reason": "Claw Dh Base set|victim: dillon xx",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "starngerz",
+        "signup_date": "2023-05-14 10:32:45",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Impostering Ranks, serial scammer",
         "evidence_rating": "3"
     },
     {
