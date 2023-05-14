@@ -8640,7 +8640,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "udide wya",
+        "display_rsn": "yeando",
         "signup_date": "2023-05-06 00:44:23",
         "account_hash": "b3f3-d322-d9ef-53e5",
         "hardware_id": "307e-018d-f2b3-bad8",
@@ -8664,7 +8664,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "udide wya",
+        "display_rsn": "yeando",
         "signup_date": "2023-05-06 00:53:02",
         "account_hash": "b3f3-d322-d9ef-53e5",
         "hardware_id": "307e-018d-f2b3-bad8",
@@ -9872,7 +9872,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "udide wya",
+        "display_rsn": "yeando",
         "signup_date": "2023-05-10 05:15:59",
         "account_hash": "544c-f1d3-e0f3-45ce",
         "hardware_id": "b193-ace5-715e-3bd8",
@@ -10344,7 +10344,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "udide wya",
+        "display_rsn": "yeando",
         "signup_date": "2023-05-12 06:27:52",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10701,6 +10701,22 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "530m + Void + DH | Victim: sloppy gamer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Udide wya",
+        "signup_date": "2023-05-13 19:43:36",
+        "account_hash": "af3b-c671-20b7-b1c6",
+        "hardware_id": "ef31-8b36-55d9-1744",
+        "reason": "135m + Void + Inquis | Victim: Sloppy Gamer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "sex in club",
+        "signup_date": "2023-05-13 19:49:27",
+        "account_hash": "2d14-78d6-5bcb-80cc",
+        "hardware_id": "57cb-4100-8f32-57be",
+        "reason": "Void + Inquis + Elder | Victim: darksquall91",
         "evidence_rating": "3"
     },
     {
