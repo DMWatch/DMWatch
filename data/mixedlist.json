@@ -8032,7 +8032,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "itzdamilkman",
+        "display_rsn": "ltzdamilkman",
         "signup_date": "2023-05-03 18:57:26",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10685,6 +10685,14 @@
         "account_hash": "b820-efe8-fe5c-2d4b",
         "hardware_id": "83e0-d7b1-6712-2de2",
         "reason": "Void Inquis Elder",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Atomic Xenom",
+        "signup_date": "2023-05-13 19:07:08",
+        "account_hash": "d6c0-4abb-3dba-af67",
+        "hardware_id": "02f0-c966-29ea-f22c",
+        "reason": "AGS DH Base Set | Victim: Kermit",
         "evidence_rating": "3"
     },
     {
