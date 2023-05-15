@@ -11104,6 +11104,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "unfocussed",
+        "signup_date": "2023-05-15 08:34:44",
+        "account_hash": "298d-ee40-54ca-93b7",
+        "hardware_id": "7940-631d-724b-2b0b",
+        "reason": "Voidwaker+DH+Set - Victim: Glur",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "its garrett",
+        "signup_date": "2023-05-15 08:36:50",
+        "account_hash": "acee-7eb1-c4fa-850b",
+        "hardware_id": "055b-0e76-178b-a896",
+        "reason": "Scammed DH Voidwaker set",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -11358,6 +11374,14 @@
         "hardware_id": "null",
         "reason": "Nepseey",
         "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "glur",
+        "signup_date": "2023-05-15 08:36:34",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "prince\r\n1 warning - collat\r\n1 derank - collat",
+        "evidence_rating": "11"
     },
     {
         "display_rsn": "lastingbuzz",
