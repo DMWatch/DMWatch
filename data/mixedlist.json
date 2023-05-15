@@ -11232,6 +11232,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "MILEY CIRCUS",
+        "signup_date": "2023-05-15 16:33:05",
+        "account_hash": "e6f5-2343-60f2-4142",
+        "hardware_id": "309d-8993-e7c5-be44",
+        "reason": "Claws+DH+Set - Victim: hades mvp",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
