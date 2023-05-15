@@ -9896,7 +9896,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "blossom o7",
+        "display_rsn": "wilbur 07",
         "signup_date": "2023-05-10 06:36:08",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -10648,7 +10648,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "blossom o7",
+        "display_rsn": "wilbur 07",
         "signup_date": "2023-05-13 12:22:49",
         "account_hash": "null",
         "hardware_id": "null",
@@ -11165,6 +11165,14 @@
         "account_hash": "5f46-26b1-f993-47c0",
         "hardware_id": "0378-16b8-fc46-a912",
         "reason": "AGS+DH+Budget - Victim: Mr_Mangosss",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Snorona",
+        "signup_date": "2023-05-15 09:13:17",
+        "account_hash": "9c5b-ab94-4a42-dd93",
+        "hardware_id": "a423-ab0b-ea8f-ea52",
+        "reason": "DQ'd for voidwaker + dh set",
         "evidence_rating": "3"
     },
     {
