@@ -10875,7 +10875,7 @@
         "display_rsn": "xtramadolx",
         "signup_date": "2023-05-14 16:28:22",
         "account_hash": "e5ea-ed09-411f-46e9",
-        "hardware_id": "null",
+        "hardware_id": "8848-548f-15f5-c6bb",
         "reason": "AGS+DH+Set - Victim: hewasvenged",
         "evidence_rating": "3"
     },
@@ -10890,8 +10890,8 @@
     {
         "display_rsn": "xtramadolx",
         "signup_date": "2023-05-14 16:32:43",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "account_hash": "e5ea-ed09-411f-46e9",
+        "hardware_id": "8848-548f-15f5-c6bb",
         "reason": "AGS+DH+Set - Victim: helius23",
         "evidence_rating": "3"
     },
