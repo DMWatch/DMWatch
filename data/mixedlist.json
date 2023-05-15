@@ -11136,6 +11136,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "tuik tuik",
+        "signup_date": "2023-05-15 08:39:51",
+        "account_hash": "b256-5867-ca64-12d9",
+        "hardware_id": "07a4-917a-4742-3738",
+        "reason": "AGS+DH+Set - Victim: kirby argo",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
