@@ -2888,7 +2888,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "woooooox",
+        "display_rsn": "quad bombs",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8272,7 +8272,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "woooooox",
+        "display_rsn": "quad bombs",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9408,7 +9408,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "woooooox",
+        "display_rsn": "quad bombs",
         "signup_date": "2023-05-08 06:10:03",
         "account_hash": "null",
         "hardware_id": "null",
@@ -11144,6 +11144,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "tuik tuik",
+        "signup_date": "2023-05-15 08:42:04",
+        "account_hash": "b256-5867-ca64-12d9",
+        "hardware_id": "07a4-917a-4742-3738",
+        "reason": "scammed ags dh set",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "digbatle",
+        "signup_date": "2023-05-15 08:42:42",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "AGS+DH+Set - Victim: kirby argo",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -11401,9 +11417,9 @@
     },
     {
         "display_rsn": "glur",
-        "signup_date": "2023-05-15 08:36:34",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "signup_date": "2023-05-15 08:40:52",
+        "account_hash": "4dca-ace5-2346-ab9f",
+        "hardware_id": "6804-2797-2e15-c07c",
         "reason": "prince\r\n1 warning - collat\r\n1 derank - collat",
         "evidence_rating": "11"
     },
