@@ -10962,9 +10962,17 @@
     {
         "display_rsn": "lanceeast",
         "signup_date": "2023-05-14 17:09:20",
+        "account_hash": "6dfe-d252-d58d-45d1",
+        "hardware_id": "4ec3-16f3-ecb9-3082",
+        "reason": "Claws+Elder+Set - Victim: Worldstar",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "habibi rotta",
+        "signup_date": "2023-05-14 17:12:10",
         "account_hash": "null",
         "hardware_id": "null",
-        "reason": "Claws+Elder+Set - Victim: Worldstar",
+        "reason": "Claws+DH+Set+200m - Victim: Worldstar",
         "evidence_rating": "3"
     },
     {
