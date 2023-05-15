@@ -9796,7 +9796,7 @@
         "signup_date": "2023-05-09 19:35:20",
         "account_hash": "0ce5-1c18-1e78-0645",
         "hardware_id": "b827-fc18-697d-99f5",
-        "reason": "VW + Set - Teled - Victim: bat au vif",
+        "reason": "VW + Set - Teled - Victim: NBATEAM",
         "evidence_rating": "3"
     },
     {
@@ -10925,6 +10925,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Claws+DH+Set - Victim: kirbo argo",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "fuxjod",
+        "signup_date": "2023-05-14 17:00:22",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Elder+Set - Victim: spoonedpkr",
         "evidence_rating": "3"
     },
     {
