@@ -10874,7 +10874,7 @@
     {
         "display_rsn": "xtramadolx",
         "signup_date": "2023-05-14 16:28:22",
-        "account_hash": "null",
+        "account_hash": "e5ea-ed09-411f-46e9",
         "hardware_id": "null",
         "reason": "AGS+DH+Set - Victim: hewasvenged",
         "evidence_rating": "3"
@@ -11005,6 +11005,22 @@
         "account_hash": "18c1-65bd-f318-7651",
         "hardware_id": "9645-f52f-0520-6e64",
         "reason": "Abuse",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "magpul USA",
+        "signup_date": "2023-05-14 17:31:13",
+        "account_hash": "0618-d93f-a99d-ebd1",
+        "hardware_id": "bc70-7781-ae13-02a9",
+        "reason": "AGS+DH+Budget - Victim: WiizCaliffa",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "xtramadolx",
+        "signup_date": "2023-05-14 17:32:51",
+        "account_hash": "e5ea-ed09-411f-46e9",
+        "hardware_id": "8848-548f-15f5-c6bb",
+        "reason": "AGS+DH+Budget - Victim: zhemnis",
         "evidence_rating": "3"
     },
     {
