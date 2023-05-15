@@ -10176,7 +10176,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "burbewwy",
+        "display_rsn": "jabanakis",
         "signup_date": "2023-05-11 19:14:48",
         "account_hash": "2cb9-14e5-cf14-77af",
         "hardware_id": "d4fb-5c26-5de9-94a7",
@@ -10192,7 +10192,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "burbewwy",
+        "display_rsn": "jabanakis",
         "signup_date": "2023-05-11 19:42:18",
         "account_hash": "2cb9-14e5-cf14-77af",
         "hardware_id": "d4fb-5c26-5de9-94a7",
@@ -10200,7 +10200,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "burbewwy",
+        "display_rsn": "jabanakis",
         "signup_date": "2023-05-11 19:53:19",
         "account_hash": "2cb9-14e5-cf14-77af",
         "hardware_id": "d4fb-5c26-5de9-94a7",
@@ -10944,7 +10944,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "burbewwy",
+        "display_rsn": "jabanakis",
         "signup_date": "2023-05-14 17:20:13",
         "account_hash": "2cb9-14e5-cf14-77af",
         "hardware_id": "d4fb-5c26-5de9-94a7",
@@ -11197,6 +11197,14 @@
         "account_hash": "c718-8de0-3151-eea3",
         "hardware_id": "400b-d5bd-9fcb-dec3",
         "reason": "Fang DH Base Set Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "zezima",
+        "signup_date": "2023-05-15 13:56:08",
+        "account_hash": "c1fa-4308-ac98-1ede",
+        "hardware_id": "00da-d35d-c21f-3ba",
+        "reason": "Claw+DH+Set - Victim: rppn",
         "evidence_rating": "3"
     },
     {
