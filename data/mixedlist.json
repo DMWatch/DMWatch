@@ -8648,7 +8648,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "darwinchish",
+        "display_rsn": "juli us",
         "signup_date": "2023-05-06 00:44:23",
         "account_hash": "b3f3-d322-d9ef-53e5",
         "hardware_id": "307e-018d-f2b3-bad8",
@@ -8672,7 +8672,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "darwinchish",
+        "display_rsn": "juli us",
         "signup_date": "2023-05-06 00:53:02",
         "account_hash": "b3f3-d322-d9ef-53e5",
         "hardware_id": "307e-018d-f2b3-bad8",
@@ -9880,7 +9880,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "darwinchish",
+        "display_rsn": "juli us",
         "signup_date": "2023-05-10 05:15:59",
         "account_hash": "544c-f1d3-e0f3-45ce",
         "hardware_id": "b193-ace5-715e-3bd8",
@@ -10352,7 +10352,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "darwinchish",
+        "display_rsn": "juli us",
         "signup_date": "2023-05-12 06:27:52",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10981,6 +10981,30 @@
         "account_hash": "bbc3-2120-6f45-0e3d",
         "hardware_id": "7520-55ec-535d-ba07",
         "reason": "Elder+Inq+Set - Victim: ronaldo sui",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "jagmeet07",
+        "signup_date": "2023-05-14 17:20:13",
+        "account_hash": "2cb9-14e5-cf14-77af",
+        "hardware_id": "d4fb-5c26-5de9-94a7",
+        "reason": "Voidwaker+DH+Set - Victim: legna4seven",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "zezima",
+        "signup_date": "2023-05-14 17:22:24",
+        "account_hash": "df73-7170-e0c2-8d3f",
+        "hardware_id": "9229-3aa7-105d-feba",
+        "reason": "Voidwaker+DH+Set - Victim: kevxflash",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "supporrtt",
+        "signup_date": "2023-05-14 17:24:38",
+        "account_hash": "18c1-65bd-f318-7651",
+        "hardware_id": "9645-f52f-0520-6e64",
+        "reason": "Abuse",
         "evidence_rating": "3"
     },
     {
