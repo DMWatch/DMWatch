@@ -9664,7 +9664,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "legma4seven",
+        "display_rsn": "hewasvanged",
         "signup_date": "2023-05-09 13:38:02",
         "account_hash": "null",
         "hardware_id": "null",
@@ -11429,6 +11429,14 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "Attempted Anti scammer AGS-DH-Base Set",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Afro",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Impostering Ranks\/Staff",
         "evidence_rating": "3"
     },
     {
