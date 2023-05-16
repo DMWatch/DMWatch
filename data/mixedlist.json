@@ -3190,7 +3190,7 @@
         "hardware_id": "f32f-948d-0250-3969",
         "reason": "Serial Scammer",
         "evidence_rating": "3"
-    },
+      },
     {
         "display_rsn": "mystic isle",
         "signup_date": "2023-04-04 22:07:36",
@@ -6216,7 +6216,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "rng_urs",
+        "display_rsn": "pk1ng own",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "568a52cc-69ac-4148-97b5-0df63a51ec32",
         "hardware_id": "4ae0898f-6f6c-42a2-8fb0-6",
@@ -6572,7 +6572,7 @@
         "signup_date": "2023-04-28 21:47:55",
         "account_hash": "423b-1dfe-b2e4-3bf0",
         "hardware_id": "dfc0-5fdf-82cb-d1e0",
-        "reason": "AGS+DH+Set - Victim: Am: Aud Donny",
+        "reason": "AGS+DH+Set - Victim: Aud Donny",
         "evidence_rating": "3"
     },
     {
