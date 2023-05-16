@@ -8216,7 +8216,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "freeegrinder",
+        "display_rsn": "freegrinderr",
         "signup_date": "2023-05-04 08:47:23",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8896,7 +8896,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "freeegrinder",
+        "display_rsn": "freegrinderr",
         "signup_date": "2023-05-06 20:15:29",
         "account_hash": "6956-e62e-922b-cfb2",
         "hardware_id": "b9a4-d66a-2033-cf6f",
@@ -9648,7 +9648,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "freeegrinder",
+        "display_rsn": "freegrinderr",
         "signup_date": "2023-05-09 12:23:25",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9672,7 +9672,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mentaas",
+        "display_rsn": "primativer",
         "signup_date": "2023-05-09 13:38:02",
         "account_hash": "null",
         "hardware_id": "null",
@@ -11381,6 +11381,22 @@
         "account_hash": "f6d1-897d-8d59-99b8",
         "hardware_id": "0a18-3325-d14d-2df0",
         "reason": "Scammed Voidwaker + DH Set",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "M3 TOMMY",
+        "signup_date": "2023-05-16 11:34:19",
+        "account_hash": "Null",
+        "hardware_id": "Null",
+        "reason": "Teled on AGS + DH Set",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "idontcum69",
+        "signup_date": "2023-05-16 11:36:07",
+        "account_hash": "9471-fce9-fd4b-8cb3",
+        "hardware_id": "0835-a666-a2b6-0e46",
+        "reason": "AGS+DH+Set - Victim: Janipur",
         "evidence_rating": "3"
     },
     {
