@@ -736,7 +736,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "dittofish",
+        "display_rsn": "julis",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -968,7 +968,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "jungle boys",
+        "display_rsn": "illitiitllli",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -3864,7 +3864,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "iejakeulated",
+        "display_rsn": "pro skeeter",
         "signup_date": "2023-04-23 20:08:08",
         "account_hash": "null",
         "hardware_id": "null",
@@ -7304,7 +7304,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "euro pvmer",
+        "display_rsn": "tense dm",
         "signup_date": "2023-05-01 16:18:27",
         "account_hash": "null",
         "hardware_id": "null",
@@ -7635,7 +7635,7 @@
         "display_rsn": "Damn Homie",
         "signup_date": "2023-05-02 17:15:47",
         "account_hash": "e806-237d-1507-edb7",
-        "hardd": "2dcc-de7c-8374-c9b8",
+        "hardware_id": "2dcc-de7c-8374-c9b8",
         "reason": "AGS + DH + Budget - DQ didnt pay - Victim: Bibbleee",
         "evidence_rating": "3"
     },
@@ -11773,4 +11773,110 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Puffing",
-        "
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "debit2",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Debit",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Tony 2Times",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Tony 2Times",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "messdog98",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Messdog98",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "m i z z o u",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "m i z z o u",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Nepseey",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Nepseey",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "glur",
+        "signup_date": "2023-05-15 08:40:52",
+        "account_hash": "4dca-ace5-2346-ab9f",
+        "hardware_id": "6804-2797-2e15-c07c",
+        "reason": "prince\r\n1 warning - collat\r\n1 derank - collat",
+        "evidence_rating": "11"
+    },
+    {
+        "display_rsn": "lastingbuzz",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "lastingbuzz",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Bowki",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Bowki",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Strangerz",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Strangerz",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "mr xanni",
+        "signup_date": "2023-05-07 22:26:40",
+        "account_hash": "a838-4e2c-4892-ed71",
+        "hardware_id": "8097-47da-50fd-b5ec",
+        "reason": "mr xanny",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "ronaldo sui",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Chuck Acc 2\nLeniency for getting the URL",
+        "evidence_rating": "9"
+    },
+    {
+        "display_rsn": "DEJARU22",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Skate",
+        "evidence_rating": "11"
+    },
+    {
+        "display_rsn": "youbieedred",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "104a-19f9-d8af-8189",
+        "hardware_id": "a5f5-2678-cf12-b947",
+        "reason": "youbieedred",
+        "evidence_rating": "1"
+    }
+]
