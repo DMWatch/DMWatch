@@ -9824,7 +9824,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pick of rs",
+        "display_rsn": "v1per d0g",
         "signup_date": "2023-05-10 04:57:49",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -11549,6 +11549,14 @@
         "account_hash": "Null",
         "hardware_id": "Null",
         "reason": "Ragging streamers.",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "hi ghe",
+        "signup_date": "2023-05-17 07:32:32",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Voidwaker+Elder+Torva+Set - VIctim: worldstar",
         "evidence_rating": "3"
     },
     {
