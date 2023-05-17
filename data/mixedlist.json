@@ -9824,7 +9824,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pocketz gp",
+        "display_rsn": "pockets gp",
         "signup_date": "2023-05-10 04:57:49",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -11573,6 +11573,14 @@
         "account_hash": "5021-f4ea-c17f-b8f3",
         "hardware_id": "f74d-0f09-6059-d273",
         "reason": "Claws+DH+Set - Victim: Hades MvP",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Zaadddyyy",
+        "signup_date": "2023-05-17 08:00:08",
+        "account_hash": "740b-60cf-98f4-b932",
+        "hardware_id": "0203-20dd-29e0-c3e9",
+        "reason": "AGS+DH+Set - Victim: MATUTES JR",
         "evidence_rating": "3"
     },
     {
