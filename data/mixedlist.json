@@ -11656,6 +11656,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Trayvun",
+        "signup_date": "2023-05-17 16:31:15",
+        "account_hash": "8961-824a-cffb-c849",
+        "hardware_id": "4f43-40b4-3b59-c310",
+        "reason": "Claws+DH+Set - Victim: Ace 860",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
