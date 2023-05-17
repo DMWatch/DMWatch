@@ -11672,6 +11672,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Barr y alt",
+        "signup_date": "2023-05-17 16:36:44",
+        "account_hash": "f42a-d1c6-5ca5-0e87",
+        "hardware_id": "6538-4fb0-3d5e-d16a",
+        "reason": "Claws+DH+Set+335m - Victim: G io",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
