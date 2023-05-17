@@ -736,7 +736,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "julis",
+        "display_rsn": "dittofish",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -5267,7 +5267,7 @@
         "display_rsn": "96 mage",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "3fcb185d-844d-4044-a8b7-6852e665686e",
-        "hardhardware_id": "01970ef1-0a5b-4a45-9a32-8",
+        "hardware_id": "01970ef1-0a5b-4a45-9a32-8",
         "reason": "Added with evidence",
         "evidence_rating": "3"
     },
