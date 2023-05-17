@@ -11592,6 +11592,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "blue lungs",
+        "signup_date": "2023-05-17 09:39:15",
+        "account_hash": "422e-03c0-eab1-fd26",
+        "hardware_id": "fd78-24de-c5ea-e0c9",
+        "reason": "DH+Set+250m - Victim: ghost wizard",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
