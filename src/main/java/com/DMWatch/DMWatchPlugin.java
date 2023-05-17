@@ -23,7 +23,6 @@ import java.security.MessageDigest;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -33,6 +32,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
@@ -188,8 +188,6 @@ public class DMWatchPlugin extends Plugin
 	private NavigationButton navButton;
 	private HashMap<String, Instant> nameNotifier;
 	private Instant lastSync;
-	private List<Case> caseList;
-	private HashSet<String> dmwatchScammerList;
 
 	@Getter
 	@Setter
@@ -427,14 +425,6 @@ public class DMWatchPlugin extends Plugin
 
 	private void colorAll()
 	{
-		dmwatchScammerList.clear();
-		for (Case c : caseManager.getList())
-		{
-			if (c.getStatus().equals("3"))
-			{
-				dmwatchScammerList.add(c.getNiceRSN());
-			}
-		}
 		clientThread.invoke(() -> {
 			colorFriendsChat();
 			colorClanChat();
@@ -684,24 +674,9 @@ public class DMWatchPlugin extends Plugin
 	private void onGameTick(GameTick e)
 	{
 
-		if (client.getLocalPlayer() == null) return;
-
-		if (config.scanLocalPlayers() && client.getTickCount() % 9 == 0) {  // update the local lists based on the scan
-			for (Player p : client.getPlayers())
-			{
-				String rsn = Text.removeTags(Text.toJagexName(p.getName()));
-				rsn = Text.toJagexName(rsn);
-				Case dmwCase = caseManager.get(rsn);
-
-				if (dmwCase != null && dmwCase.getStatus().equals("0"))
-				{
-					removeResolvedCase(dmwCase);
-				}
-				else if (dmwCase != null && dmwCase.getStatus().equals("3") && !caseList.contains(dmwCase))
-				{
-					caseList.add(dmwCase);
-				}
-			}
+		if (client.getLocalPlayer() == null)
+		{
+			return;
 		}
 
 		if (!isInParty() || partyService.getLocalMember() == null)
@@ -1082,22 +1057,15 @@ public class DMWatchPlugin extends Plugin
 
 	private void alertPlayerWarning(String rsn, boolean notifyClear, AlertType alertType)
 	{
-		if (caseManager.getListSize() == 0) return;
+		if (caseManager.getListSize() == 0)
+		{
+			return;
+		}
 		rsn = Text.toJagexName(rsn);
 		Case dmwCase = caseManager.get(rsn);
 
-		if (dmwCase != null && dmwCase.getStatus().equals("0"))
-		{
-			removeResolvedCase(dmwCase);
-			return;
-		}
-
 		if (!config.notifyOnNearby() && alertType.getMessage().equals("Nearby player, "))
 		{
-			if (dmwCase != null && dmwCase.getStatus().equals("3") && !caseList.contains(dmwCase))
-			{
-				caseList.add(dmwCase);
-			}
 			return;
 		}
 
@@ -1123,10 +1091,6 @@ public class DMWatchPlugin extends Plugin
 			}
 			else if (dmwCase.getStatus().equals("3"))
 			{
-				if (!caseList.contains(dmwCase))
-				{
-					caseList.add(dmwCase);
-				}
 				response.append(" is a scammer [")
 					.append(ChatColorType.HIGHLIGHT)
 					.append(dmwCase.getReason());
@@ -1173,17 +1137,6 @@ public class DMWatchPlugin extends Plugin
 				nameNotifier.put(rsn, Instant.now().plus(Duration.ofMinutes(config.notifyReminder())));
 			}
 		}
-	}
-
-	private void removeResolvedCase(Case c)
-	{
-		Case unResolvedCase2 = new Case(c.getRsn(), c.getDate(), c.getAccountHash(), c.getHardwareID(), c.getReason(), "2");
-		Optional<Case> findResolved2 = getLocalList().stream().filter(resolvedCase -> resolvedCase.equals(unResolvedCase2)).findFirst();
-		findResolved2.ifPresent(aCase -> caseList.remove(aCase));
-
-		Case unResolvedCase3 = new Case(c.getRsn(), c.getDate(), c.getAccountHash(), c.getHardwareID(), c.getReason(), "3");
-		Optional<Case> findResolved3 = getLocalList().stream().filter(resolvedCase -> resolvedCase.equals(unResolvedCase3)).findFirst();
-		findResolved3.ifPresent(aCase -> caseList.remove(aCase));
 	}
 
 	public String msg(String status)
@@ -1285,6 +1238,11 @@ public class DMWatchPlugin extends Plugin
 		}
 	}
 
+	public ConcurrentHashMap<String, HashSet<String>> getMappings()
+	{
+		return caseManager.getMappings();
+	}
+
 	private void illiteratePlayerWidgets(Widget chatWidget)
 	{
 		if (chatWidget == null || chatWidget.getChildren() == null)
@@ -1301,70 +1259,20 @@ public class DMWatchPlugin extends Plugin
 			{
 				continue;
 			}
-			if (dmwatchScammerList.contains(Text.toJagexName(memberName.toLowerCase())))
+			if (caseManager.getMappings().get("3").contains(Text.toJagexName(memberName.toLowerCase())))
 			{
 				listWidget.setTextColor(Color.RED.getRGB());
 			}
 		}
 	}
 
-	public void tryAddingHash(String hash)
-	{
-		Case c = caseManager.getByAccountHash(hash);
-		if (c == null)
-		{
-			return;
-		}
-		if (caseList.contains(c))
-		{
-			return;
-		}
-		caseList.add(c);
-	}
-
-	public void tryAddingHWID(String hwid)
-	{
-		Case c = caseManager.getByHWID(hwid);
-		if (c == null)
-		{
-			return;
-		}
-		if (caseList.contains(c))
-		{
-			return;
-		}
-		caseList.add(c);
-	}
-
-	public void tryAddingName(String rsn)
-	{
-		Case c = caseManager.get(rsn);
-		if (c == null)
-		{
-			return;
-		}
-		if (caseList.contains(c))
-		{
-			return;
-		}
-		caseList.add(c);
-	}
-
-	public List<Case> getLocalList()
-	{
-		return caseList;
-	}
-
 	private void reset(boolean turningOn)
 	{
-		caseList = new ArrayList<>();
-		dmwatchScammerList = new HashSet<>();
 		DMWATCH_DIR.mkdirs();
 		uniqueIDs = new LinkedHashSet<>();
 		dmwLogger = setupLogger("DMWatchLogger", "DMWatch");
 		panel = new PartyPanel(this, config);
 		nameNotifier = new HashMap<>();
-
 		if (turningOn)
 		{
 			overlayManager.add(playerMemberTileTierOverlay);

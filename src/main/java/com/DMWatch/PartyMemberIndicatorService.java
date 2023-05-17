@@ -3,7 +3,8 @@ package com.DMWatch;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
-import java.util.Optional;
+import java.util.HashSet;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.BiConsumer;
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -18,12 +19,12 @@ public class PartyMemberIndicatorService
 {
 
 	private final Client client;
-	private final DMWatchConfig config;
 	private final DMWatchPlugin plugin;
 
 	private static final BufferedImage SCAMMER_ICON = ImageUtil.resizeImage(ImageUtil.loadImageResource(DMWatchPlugin.class, "scammer.png"), 11, 11);
 
 	final static HashMap<String, Color> COLORHM;
+
 	static
 	{
 		COLORHM = new HashMap<>();
@@ -42,9 +43,8 @@ public class PartyMemberIndicatorService
 	}
 
 	@Inject
-	private PartyMemberIndicatorService(Client client, DMWatchConfig config, DMWatchPlugin plugin)
+	private PartyMemberIndicatorService(Client client, DMWatchPlugin plugin)
 	{
-		this.config = config;
 		this.client = client;
 		this.plugin = plugin;
 	}
@@ -68,6 +68,7 @@ public class PartyMemberIndicatorService
 
 	Decorations getDecorations(Player player)
 	{
+		ConcurrentHashMap<String, HashSet<String>> mappings = plugin.getMappings();
 		if (player.getName() == null)
 		{
 			return null;
@@ -76,25 +77,21 @@ public class PartyMemberIndicatorService
 		Color color = null;
 		BufferedImage rankImage = null;
 
-		final Optional<Case> c = plugin.getLocalList().stream().filter(p -> p.getNiceRSN().equalsIgnoreCase(Text.toJagexName(player.getName()))).findFirst();
-
-		if (c.isPresent())
+		for (String key : mappings.keySet())
 		{
-			Case c1 = c.get();
-			if (!config.drawOnSelf() && player == client.getLocalPlayer())
+			if (mappings.get(key).contains(Text.toJagexName(player.getName().toLowerCase())))
 			{
-				return null;
-			}
+				if (COLORHM.containsKey(key))
+				{
+					color = COLORHM.get(key);
+				}
+				if (key.equals("3"))
+				{
+					rankImage = SCAMMER_ICON;
 
-			if (COLORHM.containsKey(c1.getStatus()))
-			{
-				color = COLORHM.get(c1.getStatus());
+				}
+				return new Decorations(color, rankImage);
 			}
-			if (c1.getStatus().equals("3"))
-			{
-				rankImage = SCAMMER_ICON;
-			}
-			return new Decorations(color, rankImage);
 		}
 		return null;
 	}
