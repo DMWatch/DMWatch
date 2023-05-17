@@ -11680,6 +11680,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zezima",
+        "signup_date": "2023-05-17 16:38:55",
+        "account_hash": "53a6-1c9d-b3da-6031",
+        "hardware_id": "9d99-a3ee-815e-6902",
+        "reason": "Voidwaker+DH+Set - Victim: g io",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
