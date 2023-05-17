@@ -11,9 +11,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Queue;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.function.Consumer;
 import javax.inject.Inject;
@@ -42,6 +44,7 @@ public class CaseManager
 	private final OkHttpClient client;
 	private final DMWatchConfig config;
 	private final Queue<Case> dmCases = new ConcurrentLinkedQueue<>();
+	private ConcurrentHashMap<String, HashSet<String>> mappings = new ConcurrentHashMap<>();
 	private final ClientThread clientThread;
 	private final Gson gson;
 
@@ -74,7 +77,9 @@ public class CaseManager
 		if (config.watchListEndpoint().endsWith("mixedlist.json") && config.watchListEndpoint().startsWith("https://"))
 		{
 			rwReq = new Request.Builder().url(config.watchListEndpoint()).build();
-		} else {
+		}
+		else
+		{
 			rwReq = new Request.Builder().url(DMWatch_LIST_URL_DEFAULT).build();
 		}
 
@@ -101,15 +106,29 @@ public class CaseManager
 					{
 						List<Case> cases = gson.fromJson(new InputStreamReader(response.body().byteStream()), typeToken);
 						dmCases.clear();
+						ConcurrentHashMap<String, HashSet<String>> localMappings = new ConcurrentHashMap<>();
 						for (Case c : cases)
 						{
 							Case old = get(c.getNiceRSN());
 							// keep the newest case
 							if (old == null || old.getDate().before(c.getDate()))
 							{
+								if (localMappings.containsKey(c.getStatus()))
+								{
+									HashSet<String> currentSet = localMappings.get(c.getStatus());
+									currentSet.add(c.getNiceRSN());
+									localMappings.put(c.getStatus(), currentSet);
+								}
+								else
+								{
+									HashSet<String> currentSet = new HashSet();
+									currentSet.add(c.getNiceRSN());
+									localMappings.put(c.getStatus(), currentSet);
+								}
 								dmCases.add(c);
 							}
 						}
+						mappings = localMappings;
 						log.debug("saved {}/{} dm cases", dmCases.size(), cases.size());
 					}
 				}
@@ -173,8 +192,14 @@ public class CaseManager
 		return dmCases.size();
 	}
 
-	public Queue<Case> getList() {
+	public Queue<Case> getList()
+	{
 		return dmCases;
+	}
+
+	public ConcurrentHashMap<String, HashSet<String>> getMappings()
+	{
+		return mappings;
 	}
 
 	/**

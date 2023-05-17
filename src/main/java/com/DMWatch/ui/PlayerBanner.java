@@ -135,12 +135,6 @@ public class PlayerBanner extends JPanel
 		statsPanel.add(createIconPanel(spriteManager, SpriteID.SPELL_VENGEANCE_OTHER, "IsVenged", player.getIsVenged() == 1 ? "Is Venged" : "Not Venged", "", false));
 		statsPanel.add(createIconPanel(spriteManager, SpriteID.PLAYER_KILLER_SKULL, "DMWatchStatus", msg(player.getStatus()), player.getReason(), true));
 
-		if (player.getStatus().equals("3") || player.getStatus().equals("2")) {
-			plugin.tryAddingHash(player.getUserUnique());
-			plugin.tryAddingName(player.getUsername());
-			plugin.tryAddingHWID(player.getHWID());
-		}
-
 		final JLabel trustLabel = new JLabel("Trust this player:");
 		trustLabel.setToolTipText("If selected the inventory will show the players GP and/or Platinum tokens.");
 
@@ -196,7 +190,8 @@ public class PlayerBanner extends JPanel
 			final String levelText = player.getCombatLevel() == -1 ? "" : " (level-" + player.getCombatLevel() + ")";
 			usernameLabel.setText(player.getUsername() + levelText);
 
-			if (config.recolorRSNonBanner()){
+			if (config.recolorRSNonBanner())
+			{
 				Color color = getColorFromTier(player.getStatus());
 				if (color != null)
 				{
@@ -374,7 +369,7 @@ public class PlayerBanner extends JPanel
 		if (player.getStatus().equals("6"))
 		{
 			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
-			ImageIcon hoverIC  = new ImageIcon(ImageUtil.alphaOffset(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height), 0.53f));
+			ImageIcon hoverIC = new ImageIcon(ImageUtil.alphaOffset(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height), 0.53f));
 
 			label.setIcon(ic);
 			if (player.getReason().length() != 1)
