@@ -11328,7 +11328,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "yolomesir",
+        "display_rsn": "foofighters6",
         "signup_date": "2023-05-16 11:26:45",
         "account_hash": "9471-fce9-fd4b-8cb3",
         "hardware_id": "0835-a666-a2b6-0e46",
@@ -11336,7 +11336,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "yolomesir",
+        "display_rsn": "foofighters6",
         "signup_date": "2023-05-16 11:28:28",
         "account_hash": "9471-fce9-fd4b-8cb3",
         "hardware_id": "0835-a666-a2b6-0e46",
@@ -11360,7 +11360,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "yolomesir",
+        "display_rsn": "foofighters6",
         "signup_date": "2023-05-16 11:36:07",
         "account_hash": "9471-fce9-fd4b-8cb3",
         "hardware_id": "0835-a666-a2b6-0e46",
@@ -11384,7 +11384,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "yolomesir",
+        "display_rsn": "foofighters6",
         "signup_date": "2023-05-16 11:52:46",
         "account_hash": "9471-fce9-fd4b-8cb3",
         "hardware_id": "0835-a666-a2b6-0e46",
@@ -11565,14 +11565,6 @@
         "account_hash": "5021-f4ea-c17f-b8f3",
         "hardware_id": "f74d-0f09-6059-d273",
         "reason": "AGS+DH+Set - Victim: llmon",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "zezima",
-        "signup_date": "2023-05-17 07:43:13",
-        "account_hash": "5021-f4ea-c17f-b8f3",
-        "hardware_id": "f74d-0f09-6059-d273",
-        "reason": "Claws+DH+Set - Victim: Hades MvP",
         "evidence_rating": "3"
     },
     {
