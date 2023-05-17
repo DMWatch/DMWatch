@@ -11504,6 +11504,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "MaxHits",
+        "signup_date": "2023-05-16 22:49:59",
+        "account_hash": "Null",
+        "hardware_id": "Null",
+        "reason": "spoofer and a scammer.",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
