@@ -462,6 +462,7 @@ public class DMWatchPlugin extends Plugin
 	@Subscribe
 	public void onPlayerSpawned(PlayerSpawned playerSpawned)
 	{
+		if (!config.notifyOnNearby()) return;
 		String name = playerSpawned.getPlayer().getName();
 		alertPlayerWarning(name, false, AlertType.NEARBY);
 	}
@@ -512,16 +513,11 @@ public class DMWatchPlugin extends Plugin
 	@Subscribe
 	public void onFriendsChatMemberJoined(FriendsChatMemberJoined event)
 	{
-		if (!config.notifyOnJoin())
-		{
-			return;
-		}
+		if (!config.notifyOnJoin()) return;
+
 		String rsn = Text.toJagexName(event.getMember().getName());
 		String local = client.getLocalPlayer().getName();
-		if (rsn.equals(local))
-		{
-			return;
-		}
+		if (rsn.equals(local)) return;
 
 		alertPlayerWarning(rsn, false, AlertType.FRIENDS_CHAT);
 	}
@@ -529,16 +525,11 @@ public class DMWatchPlugin extends Plugin
 	@Subscribe
 	public void onClanMemberJoined(ClanMemberJoined event)
 	{
-		if (!config.notifyOnJoin())
-		{
-			return;
-		}
+		if (!config.notifyOnJoin()) return;
+
 		String rsn = Text.toJagexName(event.getClanMember().getName());
 		String local = client.getLocalPlayer().getName();
-		if (rsn.equals(local))
-		{
-			return;
-		}
+		if (rsn.equals(local)) return;
 
 		alertPlayerWarning(rsn, false, AlertType.CLAN_CHAT);
 	}
@@ -1090,11 +1081,6 @@ public class DMWatchPlugin extends Plugin
 		}
 		rsn = Text.toJagexName(rsn);
 		Case dmwCase = caseManager.get(rsn);
-
-		if (!config.notifyOnNearby() && alertType.getMessage().equals("Nearby player, "))
-		{
-			return;
-		}
 
 		ChatMessageBuilder response = new ChatMessageBuilder();
 		response.append(alertType.getMessage())
