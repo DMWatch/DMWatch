@@ -9824,7 +9824,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "dark dango",
+        "display_rsn": "joeyzzzz",
         "signup_date": "2023-05-10 04:57:49",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -11693,6 +11693,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "DH+Set - Victim: cronixia ii",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "toatsme me",
+        "signup_date": "2023-05-17 16:54:46",
+        "account_hash": "05d8-166d-620c-c58d",
+        "hardware_id": "ef0a-dac8-1449-79e2",
+        "reason": "DH+Set+350m - Victim: ob z",
         "evidence_rating": "3"
     },
     {
