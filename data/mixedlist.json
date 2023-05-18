@@ -8136,7 +8136,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "kaite simp",
+        "display_rsn": "high_tecks",
         "signup_date": "2023-05-04 02:02:53",
         "account_hash": "null",
         "hardware_id": "null",
@@ -11552,7 +11552,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "deafwood",
+        "display_rsn": "hea ve",
         "signup_date": "2023-05-17 07:32:32",
         "account_hash": "null",
         "hardware_id": "null",
@@ -11624,7 +11624,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "zer0 skiller",
+        "display_rsn": "straybuck",
         "signup_date": "2023-05-17 16:22:13",
         "account_hash": "ced9-5ab0-cc72-90a0",
         "hardware_id": "d4b8-ddc5-e86c-46f1",
@@ -11640,7 +11640,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "zer0 skiller",
+        "display_rsn": "straybuck",
         "signup_date": "2023-05-17 16:26:44",
         "account_hash": "null",
         "hardware_id": "null",
@@ -11664,7 +11664,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "zer0 skiller",
+        "display_rsn": "straybuck",
         "signup_date": "2023-05-17 16:33:07",
         "account_hash": "ced9-5ab0-cc72-90a0",
         "hardware_id": "d4b8-ddc5-e86c-46f1",
@@ -11701,6 +11701,14 @@
         "account_hash": "05d8-166d-620c-c58d",
         "hardware_id": "ef0a-dac8-1449-79e2",
         "reason": "DH+Set+350m - Victim: ob z",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "its biggie",
+        "signup_date": "2023-05-17 17:47:51",
+        "account_hash": "afa7-3c39-b0b4-ef37",
+        "hardware_id": "4b57-a7e4-20fa-b7a2",
+        "reason": "DH+Set+75m - Victim: kermit",
         "evidence_rating": "3"
     },
     {
@@ -11833,9 +11841,9 @@
     },
     {
         "display_rsn": "WeDrinkTitos",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "WeDrinkTitos",
-        "hardware_id": "WeDrinkTitos",
+        "signup_date": "2023-05-17 17:15:40",
+        "account_hash": "8d8c-9f77-bd03-3a94",
+        "hardware_id": "585e-e503-f473-b1ab",
         "reason": "WeDrinkTitos smiley rank",
         "evidence_rating": "1"
     },
