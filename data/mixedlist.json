@@ -10835,7 +10835,7 @@
         "display_rsn": "no tabbin",
         "signup_date": "2023-05-14 16:29:56",
         "account_hash": "f713-0513-e5d6-883d",
-        "hardware_e_id": "9cf3-b01a-1aab-2c65",
+        "hardware_id": "9cf3-b01a-1aab-2c65",
         "reason": "Claws+DH+Set - Victim: rppn",
         "evidence_rating": "3"
     },
@@ -12039,3 +12039,4 @@
         "reason": "ipker",
         "evidence_rating": "1"
     }
+]
