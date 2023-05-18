@@ -9824,7 +9824,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "urika xd",
+        "display_rsn": "devil is eye",
         "signup_date": "2023-05-10 04:57:49",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -11888,6 +11888,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "lf dh fight",
+        "signup_date": "2023-05-18 15:54:51",
+        "account_hash": "8ef0-3d23-cd55-a947",
+        "hardware_id": "97d7-4080-9c77-9cba",
+        "reason": "DH+Set+250m - Victim: Sly C00per",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "qwinny slave",
+        "signup_date": "2023-05-18 15:57:22",
+        "account_hash": "aeae-178d-928b-3fa3",
+        "hardware_id": "c3aa-0cc4-9cae-c8f4",
+        "reason": "AGS+DH+Set - Victim: Chucked 6B",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -12214,24 +12230,6 @@
         "hardware_id": "a1da-b790-5b41-0387",
         "reason": "ipker",
         "evidence_rating": "1"
-    },
-    {
-        "display_rsn": "Sun Dances",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "0fda-3bb2-7554-796a",
-        "hardware_id": "8441-4f66-9fb3-1192",
-        "reason": "Smiley\nJ oker#0500 - 1082216702097498222",
-        "evidence_rating": "1"
-    },
-    {
-        "display_rsn": "rng for mine",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "bf49-6c47-6c74-32cf",
-        "hardware_id": "9c4d-54fb-91ce-2099",
-        "reason": "757475160264802445",
-        "evidence_rating": "1"
-    }
-]"
     },
     {
         "display_rsn": "Sun Dances",
