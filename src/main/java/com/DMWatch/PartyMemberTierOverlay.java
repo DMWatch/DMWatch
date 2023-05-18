@@ -27,12 +27,16 @@ public class PartyMemberTierOverlay extends Overlay
 
 	private final PartyMemberIndicatorService playerIndicatorsService;
 	private final DMWatchConfig config;
+	private final DMWatchPlugin plugin;
+	private final ChatIconManager chatIconManager;
 
 	@Inject
-	private PartyMemberTierOverlay(DMWatchConfig config, PartyMemberIndicatorService playerIndicatorsService)
+	private PartyMemberTierOverlay(DMWatchPlugin plugin, DMWatchConfig config, PartyMemberIndicatorService playerIndicatorsService, ChatIconManager chatIconManager)
 	{
+		this.plugin = plugin;
 		this.config = config;
 		this.playerIndicatorsService = playerIndicatorsService;
+		this.chatIconManager = chatIconManager;
 		setPosition(OverlayPosition.DYNAMIC);
 		setPriority(OverlayPriority.MED);
 	}
@@ -81,6 +85,44 @@ public class PartyMemberTierOverlay extends Overlay
 		if (textLocation == null)
 		{
 			return;
+		}
+
+		BufferedImage rankImage = null;
+		if (decorations.getFriendsChatRank() != null && plugin.isShowFriendRanks())
+		{
+			if (decorations.getFriendsChatRank() != FriendsChatRank.UNRANKED)
+			{
+				rankImage = chatIconManager.getRankImage(decorations.getFriendsChatRank());
+			}
+		}
+		else if (decorations.getClanTitle() != null && plugin.isShowClanRanks())
+		{
+			rankImage = chatIconManager.getRankImage(decorations.getClanTitle());
+		}
+
+		if (rankImage != null)
+		{
+			final int imageWidth = rankImage.getWidth();
+			final int imageTextMargin;
+			final int imageNegativeMargin;
+
+			if (drawPlayerNamesConfig == PlayerNameLocation.MODEL_RIGHT)
+			{
+				imageTextMargin = imageWidth;
+				imageNegativeMargin = 0;
+			}
+			else
+			{
+				imageTextMargin = imageWidth / 2;
+				imageNegativeMargin = imageWidth / 2;
+			}
+
+			final int textHeight = graphics.getFontMetrics().getHeight() - graphics.getFontMetrics().getMaxDescent();
+			final Point imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 1, textLocation.getY() - textHeight / 2 - rankImage.getHeight() / 2);
+			OverlayUtil.renderImageLocation(graphics, imageLocation, rankImage);
+
+			// move text
+			textLocation = new Point(textLocation.getX() + imageTextMargin, textLocation.getY());
 		}
 
 		BufferedImage scammerImage = decorations.getScammerIcon();

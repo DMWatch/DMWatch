@@ -10,7 +10,16 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 import lombok.Value;
 import net.runelite.api.Client;
+import net.runelite.api.FriendsChatManager;
+import net.runelite.api.FriendsChatMember;
+import net.runelite.api.FriendsChatRank;
+import static net.runelite.api.FriendsChatRank.UNRANKED;
 import net.runelite.api.Player;
+import net.runelite.api.clan.ClanChannel;
+import net.runelite.api.clan.ClanChannelMember;
+import net.runelite.api.clan.ClanRank;
+import net.runelite.api.clan.ClanSettings;
+import net.runelite.api.clan.ClanTitle;
 import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.Text;
 
@@ -88,9 +97,21 @@ public class PartyMemberIndicatorService
 				if (key.equals("3"))
 				{
 					rankImage = SCAMMER_ICON;
-
 				}
-				return new Decorations(color, rankImage);
+
+				FriendsChatRank rank = null;
+				ClanTitle clanTitle = null;
+
+				if (player.isFriendsChatMember() && plugin.isShowFriendRanks())
+				{
+					rank = getFriendsChatRank(player);
+				}
+				if (player.isClanMember() && plugin.isShowClanRanks())
+				{
+					clanTitle = getClanTitle(player);
+				}
+
+				return new Decorations(rank, clanTitle, color, rankImage);
 			}
 		}
 		return null;
@@ -99,7 +120,40 @@ public class PartyMemberIndicatorService
 	@Value
 	static class Decorations
 	{
+		FriendsChatRank friendsChatRank;
+		ClanTitle clanTitle;
 		Color color;
 		BufferedImage scammerIcon;
+	}
+
+	private ClanTitle getClanTitle(Player player)
+	{
+		ClanChannel clanChannel = client.getClanChannel();
+		ClanSettings clanSettings = client.getClanSettings();
+		if (clanChannel == null || clanSettings == null)
+		{
+			return null;
+		}
+
+		ClanChannelMember member = clanChannel.findMember(player.getName());
+		if (member == null)
+		{
+			return null;
+		}
+
+		ClanRank rank = member.getRank();
+		return clanSettings.titleForRank(rank);
+	}
+
+	private FriendsChatRank getFriendsChatRank(Player player)
+	{
+		final FriendsChatManager friendsChatManager = client.getFriendsChatManager();
+		if (friendsChatManager == null)
+		{
+			return UNRANKED;
+		}
+
+		FriendsChatMember friendsChatMember = friendsChatManager.findByName(Text.removeTags(player.getName()));
+		return friendsChatMember != null ? friendsChatMember.getRank() : UNRANKED;
 	}
 }

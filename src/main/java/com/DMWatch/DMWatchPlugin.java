@@ -85,6 +85,8 @@ import net.runelite.client.party.messages.UserSync;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.plugins.PluginManager;
+import net.runelite.client.plugins.playerindicators.PlayerIndicatorsConfig;
+import net.runelite.client.plugins.playerindicators.PlayerIndicatorsPlugin;
 import net.runelite.client.task.Schedule;
 import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
@@ -179,6 +181,9 @@ public class DMWatchPlugin extends Plugin
 	@Inject
 	private PartyMemberIndicatorService partyMemberIndicatorService;
 
+	@Inject
+	private PlayerIndicatorsPlugin playerIndicatorsPlugin;
+
 	// globals
 	private Instant lastLogout;
 	private Logger dmwLogger;
@@ -188,6 +193,11 @@ public class DMWatchPlugin extends Plugin
 	private NavigationButton navButton;
 	private HashMap<String, Instant> nameNotifier;
 	private Instant lastSync;
+
+	@Getter
+	private boolean showFriendRanks;
+	@Getter
+	private boolean showClanRanks;
 
 	@Getter
 	@Setter
@@ -363,6 +373,23 @@ public class DMWatchPlugin extends Plugin
 	@Subscribe
 	public void onConfigChanged(ConfigChanged event)
 	{
+		if(event.getGroup().equals("runelite")) {
+			if (event.getKey().equals("playerindicatorsplugin")) {
+				if (event.getNewValue().equals("false")) {
+					showClanRanks = false;
+					showFriendRanks = false;
+				} else {
+					showClanRanks = showClanRanks();
+					showFriendRanks = showFriendsRanks();
+				}
+			}
+		}
+
+		if (event.getGroup().equals("playerindicators")) {
+			showClanRanks = showClanRanks();
+			showFriendRanks = showFriendsRanks();
+		}
+
 		if (!event.getGroup().equals(DMWatchConfig.CONFIG_GROUP))
 		{
 			return;
@@ -1266,6 +1293,36 @@ public class DMWatchPlugin extends Plugin
 		}
 	}
 
+	private boolean showFriendsRanks() {
+		Optional<Plugin> playerIndicators = pluginManager.getPlugins().stream().filter(p -> p.getName().equals("Player Indicators")).findFirst();
+		if (playerIndicators.isPresent() && pluginManager.isPluginEnabled(playerIndicators.get()))
+		{
+			if (pluginManager.isPluginEnabled(playerIndicators.get())) {
+				PlayerIndicatorsConfig config1 = (PlayerIndicatorsConfig) pluginManager.getPluginConfigProxy(playerIndicators.get());
+				if (config1.showFriendsChatRanks()) {
+					return  true;
+				}
+			}
+		}
+
+		return false;
+	}
+
+	private boolean showClanRanks() {
+		final Optional<Plugin> playerIndicators = pluginManager.getPlugins().stream().filter(p -> p.getName().equals("Player Indicators")).findFirst();
+		if (playerIndicators.isPresent() && pluginManager.isPluginEnabled(playerIndicators.get()))
+		{
+			if (pluginManager.isPluginEnabled(playerIndicators.get())) {
+				PlayerIndicatorsConfig config1 = (PlayerIndicatorsConfig) pluginManager.getPluginConfigProxy(playerIndicators.get());
+				if (config1.showClanChatRanks()) {
+					return  true;
+				}
+			}
+		}
+
+		return false;
+	}
+
 	private void reset(boolean turningOn)
 	{
 		DMWATCH_DIR.mkdirs();
@@ -1273,6 +1330,8 @@ public class DMWatchPlugin extends Plugin
 		dmwLogger = setupLogger("DMWatchLogger", "DMWatch");
 		panel = new PartyPanel(this, config);
 		nameNotifier = new HashMap<>();
+		showFriendRanks = showFriendsRanks();
+		showClanRanks = showClanRanks();
 		if (turningOn)
 		{
 			overlayManager.add(playerMemberTileTierOverlay);
