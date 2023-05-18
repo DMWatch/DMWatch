@@ -9824,7 +9824,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "urika xd",
+        "display_rsn": "777 is num",
         "signup_date": "2023-05-10 04:57:49",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -11885,6 +11885,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Abuse\/Imp Box",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "lf dh fight",
+        "signup_date": "2023-05-18 15:54:51",
+        "account_hash": "8ef0-3d23-cd55-a947",
+        "hardware_id": "97d7-4080-9c77-9cba",
+        "reason": "DH+Set+250m - Victim: Sly C00per",
         "evidence_rating": "3"
     },
     {
