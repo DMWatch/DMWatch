@@ -7392,7 +7392,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "oak logpkr",
+        "display_rsn": "till suns up",
         "signup_date": "2023-05-01 22:45:03",
         "account_hash": "null",
         "hardware_id": "null",
@@ -11965,6 +11965,22 @@
         "account_hash": "2d76-9aaa-fa15-a23d",
         "hardware_id": "b70d-7756-69dc-5f2c",
         "reason": "Claws DH Base Set| Victim: Teh Expert",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Flippertank",
+        "signup_date": "2023-05-19 09:03:28",
+        "account_hash": "5938-303e-2938-f788",
+        "hardware_id": "57ac-7e41-d627-790e",
+        "reason": "100m + DH base set | victim: Hades MvP",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Sacred you",
+        "signup_date": "2023-05-19 09:17:34",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Serial Scammer",
         "evidence_rating": "3"
     },
     {
