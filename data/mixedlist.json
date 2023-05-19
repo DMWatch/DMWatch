@@ -4376,7 +4376,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mashinaque95",
+        "display_rsn": "fish n eggs",
         "signup_date": "2023-04-25 12:16:49",
         "account_hash": "841b-3e29-6f70-4311",
         "hardware_id": "1bc2-c7d1-d375-dad2",
@@ -5730,7 +5730,7 @@
     {
         "display_rsn": "khizra",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash: "1eea-da5d-b589-767b",
+        "account_hash": "1eea-da5d-b589-767b",
         "hardware_id": "4b9e-e053-02b9-d5d6",
         "reason": "dh set + 1b | victim: BigAz",
         "evidence_rating": "3"
@@ -12312,4 +12312,27 @@
         "evidence_rating": "1"
     },
     {
-       
+        "display_rsn": "paladin boom",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "d28b-3e6a-77d2-3a15",
+        "hardware_id": "a1da-b790-5b41-0387",
+        "reason": "ipker",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Sun Dances",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "0fda-3bb2-7554-796a",
+        "hardware_id": "8441-4f66-9fb3-1192",
+        "reason": "Smiley\nJ oker#0500 - 1082216702097498222",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "rng for mine",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "bf49-6c47-6c74-32cf",
+        "hardware_id": "9c4d-54fb-91ce-2099",
+        "reason": "757475160264802445",
+        "evidence_rating": "1"
+    }
+]
