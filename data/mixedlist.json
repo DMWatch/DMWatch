@@ -4592,14 +4592,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "trapbag",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "9845-b633-ca24-efaf",
-        "hardware_id": "cf3e-7776-1280-bf71",
-        "reason": "Claws+DH+Set - Victim: PUFFING",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "loadin bars",
         "signup_date": "2023-04-26 01:35:07",
         "account_hash": "null",
