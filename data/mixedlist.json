@@ -11992,6 +11992,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zezima",
+        "signup_date": "2023-05-19 10:07:57",
+        "account_hash": "8a3e-3bdb-ff46-9204",
+        "hardware_id": "e7d5-2d73-58e9-7a52",
+        "reason": "DH+Set+1b - Victim: Chucked 6b",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
