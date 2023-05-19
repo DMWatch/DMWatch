@@ -7392,7 +7392,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "lost 4b dmin",
+        "display_rsn": "oak logpkr",
         "signup_date": "2023-05-01 22:45:03",
         "account_hash": "null",
         "hardware_id": "null",
@@ -7629,7 +7629,7 @@
         "account_hash": "364f-514e-0c1b-d498",
         "hardware_id": "be74-32ac-94b5-50db",
         "reason": "Slander and ban evading",
-        "evidence_rating": "3"
+          "evidence_rating": "3"
     },
     {
         "display_rsn": "Damn Homie",
@@ -12311,4 +12311,3 @@
         "reason": "757475160264802445",
         "evidence_rating": "1"
     }
-]
