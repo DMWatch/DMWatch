@@ -12056,6 +12056,30 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "whyilost",
+        "signup_date": "2023-05-19 13:00:43",
+        "account_hash": "1961-ef9b-15af-d23c",
+        "hardware_id": "49b3-8681-97c2-0a2d",
+        "reason": "InqMace+Torva+Set - Victim: interacting",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Breault Slay",
+        "signup_date": "2023-05-19 13:03:32",
+        "account_hash": "b8df-f6cd-e3d8-23c4",
+        "hardware_id": "acc9-9bcc-61cf-e96f",
+        "reason": "Voidwaker+DH+Set - Victim: Till Sun Up",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "feetmunch",
+        "signup_date": "2023-05-19 13:04:01",
+        "account_hash": "09c7-8945-96cf-7602",
+        "hardware_id": "dfdb-25db-edf7-de86",
+        "reason": "AGS+DH+Budget - Victim: wiizcaliffa",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
