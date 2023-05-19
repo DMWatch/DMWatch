@@ -6712,7 +6712,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "b1ack anti",
+        "display_rsn": "1 black out",
         "signup_date": "2023-04-29 11:58:35",
         "account_hash": "null",
         "hardware_id": "null",
@@ -12125,6 +12125,14 @@
         "account_hash": "4227-dda4-b474-97a7",
         "hardware_id": "bba7-82b9-53c6-2e30",
         "reason": "Claws+DH+Set - Victim: odiznor0341",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "xit",
+        "signup_date": "2023-05-19 16:23:20",
+        "account_hash": "d8f-8091-23d3-ea6f",
+        "hardware_id": "ab79-c75c-c798-e617",
+        "reason": "DH+Set+1b - Victim: GodBlessOhi0",
         "evidence_rating": "3"
     },
     {
