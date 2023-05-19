@@ -11944,6 +11944,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "pink 7acos",
+        "signup_date": "2023-05-19 07:13:45",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "AGS Dh Base Set | Victim: SpoonedPkr",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "rockershock",
+        "signup_date": "2023-05-19 07:17:10",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Claws Inquis Elder",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -12274,20 +12290,6 @@
     {
         "display_rsn": "Sun Dances",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "0fda-3bb2-7554-796a",
-        "hardware_id": "8441-4f66-9fb3-1192",
-        "reason": "Smiley\nJ oker#0500 - 1082216702097498222",
-        "evidence_rating": "1"
-    },
-    {
-        "display_rsn": "rng for mine",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "bf49-6c47-6c74-32cf",
-        "hardware_id": "9c4d-54fb-91ce-2099",
-        "reason": "757475160264802445",
-        "evidence_rating": "1"
-    }
-]3-04-04 22:07:36",
         "account_hash": "0fda-3bb2-7554-796a",
         "hardware_id": "8441-4f66-9fb3-1192",
         "reason": "Smiley\nJ oker#0500 - 1082216702097498222",
