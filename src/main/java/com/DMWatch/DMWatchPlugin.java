@@ -83,6 +83,7 @@ import net.runelite.client.party.WSClient;
 import net.runelite.client.party.events.UserPart;
 import net.runelite.client.party.messages.UserSync;
 import net.runelite.client.plugins.Plugin;
+import net.runelite.client.plugins.PluginDependency;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.plugins.PluginManager;
 import net.runelite.client.plugins.playerindicators.PlayerIndicatorsConfig;
@@ -100,6 +101,7 @@ import org.slf4j.LoggerFactory;
 @PluginDescriptor(
 	name = "DMWatch"
 )
+@PluginDependency(PlayerIndicatorsPlugin.class)
 public class DMWatchPlugin extends Plugin
 {
 	private static final String CHALLENGE = "Challenge in DM";
