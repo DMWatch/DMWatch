@@ -4336,7 +4336,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "kiznunez",
+        "display_rsn": "x website xx",
         "signup_date": "2023-04-25 10:45:08",
         "account_hash": "null",
         "hardware_id": "null",
@@ -4376,7 +4376,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mashinaque95",
+        "display_rsn": "fish n eggs",
         "signup_date": "2023-04-25 12:16:49",
         "account_hash": "841b-3e29-6f70-4311",
         "hardware_id": "1bc2-c7d1-d375-dad2",
@@ -6672,7 +6672,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "kiznunez",
+        "display_rsn": "x website xx",
         "signup_date": "2023-04-29 10:28:08",
         "account_hash": "null",
         "hardware_id": "null",
@@ -7256,7 +7256,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "kiznunez",
+        "display_rsn": "x website xx",
         "signup_date": "2023-05-01 10:02:01",
         "account_hash": "null",
         "hardware_id": "null",
@@ -7392,7 +7392,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "oak logpkr",
+        "display_rsn": "till suns up",
         "signup_date": "2023-05-01 22:45:03",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8200,7 +8200,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "klappendekat",
+        "display_rsn": "baldhead05",
         "signup_date": "2023-05-04 08:47:23",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8880,7 +8880,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "klappendekat",
+        "display_rsn": "baldhead05",
         "signup_date": "2023-05-06 20:15:29",
         "account_hash": "6956-e62e-922b-cfb2",
         "hardware_id": "b9a4-d66a-2033-cf6f",
@@ -9632,7 +9632,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "klappendekat",
+        "display_rsn": "baldhead05",
         "signup_date": "2023-05-09 12:23:25",
         "account_hash": "null",
         "hardware_id": "null",
@@ -11965,6 +11965,30 @@
         "account_hash": "2d76-9aaa-fa15-a23d",
         "hardware_id": "b70d-7756-69dc-5f2c",
         "reason": "Claws DH Base Set| Victim: Teh Expert",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Flippertank",
+        "signup_date": "2023-05-19 09:03:28",
+        "account_hash": "5938-303e-2938-f788",
+        "hardware_id": "57ac-7e41-d627-790e",
+        "reason": "100m + DH base set | victim: Hades MvP",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Sacred you",
+        "signup_date": "2023-05-19 09:17:34",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "yani poonani",
+        "signup_date": "2023-05-19 09:38:24",
+        "account_hash": "c91d-cedf-278a-7c86",
+        "hardware_id": "0438-33dd-2e83-9d1d",
+        "reason": "Fang DH Base Set | Victim: torvesta l",
         "evidence_rating": "3"
     },
     {
