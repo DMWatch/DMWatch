@@ -12048,6 +12048,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "awyr",
+        "signup_date": "2023-05-19 10:22:42",
+        "account_hash": "8004-8d24-a38a-fcba",
+        "hardware_id": "ef9d-d116-655c-cfe6",
+        "reason": "Claws+DH+Set - Victim: 02 07",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
