@@ -12352,6 +12352,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "0x0x0",
+        "signup_date": "2023-05-20 10:27:27",
+        "account_hash": "6301-8721-4382-cbe7",
+        "hardware_id": "e7db-7b4a-2b6c-25cb",
+        "reason": "Claws+DH+Set - Victim: Become Human",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
