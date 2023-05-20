@@ -12248,6 +12248,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "mike5544",
+        "signup_date": "2023-05-20 07:40:27",
+        "account_hash": "2979-4118-9a7a-900b",
+        "hardware_id": "a9cd-23c4-32b0-0849",
+        "reason": "Claws DH Baset set | Victim: rppn",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -12557,4 +12565,38 @@
         "account_hash": "104a-19f9-d8af-8189",
         "hardware_id": "a5f5-2678-cf12-b947",
         "reason": "youbieedred",
-        "evidence
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "paladin boom",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "d28b-3e6a-77d2-3a15",
+        "hardware_id": "a1da-b790-5b41-0387",
+        "reason": "ipker",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Sun Dances",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "0fda-3bb2-7554-796a",
+        "hardware_id": "8441-4f66-9fb3-1192",
+        "reason": "Smiley\nJ oker#0500 - 1082216702097498222",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "rng for mine",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "bf49-6c47-6c74-32cf",
+        "hardware_id": "9c4d-54fb-91ce-2099",
+        "reason": "757475160264802445",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "r iky",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "0547-838c-a288-2d34",
+        "hardware_id": "713f-719a-76dd-620b",
+        "reason": "144808889521537024",
+        "evidence_rating": "1"
+    }
+]
