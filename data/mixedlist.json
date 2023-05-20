@@ -12160,6 +12160,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Brunosala II",
+        "signup_date": "2023-05-19 18:04:20",
+        "account_hash": "ed1d-0ae8-b2fe-b5ba",
+        "hardware_id": "c3b6-101d-1634-52c9",
+        "reason": "Claws+DH+Set - Victim: Theangryhog",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
