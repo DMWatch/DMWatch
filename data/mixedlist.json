@@ -5376,7 +5376,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "cheeky",
+        "display_rsn": "cheeeky",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "edb8-46fc-3c3b-d844",
         "hardware_id": "f3cf-3a68-879a-ef74",
@@ -5725,7 +5725,7 @@
         "account_hash": "c58846d0-bd55-4c62-8182-b0df7bab4720",
         "hardware_id": "50b0d0eb-2265-4e53-89f1-6",
         "reason": "DH Set + Ags - Victim: Chicagoland",
-        "evidence_rating": "3"
+        "evidene_rating": "3"
     },
     {
         "display_rsn": "new surprem0",
