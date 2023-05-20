@@ -12328,6 +12328,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "aqilea",
+        "signup_date": "2023-05-20 09:04:45",
+        "account_hash": "32fb-6352-d7fb-93d8",
+        "hardware_id": "d37f-927d-d1bc-c6c2",
+        "reason": "Claws+DH+Set - Victim: Redn1netale",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
