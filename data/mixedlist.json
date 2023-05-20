@@ -9824,7 +9824,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "o2 07",
+        "display_rsn": "elyasain pk",
         "signup_date": "2023-05-10 05:13:16",
         "account_hash": "25fa-525f-376d-f891",
         "hardware_id": "f66d-87f7-5756-b7db",
@@ -9840,7 +9840,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "o2 07",
+        "display_rsn": "elyasain pk",
         "signup_date": "2023-05-10 05:20:37",
         "account_hash": "25fa-525f-376d-f891",
         "hardware_id": "f66d-87f7-5756-b7db",
@@ -12357,6 +12357,14 @@
         "account_hash": "ce15-d912-d0e0-85e8",
         "hardware_id": "f309-c843-334f-e558",
         "reason": "AGS+DH+Set - Victim: big sage",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "zezima",
+        "signup_date": "2023-05-20 12:20:57",
+        "account_hash": "3638-d2b4-2c0f-625d",
+        "hardware_id": "b41f-bd42-c191-4bfe",
+        "reason": "Claws+Elder+Set - Victim: LanceEast",
         "evidence_rating": "3"
     },
     {
