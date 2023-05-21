@@ -736,7 +736,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "janti",
+        "display_rsn": "mad cassie",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -4264,7 +4264,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "luimindee",
+        "display_rsn": "zelderado cx",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8617,7 +8617,7 @@
     },
     {
         "display_rsn": "queen lilitu",
-        "signup_date": "2023-04-04 22:07:36"2:07:36",
+        "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Scammed 6b",
@@ -12837,4 +12837,30 @@
         "account_hash": "bf49-6c47-6c74-32cf",
         "hardware_id": "9c4d-54fb-91ce-2099",
         "reason": "757475160264802445",
-        "evide
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "r iky",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "0547-838c-a288-2d34",
+        "hardware_id": "713f-719a-76dd-620b",
+        "reason": "144808889521537024",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Padarelis",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "465d-7a20-e89c-cf6f",
+        "hardware_id": "ed72-32a3-910f-bfc7",
+        "reason": "897000397787496470",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "mog time xd",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "https:\/\/www.twitch.tv\/mogtime",
+        "evidence_rating": "6"
+    }
+]
