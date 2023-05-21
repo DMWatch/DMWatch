@@ -9520,7 +9520,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "slzr main",
+        "display_rsn": "thepussslayr",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -12413,6 +12413,14 @@
         "account_hash": "4ef4-0944-12ea-38e4",
         "hardware_id": "59c8-840b-f84d-0180",
         "reason": "DH + Budget + AGS - DQ not paying - Victim: Loading Bars",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "SawConDzNuts",
+        "signup_date": "2023-05-20 17:32:03",
+        "account_hash": "0aef-40f8-0299-d8d7",
+        "hardware_id": "dcc1-4c85-f903-f923",
+        "reason": "DH + Set + 700M - Teled - Victim: Addpoints",
         "evidence_rating": "3"
     },
     {
