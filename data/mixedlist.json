@@ -12600,6 +12600,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Overguard",
+        "signup_date": "2023-05-21 16:33:07",
+        "account_hash": "e8ee-3898-04bb-1d76",
+        "hardware_id": "68de-fcf0-1472-25ea",
+        "reason": "AGS+DH+Set - Victim: big sage",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
