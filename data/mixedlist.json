@@ -882,9 +882,9 @@
     {
         "display_rsn": "g dk",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unknown",
-        "hardware_id": "unknown",
-        "reason": "tabbed",
+        "account_hash": "8f81-75a5-e4ca-bb2a",
+        "hardware_id": "6058-c2dc-1a93-5793",
+        "reason": "Claws+DH+Set - Victim: Lick Time",
         "evidence_rating": "3"
     },
     {
@@ -5421,14 +5421,6 @@
         "account_hash": "ad78-76cf-a074-582f",
         "hardware_id": "6e12-310a-7d61-ee32",
         "reason": "AGS+DH+Set - Victim: HardvardKush",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "g dk",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "8f81-75a5-e4ca-bb2a",
-        "hardware_id": "6058-c2dc-1a93-5793",
-        "reason": "Claws+DH+Set - Victim: Lick Time",
         "evidence_rating": "3"
     },
     {
