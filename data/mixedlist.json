@@ -3688,7 +3688,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "skrotmot",
+        "display_rsn": "maxhittowin",
         "signup_date": "2023-04-23 12:55:53",
         "account_hash": "0d4a-a72f-0aaf-7909",
         "hardware_id": "8413-f89d-9d1f-8897",
@@ -3816,7 +3816,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "halal hotdog",
+        "display_rsn": "maniac specs",
         "signup_date": "2023-04-23 17:37:12",
         "account_hash": "null",
         "hardware_id": "null",
@@ -6896,7 +6896,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "skrotmot",
+        "display_rsn": "maxhittowin",
         "signup_date": "2023-04-30 01:54:57",
         "account_hash": "0d4a-a72f-0aaf-7909",
         "hardware_id": "02f2-16a9-4f69-6e00",
@@ -7640,7 +7640,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "v79",
+        "display_rsn": "fogsbaker",
         "signup_date": "2023-05-02 18:29:35",
         "account_hash": "b99b-8f59-b8f4-6631",
         "hardware_id": "fa13-8eae-7ac7-f682",
@@ -8104,7 +8104,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "debits2",
+        "display_rsn": "over avreage",
         "signup_date": "2023-05-04 02:02:53",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8528,7 +8528,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "kosherville",
+        "display_rsn": "phats",
         "signup_date": "2023-05-05 20:29:34",
         "account_hash": "869f-ecf4-38c3-a565",
         "hardware_id": "5bd9-594b-8a85-73cf",
@@ -9312,7 +9312,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tooshort469",
+        "display_rsn": "over avraege",
         "signup_date": "2023-05-07 23:57:19",
         "account_hash": "cb30-9359-e96b-0a46",
         "hardware_id": "c2fe-7528-283a-cac9",
@@ -9536,7 +9536,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "blackboxjhus",
+        "display_rsn": "back 2 study",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9648,7 +9648,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "skattamatta",
+        "display_rsn": "ganghangk",
         "signup_date": "2023-05-09 14:05:44",
         "account_hash": "3ccb-1eb1-9614-20bb",
         "hardware_id": "b286-d8e2-5a9a-9f94",
@@ -9656,7 +9656,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "skattamatta",
+        "display_rsn": "ganghangk",
         "signup_date": "2023-05-09 14:15:54",
         "account_hash": "3ccb-1eb1-9614-20bb",
         "hardware_id": "b286-d8e2-5a9a-9f94",
@@ -9688,7 +9688,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "skattamatta",
+        "display_rsn": "ganghangk",
         "signup_date": "2023-05-09 15:25:19",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9744,7 +9744,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "oldzactly",
+        "display_rsn": "itsmeaueeb",
         "signup_date": "2023-05-09 20:49:41",
         "account_hash": "3ee0-6c23-5657-2f52",
         "hardware_id": "780f-cbff-b6a1-312d",
@@ -9752,7 +9752,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "oldzactly",
+        "display_rsn": "itsmeaueeb",
         "signup_date": "2023-05-09 20:53:00",
         "account_hash": "3ee0-6c23-5657-2f52",
         "hardware_id": "780f-cbff-b6a1-312d",
@@ -10064,7 +10064,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tallerthenu",
+        "display_rsn": "305 phantom",
         "signup_date": "2023-05-11 15:57:55",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10828,7 +10828,7 @@
         "signup_date": "2023-05-14 17:00:22",
         "account_hash": "null",
         "hardware_id": "null",
-        "reason": "Elder+Set - Victim: spoone: spoonedpkr",
+        "reason": "Elder+Set - Victim: spoonedpkr",
         "evidence_rating": "3"
     },
     {
@@ -12787,4 +12787,8 @@
         "display_rsn": "mog time xd",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
-        "hardwa
+        "hardware_id": "null",
+        "reason": "https:\/\/www.twitch.tv\/mogtime",
+        "evidence_rating": "6"
+    }
+]
