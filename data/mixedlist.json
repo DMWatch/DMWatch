@@ -2424,7 +2424,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "gamebreakahk",
+        "display_rsn": "floggedbyaxe",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -3688,7 +3688,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "skrotmot",
+        "display_rsn": "maxhittowin",
         "signup_date": "2023-04-23 12:55:53",
         "account_hash": "0d4a-a72f-0aaf-7909",
         "hardware_id": "8413-f89d-9d1f-8897",
@@ -3816,7 +3816,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "halal hotdog",
+        "display_rsn": "maniac specs",
         "signup_date": "2023-04-23 17:37:12",
         "account_hash": "null",
         "hardware_id": "null",
@@ -6896,7 +6896,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "skrotmot",
+        "display_rsn": "maxhittowin",
         "signup_date": "2023-04-30 01:54:57",
         "account_hash": "0d4a-a72f-0aaf-7909",
         "hardware_id": "02f2-16a9-4f69-6e00",
@@ -7640,7 +7640,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "v79",
+        "display_rsn": "fogsbaker",
         "signup_date": "2023-05-02 18:29:35",
         "account_hash": "b99b-8f59-b8f4-6631",
         "hardware_id": "fa13-8eae-7ac7-f682",
@@ -8104,7 +8104,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "debits2",
+        "display_rsn": "over avreage",
         "signup_date": "2023-05-04 02:02:53",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8528,7 +8528,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "kosherville",
+        "display_rsn": "phats",
         "signup_date": "2023-05-05 20:29:34",
         "account_hash": "869f-ecf4-38c3-a565",
         "hardware_id": "5bd9-594b-8a85-73cf",
@@ -8618,7 +8618,6 @@
     {
         "display_rsn": "queen lilitu",
         "signup_date": "2023-04-04 22:07:36",
-22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Scammed 6b",
@@ -12788,4 +12787,8 @@
         "display_rsn": "mog time xd",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
-        "hardwa
+        "hardware_id": "null",
+        "reason": "https:\/\/www.twitch.tv\/mogtime",
+        "evidence_rating": "6"
+    }
+]
