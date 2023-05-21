@@ -4032,7 +4032,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "1million0",
+        "display_rsn": "frotower",
         "signup_date": "2023-04-24 10:41:54",
         "account_hash": "Null",
         "hardware_id": "Null",
@@ -12418,8 +12418,8 @@
     {
         "display_rsn": "normandy xo",
         "signup_date": "2023-05-20 19:04:18",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "account_hash": "50ec-cecd-771d-ceae",
+        "hardware_id": "6f77-9c3b-75cf-f546",
         "reason": "DH+Set+500m - Victim: fatfetus",
         "evidence_rating": "3"
     },
