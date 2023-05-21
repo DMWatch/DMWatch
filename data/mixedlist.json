@@ -736,7 +736,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "janti",
+        "display_rsn": "fortaken12",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -2424,7 +2424,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "floggedbyaxe",
+        "display_rsn": "gamebreakahk",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -3688,7 +3688,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "maxhittowin",
+        "display_rsn": "skrotmot",
         "signup_date": "2023-04-23 12:55:53",
         "account_hash": "0d4a-a72f-0aaf-7909",
         "hardware_id": "8413-f89d-9d1f-8897",
@@ -3816,7 +3816,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "maniac specs",
+        "display_rsn": "halal hotdog",
         "signup_date": "2023-04-23 17:37:12",
         "account_hash": "null",
         "hardware_id": "null",
@@ -5724,7 +5724,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "66317ba5-1500-4547-9254-42c84f3ab74c",
         "hardware_id": "c51b4419-4f95-4da1-a05a-f",
-        "reason": "DH set + AGS - Victim: chicagoland",
+        "reon": "DH set + AGS - Victim: chicagoland",
         "evidence_rating": "3"
     },
     {
@@ -12787,8 +12787,4 @@
         "display_rsn": "mog time xd",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "https:\/\/www.twitch.tv\/mogtime",
-        "evidence_rating": "6"
-    }
-]
+        "hardware_id"
