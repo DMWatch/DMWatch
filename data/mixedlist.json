@@ -12400,14 +12400,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Orochy",
-        "signup_date": "2023-05-20 18:24:33",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "AGS+DH+Set - Victim: eer0",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "powerflow_04",
         "signup_date": "2023-05-20 18:41:05",
         "account_hash": "null",
