@@ -4264,7 +4264,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "zelderado cx",
+        "display_rsn": "luimindee",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -5724,7 +5724,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "66317ba5-1500-4547-9254-42c84f3ab74c",
         "hardware_id": "c51b4419-4f95-4da1-a05a-f",
-        "reason": "DH set + AGS - Victim: chicagoland",
+        "reason"on": "DH set + AGS - Victim: chicagoland",
         "evidence_rating": "3"
     },
     {
@@ -9648,7 +9648,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "ganghangk",
+        "display_rsn": "santamantat",
         "signup_date": "2023-05-09 14:05:44",
         "account_hash": "3ccb-1eb1-9614-20bb",
         "hardware_id": "b286-d8e2-5a9a-9f94",
@@ -9656,7 +9656,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "ganghangk",
+        "display_rsn": "santamantat",
         "signup_date": "2023-05-09 14:15:54",
         "account_hash": "3ccb-1eb1-9614-20bb",
         "hardware_id": "b286-d8e2-5a9a-9f94",
@@ -9688,7 +9688,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "ganghangk",
+        "display_rsn": "santamantat",
         "signup_date": "2023-05-09 15:25:19",
         "account_hash": "null",
         "hardware_id": "null",
@@ -12836,23 +12836,4 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "0547-838c-a288-2d34",
         "hardware_id": "713f-719a-76dd-620b",
-        "reason": "144808889521537024",
-        "evidence_rating": "1"
-    },
-    {
-        "display_rsn": "Padarelis",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "465d-7a20-e89c-cf6f",
-        "hardware_id": "ed72-32a3-910f-bfc7",
-        "reason": "897000397787496470",
-        "evidence_rating": "1"
-    },
-    {
-        "display_rsn": "mog time xd",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "https:\/\/www.twitch.tv\/mogtime",
-        "evidence_rating": "6"
-    }
-]
+        "reason": "144808889521
