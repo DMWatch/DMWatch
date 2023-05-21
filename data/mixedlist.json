@@ -12416,6 +12416,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "SawConDzNuts",
+        "signup_date": "2023-05-20 17:32:03",
+        "account_hash": "0aef-40f8-0299-d8d7",
+        "hardware_id": "dcc1-4c85-f903-f923",
+        "reason": "DH + Set + 700M - Teled - Victim: Addpoints",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
