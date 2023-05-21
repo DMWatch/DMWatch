@@ -12506,7 +12506,7 @@
     {
         "display_rsn": "A le c",
         "signup_date": "2023-05-21 10:53:11",
-        "account_hash": "null",
+        "account_hash": "0290-584a-753c-641f",
         "hardware_id": "null",
         "reason": "AGS + DH + Set - Teled - Victim: Stationrunnr",
         "evidence_rating": "3"
@@ -12541,6 +12541,46 @@
         "account_hash": "eec2-add1-10f5-e6c5",
         "hardware_id": "ff2c-1475-0544-0325",
         "reason": "700m - Victim: doctor ace",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "baees",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Abuse | Drops GP before fights",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "maxhittowin",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Imp Boxing",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "queencitydms",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Abuse | Drops GP before fights",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "santamantat",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Imp Boxing",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "j qee",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Abuse | Drops GP before fights",
         "evidence_rating": "3"
     },
     {
