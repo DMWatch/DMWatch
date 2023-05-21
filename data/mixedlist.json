@@ -12418,8 +12418,8 @@
     {
         "display_rsn": "normandy xo",
         "signup_date": "2023-05-20 19:04:18",
-        "account_hash": "50d8-00af-d9a4-c7ef",
-        "hardware_id": "4eeb-8bf0-931d-3bf4",
+        "account_hash": "null",
+        "hardware_id": "null",
         "reason": "DH+Set+500m - Victim: fatfetus",
         "evidence_rating": "3"
     },
