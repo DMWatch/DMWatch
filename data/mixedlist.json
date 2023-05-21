@@ -3688,7 +3688,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "maxhittowin",
+        "display_rsn": "skrotmot",
         "signup_date": "2023-04-23 12:55:53",
         "account_hash": "0d4a-a72f-0aaf-7909",
         "hardware_id": "8413-f89d-9d1f-8897",
@@ -3816,7 +3816,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "maniac specs",
+        "display_rsn": "halal hotdog",
         "signup_date": "2023-04-23 17:37:12",
         "account_hash": "null",
         "hardware_id": "null",
@@ -6896,7 +6896,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "maxhittowin",
+        "display_rsn": "skrotmot",
         "signup_date": "2023-04-30 01:54:57",
         "account_hash": "0d4a-a72f-0aaf-7909",
         "hardware_id": "02f2-16a9-4f69-6e00",
@@ -7625,7 +7625,7 @@
     },
     {
         "display_rsn": "got cub",
-        "signup_date": "2023-05-02 17:56:46",
+        "signup_date":date": "2023-05-02 17:56:46",
         "account_hash": "f5a4-a5fb-8ba0-cde6",
         "hardware_id": "9347-d0ef-2268-6019",
         "reason": "DH + Claws - Teled - Victim: tony 2times",
@@ -12787,8 +12787,4 @@
         "display_rsn": "mog time xd",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "https:\/\/www.twitch.tv\/mogtime",
-        "evidence_rating": "6"
-    }
-]
+        "hardwa
