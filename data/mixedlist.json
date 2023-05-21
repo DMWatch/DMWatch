@@ -4032,7 +4032,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "frotower",
+        "display_rsn": "1million0",
         "signup_date": "2023-04-24 10:41:54",
         "account_hash": "Null",
         "hardware_id": "Null",
@@ -12533,14 +12533,6 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "AGS + DH + Set - Teled - Victim: Stationrunnr",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "i vics",
-        "signup_date": "2023-05-21 11:05:06",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "Claws + Set - Eating - Victim: King creator",
         "evidence_rating": "3"
     },
     {
