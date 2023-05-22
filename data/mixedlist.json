@@ -12210,7 +12210,7 @@
     {
         "display_rsn": "odinzor0341",
         "signup_date": "2023-05-20 07:40:27",
-        "account_hash": "2979-41118-9a7a-900b",
+        "account_hash": "2979-4118-9a7a-900b",
         "hardware_id": "a9cd-23c4-32b0-0849",
         "reason": "Claws DH Baset set | Victim: rppn",
         "evidence_rating": "3"
@@ -12352,7 +12352,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "restric07",
+        "display_rsn": "cba farm",
         "signup_date": "2023-05-20 17:15:25",
         "account_hash": "a7f3-efcb-f3fb-316c",
         "hardware_id": "71a6-187a-f4c8-28a2",
@@ -12568,7 +12568,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "j qee",
+        "display_rsn": "jeepia",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -12576,7 +12576,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "never hit 0",
+        "display_rsn": "80 smacker",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -12597,6 +12597,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Abuse | Drops GP before fights",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Overguard",
+        "signup_date": "2023-05-21 16:33:07",
+        "account_hash": "e8ee-3898-04bb-1d76",
+        "hardware_id": "68de-fcf0-1472-25ea",
+        "reason": "AGS+DH+Set - Victim: big sage",
         "evidence_rating": "3"
     },
     {
@@ -12918,16 +12926,6 @@
         "hardware_id": "ed72-32a3-910f-bfc7",
         "reason": "897000397787496470",
         "evidence_rating": "1"
-    },
-    {
-        "display_rsn": "mog time xd",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "https:\/\/www.twitch.tv\/mogtime",
-        "evidence_rating": "6"
-    }
-]ce_rating": "1"
     },
     {
         "display_rsn": "mog time xd",
