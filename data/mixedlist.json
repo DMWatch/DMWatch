@@ -3709,7 +3709,7 @@
         "account_hash": "8afa-6ae1-3516-431c",
         "hardware_id": "2520-7ae8-aaf3-497b",
         "reason": "Ate n ran korasi inq elder",
-        "evidence_rating": "3"
+       "evidence_rating": "3"
     },
     {
         "display_rsn": "winner side",
@@ -5722,7 +5722,7 @@
     {
         "display_rsn": "no j u d g e",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "d6c8-9c91-5a6b-d2ae",
+        "account_hash": "d6c8-9c91-5a6b-dd2ae",
         "hardware_id": "dadd-e009-d5c4-729f",
         "reason": "AGS+DH+Set - Victim: iSpotEmGotEm",
         "evidence_rating": "3"
