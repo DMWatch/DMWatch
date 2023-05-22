@@ -835,7 +835,7 @@
         "display_rsn": "jobbo maboo",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "ee0f-ed8c-063c-7f57",
-        "hardware_id": "unknown",
+        "hardware_id": "a17c-78a9-428c-c1d4",
         "reason": "Claws+DH+Set - Victim: Cook Brook",
         "evidence_rating": "3"
     },
@@ -12717,6 +12717,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "AGS+DH+Set - Victim: beendank",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "n xx",
+        "signup_date": "2023-05-22 13:36:11",
+        "account_hash": "7c0a-5fb8-c111-db60",
+        "hardware_id": "8059-a9a9-8fdc-f492",
+        "reason": "DH+Budget - Victim: Chito OSRS",
         "evidence_rating": "3"
     },
     {
