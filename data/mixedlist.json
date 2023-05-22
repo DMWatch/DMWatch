@@ -4816,7 +4816,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "halseg",
+        "display_rsn": "qleaned",
         "signup_date": "2023-04-27 09:17:01",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -7384,14 +7384,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "R 3 DR U ITI",
-        "signup_date": "2023-05-01 23:27:37",
-        "account_hash": "d1b6-cbfa-1239-c26c",
-        "hardware_id": "b23e-8ba7-4915-9448",
-        "reason": "AGS+DH+Budget - Victim: Padme",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "gg-v3",
         "signup_date": "2023-05-02 00:08:59",
         "account_hash": "0",
@@ -8088,7 +8080,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "godbless0hio",
+        "display_rsn": "palodin boom",
         "signup_date": "2023-05-04 02:02:53",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8152,7 +8144,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "23 am",
+        "display_rsn": "ronpks 07",
         "signup_date": "2023-05-04 08:47:23",
         "account_hash": "null",
         "hardware_id": "null",
@@ -8824,7 +8816,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "23 am",
+        "display_rsn": "ronpks 07",
         "signup_date": "2023-05-06 20:15:29",
         "account_hash": "6956-e62e-922b-cfb2",
         "hardware_id": "b9a4-d66a-2033-cf6f",
@@ -9576,7 +9568,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "23 am",
+        "display_rsn": "ronpks 07",
         "signup_date": "2023-05-09 12:23:25",
         "account_hash": "null",
         "hardware_id": "null",
@@ -9600,7 +9592,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "ariz 77",
+        "display_rsn": "moon planet",
         "signup_date": "2023-05-09 13:38:02",
         "account_hash": "null",
         "hardware_id": "null",
@@ -10336,7 +10328,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "build like",
+        "display_rsn": "rng 99s",
         "signup_date": "2023-05-12 12:02:18",
         "account_hash": "0aa7-5579-f351-46b0",
         "hardware_id": "4536-c5f8-35c0-494e",
@@ -11552,7 +11544,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "build like",
+        "display_rsn": "rng 99s",
         "signup_date": "2023-05-17 16:42:53",
         "account_hash": "null",
         "hardware_id": "null",
@@ -11728,7 +11720,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "build like",
+        "display_rsn": "rng 99s",
         "signup_date": "2023-05-18 10:14:24",
         "account_hash": "null",
         "hardware_id": "null",
@@ -12336,7 +12328,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "cba farm",
+        "display_rsn": "roserm",
         "signup_date": "2023-05-20 17:15:25",
         "account_hash": "a7f3-efcb-f3fb-316c",
         "hardware_id": "71a6-187a-f4c8-28a2",
@@ -12504,7 +12496,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "hiwasvenged",
+        "display_rsn": "killer kam4l",
         "signup_date": "2023-05-21 12:07:22",
         "account_hash": "4db9-32fd-893e-2ded",
         "hardware_id": "ba09-e28c-df89-3bfc",
@@ -12717,6 +12709,22 @@
         "account_hash": "7c0a-5fb8-c111-db60",
         "hardware_id": "8059-a9a9-8fdc-f492",
         "reason": "DH+Budget - Victim: Chito OSRS",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "shiestyruner",
+        "signup_date": "2023-05-22 14:03:48",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+Bandos+Set - Victim: WizCalifa",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "roserm",
+        "signup_date": "2023-05-22 14:07:45",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+DH+Set - Victim: need cape",
         "evidence_rating": "3"
     },
     {
