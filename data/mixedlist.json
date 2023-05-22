@@ -736,7 +736,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mad cassie",
+        "display_rsn": "ankou son",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -5722,7 +5722,7 @@
     {
         "display_rsn": "no j u d g e",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "d6c8-9c91-5a6b-2ae",
+        "account_hash": "d6c8-9c91-5a6b-d2ae",
         "hardware_id": "dadd-e009-d5c4-729f",
         "reason": "AGS+DH+Set - Victim: iSpotEmGotEm",
         "evidence_rating": "3"
@@ -12925,4 +12925,14 @@
         "account_hash": "465d-7a20-e89c-cf6f",
         "hardware_id": "ed72-32a3-910f-bfc7",
         "reason": "897000397787496470",
-        "evidence_rating": "
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "mog time xd",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "https:\/\/www.twitch.tv\/mogtime",
+        "evidence_rating": "6"
+    }
+]
