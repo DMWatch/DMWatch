@@ -9720,14 +9720,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "itsmeaueeb",
-        "signup_date": "2023-05-09 20:53:00",
-        "account_hash": "3ee0-6c23-5657-2f52",
-        "hardware_id": "780f-cbff-b6a1-312d",
-        "reason": "Claws + DH + Set - Teled - Victim: Volatileorb",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "sharon gan",
         "signup_date": "2023-05-09 21:12:40",
         "account_hash": "null",
@@ -11000,7 +10992,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "totti dm",
+        "display_rsn": "fallini4",
         "signup_date": "2023-05-15 08:39:51",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -12717,6 +12709,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Abuse | DH+Set+100m - Victim: dboxx",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "zezima",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "1982",
+        "hardware_id": "c3b6-101d-1634-52c9",
+        "reason": "Claws+DH+Set - Victim: Theangryhog",
         "evidence_rating": "3"
     },
     {
