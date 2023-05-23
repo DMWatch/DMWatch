@@ -3120,7 +3120,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "white powdar",
+        "display_rsn": "locatie",
         "signup_date": "2023-04-21 13:55:30",
         "account_hash": "3586-6555-8f0e-bfa2",
         "hardware_id": "d4be-6d7c-cefe-98d9",
@@ -4040,7 +4040,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "white powdar",
+        "display_rsn": "locatie",
         "signup_date": "2023-04-24 11:07:45",
         "account_hash": "3586-6555-8f0e-bfa2",
         "hardware_id": "d4be-6d7c-cefe-98d9",
@@ -5064,7 +5064,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "white powdar",
+        "display_rsn": "locatie",
         "signup_date": "2023-04-28 02:50:18",
         "account_hash": "3586-6555-8f0e-bfa2",
         "hardware_id": "d4be-6d7c-cefe-98d9",
@@ -7744,7 +7744,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "white powdar",
+        "display_rsn": "locatie",
         "signup_date": "2023-05-03 08:59:25",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -9536,7 +9536,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "white powdar",
+        "display_rsn": "locatie",
         "signup_date": "2023-05-09 09:36:31",
         "account_hash": "null",
         "hardware_id": "null",
@@ -12784,14 +12784,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Aliddin",
-        "signup_date": "2023-05-23 06:31:34",
-        "account_hash": "2361-27f5-356b-514f",
-        "hardware_id": "1563-9e78-85e8-6cd6",
-        "reason": "Ags DH Base Set | Victim: pezza54",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "cute n thicc",
         "signup_date": "2023-05-23 06:33:58",
         "account_hash": "a886-890a-6dd4-13e5",
@@ -12805,6 +12797,38 @@
         "account_hash": "e746-1918-3149-23e3",
         "hardware_id": "bcaf-549b-a2d3-089b",
         "reason": "Claw DH Base Set| Victim: Hades MvP",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "dipsiez",
+        "signup_date": "2023-05-23 06:59:44",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Serial scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "viese rat",
+        "signup_date": "2023-05-23 07:25:03",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "DH AGS | Victim: spoonedpkr",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "jose jaen",
+        "signup_date": "2023-05-23 08:08:50",
+        "account_hash": "c198-4e90-44ed-3993",
+        "hardware_id": "39d2-bbb8-22f9-52d4",
+        "reason": "Void Verac Base Set | Victim: dorklas",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Mr Fro0obs",
+        "signup_date": "2023-05-23 09:02:55",
+        "account_hash": "f38d-f610-5b12-a312",
+        "hardware_id": "35ab-7d1f-2441-ac0d",
+        "reason": "AGS DH Budget| Victim: Kneelin onu",
         "evidence_rating": "3"
     },
     {
