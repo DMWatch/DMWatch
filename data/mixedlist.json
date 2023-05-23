@@ -6992,7 +6992,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "kana fajita",
+        "display_rsn": "666munasuus",
         "signup_date": "2023-04-30 16:54:10",
         "account_hash": "3b1b-839b-8084-4f8c",
         "hardware_id": "506d-7b7c-9572-fd3f",
@@ -7008,7 +7008,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "kana fajita",
+        "display_rsn": "666munasuus",
         "signup_date": "2023-04-30 17:13:00",
         "account_hash": "3b1b-839b-8084-4f8c",
         "hardware_id": "506d-7b7c-9572-fd3f",
@@ -12741,6 +12741,22 @@
         "account_hash": "561f-7df1-96a3-4e1d",
         "hardware_id": "3642-b195-1260-46e6",
         "reason": "AGS+DH+Set - Victim: idca",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Ysr",
+        "signup_date": "2023-05-22 23:01:43",
+        "account_hash": "Null",
+        "hardware_id": "Null",
+        "reason": "DH+Set+20b - Victim: 777luckyish",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "ghamble",
+        "signup_date": "2023-05-22 23:04:33",
+        "account_hash": "Null",
+        "hardware_id": "Null",
+        "reason": "Owes 20B, his mod scammed 20B",
         "evidence_rating": "3"
     },
     {
