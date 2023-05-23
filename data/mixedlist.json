@@ -13254,5 +13254,13 @@
         "hardware_id": "bf8b-206b-20b6-565b",
         "reason": "1044897441398403143",
         "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "itskidaof",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "0baf-e9fc-533b-9791",
+        "hardware_id": "fd38-e051-adcf-246b",
+        "reason": "875531750170841139",
+        "evidence_rating": "1"
     }
 ]
