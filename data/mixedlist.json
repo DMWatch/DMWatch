@@ -12832,7 +12832,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Ronald 07",
+        "display_rsn": "funnyfrogg",
         "signup_date": "2023-05-23 09:55:07",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -12853,6 +12853,22 @@
         "account_hash": "bb39-c3a2-cf25-e6a2",
         "hardware_id": "ec18-1075-3766-f8d8",
         "reason": "AGS Dh base set | victim: nopid",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "a randy solo",
+        "signup_date": "2023-05-23 10:35:15",
+        "account_hash": "94e4-9d9c-5c59-0040",
+        "hardware_id": "9674-ca0f-51df-ab04",
+        "reason": "Void Base Set | victim: till sun up",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "PSV",
+        "signup_date": "2023-05-23 10:42:59",
+        "account_hash": "a084-7221-13ee-e415",
+        "hardware_id": "1c89-4273-a529--f233",
+        "reason": "Claw DH Base Set| Victim: ronnie 8",
         "evidence_rating": "3"
     },
     {
