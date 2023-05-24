@@ -8632,7 +8632,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mkultra53876",
+        "display_rsn": "montaukproje",
         "signup_date": "2023-05-06 10:00:38",
         "account_hash": "9be0-a058-5cc5-efbc",
         "hardware_id": "2951-55f2-03d8-19e1",
@@ -12709,14 +12709,6 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "AGS+DH+Set - Victim: James veee",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "fatjocks32",
-        "signup_date": "2023-05-22 22:13:22",
-        "account_hash": "561f-7df1-96a3-4e1d",
-        "hardware_id": "3642-b195-1260-46e6",
-        "reason": "AGS+DH+Set - Victim: idca",
         "evidence_rating": "3"
     },
     {
