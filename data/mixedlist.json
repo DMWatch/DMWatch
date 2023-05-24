@@ -12984,6 +12984,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zezima",
+        "signup_date": "2023-05-23 20:40:23",
+        "account_hash": "6770-58ec-6f22-a398",
+        "hardware_id": "6cd5-0a70-c9c5-6115",
+        "reason": "DH+Set+350m - Victim: Must be f8",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
