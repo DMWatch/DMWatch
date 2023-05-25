@@ -7236,7 +7236,7 @@
         "signup_date": "2023-05-01 16:27:43",
         "account_hash": "c0e0-1817-bfa3-ed51",
         "hardware_id": "4945-864a-e992-1d27",
-        "reason": "AGS + Set - Teled - Victim:",
+        "reason": "AGS + Set - Teled - Victim: CRlPPIN",
         "evidence_rating": "3"
     },
     {
@@ -7424,7 +7424,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pinokiuo",
+        "display_rsn": "brut trophis",
         "signup_date": "2023-05-02 10:53:52",
         "account_hash": "1f0f-8952-4621-6791",
         "hardware_id": "75cc-ff3f-988a-d8cd",
@@ -12616,7 +12616,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pinokiuo",
+        "display_rsn": "brut trophis",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
