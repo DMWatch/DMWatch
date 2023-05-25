@@ -13120,6 +13120,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "f5h",
+        "signup_date": "2023-05-24 22:18:58",
+        "account_hash": "c013-9a54-89a3-7f99",
+        "hardware_id": "95a6-1dac-1522-9874",
+        "reason": "Claws+DH+Set - Victim: Ping Floyd",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
