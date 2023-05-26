@@ -13432,6 +13432,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Hisn",
+        "signup_date": "2023-05-26 09:37:18",
+        "account_hash": "e253-3666-5d2a-2b4e",
+        "hardware_id": "7e39-c416-0855-0a4f",
+        "reason": "DH Base set | victim: Tompsi",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
