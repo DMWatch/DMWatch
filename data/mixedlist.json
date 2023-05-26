@@ -13368,6 +13368,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "sterling o",
+        "signup_date": "2023-05-25 21:18:45",
+        "account_hash": "d2f2-2674-46ba-cc0d",
+        "hardware_id": "f004-cff4-aab5-34b3",
+        "reason": "Claw DH Base Set | Victim: rbny-c13",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
