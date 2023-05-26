@@ -13488,6 +13488,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "RO BS",
+        "signup_date": "2023-05-26 13:18:21",
+        "account_hash": "1005-589c-9b3a-110d",
+        "hardware_id": "9f09-1422-a2ce-9f8e",
+        "reason": "1st warning, mage pray on VW",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
