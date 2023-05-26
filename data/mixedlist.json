@@ -13448,6 +13448,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "AB84",
+        "signup_date": "2023-05-26 12:41:02",
+        "account_hash": "8449-1afe-6547-517f",
+        "hardware_id": "b024-cdef-36f1-3469",
+        "reason": "AGS+DH+Set - Victim: Chito OSRS",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
