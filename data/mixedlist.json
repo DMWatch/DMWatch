@@ -13648,6 +13648,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "8x8 64",
+        "signup_date": "2023-05-27 11:47:56",
+        "account_hash": "e8e4-81b2-d689-be27",
+        "hardware_id": "fc63-ece6-c5c2-8e8e",
+        "reason": "Claws+DH+Set - Victim: pure madness",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
