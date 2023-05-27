@@ -13536,6 +13536,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "beding",
+        "signup_date": "2023-05-26 19:22:40",
+        "account_hash": "8583-a044-6dd9-877d",
+        "hardware_id": "e116-d96f-cc0f-0462",
+        "reason": "Claws+Inq+Set - Victim: Chance S",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
