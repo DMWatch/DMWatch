@@ -13688,6 +13688,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Fallacy Fml",
+        "signup_date": "2023-05-27 15:23:23",
+        "account_hash": "d2f7-3ba0-00ce-4eda",
+        "hardware_id": "5b68-8fcd-20b3-af4b",
+        "reason": "Claws+DH+Set - Victim: Pageyy",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
