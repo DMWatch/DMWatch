@@ -13576,6 +13576,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zezima",
+        "signup_date": "2023-05-27 11:20:54",
+        "account_hash": "6ab9-5117-8a42-f023",
+        "hardware_id": "5c35-8af7-cdd6-cbe5",
+        "reason": "Claws+DH+Set - Victim: 90 soon 99",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
