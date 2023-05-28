@@ -13736,6 +13736,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "S1NGLE M0MS",
+        "signup_date": "2023-05-27 23:03:08",
+        "account_hash": "d993-31b9-c5cc-c565",
+        "hardware_id": "e169-4eb1-54a1-d4cb",
+        "reason": "Claws+DH+Set - Victim: DEMO0OO0ON",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
