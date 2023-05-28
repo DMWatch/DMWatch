@@ -13626,8 +13626,8 @@
     {
         "display_rsn": "N0 QUEMA CUH",
         "signup_date": "2023-05-27 11:50:50",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "account_hash": "1c80-8003-053c-dbe9",
+        "hardware_id": "6901-b7de-fdb0-abc4",
         "reason": "DH+Budget - Victim: Hata DIF",
         "evidence_rating": "3"
     },
