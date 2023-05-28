@@ -8946,8 +8946,8 @@
     {
         "display_rsn": "sportas",
         "signup_date": "2023-05-07 11:38:33",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "account_hash": "c5ee-1fad-8534-1df6",
+        "hardware_id": "f790-0ff1-235b-e4d0",
         "reason": "Claws + DH + Set - Ate\/Ran - Victim: sly c0per",
         "evidence_rating": "3"
     },
