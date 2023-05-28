@@ -8944,14 +8944,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "sportas",
-        "signup_date": "2023-05-07 11:38:33",
-        "account_hash": "c5ee-1fad-8534-1df6",
-        "hardware_id": "f790-0ff1-235b-e4d0",
-        "reason": "Claws + DH + Set - Ate\/Ran - Victim: sly c0per",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "terrodactal",
         "signup_date": "2023-05-07 11:51:12",
         "account_hash": "null",
