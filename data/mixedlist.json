@@ -14302,5 +14302,13 @@
         "hardware_id": "cc68-5377-5162-d55b",
         "reason": "831893248179568731",
         "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Kermit",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "0770-2c60-a1b9-b92e",
+        "hardware_id": "c976-fd0f-374e-e1a2",
+        "reason": "688226553683116041",
+        "evidence_rating": "1"
     }
 ]
