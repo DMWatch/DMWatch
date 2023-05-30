@@ -11456,7 +11456,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "srry 4 pk",
+        "display_rsn": "habes mvp",
         "signup_date": "2023-05-18 08:47:41",
         "account_hash": "null",
         "hardware_id": "null",
@@ -14069,6 +14069,14 @@
         "account_hash": "Null",
         "hardware_id": "Null",
         "reason": "DH+Set+100m - Victim: emilyuwo",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Francs",
+        "signup_date": "2023-05-30 12:33:15",
+        "account_hash": "6785-0c1e-1f15-da8a",
+        "hardware_id": "4e03-c80f-2d1d-0ea4",
+        "reason": "Claws DH Baset Set: victim: Zennyte",
         "evidence_rating": "3"
     },
     {
