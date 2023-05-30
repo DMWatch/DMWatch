@@ -14088,6 +14088,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "BRABUS 900",
+        "signup_date": "2023-05-30 16:49:05",
+        "account_hash": "9771-e802-8de3-d5e3",
+        "hardware_id": "d7ed-8a3f-1150-aaae",
+        "reason": "Claws + DH + Set - DQ Without paying - Victim: Ferro Alloys",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
