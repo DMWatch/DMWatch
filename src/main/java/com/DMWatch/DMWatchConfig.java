@@ -148,6 +148,17 @@ public interface DMWatchConfig extends Config
 	}
 
 	@ConfigItem(
+		position = 12,
+		keyName = "openNav",
+		name = "DMWatch side panel on challenge",
+		description = "Opens DMWatch side panel when a challenge is issued"
+	)
+	default boolean openDMWatchSidePanelOnChallenge()
+	{
+		return true;
+	}
+
+	@ConfigItem(
 		position = 8,
 		keyName = "notifyOnJoin",
 		name = "Alert On Join",
@@ -182,6 +193,18 @@ public interface DMWatchConfig extends Config
 	default int notifyReminder()
 	{
 		return 3;
+	}
+
+	@ConfigItem(
+		position = 11,
+		keyName = "discordNotify",
+		name = "Discord Reminder",
+		description = "Reminder to join DMWatch discord",
+		section = NOTIFICATIONS_SECTION
+	)
+	default boolean discordNotify()
+	{
+		return true;
 	}
 
 	@ConfigItem(

@@ -48,8 +48,10 @@ import net.runelite.api.MenuAction;
 import static net.runelite.api.MenuAction.*;
 import net.runelite.api.MenuEntry;
 import net.runelite.api.Player;
+import net.runelite.api.ScriptEvent;
 import net.runelite.api.ScriptID;
 import net.runelite.api.Varbits;
+import net.runelite.api.events.ChatMessage;
 import net.runelite.api.events.ClanMemberJoined;
 import net.runelite.api.events.ClientTick;
 import net.runelite.api.events.CommandExecuted;
@@ -62,6 +64,7 @@ import net.runelite.api.events.MenuOptionClicked;
 import net.runelite.api.events.PlayerSpawned;
 import net.runelite.api.events.ScriptPostFired;
 import net.runelite.api.events.VarbitChanged;
+import net.runelite.api.widgets.JavaScriptCallback;
 import net.runelite.api.widgets.Widget;
 import net.runelite.api.widgets.WidgetInfo;
 import net.runelite.client.callback.ClientThread;
@@ -94,6 +97,7 @@ import net.runelite.client.ui.NavigationButton;
 import net.runelite.client.ui.overlay.OverlayManager;
 import net.runelite.client.util.ColorUtil;
 import net.runelite.client.util.ImageUtil;
+import net.runelite.client.util.LinkBrowser;
 import net.runelite.client.util.Text;
 import org.slf4j.LoggerFactory;
 
@@ -195,6 +199,7 @@ public class DMWatchPlugin extends Plugin
 	private NavigationButton navButton;
 	private HashMap<String, Instant> nameNotifier;
 	private Instant lastSync;
+	private int ticksLoggedIn;
 
 	@Getter
 	private boolean showFriendRanks;
@@ -272,6 +277,13 @@ public class DMWatchPlugin extends Plugin
 		if (c.getGameState() == GameState.LOGIN_SCREEN)
 		{
 			lastLogout = Instant.now();
+		}
+
+		if (config.discordNotify() && c.getGameState() == GameState.LOGGED_IN)
+		{
+			if (config.discordNotify()) {
+				ticksLoggedIn = 0;
+			}
 		}
 
 		if (!isInParty())
@@ -567,6 +579,16 @@ public class DMWatchPlugin extends Plugin
 			if (target != null)
 			{
 				partyService.changeParty(getPrivateDM(target));
+				if (config.openDMWatchSidePanelOnChallenge())
+				{
+					SwingUtilities.invokeLater(() ->
+					{
+						if (!navButton.isSelected())
+						{
+							navButton.getOnSelect().run();
+						}
+					});
+				}
 			}
 		}
 	}
@@ -691,12 +713,76 @@ public class DMWatchPlugin extends Plugin
 	}
 
 	@Subscribe
+	public void onChatMessage(ChatMessage e)
+	{
+		Widget chatWidget = client.getWidget(WidgetInfo.CHATBOX_MESSAGE_LINES);
+		if (chatWidget != null && config.discordNotify())
+		{
+			for (Widget w: chatWidget.getDynamicChildren())
+			{
+				clientThread.invoke(() -> {
+					w.setHasListener(false);
+					w.setNoClickThrough(false);
+					w.revalidate();
+				});
+
+				if (w.getText().isEmpty()) continue;
+
+				if (Text.removeTags(w.getText()).contains("Join DMWatch's discord by clicking here!")
+					|| Text.removeTags(w.getText()).contains("Or by clicking the discord icon in side panel!"))
+				{
+					clientThread.invoke(() -> {
+						w.setAction(0, "Open Discord");
+						w.setOnClickListener((JavaScriptCallback) this::click);
+						w.setHasListener(true);
+						w.setNoClickThrough(true);
+						w.revalidate();
+					});
+				}
+			}
+			clientThread.invoke(() -> chatWidget.revalidate());
+		}
+	}
+
+	@Subscribe
 	private void onGameTick(GameTick e)
 	{
 
 		if (client.getLocalPlayer() == null)
 		{
 			return;
+		}
+		ticksLoggedIn++;
+		if (ticksLoggedIn == 5 && config.discordNotify()) {
+			ChatMessageBuilder response = new ChatMessageBuilder();
+			response.append(ChatColorType.NORMAL)
+				.append("Join ")
+				.append(ChatColorType.HIGHLIGHT)
+				.append("DMWatch's discord")
+				.append(ChatColorType.NORMAL)
+				.append(" by clicking ")
+				.append(ChatColorType.HIGHLIGHT)
+				.append("here!");
+
+			chatMessageManager.queue(QueuedMessage.builder()
+				.type(ChatMessageType.CONSOLE)
+				.runeLiteFormattedMessage(response.build())
+				.build());
+
+			response = new ChatMessageBuilder();
+			response.append(ChatColorType.NORMAL)
+				.append("Or by ")
+				.append(ChatColorType.HIGHLIGHT)
+				.append("clicking")
+				.append(ChatColorType.NORMAL)
+				.append(" the discord icon in ")
+				.append(ChatColorType.HIGHLIGHT)
+				.append("side panel!");
+
+			chatMessageManager.queue(QueuedMessage.builder()
+				.type(ChatMessageType.CONSOLE)
+				.runeLiteFormattedMessage(response.build())
+				.build());
 		}
 
 		if (!isInParty() || partyService.getLocalMember() == null)
@@ -773,6 +859,16 @@ public class DMWatchPlugin extends Plugin
 
 			currentChange = new DMPartyBatchedChange();
 		}
+	}
+
+	protected void click(ScriptEvent ev)
+	{
+		LinkBrowser.browse("https://discord.gg/dm");
+		log.info("Opened a link to DMWatch discord");
+		chatMessageManager.queue(QueuedMessage.builder()
+			.type(ChatMessageType.CONSOLE)
+			.runeLiteFormattedMessage("Opened an invite link to DMWatch discord. You can disable this in the DMWatch config.")
+			.build());
 	}
 
 	private static int messageFreq(int partySize)
@@ -1313,6 +1409,7 @@ public class DMWatchPlugin extends Plugin
 
 	private void reset(boolean turningOn)
 	{
+		ticksLoggedIn = 0;
 		DMWATCH_DIR.mkdirs();
 		uniqueIDs = new LinkedHashSet<>();
 		dmwLogger = setupLogger("DMWatchLogger", "DMWatch");
