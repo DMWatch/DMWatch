@@ -14288,6 +14288,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Pomboclock",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "4827-ce4f-19c4-6f41",
+        "hardware_id": "5cdf-1960-0f89-3160",
+        "reason": "AGS+DH+Set - Victim: Ace 860",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
