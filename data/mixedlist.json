@@ -14248,6 +14248,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Deanoi",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "9357-0495-ae46-c723",
+        "hardware_id": "d112-1542-5c5b-0ec6",
+        "reason": "Claws+DH+Set - Victim: ",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
