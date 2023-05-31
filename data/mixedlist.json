@@ -14280,6 +14280,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Bubbla07",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "4db9-32fd-893e-2ded",
+        "hardware_id": "678d-4f5e-8038-cc52",
+        "reason": "AGS+DH+Set - Victim: nopid",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
