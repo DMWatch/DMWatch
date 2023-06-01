@@ -9840,7 +9840,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "clumpsofdirt",
+        "display_rsn": "clumpsofhurt",
         "signup_date": "2023-05-11 05:23:14",
         "account_hash": "Unk",
         "hardware_id": "Unk",
@@ -10048,7 +10048,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "clumpsofdirt",
+        "display_rsn": "clumpsofhurt",
         "signup_date": "2023-05-11 21:27:42",
         "account_hash": "null",
         "hardware_id": "null",
@@ -14349,6 +14349,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Self Exclusion, not a scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "vuileskoft",
+        "signup_date": "2023-05-31 18:54:34",
+        "account_hash": "fc14-431d-dbee-cfd0",
+        "hardware_id": "15ea-f2cc-c63f-8779",
+        "reason": "INQ + VW + Set - DQ without paying - Victim: Asian Frog",
         "evidence_rating": "3"
     },
     {
