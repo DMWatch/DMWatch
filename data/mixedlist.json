@@ -7408,7 +7408,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "jacki3 ch4n",
+        "display_rsn": "kadueduh",
         "signup_date": "2023-05-02 10:53:52",
         "account_hash": "1f0f-8952-4621-6791",
         "hardware_id": "75cc-ff3f-988a-d8cd",
@@ -12496,7 +12496,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "jacki3 ch4n",
+        "display_rsn": "kadueduh",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -13224,7 +13224,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "jacki3 ch4n",
+        "display_rsn": "kadueduh",
         "signup_date": "2023-05-25 18:35:48",
         "account_hash": "null",
         "hardware_id": "null",
@@ -14517,6 +14517,14 @@
         "account_hash": "d695-8171-fe0d-a815",
         "hardware_id": "ef1a-9032-80fe-ecb5",
         "reason": "AGS+DH+Set - Victim: nopid",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Zezima",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "dfb1-5836-e186-e2a6",
+        "hardware_id": "8c6e-320b-afb4-f520",
+        "reason": "AGS+DH+Set - Victim: meachum",
         "evidence_rating": "3"
     },
     {
