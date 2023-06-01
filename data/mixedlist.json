@@ -14408,6 +14408,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Samurai Ad",
+        "signup_date": "2023-06-01 06:40:21",
+        "account_hash": "1b7e-63ad-ef12-4cb2",
+        "hardware_id": "fdef-ba92-8c3f-47df",
+        "reason": "AGS DH Base set | victim: D3XTR0Y",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
