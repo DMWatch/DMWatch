@@ -14488,6 +14488,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Zezima",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "0a92-a745-96c5-20e7",
+        "hardware_id": "45bd-2604-adf5-1704",
+        "reason": "AGS+DH+Set - Victim: amparo",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
