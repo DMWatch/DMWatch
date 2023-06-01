@@ -5304,14 +5304,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "cers",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "0a57-3626-14be-1abc",
-        "hardware_id": "f8ff-176c-0db7-5fa6",
-        "reason": "Claw DH Set - Scammed Effics",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "chaoscon",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "a842-f506-2774-d270",
