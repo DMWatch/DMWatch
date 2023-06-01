@@ -14528,7 +14528,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Squirtwar",
+        "display_rsn": "c0camania",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "69dd-87cd-f709-b611",
         "hardware_id": "9ef8-bfe4-f005-555a",
@@ -14541,6 +14541,14 @@
         "account_hash": "c866-5003-eddb-0de2",
         "hardware_id": "8ef9-3696-b6a7-dfe7",
         "reason": "Voidwaker+DH+Set - Victim: Deathismydad",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "122cmb",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "9b02-d336-eb39-f484",
+        "hardware_id": "8ef9-3696-b6a7-dfe7",
+        "reason": "Voidwaker+DH+Set - Victim: Redn1netale",
         "evidence_rating": "3"
     },
     {
