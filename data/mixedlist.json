@@ -5896,14 +5896,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "thadrok",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "12fe-9e81-40c3-7dcc",
-        "hardware_id": "8fcf-6dc2-1a92-8554",
-        "reason": "self excluded",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "the calmas",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "82aa-1361-6916-b1ef",
