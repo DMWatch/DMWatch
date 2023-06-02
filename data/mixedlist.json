@@ -14688,6 +14688,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "advies",
+        "signup_date": "2023-06-02 07:49:55",
+        "account_hash": "d581-751f-3fba-6e81",
+        "hardware_id": "ec67-14b1-6694-2126",
+        "reason": "Self Exclusion, not a scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
