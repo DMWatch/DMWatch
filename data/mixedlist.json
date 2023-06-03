@@ -15000,6 +15000,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "keizer",
+        "signup_date": "2023-06-03 16:44:56",
+        "account_hash": "97d8-3430-ea5c-568f",
+        "hardware_id": "abd4-8b79-8dc2-c96f",
+        "reason": "DH+Set+2b - Victim: dh only",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
