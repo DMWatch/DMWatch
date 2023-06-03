@@ -14816,6 +14816,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "eqae",
+        "signup_date": "2023-06-02 21:08:42",
+        "account_hash": "7e09-a803-c1ad-a27a",
+        "hardware_id": "ef78-7c38-08dd-21b0",
+        "reason": "Elder+150m - Victim: Worldstar",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
