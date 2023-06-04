@@ -15032,6 +15032,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "MR TTB",
+        "signup_date": "2023-06-03 19:46:26",
+        "account_hash": "3d53-f9f7-1a2f-772e",
+        "hardware_id": "4600-8b75-8f6f-83fc",
+        "reason": "Claws + DH + Set - Teled - Victim: Ace 860",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
