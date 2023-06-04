@@ -15008,6 +15008,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Namcitoa",
+        "signup_date": "2023-06-03 18:37:09",
+        "account_hash": "8d22-3bb9-23cd-40b9",
+        "hardware_id": "ff37-917a-c58a-32f4",
+        "reason": "DH + Claws + Set - Teled - Victim: SoliDSam",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
