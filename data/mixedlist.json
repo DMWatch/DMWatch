@@ -15072,6 +15072,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "BiigPurp",
+        "signup_date": "2023-06-04 09:14:27",
+        "account_hash": "a534-b7c9-4519-12c2",
+        "hardware_id": "9ada-cc46-223a-8bd3",
+        "reason": "Claws + DH + Set - Teled - Victim: ChanceCSGO",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
