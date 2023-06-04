@@ -15136,6 +15136,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "S3x to m3x",
+        "signup_date": "2023-06-04 10:14:28",
+        "account_hash": "c995-7986-ec0c-cf5a",
+        "hardware_id": "b54b-3df8-0de5-f29a",
+        "reason": "Claws + DH + Set - eating - victim: Aliddin",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
