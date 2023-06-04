@@ -15144,6 +15144,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "pl7tes",
+        "signup_date": "2023-06-04 10:26:31",
+        "account_hash": "bb31-672c-e9b8-de40",
+        "hardware_id": "0755-38eb-1e33-e8c5",
+        "reason": "Claws + DH + Set - Teled - Victim: Jarcan'd",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
