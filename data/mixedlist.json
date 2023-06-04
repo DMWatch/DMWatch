@@ -15016,6 +15016,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Gedebuk",
+        "signup_date": "2023-06-03 19:02:03",
+        "account_hash": "421c-7666-a937-7963",
+        "hardware_id": "5128-bf67-68cf-7420",
+        "reason": "DH + Claws + Set - Teled - Victim: Redn1netale",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
