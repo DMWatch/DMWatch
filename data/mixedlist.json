@@ -2364,7 +2364,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
-        "reason": "redrum saw",
+        "reason": "Serial scammer",
         "evidence_rating": "3"
     },
     {
@@ -15293,6 +15293,14 @@
         "account_hash": "1841-b2b9-dda7-256a",
         "hardware_id": "6bcd-cdfc-f9de-1ed1",
         "reason": "Claws+Elder+Inq+Set - Victim: CUP ON KICK",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "zezima",
+        "signup_date": "2023-06-04 21:44:28",
+        "account_hash": "d23b-7243-52a1-e471",
+        "hardware_id": "f110-f971-d1e1-1417",
+        "reason": "Abuse | DH+Set+2.5b - Victim: spooned mist",
         "evidence_rating": "3"
     },
     {
