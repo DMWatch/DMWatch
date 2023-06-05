@@ -15272,6 +15272,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zezima",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "712b-072e-23b8-13d0",
+        "hardware_id": "344c-02b0-b835-2778",
+        "reason": "DH+Set+2.4b - Victim: zkeru",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
