@@ -15256,6 +15256,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "NPC Tim",
+        "signup_date": "2023-06-04 17:56:26",
+        "account_hash": "b2bf-f211-d9b5-4b9b",
+        "hardware_id": "7d70-e0d4-0c95-d891",
+        "reason": "DH + AGS + Set - DQ without paying - Victim: Serotonin",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
