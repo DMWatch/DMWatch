@@ -2228,7 +2228,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "b5c2-4267-41dc-9dfc",
         "hardware_id": "03e9-5980-c99a-d702",
-        "reason": "ask redrum",
+        "reason": "Serial scammer",
         "evidence_rating": "3"
     },
     {
@@ -2372,7 +2372,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
-        "reason": "redrum watched",
+        "reason": "Serial scammer",
         "evidence_rating": "3"
     },
     {
