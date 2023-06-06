@@ -15878,5 +15878,13 @@
         "hardware_id": "0f08-1b3c-ccf2-8680",
         "reason": "454146868226686986",
         "evidence_rating": "6"
+    },
+    {
+        "display_rsn": "redrumyliad",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "redrumyliad",
+        "hardware_id": "redrumyliad",
+        "reason": "redrumyliad",
+        "evidence_rating": "7"
     }
 ]
