@@ -15448,6 +15448,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "rng snakey",
+        "signup_date": "2023-06-06 07:07:13",
+        "account_hash": "a2a3-99a4-e5af-7998",
+        "hardware_id": "a6da-c276-5a7e-43d9",
+        "reason": "Claws DH Base set scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
