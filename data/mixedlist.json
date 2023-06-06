@@ -15504,18 +15504,10 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "garnerjj",
-        "signup_date": "2023-06-06 11:03:33",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "Tabbed Torva\/Ags, victim Maturelover",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "GarnerJJ",
         "signup_date": "2023-06-06 11:11:27",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "account_hash": "50ad-cf02-e680 ",
+        "hardware_id": "9f75-1803-a3c9-ca7e",
         "reason": "Tabbed torva\/ags, victim Maturelover",
         "evidence_rating": "3"
     },
@@ -15584,7 +15576,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pro junglerw",
+        "display_rsn": "breachers",
         "signup_date": "2023-06-06 12:35:41",
         "account_hash": "unk",
         "hardware_id": "unk",
