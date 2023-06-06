@@ -14120,14 +14120,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "k b00000m",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "Null ",
-        "hardware_id": "Null",
-        "reason": "AGS+DH+Set - Victim: BamsYams",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "eutanasica",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "05fb-7cf6-aa32-52c0",
@@ -15581,6 +15573,14 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "50m + AGS + DH Base set",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "k b00000m",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Serial scammer",
         "evidence_rating": "3"
     },
     {
