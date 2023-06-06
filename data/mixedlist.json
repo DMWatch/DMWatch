@@ -15536,6 +15536,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "sabian",
+        "signup_date": "2023-06-06 11:33:04",
+        "account_hash": "c415-792b-67cf-840c",
+        "hardware_id": "hwid:9539-60a0-d5b4-be69",
+        "reason": "tabbed dh + set - Victim: 01 pr",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
