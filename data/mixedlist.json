@@ -15568,14 +15568,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pro junglerw",
-        "signup_date": "2023-06-06 12:35:41",
-        "account_hash": "unk",
-        "hardware_id": "unk",
-        "reason": "Tabbed for 165m, claws, dh + set - Victim: pro JunglerW",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "tetonic 0202",
         "signup_date": "2023-06-06 12:51:30",
         "account_hash": "null",
@@ -15589,6 +15581,14 @@
         "account_hash": "9033-7e81-f3cd-1737",
         "hardware_id": "8f00-4692-3261-6c0b",
         "reason": "DH+Set+1b - Victim: Ultra Miami",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "breachers",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Tabbed for 165m, claws, dh + set - Victim: pro JunglerW",
         "evidence_rating": "3"
     },
     {
