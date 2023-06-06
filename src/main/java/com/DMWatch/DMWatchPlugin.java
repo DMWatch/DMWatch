@@ -766,7 +766,7 @@ public class DMWatchPlugin extends Plugin
 
 			chatMessageManager.queue(QueuedMessage.builder()
 				.type(ChatMessageType.CONSOLE)
-				.runeLiteFormattedMessage(response.build().replaceAll("colHIGHLIGHT", "col=000000"))
+				.runeLiteFormattedMessage(response.build().replaceAll("colHIGHLIGHT", "col=c41ab0"))
 				.build());
 
 			response = new ChatMessageBuilder();
