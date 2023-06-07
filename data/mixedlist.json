@@ -15704,7 +15704,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tallent xd",
+        "display_rsn": "dialoc",
         "signup_date": "2023-06-07 07:46:12",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -15717,6 +15717,14 @@
         "account_hash": "b97c-fbdf-3c41-7fe3",
         "hardware_id": "ac50-e0c6-8acf-10ba",
         "reason": "Torva AGS Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Justfer0x",
+        "signup_date": "2023-06-07 09:27:01",
+        "account_hash": "c618-cf2f-9003-cde1",
+        "hardware_id": "91c1-0951-977b-fc07",
+        "reason": "Tabbed - Dh+set - Victim: Jennifer qt",
         "evidence_rating": "3"
     },
     {
