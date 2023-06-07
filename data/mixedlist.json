@@ -15768,6 +15768,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "02 07",
+        "signup_date": "2023-06-07 12:05:21",
+        "account_hash": "b97c-fbdf-3c41-7fe3",
+        "hardware_id": "ac50-e0c6-8acf-10ba",
+        "reason": "Voidwaker+Elder+Inq+Set - Victim: lCESPlCE",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
