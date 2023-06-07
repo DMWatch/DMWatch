@@ -13872,7 +13872,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "born2lossdms",
+        "display_rsn": "l am slerp",
         "signup_date": "2023-05-30 09:47:57",
         "account_hash": "null",
         "hardware_id": "null",
@@ -15781,6 +15781,14 @@
         "account_hash": "92ea-7220-ba5a-9e3f",
         "hardware_id": "ea92-9a8d-34eb-15e3",
         "reason": "50m - Victim: outsourced",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "e xhale",
+        "signup_date": "2023-06-07 12:13:56",
+        "account_hash": "4952-6502-23a5-606b",
+        "hardware_id": "dc65-a168-0c5b-a948",
+        "reason": "Claws+DH+Set+200m - Victim: a le c",
         "evidence_rating": "3"
     },
     {
