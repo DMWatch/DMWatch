@@ -14268,7 +14268,7 @@
         "signup_date": "2023-06-01 08:31:23",
         "account_hash": "31cd-c39e-b7de-1a9c",
         "hardware_id": "1f67-6f37-8073-8b22",
-        "reason": "serial scammer",
+        "reason": "ACGS+Verac+Set - Victim: s upernan",
         "evidence_rating": "3"
     },
     {
@@ -15685,14 +15685,6 @@
         "account_hash": "a0f1-09bc-7c6d-b3ca",
         "hardware_id": "d470-c884-7d98-c8b4",
         "reason": "Claws+DH+Set+1b - Victim: laotian",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "iAll On Myd",
-        "signup_date": "2023-06-07 07:31:58",
-        "account_hash": "31cd-c39e-b7de-1a9c",
-        "hardware_id": "1f67-6f37-8073-8b22",
-        "reason": "Ancient gs + veracs + base set scammer",
         "evidence_rating": "3"
     },
     {
