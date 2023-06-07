@@ -15656,14 +15656,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "ivan is gay",
-        "signup_date": "2023-06-07 06:31:47",
-        "account_hash": "d059-262d-83de-60d3",
-        "hardware_id": "ba68-8e70-f911-5f27",
-        "reason": "Serial Scammer",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "PWD HTX",
         "signup_date": "2023-06-07 07:09:42",
         "account_hash": "unk",
@@ -15757,6 +15749,14 @@
         "account_hash": "5ef8-0def-c6ba-2326",
         "hardware_id": "3fa9-426f-be34-4ac5",
         "reason": "dclaw dh set",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "ivan is gay",
+        "signup_date": "2023-06-07 11:52:51",
+        "account_hash": "d059-262d-83de-60d3",
+        "hardware_id": "ba68-8e70-f911-5f27",
+        "reason": "DH+Set+4b - Victim: elrange2you",
         "evidence_rating": "3"
     },
     {
