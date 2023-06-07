@@ -15744,6 +15744,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "creadic",
+        "signup_date": "2023-06-07 11:50:05",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+DH+Set - Victim: will byers2",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -16158,3 +16166,5 @@
         "hardware_id": "5e20-d4a3-a825-3c3a",
         "reason": "1032700756182184077",
         "evidence_rating": "1"
+    }
+]
