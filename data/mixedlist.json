@@ -1396,7 +1396,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
-        "reason": "Tabbed",
+        "reason": "Elder+Bandos+Set - Victim: outsourced",
         "evidence_rating": "3"
     },
     {
@@ -15773,6 +15773,14 @@
         "account_hash": "b97c-fbdf-3c41-7fe3",
         "hardware_id": "ac50-e0c6-8acf-10ba",
         "reason": "Voidwaker+Elder+Inq+Set - Victim: lCESPlCE",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "d ipped",
+        "signup_date": "2023-06-07 12:11:56",
+        "account_hash": "92ea-7220-ba5a-9e3f",
+        "hardware_id": "ea92-9a8d-34eb-15e3",
+        "reason": "50m - Victim: outsourced",
         "evidence_rating": "3"
     },
     {
