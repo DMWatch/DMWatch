@@ -15664,6 +15664,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Vengly",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "d059-262d-83de-60d3",
+        "hardware_id": "ba68-8e70-f911-5f27",
+        "reason": "Serial scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -15989,14 +15997,6 @@
         "account_hash": "c97e-d38d-df93-ae6f",
         "hardware_id": "8fbe-0124-cc9c-0126",
         "reason": "234120378169950211",
-        "evidence_rating": "1"
-    },
-    {
-        "display_rsn": "Vengly",
-        "signup_date": "2023-05-31 21:47:44",
-        "account_hash": "d059-262d-83de-60d3",
-        "hardware_id": "ba68-8e70-f911-5f27",
-        "reason": "387614889956343811\r\n\r\n1 warning; Using defender repeatedly when agreed not to use and opponent didn't even have",
         "evidence_rating": "1"
     },
     {
