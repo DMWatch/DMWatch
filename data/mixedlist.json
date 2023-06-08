@@ -15680,14 +15680,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "muzpah",
-        "signup_date": "2023-06-07 11:31:40",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "Scams by not matching set",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "creadic",
         "signup_date": "2023-06-07 11:50:05",
         "account_hash": "null",
