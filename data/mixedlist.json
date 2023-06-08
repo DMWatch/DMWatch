@@ -7432,14 +7432,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "dadio 201",
-        "signup_date": "2023-05-02 13:12:37",
-        "account_hash": "dc1c-2aaf-20ae-eed4",
-        "hardware_id": "457b-bd8e-1517-1d12",
-        "reason": "Self Exclusion - Permanent",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "slurpyjuicy",
         "signup_date": "2023-05-02 13:41:52",
         "account_hash": "null",
@@ -13752,14 +13744,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "holycowmanur",
-        "signup_date": "2023-05-29 18:37:24",
-        "account_hash": "unk",
-        "hardware_id": "unk",
-        "reason": "self exclusion, not a scammer",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "rslegend3",
         "signup_date": "2023-05-29 19:56:00",
         "account_hash": "4ba7-f69a-08b2-2693",
@@ -14549,14 +14533,6 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "AGS DH Base set scammer",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "advies",
-        "signup_date": "2023-06-02 07:49:55",
-        "account_hash": "d581-751f-3fba-6e81",
-        "hardware_id": "ec67-14b1-6694-2126",
-        "reason": "Self Exclusion, not a scammer",
         "evidence_rating": "3"
     },
     {
