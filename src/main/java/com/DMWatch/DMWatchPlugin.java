@@ -200,6 +200,11 @@ public class DMWatchPlugin extends Plugin
 	private HashMap<String, Instant> nameNotifier;
 	private Instant lastSync;
 	private int ticksLoggedIn;
+	@Setter
+	private String opponent;
+
+	@Getter
+	private HashSet<String> localScammers;
 
 	@Getter
 	private boolean showFriendRanks;
@@ -578,6 +583,7 @@ public class DMWatchPlugin extends Plugin
 
 			if (target != null)
 			{
+				opponent = Text.toJagexName(target).toLowerCase();
 				partyService.changeParty(getPrivateDM(target));
 				if (config.openDMWatchSidePanelOnChallenge())
 				{
@@ -943,6 +949,7 @@ public class DMWatchPlugin extends Plugin
 	{
 		if (isInParty())
 		{
+			opponent = "";
 			partyService.changeParty(null);
 			panel.updateParty();
 		}
@@ -1333,6 +1340,60 @@ public class DMWatchPlugin extends Plugin
 				rid = partyMembers.get(memberID).getUserUnique();
 				rsn = partyMembers.get(memberID).getUsername();
 
+				Case c = caseManager.getByHWID(hwid);
+				int listSize = localScammers.size();
+				if (c != null)
+				{
+					if (c.getStatus().equals("3"))
+					{
+						if (!opponent.equalsIgnoreCase(c.getNiceRSN()))
+						{
+							localScammers.add(rsn);
+							if (listSize != localScammers.size())
+							{
+								ChatMessageBuilder response = new ChatMessageBuilder();
+								response.append("Challenged player is a scammer [")
+									.append(ChatColorType.HIGHLIGHT)
+									.append(rsn)
+									.append(ChatColorType.NORMAL)
+									.append("]");
+
+								chatMessageManager.queue(QueuedMessage.builder()
+									.type(ChatMessageType.CONSOLE)
+									.runeLiteFormattedMessage(response.build())
+									.build());
+							}
+						}
+					}
+				} else
+				{
+					c = caseManager.getByAccountHash(rid);
+					if (c != null)
+					{
+						if (c.getStatus().equals("3"))
+						{
+							if (!opponent.equalsIgnoreCase(c.getNiceRSN()))
+							{
+								localScammers.add(rsn);
+								if (listSize != localScammers.size())
+								{
+									ChatMessageBuilder response = new ChatMessageBuilder();
+									response.append("Challenged player is a scammer [")
+										.append(ChatColorType.HIGHLIGHT)
+										.append(rsn)
+										.append(ChatColorType.NORMAL)
+										.append("]");
+
+									chatMessageManager.queue(QueuedMessage.builder()
+										.type(ChatMessageType.CONSOLE)
+										.runeLiteFormattedMessage(response.build())
+										.build());
+								}
+							}
+						}
+					}
+				}
+
 				if (!uniqueIDs.contains(hwid + rid + rsn))
 				{
 					if (hwid.equals("unknown"))
@@ -1417,6 +1478,7 @@ public class DMWatchPlugin extends Plugin
 		nameNotifier = new HashMap<>();
 		showFriendRanks = showFriendsRanks();
 		showClanRanks = showClanRanks();
+		localScammers = new HashSet<>();
 		if (turningOn)
 		{
 			overlayManager.add(playerMemberTileTierOverlay);

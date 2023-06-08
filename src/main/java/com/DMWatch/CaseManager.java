@@ -109,24 +109,18 @@ public class CaseManager
 						ConcurrentHashMap<String, HashSet<String>> localMappings = new ConcurrentHashMap<>();
 						for (Case c : cases)
 						{
-							Case old = get(c.getNiceRSN());
-							// keep the newest case
-							if (old == null || old.getDate().before(c.getDate()))
+							if (localMappings.containsKey(c.getStatus()))
 							{
-								if (localMappings.containsKey(c.getStatus()))
-								{
-									HashSet<String> currentSet = localMappings.get(c.getStatus());
-									currentSet.add(c.getNiceRSN());
-									localMappings.put(c.getStatus(), currentSet);
-								}
-								else
-								{
-									HashSet<String> currentSet = new HashSet();
-									currentSet.add(c.getNiceRSN());
-									localMappings.put(c.getStatus(), currentSet);
-								}
-								dmCases.add(c);
+								HashSet<String> currentSet = localMappings.get(c.getStatus());
+								currentSet.add(c.getNiceRSN());
+								localMappings.put(c.getStatus(), currentSet);
 							}
+							else {
+								HashSet<String> currentSet = new HashSet();
+								currentSet.add(c.getNiceRSN());
+								localMappings.put(c.getStatus(), currentSet);
+							}
+							dmCases.add(c);
 						}
 						mappings = localMappings;
 						log.debug("saved {}/{} dm cases", dmCases.size(), cases.size());
