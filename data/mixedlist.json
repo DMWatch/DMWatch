@@ -15816,6 +15816,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "xnbax",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "86e8-1807-edcc-be4c",
+        "hardware_id": "9cdb-d2be-091c-31c7",
+        "reason": "Abuse | DH+Set+1b - Victim: ",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
