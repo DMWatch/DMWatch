@@ -192,6 +192,7 @@ public class DMWatchPlugin extends Plugin
 
 	// globals
 	private Instant lastLogout;
+	private Instant lastNotify;
 	private Logger dmwLogger;
 	private LinkedHashSet<String> uniqueIDs;
 	private PartyPanel panel;
@@ -759,7 +760,8 @@ public class DMWatchPlugin extends Plugin
 			return;
 		}
 		ticksLoggedIn++;
-		if (ticksLoggedIn == 5 && config.discordNotify()) {
+		if (ticksLoggedIn == 5 && config.discordNotify() && shouldRemind()) {
+			lastNotify = Instant.now();
 			ChatMessageBuilder response = new ChatMessageBuilder();
 			response.append(ChatColorType.NORMAL)
 				.append("Join ")
@@ -1468,6 +1470,15 @@ public class DMWatchPlugin extends Plugin
 		return false;
 	}
 
+	private boolean shouldRemind()
+	{
+		if (lastNotify == null)
+			return true;
+		if (lastNotify.plus(120, ChronoUnit.SECONDS).isAfter(Instant.now()))
+			return true;
+		return false;
+	}
+
 	private void reset(boolean turningOn)
 	{
 		ticksLoggedIn = 0;
@@ -1479,6 +1490,7 @@ public class DMWatchPlugin extends Plugin
 		showFriendRanks = showFriendsRanks();
 		showClanRanks = showClanRanks();
 		localScammers = new HashSet<>();
+		lastNotify = null;
 		if (turningOn)
 		{
 			overlayManager.add(playerMemberTileTierOverlay);
