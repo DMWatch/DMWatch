@@ -10520,14 +10520,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "fear rules",
-        "signup_date": "2023-05-14 15:46:51",
-        "account_hash": "unk",
-        "hardware_id": "unk",
-        "reason": "Serial scammer",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "hit the head",
         "signup_date": "2023-05-14 15:48:30",
         "account_hash": "null",
