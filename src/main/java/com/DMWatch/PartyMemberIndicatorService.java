@@ -78,6 +78,7 @@ public class PartyMemberIndicatorService
 	Decorations getDecorations(Player player)
 	{
 		ConcurrentHashMap<String, HashSet<String>> mappings = plugin.getMappings();
+		HashSet<String> localList = plugin.getLocalScammers();
 		if (player.getName() == null)
 		{
 			return null;
@@ -85,6 +86,25 @@ public class PartyMemberIndicatorService
 
 		Color color = null;
 		BufferedImage rankImage = null;
+		FriendsChatRank rank = null;
+		ClanTitle clanTitle = null;
+
+		if (localList.size() != 0 && localList.contains(player.getName()))
+		{
+			color = COLORHM.get("3");
+			rankImage = SCAMMER_ICON;
+
+			if (player.isFriendsChatMember() && plugin.isShowFriendRanks())
+			{
+				rank = getFriendsChatRank(player);
+			}
+			if (player.isClanMember() && plugin.isShowClanRanks())
+			{
+				clanTitle = getClanTitle(player);
+			}
+
+			return new Decorations(rank, clanTitle, color, rankImage);
+		}
 
 		for (String key : mappings.keySet())
 		{
@@ -98,9 +118,6 @@ public class PartyMemberIndicatorService
 				{
 					rankImage = SCAMMER_ICON;
 				}
-
-				FriendsChatRank rank = null;
-				ClanTitle clanTitle = null;
 
 				if (player.isFriendsChatMember() && plugin.isShowFriendRanks())
 				{
