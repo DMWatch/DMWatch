@@ -15912,6 +15912,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zezima",
+        "signup_date": "2023-06-08 08:27:00",
+        "account_hash": "2c25-1b46-3964-1193",
+        "hardware_id": "63c2-9d3a-f388-d9f5",
+        "reason": "Claws+Elder+Inq+Set - Victim: worldstar",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
