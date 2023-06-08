@@ -15440,22 +15440,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "range2life",
-        "signup_date": "2023-06-06 10:00:09",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "tabbed 250m, claws, dh + set - Victim: lCESPlCE",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "range2life",
-        "signup_date": "2023-06-06 10:06:15",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "tabbed 250m, claws, dh + set - Victim: lCESPlCE",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "zezima",
         "signup_date": "2023-06-06 10:23:40",
         "account_hash": "eb47-9927-b8f0-c5ce",
@@ -15565,14 +15549,6 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "Tabbed for 165m, claws, dh + set - Victim: pro JunglerW",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "Old Pixels",
-        "signup_date": "2023-06-06 14:04:50",
-        "account_hash": "6f00-ab71-c380-4b5b",
-        "hardware_id": "302c-6186-b6c6-5ed5",
-        "reason": "AGS+Torva+Set - Victim: laotian",
         "evidence_rating": "3"
     },
     {
@@ -15840,6 +15816,94 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "range2life",
+        "signup_date": "2023-06-07 22:12:47",
+        "account_hash": "a1a4-4701-4e30-31b1",
+        "hardware_id": "ebc5-acf6-26ef-3dd0",
+        "reason": "250m claw dh - tabbed",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "cryptodude12",
+        "signup_date": "2023-06-07 22:15:31",
+        "account_hash": "38a8-0872-b7f0-5af6",
+        "hardware_id": "3fa1-87e6-44f5-854b",
+        "reason": "inq void elder - tabbed",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Be Thief",
+        "signup_date": "2023-06-08 06:05:05",
+        "account_hash": "73b1-55e2-78aa-0af5",
+        "hardware_id": "2f2a-112c-2948-fe39",
+        "reason": "tabbed for claws, dh + set - Victim: Jennifer qt",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Sell Kills",
+        "signup_date": "2023-06-08 06:10:31",
+        "account_hash": "dcd0-5647-68fe-940a",
+        "hardware_id": "b623-69a4-e27f-bfe3",
+        "reason": "Tabbed for 390m, claws, dh + set - Victim: AustinOnPunt",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "ITS 42O MAN",
+        "signup_date": "2023-06-08 06:14:30",
+        "account_hash": "b79e-c5d8-e10a-e2ab",
+        "hardware_id": "f35a-a4c2-90cb-5e6e",
+        "reason": "Tabbed ags + dh+ set - Victim: Hotchelli",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Its 42O Man",
+        "signup_date": "2023-06-08 06:16:47",
+        "account_hash": "b79e-c5d8-e10a-e2ab",
+        "hardware_id": "f35a-a4c2-90cb-5e6e",
+        "reason": "tabbed ags + dh + set",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "ANG CUC",
+        "signup_date": "2023-06-08 06:21:16",
+        "account_hash": "8e9f-45df-611b-e088",
+        "hardware_id": "fe3b-1b90-79fb-65bc",
+        "reason": "tabbed: claws + dh + set - Victim: ChanceCSGO",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "die 2 muchhh",
+        "signup_date": "2023-06-08 06:25:44",
+        "account_hash": "9c12-17d3-1fe4-e58c",
+        "hardware_id": "017c-0b5b-8008-da74",
+        "reason": "tabbed claw + dh + set - Victim: VikingRich",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "zezima",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "345a-994f-ab80-ea60",
+        "hardware_id": "345a-994f-ab80-ea60",
+        "reason": "345a-994f-ab80-ea60",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Thxntos",
+        "signup_date": "2023-06-08 06:49:51",
+        "account_hash": "ecfe-d4bf-9558-0c75",
+        "hardware_id": "273d-5833-159e-4f6f",
+        "reason": "Ate food - claw + dh + set - Victim: ChanceCSGO",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "be thief",
+        "signup_date": "2023-06-08 06:59:02",
+        "account_hash": "73b1-55e2-78aa-0af5",
+        "hardware_id": "2f2a-112c-2948-fe39",
+        "reason": "tabbed ags + dh - Victim: ur rng crazy",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -16056,14 +16120,6 @@
         "evidence_rating": "1"
     },
     {
-        "display_rsn": "glur",
-        "signup_date": "2023-05-15 08:40:52",
-        "account_hash": "4dca-ace5-2346-ab9f",
-        "hardware_id": "6804-2797-2e15-c07c",
-        "reason": "prince\r\n1 warning - collat\r\n1 derank - collat",
-        "evidence_rating": "11"
-    },
-    {
         "display_rsn": "Bowki",
         "signup_date": "2023-05-20 20:30:05",
         "account_hash": "8954-53ee-7717-8619",
@@ -16238,14 +16294,6 @@
         "hardware_id": "0f08-1b3c-ccf2-8680",
         "reason": "454146868226686986",
         "evidence_rating": "6"
-    },
-    {
-        "display_rsn": "redrumyliad",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "redrumyliad",
-        "hardware_id": "redrumyliad",
-        "reason": "redrumyliad",
-        "evidence_rating": "7"
     },
     {
         "display_rsn": "s o u p i",
