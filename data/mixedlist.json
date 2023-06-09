@@ -15984,6 +15984,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "DDimmadomed",
+        "signup_date": "2023-06-08 21:23:41",
+        "account_hash": "9691-6525-fbb0-df60",
+        "hardware_id": "ccdd-4a04-6480-15e3",
+        "reason": "Claws+DH+Set - Victim: ChanceCSGO",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
