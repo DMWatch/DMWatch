@@ -15992,6 +15992,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "rangis",
+        "signup_date": "2023-06-08 21:34:55",
+        "account_hash": "e395-1014-34f6-c699",
+        "hardware_id": "f32e-0888-cf66-0b3a",
+        "reason": "claw dh set dq",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
