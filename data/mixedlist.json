@@ -15968,6 +15968,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "quitos",
+        "signup_date": "2023-06-08 21:18:22",
+        "account_hash": "9080-0728-ba53-310a",
+        "hardware_id": "a834-61d1-6503-933e",
+        "reason": "abuse - 1b imp box",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "quitos",
+        "signup_date": "2023-06-08 21:19:20",
+        "account_hash": "9080-0728-ba53-310a",
+        "hardware_id": "a834-61d1-6503-933e",
+        "reason": "abuse-  1b imp box",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
