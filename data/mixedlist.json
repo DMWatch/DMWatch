@@ -16606,5 +16606,13 @@
         "hardware_id": "redrumyliad",
         "reason": "redrumyliad",
         "evidence_rating": "7"
+    },
+    {
+        "display_rsn": "jebbaaa",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "a988-0ee2-73ad-4c78",
+        "hardware_id": "2a6a-4496-6631-3a7c",
+        "reason": "878270941136822273\nTwitch jebbasaa",
+        "evidence_rating": "1"
     }
 ]
