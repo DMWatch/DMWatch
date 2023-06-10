@@ -16096,6 +16096,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "lf claw dh",
+        "signup_date": "2023-06-09 18:01:03",
+        "account_hash": "395b-ef24-8766-0e79",
+        "hardware_id": "08d2-69cc-c8e9-708",
+        "reason": "tabbed - claw, dh, set + 500m - Victim: cpks",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
