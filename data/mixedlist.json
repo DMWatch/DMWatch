@@ -16312,7 +16312,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "bablou",
+        "display_rsn": "porsaanreika",
         "signup_date": "2023-06-11 13:59:07",
         "account_hash": "83b7-61e4-fe72-5a73",
         "hardware_id": "1ebb-d9df-9396-0c2b",
@@ -16333,6 +16333,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "tabbed - inq, claw, elder + set - victim: allmylife",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "2_trippy_4me",
+        "signup_date": "2023-06-11 15:15:34",
+        "account_hash": "2d75-af9f-adb7-9e03",
+        "hardware_id": "9e54-8136-323b-3781",
+        "reason": "whacked vw didn't pay - inq, vw, elder, + set - Victim: marin lareen",
         "evidence_rating": "3"
     },
     {
