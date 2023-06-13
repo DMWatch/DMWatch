@@ -77,6 +77,11 @@ public class PartyMemberIndicatorService
 
 	Decorations getDecorations(Player player)
 	{
+		if (client.getLocalPlayer() == player && !plugin.isRenderOnSelf())
+		{
+			return null;
+		}
+
 		ConcurrentHashMap<String, HashSet<String>> mappings = plugin.getMappings();
 		HashSet<String> localList = plugin.getLocalScammers();
 		if (player.getName() == null)

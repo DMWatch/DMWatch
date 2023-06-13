@@ -201,8 +201,11 @@ public class DMWatchPlugin extends Plugin
 	private HashMap<String, Instant> nameNotifier;
 	private Instant lastSync;
 	private int ticksLoggedIn;
+	private boolean menuOptionEnabled;
 	@Setter
 	private String opponent;
+	@Getter
+	private boolean renderOnSelf;
 
 	@Getter
 	private HashSet<String> localScammers;
@@ -238,7 +241,7 @@ public class DMWatchPlugin extends Plugin
 
 		if (config.playerOption() && client != null)
 		{
-			menuManager.addPlayerMenuItem(CHALLENGE);
+			addRemovePlayerMenu(true);
 		}
 
 		final Optional<Plugin> partyPlugin = pluginManager.getPlugins().stream().filter(p -> p.getName().equals("Party")).findFirst();
@@ -258,7 +261,7 @@ public class DMWatchPlugin extends Plugin
 
 		if (config.playerOption() && client != null)
 		{
-			menuManager.removePlayerMenuItem(CHALLENGE);
+			addRemovePlayerMenu(false);
 		}
 	}
 
@@ -415,17 +418,21 @@ public class DMWatchPlugin extends Plugin
 			return;
 		}
 
+		if (event.getKey().equals(DMWatchConfig.MENU_OPTION))
+		{
+			addRemoveMenuOption();
+		}
+
+		if (event.getKey().equals("drawOnSelf"))
+		{
+			renderOnSelf = config.drawOnSelf();
+		}
+
 		if (event.getKey().equals(DMWatchConfig.PLAYER_OPTION))
 		{
-			if (!Boolean.parseBoolean(event.getOldValue()) && Boolean.parseBoolean(event.getNewValue()))
-			{
-				menuManager.addPlayerMenuItem(CHALLENGE);
-			}
-			else if (Boolean.parseBoolean(event.getOldValue()) && !Boolean.parseBoolean(event.getNewValue()))
-			{
-				menuManager.removePlayerMenuItem(CHALLENGE);
-			}
+			addRemovePlayerMenu();
 		}
+
 		else if (event.getKey().equals(DMWatchConfig.PLAYER_TEXT_COLOR))
 		{
 			colorAll();
@@ -443,6 +450,26 @@ public class DMWatchPlugin extends Plugin
 		{
 			nameNotifier.clear();
 		}
+	}
+
+	private void addRemovePlayerMenu(boolean add)
+	{
+		if (add)
+		{
+			menuManager.addPlayerMenuItem(CHALLENGE);
+		} else{
+			menuManager.removePlayerMenuItem(CHALLENGE);
+		}
+	}
+
+	private void addRemovePlayerMenu()
+	{
+		addRemovePlayerMenu(config.playerOption());
+	}
+
+	private void addRemoveMenuOption()
+	{
+		menuOptionEnabled = config.menuOption();
 	}
 
 	private int getWorld()
@@ -490,6 +517,8 @@ public class DMWatchPlugin extends Plugin
 	@Subscribe
 	public void onMenuEntryAdded(MenuEntryAdded event)
 	{
+		if (!menuOptionEnabled) return;
+
 		int groupId = WidgetInfo.TO_GROUP(event.getActionParam1());
 		String option = event.getOption();
 
@@ -1491,6 +1520,8 @@ public class DMWatchPlugin extends Plugin
 		showClanRanks = showClanRanks();
 		localScammers = new HashSet<>();
 		lastNotify = null;
+		addRemoveMenuOption();
+		renderOnSelf = config.drawOnSelf();
 		if (turningOn)
 		{
 			overlayManager.add(playerMemberTileTierOverlay);
