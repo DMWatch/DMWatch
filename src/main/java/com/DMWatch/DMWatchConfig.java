@@ -13,6 +13,7 @@ public interface DMWatchConfig extends Config
 {
 	String CONFIG_GROUP = "DMWatch";
 	String PLAYER_OPTION = "playerOption";
+	String MENU_OPTION = "menuOption";
 	String PLAYER_TEXT_COLOR = "playerTextColor";
 
 	@ConfigSection(
