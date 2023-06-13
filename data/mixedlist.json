@@ -3416,7 +3416,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "foffmanstop",
+        "display_rsn": "ipaid175bro",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -16677,6 +16677,14 @@
         "account_hash": "a67a-5fda-ee66-5df9",
         "hardware_id": "4cb2-26d7-3a81-9a69",
         "reason": "elder set - tabbed",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "taxii2lumby",
+        "signup_date": "2023-06-12 22:48:53",
+        "account_hash": "d772-9b01-b1da-4dc7",
+        "hardware_id": "d18d-5fa0-33cb-b68d",
+        "reason": "ags dh - ate\/tabbed",
         "evidence_rating": "3"
     },
     {
