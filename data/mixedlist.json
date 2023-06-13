@@ -16720,6 +16720,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "mobile dm",
+        "signup_date": "2023-06-13 14:42:56",
+        "account_hash": "e98d-8895-42b8-78b8",
+        "hardware_id": "843c-614e-a186-757c",
+        "reason": "claw dh - abbed",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
