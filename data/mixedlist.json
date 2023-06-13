@@ -16744,6 +16744,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "doctor docta",
+        "signup_date": "2023-06-13 15:31:30",
+        "account_hash": "9987-f3ea-9420-4d1f",
+        "hardware_id": "95d3-645e-84d9-955f",
+        "reason": "claw dh - tabbed",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -17134,14 +17142,6 @@
         "hardware_id": "redrumyliad",
         "reason": "redrumyliad",
         "evidence_rating": "7"
-    },
-    {
-        "display_rsn": "jebbaaa",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "a988-0ee2-73ad-4c78",
-        "hardware_id": "2a6a-4496-6631-3a7c",
-        "reason": "878270941136822273\nTwitch jebbasaa",
-        "evidence_rating": "1"
     },
     {
         "display_rsn": "subaru brzv2",
