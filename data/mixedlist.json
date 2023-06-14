@@ -16856,6 +16856,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "RFBROB",
+        "signup_date": "2023-06-14 08:13:00",
+        "account_hash": "879b-c268-cd2a-34bf",
+        "hardware_id": "7a71-a2ad-9b2b-8b83",
+        "reason": "tabbed - ags, dh + set - victim: sfst",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
