@@ -17128,19 +17128,11 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "null",
+        "display_rsn": "porky pinee",
         "signup_date": "2023-06-15 14:39:02",
         "account_hash": "f873-ffc8-0cc2-ba2d",
         "hardware_id": "464b-58d5-d499-7882",
-        "reason": "abuse - imp box 1.8b and retribution ko",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "porky pinee",
-        "signup_date": "2023-06-15 14:55:07",
-        "account_hash": "-",
-        "hardware_id": "-",
-        "reason": "imp boxer",
+        "reason": "abuse - imp box 1.8b and retribution ko, confirmed rsn by redrum",
         "evidence_rating": "3"
     },
     {
