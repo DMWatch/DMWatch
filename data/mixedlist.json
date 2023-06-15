@@ -3260,7 +3260,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
-        "reason": "Tabbed",
+        "reason": "Tabbed - Victim: MilanOnKick",
         "evidence_rating": "3"
     },
     {
@@ -17005,6 +17005,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Harassing CC Members",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "stfu l2pkk",
+        "signup_date": "2023-06-14 23:02:40",
+        "account_hash": "0904-6d10-38de-09a2",
+        "hardware_id": "f592-1b39-a124-3d06",
+        "reason": "retribution scam ags budget set",
         "evidence_rating": "3"
     },
     {
