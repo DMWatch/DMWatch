@@ -15160,7 +15160,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "safelsim",
+        "display_rsn": "timeflaker",
         "signup_date": "2023-06-05 11:22:49",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -17077,6 +17077,14 @@
         "account_hash": "cfc6-ae12-096c-bb11",
         "hardware_id": "951f-b5d8-46ba-e3b6",
         "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "ilyt6",
+        "signup_date": "2023-06-15 13:00:52",
+        "account_hash": "6c34-5484-eb61-0464",
+        "hardware_id": "5531-385d-f6b0-b884",
+        "reason": "claw dh 45m - tabbed",
         "evidence_rating": "3"
     },
     {
