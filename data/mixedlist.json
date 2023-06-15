@@ -2080,14 +2080,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "zials",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "f30d-7a3a-784c-9fe4",
-        "hardware_id": "5f7a-ecd5-7f6e-e4fb",
-        "reason": "AGS+DH+Set - Victim: Janipur",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "moltrex",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
@@ -17280,8 +17272,8 @@
         "evidence_rating": "1"
     },
     {
-        "display_rsn": "debit2",
-        "signup_date": "2023-05-28 10:43:30",
+        "display_rsn": "AMG",
+        "signup_date": "2023-06-15 12:27:41",
         "account_hash": "0fe7-416f-4d47-b2b4",
         "hardware_id": "5b40-2d99-3b58-2e30",
         "reason": "953057480705966101",
