@@ -17376,6 +17376,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "peepoolen",
+        "signup_date": "2023-06-16 14:46:48",
+        "account_hash": "22de-853c-3068-37f5",
+        "hardware_id": "ece4-972c-cffa-b7d0",
+        "reason": "AGS+DH+Set - Victim: slzr veio",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
