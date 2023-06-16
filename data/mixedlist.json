@@ -17192,6 +17192,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "sewer b1g",
+        "signup_date": "2023-06-15 19:35:55",
+        "account_hash": "55b8-ac4f-9502-299c",
+        "hardware_id": "6d5d-f50e-78de-b01f",
+        "reason": "Claws+DH+Set - Victim: day1of3six5",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
