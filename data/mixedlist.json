@@ -17384,6 +17384,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "mageskings",
+        "signup_date": "2023-06-16 15:01:01",
+        "account_hash": "8706-b23e-24d2-faaf",
+        "hardware_id": "a98d-59a7-8b98-c6fc",
+        "reason": "Mage Pray VW (1st warning)",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
