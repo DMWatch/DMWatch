@@ -17616,6 +17616,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Big Bruuty",
+        "signup_date": "2023-06-17 16:30:06",
+        "account_hash": "3f03-ed8d-1b03-ba4f",
+        "hardware_id": "2bb4-80f4-3f0c-618a",
+        "reason": "Claws=DH+Set - Victim: goblinketa",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
