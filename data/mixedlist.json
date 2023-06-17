@@ -17568,6 +17568,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "smek d3x",
+        "signup_date": "2023-06-17 13:09:50",
+        "account_hash": "036e-363c-123a-5597",
+        "hardware_id": "hwid:130c-f3cf-d7b5-4505",
+        "reason": "imp box",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
