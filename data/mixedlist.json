@@ -17632,7 +17632,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "stealthtwich",
+        "display_rsn": "barrrowws",
         "signup_date": "2023-06-17 16:32:49",
         "account_hash": "null",
         "hardware_id": "null",
@@ -17645,6 +17645,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "spoofer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "h o l i e",
+        "signup_date": "2023-06-17 16:33:55",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "fred",
         "evidence_rating": "3"
     },
     {
