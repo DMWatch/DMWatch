@@ -17824,6 +17824,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "antibaker",
+        "signup_date": "2023-06-18 12:50:29",
+        "account_hash": "f2d1-0a75-e123-f0ab",
+        "hardware_id": "eea0-ae1c-91eb-42fa",
+        "reason": "void bandos elder - teled",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
