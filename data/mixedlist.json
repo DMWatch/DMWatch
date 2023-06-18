@@ -17704,7 +17704,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "never dming",
+        "display_rsn": "zukmyzick",
         "signup_date": "2023-06-17 22:39:05",
         "account_hash": "7221-5878-255b-30ad",
         "hardware_id": "26e5-6188-894e-6d3b",
@@ -17717,6 +17717,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "ags base dh - false dq",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "x-wiley",
+        "signup_date": "2023-06-17 22:46:13",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+Elder+Inq+Set - Victim: igamble",
         "evidence_rating": "3"
     },
     {
