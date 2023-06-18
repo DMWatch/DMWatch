@@ -17736,6 +17736,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "antisepticz",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "9bb3-3f0e-fc90-c85b",
+        "hardware_id": "a1da-b790-5b41-0387",
+        "reason": "DH+Set+3.5b - Victim: Vengly",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
