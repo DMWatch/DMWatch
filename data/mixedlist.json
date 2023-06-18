@@ -17936,6 +17936,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "EchtEenTyger",
+        "signup_date": "2023-06-18 15:45:29",
+        "account_hash": "8890-0c8d-e76c-d74d",
+        "hardware_id": "9bf9-7299-9b9d-1a0b",
+        "reason": "tabbed - claws, dh + set - victim: lower tunnel",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
