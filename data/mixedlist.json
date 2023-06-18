@@ -17848,6 +17848,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "R lite",
+        "signup_date": "2023-06-18 13:29:06",
+        "account_hash": "4ed4-f3a5-5a96-6cda",
+        "hardware_id": "530b-2d28-caf5-077f",
+        "reason": "Impbox Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
