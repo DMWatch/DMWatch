@@ -17776,6 +17776,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "redemption33",
+        "signup_date": "2023-06-18 09:31:46",
+        "account_hash": "e3f2-f12b-f251-c00f",
+        "hardware_id": "fd2b-9035-8acb-2119",
+        "reason": "imp box 400m - victim: Leakn",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
