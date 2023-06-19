@@ -18120,6 +18120,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "not a narc",
+        "signup_date": "2023-06-18 23:40:00",
+        "account_hash": "762d-f3ae-a05b-bf6c",
+        "hardware_id": "fdd3-6c2e-02eb-23a3",
+        "reason": "claw dh - ate",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
