@@ -11352,7 +11352,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "cub on kick",
+        "display_rsn": "insurancez",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -18378,6 +18378,30 @@
     {
         "display_rsn": "xeros866",
         "signup_date": "2023-06-19 03:23:37",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "iPker spam bot",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "heartbeat4",
+        "signup_date": "2023-06-19 03:23:57",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "iPker spam bot",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "big\u00a0line34",
+        "signup_date": "2023-06-19 03:24:33",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "iPker spam bot",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "tomjerry56",
+        "signup_date": "2023-06-19 03:24:43",
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "iPker spam bot",
