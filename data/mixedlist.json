@@ -19512,6 +19512,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Blexr",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "8ac3-6180-e813-b840",
+        "hardware_id": "6368-dc3d-ff89-8882",
+        "reason": "Claws+DH+Set - Victim: CLOSEDURCLAN",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
