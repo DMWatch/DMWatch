@@ -2052,7 +2052,7 @@
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
-        "reason": "Ate",
+        "reason": "AGS+Set - Victim: iuxia",
         "evidence_rating": "3"
     },
     {
@@ -20529,6 +20529,14 @@
     },
     {
         "display_rsn": "Napooleom615",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "iPker spam bot",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Eroo621",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
