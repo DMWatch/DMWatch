@@ -19976,6 +19976,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "wahido11",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "a089-6c85-b0c5-c1e5",
+        "hardware_id": "845c-afa0-d3ca-2be0",
+        "reason": "Claws+DH+Set - Victim: claw gmaul",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
