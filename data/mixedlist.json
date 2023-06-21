@@ -20000,6 +20000,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Spirius",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "545b-6370-eec3-3700",
+        "hardware_id": "68a0-e56a-09b2-fe56",
+        "reason": "DH+Set+664m - Victim: Elyasian Pk",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
