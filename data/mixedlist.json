@@ -20610,8 +20610,8 @@
     {
         "display_rsn": "oppalato",
         "signup_date": "2023-06-21 16:04:53",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "account_hash": "57c9-4242-237e-c903",
+        "hardware_id": "82e3-ed77-886f-5ff6",
         "reason": "AGS+DH+Set - Victim: geistn",
         "evidence_rating": "3"
     },
