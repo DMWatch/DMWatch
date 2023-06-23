@@ -20848,6 +20848,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "middleg332",
+        "signup_date": "2023-06-22 19:14:06",
+        "account_hash": "98b9-2429-bdb9-f669",
+        "hardware_id": "df14-4700-3683-34f6",
+        "reason": "Claws+DH+Set - Victim: Curb Stomp",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
