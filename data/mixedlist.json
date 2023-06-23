@@ -20856,7 +20856,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "zezima",
+        "display_rsn": "LEROYPVMKING",
         "signup_date": "2023-06-22 19:16:51",
         "account_hash": "fc97-0855-4853-203e",
         "hardware_id": "4205-0dd4-7599-cb87",
@@ -21022,14 +21022,6 @@
         "hardware_id": "null",
         "reason": "Slashes",
         "evidence_rating": "8"
-    },
-    {
-        "display_rsn": "m6m3",
-        "signup_date": "2023-05-20 18:55:07",
-        "account_hash": "15ec-9e48-f26e-13ba",
-        "hardware_id": "25cc-4992-0cfb-9bba",
-        "reason": "M6M3 166112677565956096",
-        "evidence_rating": "10"
     },
     {
         "display_rsn": "StakeW",
