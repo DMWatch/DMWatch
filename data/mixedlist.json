@@ -9136,7 +9136,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "abo trikaa",
+        "display_rsn": "angel crisy",
         "signup_date": "2023-05-08 08:41:10",
         "account_hash": "null",
         "hardware_id": "null",
@@ -21334,5 +21334,13 @@
         "hardware_id": "3fe3-21b0-dc1b-553f",
         "reason": "233027368690778112\r\nantijar\r\n\r\n1 warning for changing accounts repeatedly\r\nhttps:\/\/i.imgur.com\/xoGmR8O.png",
         "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "twitch cup",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "a53f-00d5-e4e2-e563",
+        "hardware_id": "238e-e47a-9478-587b",
+        "reason": "454146868226686986\ncupofpurp",
+        "evidence_rating": "6"
     }
 ]
