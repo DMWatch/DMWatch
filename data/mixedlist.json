@@ -232,7 +232,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "sackofsal",
+        "display_rsn": "heartofkonan",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -21093,6 +21093,14 @@
         "account_hash": "5047-a086-720b-542d",
         "hardware_id": "321d-03da-b9bb-ba02",
         "reason": "void bandos \/ ags set - serial",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "flipd out",
+        "signup_date": "2023-06-24 14:24:19",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "serial scammer",
         "evidence_rating": "3"
     },
     {
