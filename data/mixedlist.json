@@ -20722,4 +20722,705 @@
     {
         "display_rsn": "blink d1nk",
         "signup_date": "2023-06-22 09:10:11",
-        "account
+        "account_hash": "9120-41da-7b58-1afc",
+        "hardware_id": "1314-aafe-cf0b-9d37",
+        "reason": "AGS+Set - Victim: penguin lolo",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "blink d1nk",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+DH+Set - Victim: huskarspecs",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "lenaaaaaaa",
+        "signup_date": "2023-06-22 11:21:13",
+        "account_hash": "b032-a22f-2abf-25ab",
+        "hardware_id": "7da3-f809-0d2b-a3d1",
+        "reason": "Impboxed 250m",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "kfcandcotton",
+        "signup_date": "2023-06-22 11:23:24",
+        "account_hash": "4c59-e18f-f7b8-c2a6",
+        "hardware_id": "2092-5ab3-4ba6-b043",
+        "reason": "claw dh - tabbed",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "edge is mine",
+        "signup_date": "2023-06-22 11:25:49",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "dh ags set - tabbed",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "last one k",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "imp boxed 500m",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "xgrace",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Scammed 35b from people, do not trust",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "aarsknikker",
+        "signup_date": "2023-06-22 12:58:05",
+        "account_hash": "216e-dc70-9c7a-3463",
+        "hardware_id": "78da-e588-466f-3739",
+        "reason": "claw dh - no axe",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "ifags",
+        "signup_date": "2023-06-22 16:29:18",
+        "account_hash": "0042-93e4-44a4-1044",
+        "hardware_id": "86ae-b9b2-5e4b-80c5",
+        "reason": "torva - ate \/ tab",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "zezima",
+        "signup_date": "2023-06-22 16:31:05",
+        "account_hash": "7c96-edd7-72ee-768d",
+        "hardware_id": "ea02-572b-9288-7a40",
+        "reason": "claw inq elder - ate",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "neoyagas",
+        "signup_date": "2023-06-22 16:33:07",
+        "account_hash": "3e2a-932a-2c2d-54e6",
+        "hardware_id": "adb4-b556-bce3-c6a3",
+        "reason": "claw inq elder - ate\/tab",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "extreme nick",
+        "signup_date": "2023-06-22 16:34:14",
+        "account_hash": "f996-28ae-885d-ef61",
+        "hardware_id": "71cf-4206-e3e0-e8d9",
+        "reason": "ags dh - tab",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "420 electric",
+        "signup_date": "2023-06-22 16:43:51",
+        "account_hash": "f949-9659-3641-5089",
+        "hardware_id": "ffb7-0e2a-9c9c-b494",
+        "reason": "dh 200m - tabbed",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "matate cono",
+        "signup_date": "2023-06-22 19:14:06",
+        "account_hash": "98b9-2429-bdb9-f669",
+        "hardware_id": "df14-4700-3683-34f6",
+        "reason": "Claws+DH+Set - Victim: Curb Stomp",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "LEROYPVMKING",
+        "signup_date": "2023-06-22 19:16:51",
+        "account_hash": "fc97-0855-4853-203e",
+        "hardware_id": "4205-0dd4-7599-cb87",
+        "reason": "Claws+DH+Set - Victim: curb stomp",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "dmwatch4",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Bot Account",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "nev3r do it",
+        "signup_date": "2023-06-22 19:29:47",
+        "account_hash": "tbd",
+        "hardware_id": "tbd",
+        "reason": "Voidwaker+Elder+Set - Victim: drew toby",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "LEROYPVMKING",
+        "signup_date": "2023-06-22 19:31:25",
+        "account_hash": "fc97-0855-4853-203e",
+        "hardware_id": "4205-0dd4-7599-cb87",
+        "reason": "Claws+DH+Set - Victim: cippay",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "m6m3",
+        "signup_date": "2023-06-22 19:37:14",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "DH+Set+6b - Victim: terriblepker",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "disposablee",
+        "signup_date": "2023-06-22 19:58:56",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "240m dh ate \/ tab",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "vape g0d kid",
+        "signup_date": "2023-06-22 20:15:45",
+        "account_hash": "1c86-95e1-94b4-3dc2",
+        "hardware_id": "476c-efc9-f7d1-ed2a",
+        "reason": "dh 250m imp box - serial scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "ham zaa",
+        "signup_date": "2023-06-22 20:42:46",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Abuse | DH+Set+1b - Victim: dlksuker",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "rnuzhr",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Elder+Set - Victim: frskully",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "neoyagas",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Impostering Ranks\/Owners",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "neoyagas",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Abuse | DH+Set+1b - Victim: shad0wbanned",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "D4nk H4nk",
+        "signup_date": "2023-06-22 21:38:17",
+        "account_hash": "9564-a62c-9d05-b848",
+        "hardware_id": "cf0e-865b-69ae-ef49",
+        "reason": "Claws+DH+Set - Victim: curb stomp",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "XxKaito20xX",
+        "signup_date": "2023-06-22 22:47:28",
+        "account_hash": "8b34-e18e-2990-a9de",
+        "hardware_id": "07df-3d43-e7a2-1211",
+        "reason": "DH+Budget - Victim: hasbulluh xo",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Guslo",
+        "signup_date": "2023-06-23 07:46:41",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "serial scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Booda",
+        "signup_date": "2023-06-23 11:05:44",
+        "account_hash": "0504-12f5-b9f3-0a24",
+        "hardware_id": "f9a6-e976-dbbd-1c01",
+        "reason": "vw + elder scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Virus Acesin",
+        "signup_date": "2023-06-23 11:08:00",
+        "account_hash": "6359-eda1-3f3e-97a6",
+        "hardware_id": "3104-970d-1ba8-38e7",
+        "reason": "AGS budget",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Virus Acesin",
+        "signup_date": "2023-06-23 11:09:59",
+        "account_hash": "6359-eda1-3f3e-97a6",
+        "hardware_id": "3104-970d-1ba8-38e7",
+        "reason": "AGS DH budget",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "neoyagas",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "c297-6f9c-58f2-d467",
+        "hardware_id": "2296-8b8e-20ca-cc90",
+        "reason": "Voidwaker+Elder+Bandos+Set - Victim: asiwaju",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "R0manian Guy",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "294d-b420-ecf2-eb72",
+        "hardware_id": "f265-ff57-777e-fac1",
+        "reason": "Claws+Elder+Voidwaker+Set - Victim: SURPR1ZE MF",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "mintu 07",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "DH+Set+100m - Victim: dlksuker",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "T V I",
+        "signup_date": "2023-06-23 13:10:11",
+        "account_hash": "254d-71dd-5e94-053a",
+        "hardware_id": "8b7a-d212-b521-d10e",
+        "reason": "ags \/ dh - tabbed",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Moonsliding",
+        "signup_date": "2023-06-23 17:58:04",
+        "account_hash": "f97e-3e2b-4c47-2b27",
+        "hardware_id": "ddcf-2ca7-13eb-9837",
+        "reason": "Owes 500m; Do Not Trust",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "luke vibert",
+        "signup_date": "2023-06-23 20:14:55",
+        "account_hash": "da8e-dc21-be3f-a3de",
+        "hardware_id": "2aa9-7fb6-8ddf-5176",
+        "reason": "got hit and tabbed - dq",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "tarjetik",
+        "signup_date": "2023-06-23 20:18:22",
+        "account_hash": "aad5-b4f7-ca8f-7b29",
+        "hardware_id": "767d-225e-66f1-f38f",
+        "reason": "dh budget set - tabbed",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "theleaders",
+        "signup_date": "2023-06-23 20:19:43",
+        "account_hash": "ba00-f092-8e1c-8f00",
+        "hardware_id": "c4ff-f2e9-a2d8-1c3d",
+        "reason": "dh budget set - tabbed",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "GBGShooter",
+        "signup_date": "2023-05-06 22:26:06",
+        "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
+        "hardware_id": "e3e4af8b-59dc-4a17-b1d1-2234a3816cb9",
+        "reason": "BTCs",
+        "evidence_rating": "8"
+    },
+    {
+        "display_rsn": "Sparc Mac",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "26350954-9ebe-4718-8258-2a59980e86e1",
+        "hardware_id": "7b40eca0-962f-485e-937d-ae5e52df24d9",
+        "reason": "Sparc Mac",
+        "evidence_rating": "6"
+    },
+    {
+        "display_rsn": "Skill Specs",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "cd15698a-ad87-4ea7-9a0f-ca3b61664d98",
+        "hardware_id": "373cda66-3203-4c0e-94b8-c3db1987e6ce",
+        "reason": "skillspecs",
+        "evidence_rating": "6"
+    },
+    {
+        "display_rsn": "Deicide",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "e6174138-8ce2-4a4c-bfca-a3174a0e82d5",
+        "hardware_id": "bda3d04b-2426-4117-afc7-68440c60c1cc",
+        "reason": "donator",
+        "evidence_rating": "6"
+    },
+    {
+        "display_rsn": "omar",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "0b550cee-1c0e-473c-ae30-da8a5367b9eb",
+        "hardware_id": "d42bcbf8-3cf3-43cc-880a-c5c7567ee22c",
+        "reason": "odablock",
+        "evidence_rating": "8"
+    },
+    {
+        "display_rsn": "DMWatch",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "845e-1663-c12d-3e62",
+        "hardware_id": "3ab9-7539-6688-827b",
+        "reason": "boss man jack",
+        "evidence_rating": "8"
+    },
+    {
+        "display_rsn": "imblim area",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "dad71d72-9824-4215-b67a-28889747d527",
+        "hardware_id": "eba06932-dad4-41e3-bc35-c58d670691ec",
+        "reason": "ditterbitter",
+        "evidence_rating": "7"
+    },
+    {
+        "display_rsn": "i win dms",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "68845f75-8a09-48fd-893a-ba83b107ee9e",
+        "hardware_id": "7735880d-3a86-439f-925a-1f311034b248",
+        "reason": "igamblesometimes",
+        "evidence_rating": "6"
+    },
+    {
+        "display_rsn": "eliop14",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "c4d4-1bb9-8fdc-ff96",
+        "hardware_id": "dc55-7313-1fcf-ffd0",
+        "reason": "eliop14",
+        "evidence_rating": "6"
+    },
+    {
+        "display_rsn": "Main Wombat",
+        "signup_date": "2023-05-06 22:00:48",
+        "account_hash": "6419-100d-09ea-37fb",
+        "hardware_id": "0053-ef60-bd9d-dda4",
+        "reason": "Captain",
+        "evidence_rating": "11"
+    },
+    {
+        "display_rsn": "Low Tech",
+        "signup_date": "2023-05-06 22:08:00",
+        "account_hash": "7ef7-1fc3-bb85-1a8a",
+        "hardware_id": "9707-1bd6-54cd-01a0",
+        "reason": "Smiley Rank",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Scared You",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "5f93-2934-b1de-4239",
+        "hardware_id": "ebda-d6f3-774d-0ca7",
+        "reason": "lance",
+        "evidence_rating": "8"
+    },
+    {
+        "display_rsn": "Hallowtide",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "b29b-1252-c464-1041",
+        "hardware_id": "443d-3c5d-b64e-0c70",
+        "reason": "Ranked Member",
+        "evidence_rating": "8"
+    },
+    {
+        "display_rsn": "babayener",
+        "signup_date": "2023-05-21 12:00:50",
+        "account_hash": "f8cc-be1b-1971-ab98",
+        "hardware_id": "a9c4-f2fc-904d-5ad5",
+        "reason": "babayener\r\n809189098375741441",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "LoveYa-ALL",
+        "signup_date": "2023-05-22 13:33:04",
+        "account_hash": "ff0f-6553-9b57-131e",
+        "hardware_id": "7737-d7a6-2f09-b808",
+        "reason": "Smiley Rank\r\n1046712045720043521",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "WeDrinkTitos",
+        "signup_date": "2023-05-17 17:15:40",
+        "account_hash": "8d8c-9f77-bd03-3a94",
+        "hardware_id": "585e-e503-f473-b1ab",
+        "reason": "WeDrinkTitos smiley rank",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "seaman700",
+        "signup_date": "2023-05-06 21:59:45",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Slashes",
+        "evidence_rating": "8"
+    },
+    {
+        "display_rsn": "StakeW",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "StakeW",
+        "evidence_rating": "11"
+    },
+    {
+        "display_rsn": "high_techs",
+        "signup_date": "2023-06-04 15:59:15",
+        "account_hash": "2e72-3b2c-e3d8-2c0b",
+        "hardware_id": "24a0-dbf0-ecc9-1b42",
+        "reason": "Happy Seals\r\n1004766796529803366",
+        "evidence_rating": "10"
+    },
+    {
+        "display_rsn": "Narlyy",
+        "signup_date": "2023-05-18 14:05:29",
+        "account_hash": "c0a4-3201-5982-1ba3",
+        "hardware_id": "4e4b-497f-785b-1928",
+        "reason": "Koi",
+        "evidence_rating": "9"
+    },
+    {
+        "display_rsn": "Freak Mind",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Thor",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "AMG",
+        "signup_date": "2023-06-15 12:27:41",
+        "account_hash": "0fe7-416f-4d47-b2b4",
+        "hardware_id": "5b40-2d99-3b58-2e30",
+        "reason": "953057480705966101",
+        "evidence_rating": "11"
+    },
+    {
+        "display_rsn": "m i z z o u",
+        "signup_date": "2023-05-24 15:15:34",
+        "account_hash": "6c89-3a9f-19aa-2043",
+        "hardware_id": "7c68-780b-f26f-8887",
+        "reason": "m i z z o u",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Bowki",
+        "signup_date": "2023-06-15 22:34:35",
+        "account_hash": "8954-53ee-7717-8619",
+        "hardware_id": "3854-a0e3-2e16-adbd",
+        "reason": "Bowki 349027455018729472",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Strangerz",
+        "signup_date": "2023-05-21 12:22:51",
+        "account_hash": "b19c-a03d-f355-328a",
+        "hardware_id": "4045-21c3-d30b-4d52",
+        "reason": "Strangerz\r\n266638366554980363",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "mr xanni",
+        "signup_date": "2023-05-07 22:26:40",
+        "account_hash": "a838-4e2c-4892-ed71",
+        "hardware_id": "8097-47da-50fd-b5ec",
+        "reason": "mr xanny",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "ji dion",
+        "signup_date": "2023-06-14 16:13:02",
+        "account_hash": "00ee-d80e-a285-18e8",
+        "hardware_id": "86ae-b968-9259-8d7d--",
+        "reason": "Chuck Acc 2\r\nLeniency for getting the URL\r\n779096979070124042",
+        "evidence_rating": "10"
+    },
+    {
+        "display_rsn": "DEJARU22",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Skate",
+        "evidence_rating": "11"
+    },
+    {
+        "display_rsn": "youbieedred",
+        "signup_date": "2023-06-21 16:46:19",
+        "account_hash": "104a-19f9-d8af-8189",
+        "hardware_id": "a5f5-2678-cf12-b947",
+        "reason": "youbieedred",
+        "evidence_rating": "9"
+    },
+    {
+        "display_rsn": "r iky",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "0547-838c-a288-2d34",
+        "hardware_id": "713f-719a-76dd-620b",
+        "reason": "144808889521537024",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "mog time xd",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "https:\/\/www.twitch.tv\/mogtime",
+        "evidence_rating": "6"
+    },
+    {
+        "display_rsn": "777luckyish",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "20b0-e4a0-cd00-c460",
+        "hardware_id": "bf8b-206b-20b6-565b",
+        "reason": "1044897441398403143",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "emilyuwo",
+        "signup_date": "2023-06-04 12:39:41",
+        "account_hash": "0baf-e9fc-533b-9791",
+        "hardware_id": "fd38-e051-adcf-246b",
+        "reason": "875531750170841139\r\n684257894916816933",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Worldstar",
+        "signup_date": "2023-06-08 17:58:57",
+        "account_hash": "a821-1cee-4350-e31b",
+        "hardware_id": "b163-c17d-d099-b698",
+        "reason": "542416249217351690\r\n\r\nWarning for not recording",
+        "evidence_rating": "9"
+    },
+    {
+        "display_rsn": "Eragon Book",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "c97e-d38d-df93-ae6f",
+        "hardware_id": "8fbe-0124-cc9c-0126",
+        "reason": "234120378169950211",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "godblessohi0",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "20d7-c350-17cf-662e",
+        "hardware_id": "9a99-0208-4e9f-cd9f",
+        "reason": "1068458281095417928",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "redrumze",
+        "signup_date": "2023-06-02 14:02:23",
+        "account_hash": "redrumze",
+        "hardware_id": "redrumze",
+        "reason": "redrumze",
+        "evidence_rating": "7"
+    },
+    {
+        "display_rsn": "cute star",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "hilblow",
+        "hardware_id": "hilblow",
+        "reason": "764945262551892010",
+        "evidence_rating": "8"
+    },
+    {
+        "display_rsn": "king soupi",
+        "signup_date": "2023-06-17 11:36:11",
+        "account_hash": "3236-170f-43b8-8e9a",
+        "hardware_id": "5e20-d4a3-a825-3c3a",
+        "reason": "1032700756182184077",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "subaru brzv2",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "434f-85eb-165e-8df0",
+        "hardware_id": "0597-80fa-c3f7-af66",
+        "reason": "519673515381751845",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "Amy of",
+        "signup_date": "2023-06-23 11:42:46",
+        "account_hash": "764e-c67f-de6e-803e",
+        "hardware_id": "030a-cc6d-725d-551b",
+        "reason": "1076035210887569410\r\n\r\nSus account applying for rank",
+        "evidence_rating": "10"
+    },
+    {
+        "display_rsn": "fast drugs",
+        "signup_date": "2023-06-23 12:03:12",
+        "account_hash": "6f2a-d263-3516-fcef",
+        "hardware_id": "9df6-e6ad-af59-0415",
+        "reason": "952291115661418606",
+        "evidence_rating": "9"
+    },
+    {
+        "display_rsn": "Adamation",
+        "signup_date": "2023-06-23 11:41:51",
+        "account_hash": "c789-16be-b3f7-6dd6",
+        "hardware_id": "7122-6ab7-65c1-6cdc",
+        "reason": "1059433725953327105\r\n1 warning for holding above rank",
+        "evidence_rating": "9"
+    },
+    {
+        "display_rsn": "far of m0re",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "581f-714b-fc1b-5163",
+        "hardware_id": "bc68-237d-0dbd-3633",
+        "reason": "942671988110032916",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "vape g0d k1d",
+        "signup_date": "2023-06-22 12:25:50",
+        "account_hash": "c07f-5bd9-d125-a4ca",
+        "hardware_id": "4409-f19b-def3-1920",
+        "reason": "466817328538189846",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "disc cuck",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "7ff9-cd58-ab1e-63cf",
+        "hardware_id": "86ae-b968-9259-8d7d",
+        "reason": "1081265090189340682\nChuck free",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "innuend0",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "04a0-8d43-8123-1f06",
+        "hardware_id": "0006-cbef-dbbd-9eef",
+        "reason": "379983252825440268",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "korea apm",
+        "signup_date": "2023-06-22 22:58:51",
+        "account_hash": "2996-46cb-d21f-19d0",
+        "hardware_id": "3fe3-21b0-dc1b-553f",
+        "reason": "233027368690778112\r\nantijar\r\n\r\n1 warning for changing accounts repeatedly\r\nhttps:\/\/i.imgur.com\/xoGmR8O.png",
+        "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "twitch cup",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "a53f-00d5-e4e2-e563",
+        "hardware_id": "238e-e47a-9478-587b",
+        "reason": "454146868226686986\ncupofpurp",
+        "evidence_rating": "6"
+    }
+]
