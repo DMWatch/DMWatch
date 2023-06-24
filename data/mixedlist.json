@@ -21088,6 +21088,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "roman g",
+        "signup_date": "2023-06-24 14:22:21",
+        "account_hash": "5047-a086-720b-542d",
+        "hardware_id": "321d-03da-b9bb-ba02",
+        "reason": "void bandos \/ ags set - serial",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
