@@ -21256,6 +21256,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "a z duo",
+        "signup_date": "2023-06-25 15:24:30",
+        "account_hash": "d95b-086d-4d8a-fa8e",
+        "hardware_id": "8cc0-5cd3-a5ea-3e75",
+        "reason": "claw dh - tab",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
