@@ -17704,14 +17704,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "cruijf",
-        "signup_date": "2023-06-18 13:29:54",
-        "account_hash": "ebcc-c475-9bd6-1628",
-        "hardware_id": "3994-8ccb-79f4-0887",
-        "reason": "claw dh - ran out after hit",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "RD 54",
         "signup_date": "2023-06-18 13:30:06",
         "account_hash": "x",
