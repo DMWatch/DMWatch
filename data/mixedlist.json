@@ -21304,7 +21304,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "femakor",
+        "display_rsn": "melan a 78",
         "signup_date": "2023-06-26 08:14:21",
         "account_hash": "null",
         "hardware_id": "null",
@@ -21389,6 +21389,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Claws+DH+Set - Victim: monarchas",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "facts baby",
+        "signup_date": "2023-06-26 10:17:52",
+        "account_hash": "4e55-6291-ea6e-420f",
+        "hardware_id": "1853-36f7-9e2a-4d4e",
+        "reason": "ate mid fight - dh budget",
         "evidence_rating": "3"
     },
     {
