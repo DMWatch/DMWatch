@@ -21392,6 +21392,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "pretty 93",
+        "signup_date": "2023-06-26 10:59:24",
+        "account_hash": "61c8-e51a-1bd1-0a74",
+        "hardware_id": "7d5a-11f7-e438-5df8",
+        "reason": "Claws+DH+Set - Victim: cippay",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
