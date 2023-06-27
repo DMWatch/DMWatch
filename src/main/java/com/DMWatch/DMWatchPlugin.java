@@ -900,7 +900,7 @@ public class DMWatchPlugin extends Plugin
 
 	protected void click(ScriptEvent ev)
 	{
-		LinkBrowser.browse("https://discord.gg/dm");
+		LinkBrowser.browse("https://discord.gg/dmwatch");
 		log.info("Opened a link to DMWatch discord");
 		chatMessageManager.queue(QueuedMessage.builder()
 			.type(ChatMessageType.CONSOLE)

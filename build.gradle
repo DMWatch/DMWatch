@@ -24,7 +24,7 @@ dependencies {
 }
 
 group = 'com.DMWatch'
-version = '1.6'
+version = '1.6a'
 sourceCompatibility = '1.8'
 
 tasks.withType(JavaCompile) {
