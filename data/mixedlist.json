@@ -15376,7 +15376,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "trill iniit",
+        "display_rsn": "trl iniit",
         "signup_date": "2023-06-06 22:13:57",
         "account_hash": "a856-deeb-3b7e-65a7",
         "hardware_id": "d6fb-434b-8f91-3fb1",
@@ -21477,6 +21477,14 @@
         "account_hash": "b071-8189-0577-956",
         "hardware_id": "b150-3c8c-440e-bb1b",
         "reason": "imp box 955m - abuse",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "hoobie boobi",
+        "signup_date": "2023-06-26 22:46:08",
+        "account_hash": "c2e0-c0eb-1d33-2fa9",
+        "hardware_id": "fb15-2d16-6efd-8bdf",
+        "reason": "dh set - ate\/tab",
         "evidence_rating": "3"
     },
     {
