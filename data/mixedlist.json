@@ -16824,7 +16824,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "clappeddss",
+        "display_rsn": "clappeddds",
         "signup_date": "2023-06-15 11:12:44",
         "account_hash": "x",
         "hardware_id": "x",
@@ -21541,6 +21541,14 @@
         "account_hash": "f53f-3810-27d1-61ae",
         "hardware_id": "8b1b-0982-e6ce-cdc2",
         "reason": "claw dh - retributioned",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "drake m4ke",
+        "signup_date": "2023-06-27 12:51:18",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "claw einq elder - ate",
         "evidence_rating": "3"
     },
     {
