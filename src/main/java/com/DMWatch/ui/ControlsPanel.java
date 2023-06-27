@@ -109,7 +109,7 @@ public class ControlsPanel extends JPanel
 			{
 				if (SwingUtilities.isLeftMouseButton(e))
 				{
-					LinkBrowser.browse("https://discord.gg/dm");
+					LinkBrowser.browse("https://discord.gg/dmwatch");
 				}
 			}
 
