@@ -21520,6 +21520,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "w869",
+        "signup_date": "2023-06-27 09:37:54",
+        "account_hash": "7cc4-5aea-5f97-cb3c",
+        "hardware_id": "7cc4-5aea-5f97-cb3c",
+        "reason": "serial scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
