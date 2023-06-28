@@ -21728,6 +21728,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "nice guy07",
+        "signup_date": "2023-06-28 12:36:05",
+        "account_hash": "d0e9-44ef-0f74-82e7",
+        "hardware_id": "141b-a224-2833-f88b",
+        "reason": "claw dh - tab",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -22017,11 +22025,11 @@
     },
     {
         "display_rsn": "redrumze",
-        "signup_date": "2023-06-02 14:02:23",
+        "signup_date": "2023-06-28 12:36:25",
         "account_hash": "redrumze",
         "hardware_id": "redrumze",
         "reason": "redrumze",
-        "evidence_rating": "7"
+        "evidence_rating": "1"
     },
     {
         "display_rsn": "torvagod",
