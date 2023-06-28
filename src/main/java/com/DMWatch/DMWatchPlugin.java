@@ -51,7 +51,6 @@ import net.runelite.api.Player;
 import net.runelite.api.ScriptEvent;
 import net.runelite.api.ScriptID;
 import net.runelite.api.Varbits;
-import net.runelite.api.events.ChatMessage;
 import net.runelite.api.events.ClanMemberJoined;
 import net.runelite.api.events.ClientTick;
 import net.runelite.api.events.CommandExecuted;
@@ -290,9 +289,7 @@ public class DMWatchPlugin extends Plugin
 
 		if (config.discordNotify() && c.getGameState() == GameState.LOGGED_IN)
 		{
-			if (config.discordNotify()) {
-				ticksLoggedIn = 0;
-			}
+			ticksLoggedIn = 0;
 		}
 
 		if (!isInParty())
@@ -749,41 +746,8 @@ public class DMWatchPlugin extends Plugin
 	}
 
 	@Subscribe
-	public void onChatMessage(ChatMessage e)
-	{
-		Widget chatWidget = client.getWidget(WidgetInfo.CHATBOX_MESSAGE_LINES);
-		if (chatWidget != null && config.discordNotify())
-		{
-			for (Widget w: chatWidget.getDynamicChildren())
-			{
-				clientThread.invoke(() -> {
-					w.setHasListener(false);
-					w.setNoClickThrough(false);
-					w.revalidate();
-				});
-
-				if (w.getText().isEmpty()) continue;
-
-				if (Text.removeTags(w.getText()).contains("Join DMWatch's discord by clicking here!")
-					|| Text.removeTags(w.getText()).contains("Or by clicking the discord icon in side panel!"))
-				{
-					clientThread.invoke(() -> {
-						w.setAction(0, "Open Discord");
-						w.setOnClickListener((JavaScriptCallback) this::click);
-						w.setHasListener(true);
-						w.setNoClickThrough(true);
-						w.revalidate();
-					});
-				}
-			}
-			clientThread.invoke(() -> chatWidget.revalidate());
-		}
-	}
-
-	@Subscribe
 	private void onGameTick(GameTick e)
 	{
-
 		if (client.getLocalPlayer() == null)
 		{
 			return;
@@ -820,6 +784,31 @@ public class DMWatchPlugin extends Plugin
 				.type(ChatMessageType.CONSOLE)
 				.runeLiteFormattedMessage(response.build())
 				.build());
+		}
+
+		Widget chatWidget = client.getWidget(WidgetInfo.CHATBOX_MESSAGE_LINES);
+		if (chatWidget != null && config.discordNotify())
+		{
+			for (Widget w: chatWidget.getDynamicChildren())
+			{
+				if (Text.removeTags(w.getText()).contains("Join DMWatch's discord by clicking here!")
+					|| Text.removeTags(w.getText()).contains("Or by clicking the discord icon in side panel!"))
+				{
+					clientThread.invokeLater(() -> {
+						w.setAction(1, "Open Discord");
+						w.setOnOpListener((JavaScriptCallback) this::click);
+						w.setHasListener(true);
+						w.setNoClickThrough(true);
+						w.revalidate();
+					});
+				} else {
+					clientThread.invokeLater(() -> {
+						w.setHasListener(false);
+						w.setNoClickThrough(false);
+						w.revalidate();
+					});
+				}
+			}
 		}
 
 		if (!isInParty() || partyService.getLocalMember() == null)
@@ -1503,7 +1492,7 @@ public class DMWatchPlugin extends Plugin
 	{
 		if (lastNotify == null)
 			return true;
-		if (lastNotify.plus(120, ChronoUnit.SECONDS).isAfter(Instant.now()))
+		if (Instant.now().isAfter(lastNotify.plus(120, ChronoUnit.SECONDS)))
 			return true;
 		return false;
 	}
