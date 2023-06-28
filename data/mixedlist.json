@@ -22198,5 +22198,13 @@
         "hardware_id": "030a-cc6d-725d-551b",
         "reason": "1076035210887569410",
         "evidence_rating": "9"
+    },
+    {
+        "display_rsn": "Wizardking",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "e675-00de-fc06-ad13",
+        "hardware_id": "1649-7838-2d9d-24c3",
+        "reason": "258094646540894208",
+        "evidence_rating": "1"
     }
 ]
