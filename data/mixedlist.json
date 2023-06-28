@@ -22022,5 +22022,13 @@
         "hardware_id": "030a-cc6d-725d-551b",
         "reason": "1076035210887569410",
         "evidence_rating": "9"
+    },
+    {
+        "display_rsn": "BamsYams",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "b8df-f6cd-e3d8-23c4",
+        "hardware_id": "acc9-9bcc-61cf-e96f",
+        "reason": "172174422415769601 - BamsYams on disc",
+        "evidence_rating": "1"
     }
 ]
