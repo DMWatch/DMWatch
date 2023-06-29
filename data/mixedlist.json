@@ -21896,6 +21896,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "amounts",
+        "signup_date": "2023-06-28 19:55:07",
+        "account_hash": "5fc0-de76-ad20-a8a7",
+        "hardware_id": "9a18-9575-1142-ce61",
+        "reason": "claw dh - ate",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
