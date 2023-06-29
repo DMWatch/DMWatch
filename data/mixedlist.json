@@ -15264,7 +15264,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "the ninners",
+        "display_rsn": "l0l u dieee",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "c439-98e2-7ba4-a2e7",
         "hardware_id": "ffa9-bace-104e-d6ec",
@@ -19677,6 +19677,14 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "serial scammer, vouches scammers",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Hansage",
+        "signup_date": "2023-06-29 13:48:02",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "torva scammer",
         "evidence_rating": "3"
     },
     {
