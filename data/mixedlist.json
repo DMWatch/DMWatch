@@ -18064,14 +18064,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pibes",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "a457-6c78-0a09-dedf",
-        "hardware_id": "772f-3c9c-2a17-3915",
-        "reason": "AGS+DH+Set - Victim: GoblinKeta",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "exit exit",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
