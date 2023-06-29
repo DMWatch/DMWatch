@@ -20110,5 +20110,13 @@
         "hardware_id": "785a-d4e6-6a34-ee4a",
         "reason": "Identify\n409526966618816512",
         "evidence_rating": "6"
+    },
+    {
+        "display_rsn": "Fake Girls",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "6da0-d483-e31c-71b0",
+        "hardware_id": "9df6-e6ad-af59-0415",
+        "reason": "952291115661418606 ",
+        "evidence_rating": "9"
     }
 ]
