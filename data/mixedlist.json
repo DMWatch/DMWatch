@@ -19808,6 +19808,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "BOW Cone",
+        "signup_date": "2023-06-30 11:09:15",
+        "account_hash": "0787-bef9-7ace-e003",
+        "hardware_id": "2fff-975c-74cd-aeb3",
+        "reason": "dh budgetset tab",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
