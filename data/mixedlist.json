@@ -20254,5 +20254,13 @@
         "hardware_id": "9df6-e6ad-af59-0415",
         "reason": "952291115661418606\r\nanomaly",
         "evidence_rating": "9"
+    },
+    {
+        "display_rsn": "dearlola1",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "6a19-ffbd-67e2-f620",
+        "hardware_id": "cb40-31ff-5eff-308f",
+        "reason": "394508100616585216",
+        "evidence_rating": "6"
     }
 ]
