@@ -19192,7 +19192,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tom zanti",
+        "display_rsn": "tom zeneti",
         "signup_date": "2023-06-27 18:18:15",
         "account_hash": "null",
         "hardware_id": "null",
@@ -19920,7 +19920,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tom zanti",
+        "display_rsn": "tom zeneti",
         "signup_date": "2023-07-01 09:59:04",
         "account_hash": "8292-9256-3385-1212",
         "hardware_id": "8b94-8a15-f746-7470",
@@ -19949,6 +19949,14 @@
         "account_hash": "6ac7-14fa-ef29-9e54",
         "hardware_id": "76b4-a818-2693-8c57",
         "reason": "Claws+DH+Set - Victim: change77",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "tom zeneti",
+        "signup_date": "2023-07-01 10:09:22",
+        "account_hash": "8292-9256-3385-1212",
+        "hardware_id": "8b94-8a15-f746-7470",
+        "reason": "Claws+Set - Victim: IVIunchies",
         "evidence_rating": "3"
     },
     {
