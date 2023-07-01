@@ -20201,10 +20201,10 @@
     },
     {
         "display_rsn": "Cup of Purpp",
-        "signup_date": "2023-06-30 11:03:51",
+        "signup_date": "2023-06-30 21:19:45",
         "account_hash": "49e4-ec73-1204-90f1",
         "hardware_id": "238e-e47a-9478-587b",
-        "reason": "454146868226686986\r\ncupofpurp",
+        "reason": "cupofpurp",
         "evidence_rating": "6"
     },
     {
@@ -20289,10 +20289,10 @@
     },
     {
         "display_rsn": "SHElD-HEDA",
-        "signup_date": "2023-04-04 22:07:36",
+        "signup_date": "2023-06-30 21:19:24",
         "account_hash": "aba3-6d6d-ec73-b892",
         "hardware_id": "0537-7ece-d93c-ca9e",
-        "reason": "190606411170971652\nabyss",
+        "reason": "abyss",
         "evidence_rating": "6"
     }
 ]
