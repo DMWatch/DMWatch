@@ -19968,6 +19968,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "4200i",
+        "signup_date": "2023-07-01 10:29:57",
+        "account_hash": "9208-9224-2cac-3f6a",
+        "hardware_id": "d5ef-4b4c-f2c3-9b51",
+        "reason": "AGS+DH+Set - Victim: torvesta l",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
