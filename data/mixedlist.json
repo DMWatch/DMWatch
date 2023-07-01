@@ -19994,9 +19994,9 @@
     {
         "display_rsn": "fakeris",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "Serial Scammer",
+        "account_hash": "8a90-62bf-92e1-3e90",
+        "hardware_id": "5cf9-1b45-be0d-efd5",
+        "reason": "Abuse | DH+Set+1b - Victim: lord tokerus",
         "evidence_rating": "3"
     },
     {
