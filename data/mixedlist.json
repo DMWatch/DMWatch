@@ -20286,5 +20286,13 @@
         "hardware_id": "cb40-31ff-5eff-308f",
         "reason": "394508100616585216",
         "evidence_rating": "6"
+    },
+    {
+        "display_rsn": "SHElD-HEDA",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "aba3-6d6d-ec73-b892",
+        "hardware_id": "0537-7ece-d93c-ca9e",
+        "reason": "190606411170971652\nabyss",
+        "evidence_rating": "6"
     }
 ]
