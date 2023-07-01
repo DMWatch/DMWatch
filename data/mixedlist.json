@@ -17512,7 +17512,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "ruth jean",
+        "display_rsn": "mats briktim",
         "signup_date": "2023-06-17 19:57:39",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -19845,6 +19845,14 @@
         "account_hash": "d157-d604-d2d2-7558",
         "hardware_id": "e266-516e-0ced-7a15",
         "reason": "Claws+DH+Set - Victim: not emiliano",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "sadR3ality",
+        "signup_date": "2023-07-01 09:39:00",
+        "account_hash": "1b98-ea45-8671-3eec",
+        "hardware_id": "2c07-048c-d398-a892",
+        "reason": "Elder+Budget - Victim: da zaddy",
         "evidence_rating": "3"
     },
     {
