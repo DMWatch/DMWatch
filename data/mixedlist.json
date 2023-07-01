@@ -19192,7 +19192,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tom zeneti",
+        "display_rsn": "kikar koi",
         "signup_date": "2023-06-27 18:18:15",
         "account_hash": "null",
         "hardware_id": "null",
@@ -19920,7 +19920,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tom zeneti",
+        "display_rsn": "kikar koi",
         "signup_date": "2023-07-01 09:59:04",
         "account_hash": "8292-9256-3385-1212",
         "hardware_id": "8b94-8a15-f746-7470",
@@ -19952,7 +19952,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tom zeneti",
+        "display_rsn": "kikar koi",
         "signup_date": "2023-07-01 10:09:22",
         "account_hash": "8292-9256-3385-1212",
         "hardware_id": "8b94-8a15-f746-7470",
@@ -19965,6 +19965,14 @@
         "account_hash": "9382-d5af-b7de-0936",
         "hardware_id": "5ab0-a2de-cc46-d6a8",
         "reason": "DH+Set - Victim: dlksuker",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "gabo two",
+        "signup_date": "2023-07-01 10:13:41",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Claws+DH+Set - Victim: exkavator",
         "evidence_rating": "3"
     },
     {
