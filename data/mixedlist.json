@@ -19866,8 +19866,8 @@
     {
         "display_rsn": "loinerle",
         "signup_date": "2023-07-01 09:45:33",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "account_hash": "b29b-1252-c464-1041",
+        "hardware_id": "443d-3c5d-b64e-0c70",
         "reason": "DH+Set - Victim: foseek",
         "evidence_rating": "3"
     },
