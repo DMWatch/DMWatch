@@ -19304,7 +19304,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "i like pid",
+        "display_rsn": "catchthisd",
         "signup_date": "2023-06-28 12:29:03",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -20350,14 +20350,6 @@
         "hardware_id": "0597-80fa-c3f7-af66",
         "reason": "519673515381751845",
         "evidence_rating": "1"
-    },
-    {
-        "display_rsn": "Adamation",
-        "signup_date": "2023-06-23 11:41:51",
-        "account_hash": "c789-16be-b3f7-6dd6",
-        "hardware_id": "7122-6ab7-65c1-6cdc",
-        "reason": "1059433725953327105\r\n1 warning for holding above rank",
-        "evidence_rating": "9"
     },
     {
         "display_rsn": "far of m0re",
