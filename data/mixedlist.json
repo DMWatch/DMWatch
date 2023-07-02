@@ -20256,6 +20256,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "berrymagota4",
+        "signup_date": "2023-07-02 11:04:29",
+        "account_hash": "541c-9c01-c539-dd28",
+        "hardware_id": "4c8d-688f-a3c8-9723",
+        "reason": "Claws+DH+Set - Victim: ebk4",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
