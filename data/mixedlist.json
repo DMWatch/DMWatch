@@ -20160,6 +20160,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Yorkshire1ad",
+        "signup_date": "2023-07-02 10:36:27",
+        "account_hash": "f99f-6c5f-7c6a-9bd1",
+        "hardware_id": "ad3c-f378-0956-e225",
+        "reason": "AGS+DH+Set - Victim: r0manian guy",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
