@@ -20088,6 +20088,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "kumar_x3",
+        "signup_date": "2023-07-01 20:53:43",
+        "account_hash": "aec1-cec3-daa6-6493",
+        "hardware_id": "e608-faa2-8960-bc60",
+        "reason": "Voidwaker+DH+Set - Victim: 01 pr",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
