@@ -20608,6 +20608,14 @@
         "evidence_rating": "1"
     },
     {
+        "display_rsn": "Adamation",
+        "signup_date": "2023-07-02 11:32:39",
+        "account_hash": "c789-16be-b3f7-6dd6",
+        "hardware_id": "7122-6ab7-65c1-6cdc",
+        "reason": "1059433725953327105\r\n1 warning for holding above rank",
+        "evidence_rating": "9"
+    },
+    {
         "display_rsn": "far of m0re",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "581f-714b-fc1b-5163",
