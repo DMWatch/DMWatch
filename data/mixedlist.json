@@ -20264,6 +20264,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "az crypto",
+        "signup_date": "2023-07-02 11:06:12",
+        "account_hash": "534a-b64b-7594-6e2c",
+        "hardware_id": "8e7f-0ad2-dfbf-544d",
+        "reason": "Claws+DH+Set - Victim: l-lostile",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
