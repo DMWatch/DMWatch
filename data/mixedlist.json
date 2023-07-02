@@ -20064,6 +20064,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Riol rat",
+        "signup_date": "2023-07-01 17:38:50",
+        "account_hash": "610d-123b-27fb-98f2",
+        "hardware_id": "cffc-1875-dfbc-e638",
+        "reason": "Claws+DH+Set - Victim: not emiliano",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
