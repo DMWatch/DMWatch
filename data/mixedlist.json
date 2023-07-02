@@ -20080,6 +20080,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "mind wonder",
+        "signup_date": "2023-07-01 20:52:07",
+        "account_hash": "7221-c3f6-0694-34b9",
+        "hardware_id": "bc4d-2cbf-8bc1-8df4",
+        "reason": "Voidwaker+DH+Set - Victim: 01 pr",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
