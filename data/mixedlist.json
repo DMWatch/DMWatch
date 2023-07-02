@@ -20104,6 +20104,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "taxfraud6",
+        "signup_date": "2023-07-01 21:55:34",
+        "account_hash": "ad67-7227-1e92-8d9e",
+        "hardware_id": "e08e-8587-2817-eed4",
+        "reason": "Claws+DH+Set - Victim: mister xanny",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
