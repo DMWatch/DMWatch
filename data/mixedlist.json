@@ -15488,7 +15488,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "danielvh1",
+        "display_rsn": "armyphillips",
         "signup_date": "2023-06-07 12:17:33",
         "account_hash": "x",
         "hardware_id": "x",
@@ -16560,7 +16560,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "danielvh1",
+        "display_rsn": "armyphillips",
         "signup_date": "2023-06-13 19:14:22",
         "account_hash": "null",
         "hardware_id": "null",
@@ -20229,6 +20229,14 @@
         "account_hash": "1abe-a930-77a6-024a",
         "hardware_id": "d262-e223-8d67-0664",
         "reason": "AGS+DH+Set - Victim: 3aws",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "zezima",
+        "signup_date": "2023-07-02 10:57:00",
+        "account_hash": "541c-9c01-c539-dd28",
+        "hardware_id": "4c8d-688f-a3c8-9723",
+        "reason": "Claws+DH+Set - Victim: a z duo",
         "evidence_rating": "3"
     },
     {
