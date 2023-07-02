@@ -19408,7 +19408,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "noobletss",
+        "display_rsn": "rdywar",
         "signup_date": "2023-06-28 14:34:37",
         "account_hash": "6dd7-10fb-3e97-ed7a",
         "hardware_id": "ccc0-3671-de6d-b649",
@@ -20293,6 +20293,14 @@
         "account_hash": "cbef-67b6-2377-fff1",
         "hardware_id": "5aaa-b707-bed1-be0b",
         "reason": "Fang+Torva+Set - Victim: noble lou",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "marc smart",
+        "signup_date": "2023-07-02 12:25:05",
+        "account_hash": "7bfa-eb55-59b1-6d64",
+        "hardware_id": "43f1-1eaa-4049-8238",
+        "reason": "Voidwaker+DH+Set - Victim: zaddy zayne",
         "evidence_rating": "3"
     },
     {
