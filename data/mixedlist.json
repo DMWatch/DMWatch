@@ -20144,6 +20144,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "takeenotez",
+        "signup_date": "2023-07-02 10:33:05",
+        "account_hash": "1abe-a930-77a6-024a",
+        "hardware_id": "d262-e223-8d67-0664",
+        "reason": "Claws+DH+Set - Victim: vorasi",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
