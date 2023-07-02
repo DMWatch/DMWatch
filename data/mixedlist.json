@@ -20240,6 +20240,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "scrip ttv",
+        "signup_date": "2023-07-02 10:59:44",
+        "account_hash": "0e18-9e64-cc9b-4824",
+        "hardware_id": "bad4-03c4-72d8-6303",
+        "reason": "Claws+DH+Set - Victim: ebk4",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
