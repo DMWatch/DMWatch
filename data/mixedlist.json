@@ -20336,6 +20336,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "riot rat",
+        "signup_date": "2023-07-02 13:49:04",
+        "account_hash": "610d-123b-27fb-98f2",
+        "hardware_id": "cffc-1875-dfbc-e638",
+        "reason": "DH+Set+384m - Victim: rage devil",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
