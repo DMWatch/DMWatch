@@ -20248,6 +20248,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "scrip ttv",
+        "signup_date": "2023-07-02 11:01:24",
+        "account_hash": "ea5b-fc9a-d9be-b4a6",
+        "hardware_id": "84c4-6b34-9324-4ccc",
+        "reason": "Claws+DH+Set - Victim: a z duo",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
