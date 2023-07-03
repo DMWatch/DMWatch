@@ -6800,7 +6800,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "2tickstonyz",
+        "display_rsn": "p0l0oroid",
         "signup_date": "2023-04-30 12:12:26",
         "account_hash": "null",
         "hardware_id": "null",
@@ -20517,6 +20517,14 @@
         "account_hash": "29c6-9b16-2422-aaae",
         "hardware_id": "523d-f5ab-d9eb-78b6",
         "reason": "DH+Set - Victim: L 0 C K Y",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "energyboost",
+        "signup_date": "2023-07-03 12:02:09",
+        "account_hash": "null",
+        "hardware_id": "7a89-6fd5-6668-aacf",
+        "reason": "Claws+DH+Set - Victim: irldescent",
         "evidence_rating": "3"
     },
     {
