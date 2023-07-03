@@ -20432,6 +20432,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "mrpatty",
+        "signup_date": "2023-07-02 20:12:16",
+        "account_hash": "c880-1feb-2a32-ac79",
+        "hardware_id": "828c-9844-f9dc-5057",
+        "reason": "DH+Budget - Victim: 6url",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
