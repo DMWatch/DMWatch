@@ -1656,7 +1656,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "dustis a mus",
+        "display_rsn": "chadskl",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -20405,14 +20405,6 @@
         "account_hash": "c880-1feb-2a32-ac79",
         "hardware_id": "828c-9844-f9dc-5057",
         "reason": "AGS+DH+Budget - Victim: xr7",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "Kumar_3x",
-        "signup_date": "2023-07-02 19:56:29",
-        "account_hash": "b2f3-459e-0a64-b0ec",
-        "hardware_id": "0f44-73da-0ce4-b579",
-        "reason": "AGS+DH+Set - Victim: cavez",
         "evidence_rating": "3"
     },
     {
