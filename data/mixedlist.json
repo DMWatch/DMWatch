@@ -10640,7 +10640,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "ro0o0o00o",
+        "display_rsn": "hori kiwi",
         "signup_date": "2023-05-15 08:18:52",
         "account_hash": "9f36-5569-740a-50d8",
         "hardware_id": "49a7-e1d1-d110-10a9",
@@ -20373,6 +20373,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Ragging CC Members",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "NoMoGambling",
+        "signup_date": "2023-07-02 19:02:20",
+        "account_hash": "a62b-1475-f6d2-6a5a",
+        "hardware_id": "0620-fe86-394b-cc04",
+        "reason": "Voidwaker+Elder+Torva+Set - Victim: Big Vos",
         "evidence_rating": "3"
     },
     {
