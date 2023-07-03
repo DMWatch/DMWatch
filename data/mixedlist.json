@@ -15832,7 +15832,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "energyboost",
+        "display_rsn": "fr33 ld",
         "signup_date": "2023-06-09 14:17:55",
         "account_hash": "6efa-1198-de14-84a5",
         "hardware_id": "889b-4119-1215-838a",
@@ -20520,11 +20520,19 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "energyboost",
+        "display_rsn": "fr33 ld",
         "signup_date": "2023-07-03 12:02:09",
         "account_hash": "null",
         "hardware_id": "7a89-6fd5-6668-aacf",
         "reason": "Claws+DH+Set - Victim: irldescent",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "torvaely",
+        "signup_date": "2023-07-03 12:04:31",
+        "account_hash": "de51-95eb-109f-4638",
+        "hardware_id": "fb5b-3ee9-6522-5b85",
+        "reason": "AGS+DH+Set - Victim: eat lemons",
         "evidence_rating": "3"
     },
     {
