@@ -20448,6 +20448,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "GH0OO00O0OST",
+        "signup_date": "2023-07-02 21:51:00",
+        "account_hash": "d6c7-70e0-a536-4eef",
+        "hardware_id": "9278-6699-a8c9-8a40",
+        "reason": "AGS+DH+Set - Victim: taikless",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
