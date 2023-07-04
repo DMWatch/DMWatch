@@ -20896,6 +20896,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "torvag0d",
+        "signup_date": "2023-07-04 15:31:49",
+        "account_hash": "326d-af8d-8747-f884",
+        "hardware_id": "72d4-1b61-5f4d-4c4e",
+        "reason": "DH+Set+6b",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
