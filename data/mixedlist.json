@@ -20592,7 +20592,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "perjuvains",
+        "display_rsn": "perc0ses",
         "signup_date": "2023-07-03 18:59:53",
         "account_hash": "3bf4-a789-0d75-84b8",
         "hardware_id": "c5c7-4d7b-9b8e-b78b",
@@ -20600,7 +20600,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "perjuvains",
+        "display_rsn": "perc0ses",
         "signup_date": "2023-07-03 19:01:09",
         "account_hash": "3bf4-a789-0d75-84b8",
         "hardware_id": "c5c7-4d7b-9b8e-b78b",
@@ -20888,7 +20888,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "perjuvains",
+        "display_rsn": "perc0ses",
         "signup_date": "2023-07-04 15:28:39",
         "account_hash": "d484-587b-356e-d57f",
         "hardware_id": "11ae-3dd9-7514-0ede",
@@ -20901,6 +20901,14 @@
         "account_hash": "326d-af8d-8747-f884",
         "hardware_id": "72d4-1b61-5f4d-4c4e",
         "reason": "DH+Set+6b",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "undead pks",
+        "signup_date": "2023-07-04 16:43:41",
+        "account_hash": "8170-8d6e-5fa5-a027",
+        "hardware_id": "a2b2-1f30-d6af-146f",
+        "reason": "Claws+DH+Set - Victim: 01 pr",
         "evidence_rating": "3"
     },
     {
