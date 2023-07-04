@@ -20888,6 +20888,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "perjuvains",
+        "signup_date": "2023-07-04 15:28:39",
+        "account_hash": "d484-587b-356e-d57f",
+        "hardware_id": "11ae-3dd9-7514-0ede",
+        "reason": "Claws+DH+Set - Victim: kemperr",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
