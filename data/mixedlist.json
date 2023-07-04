@@ -760,7 +760,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "j0j0lliill",
+        "display_rsn": "pauwels69",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -20661,6 +20661,14 @@
         "account_hash": "7b6d-ebc8-42a5-d897",
         "hardware_id": "dc36-8210-d6f7-1b81",
         "reason": "ABUSE - DH SCAMMER",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "ely ian",
+        "signup_date": "2023-07-03 19:32:55",
+        "account_hash": "6092-a0aa-3f0f-323c",
+        "hardware_id": "a9bf-67a8-4f3c-53df",
+        "reason": "claw dh scammer.",
         "evidence_rating": "3"
     },
     {
