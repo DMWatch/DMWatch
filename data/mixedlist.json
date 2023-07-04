@@ -20858,8 +20858,8 @@
     {
         "display_rsn": "str rng",
         "signup_date": "2023-07-04 13:57:58",
-        "account_hash": "null",
-        "hardware_id": "null",
+        "account_hash": "e450-0d06-a3b9-511f",
+        "hardware_id": "5faf-0be2-7945-d35a",
         "reason": "Claws+DH+Set - Victim: d a t h i t",
         "evidence_rating": "3"
     },
