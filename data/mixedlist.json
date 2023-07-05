@@ -21056,6 +21056,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "NormiePrayer",
+        "signup_date": "2023-07-05 16:49:58",
+        "account_hash": "f623-3625-996b-e16d",
+        "hardware_id": "2c4c-eadf-5213-2560",
+        "reason": "Claws+Elder+Inq+Set - Victim: big vos",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "drake unit",
+        "signup_date": "2023-07-05 16:50:27",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "void dh spoof veng scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
