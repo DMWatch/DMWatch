@@ -21048,6 +21048,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "slider",
+        "signup_date": "2023-07-05 16:49:14",
+        "account_hash": "0e1c-7aa0-deb6-5081",
+        "hardware_id": "70b1-47b9-aa1a-bb93",
+        "reason": "claw dhscammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
