@@ -21096,6 +21096,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "reven op",
+        "signup_date": "2023-07-05 16:55:48",
+        "account_hash": "d627-438b-6667-7df2",
+        "hardware_id": "fd04-aa9f-7f6b-339a",
+        "reason": "Claws+DH+Set - Victim: s aii",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
