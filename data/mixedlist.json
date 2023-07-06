@@ -19770,8 +19770,8 @@
     {
         "display_rsn": "bushwapi",
         "signup_date": "2023-07-01 09:45:33",
-        "account_hash": "b29b-1252-c464-1041",
-        "hardware_id": "443d-3c5d-b64e-0c70",
+        "account_hash": "null",
+        "hardware_id": "null",
         "reason": "DH+Set - Victim: foseek",
         "evidence_rating": "3"
     },
@@ -21393,9 +21393,9 @@
     },
     {
         "display_rsn": "Hallowtide",
-        "signup_date": "2023-06-30 16:15:01",
-        "account_hash": "b29b-1252-c464-1041",
-        "hardware_id": "443d-3c5d-b64e-0c70",
+        "signup_date": "2023-07-06 09:56:14",
+        "account_hash": "null",
+        "hardware_id": "null",
         "reason": "Ranked Member",
         "evidence_rating": "8"
     },
