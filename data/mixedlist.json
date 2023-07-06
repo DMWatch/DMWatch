@@ -21152,6 +21152,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "centriiion",
+        "signup_date": "2023-07-05 17:12:50",
+        "account_hash": "bc5c-f585-6965-e207",
+        "hardware_id": "e4d8-8739-1faf-300c",
+        "reason": "Voidwaker+DH+Set - Victim: n3v3ts",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
