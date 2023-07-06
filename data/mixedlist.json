@@ -808,7 +808,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "la malotaa",
+        "display_rsn": "cachigano",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
         "hardware_id": "unknown",
@@ -21104,7 +21104,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "la malotaa",
+        "display_rsn": "cachigano",
         "signup_date": "2023-07-05 16:57:48",
         "account_hash": "null",
         "hardware_id": "null",
@@ -21160,7 +21160,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "la malotaa",
+        "display_rsn": "cachigano",
         "signup_date": "2023-07-05 17:14:45",
         "account_hash": "c31f-00da-49cb-6955",
         "hardware_id": "5839-8c27-d91d-8c8f",
@@ -21213,6 +21213,14 @@
         "account_hash": "cfad-7aa6-5ab5-6ab5",
         "hardware_id": "886c-021b-f4aa-021e",
         "reason": "Voidwaker+DH+Set - Victim: road2rebuild",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "zezima",
+        "signup_date": "2023-07-05 17:30:45",
+        "account_hash": "251e-49d9-0edc-9dae",
+        "hardware_id": "ed2b-ffcd-90d8-b15f",
+        "reason": "Elder+Set - Victim: frenchman1k",
         "evidence_rating": "3"
     },
     {
