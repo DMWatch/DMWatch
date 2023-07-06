@@ -21320,7 +21320,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "fears rule",
+        "display_rsn": "get rooooock",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
         "hardware_id": "null",
@@ -21349,6 +21349,14 @@
         "account_hash": "619d-364b-93e3-0ab1",
         "hardware_id": "79d1-7638-0d2d-ec7e",
         "reason": "Claws+DH+Set - Victim: Eat Lemons",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "kleeww",
+        "signup_date": "2023-07-06 15:04:57",
+        "account_hash": "9e67-1b34-7f70-1e48",
+        "hardware_id": "6c79-6157-fb92-92aa",
+        "reason": "ags dh budget scammer",
         "evidence_rating": "3"
     },
     {
