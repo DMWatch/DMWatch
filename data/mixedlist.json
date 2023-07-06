@@ -21296,6 +21296,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "noob rs",
+        "signup_date": "2023-07-06 10:19:23",
+        "account_hash": "672a-ad7c-5999-1b1f",
+        "hardware_id": "33a8-2ca9-9068-759d",
+        "reason": "Claws+DH+Set - Victim: sno0py",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
