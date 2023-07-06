@@ -20696,7 +20696,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "07mvp",
+        "display_rsn": "suhbabi2",
         "signup_date": "2023-07-04 08:01:40",
         "account_hash": "null",
         "hardware_id": "null",
@@ -21125,6 +21125,14 @@
         "account_hash": "e37e-d529-63ef-cad7",
         "hardware_id": "68b2-4d53-f1ba-8408",
         "reason": "Abuse | Claws+DH+Set - Victim: 01 pr",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "PacOfRise",
+        "signup_date": "2023-07-05 17:06:07",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Fang+Bandos+Set - Victim: cacksuckers",
         "evidence_rating": "3"
     },
     {
