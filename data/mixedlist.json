@@ -21136,6 +21136,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "UpDownKick",
+        "signup_date": "2023-07-05 17:07:57",
+        "account_hash": "4d0d-4e92-9d47-42da",
+        "hardware_id": "0cd6-a80c-080d-e61a",
+        "reason": "Claws+DH+Set - Victim: akimovas",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
