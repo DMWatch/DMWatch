@@ -20696,7 +20696,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "suhbabi2",
+        "display_rsn": "suhbabi",
         "signup_date": "2023-07-04 08:01:40",
         "account_hash": "null",
         "hardware_id": "null",
@@ -21165,6 +21165,14 @@
         "account_hash": "c31f-00da-49cb-6955",
         "hardware_id": "5839-8c27-d91d-8c8f",
         "reason": "AGS+DH+Set - Victim: hackett116",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Shinsfatherd",
+        "signup_date": "2023-07-05 17:17:55",
+        "account_hash": "d3de-f943-dea0-040a",
+        "hardware_id": "cf05-279b-7ac3-ba1d",
+        "reason": "Elder+Set - Victim: frenchman1k",
         "evidence_rating": "3"
     },
     {
