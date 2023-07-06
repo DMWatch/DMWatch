@@ -21352,6 +21352,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "44 54",
+        "signup_date": "2023-07-06 11:32:12",
+        "account_hash": "3644-a46c-d9de-bb51",
+        "hardware_id": "30e8-b88e-d5e8-a796",
+        "reason": "Claws+Elder+Set+3.5b - Victim: big vos",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
