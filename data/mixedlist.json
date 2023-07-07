@@ -21552,6 +21552,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "esoz",
+        "signup_date": "2023-07-07 16:12:59",
+        "account_hash": "c387-ccb4-36b6-a5a3",
+        "hardware_id": "0997-83c3-c95d-bd38",
+        "reason": "DH+Set - Victim: hackett116",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
