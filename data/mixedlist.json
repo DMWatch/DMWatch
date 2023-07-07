@@ -21400,6 +21400,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "schaexyefu47",
+        "signup_date": "2023-07-06 18:48:26",
+        "account_hash": "36b5-c716-ca80-6188",
+        "hardware_id": "dc2b-4c27-40a3-d690",
+        "reason": "Claws+DH+Set - Victim: hiddenface",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
