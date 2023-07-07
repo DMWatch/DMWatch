@@ -21456,6 +21456,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "SystemDebt",
+        "signup_date": "2023-07-07 12:47:10",
+        "account_hash": "8838-70b5-8b66-ed02",
+        "hardware_id": "2706-343f-d05b-a7be",
+        "reason": "Voidwaker+DH+Set - Victim: IVIunchies",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
