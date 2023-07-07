@@ -21464,6 +21464,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "D 1 0 R X",
+        "signup_date": "2023-07-07 13:07:59",
+        "account_hash": "463c-6792-f6ca-44c8",
+        "hardware_id": "76c4-1b2a-b80b-442c",
+        "reason": "AGS+DH+Set - Victim: xd farmer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
