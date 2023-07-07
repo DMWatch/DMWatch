@@ -21472,6 +21472,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "7san",
+        "signup_date": "2023-07-07 13:44:34",
+        "account_hash": "619f-e4cd-91f8-f15f",
+        "hardware_id": "9a68-dee7-2245-db7f",
+        "reason": "AGS+DH+Set - Victim: zyzar 12",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
