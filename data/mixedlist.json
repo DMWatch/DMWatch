@@ -21512,6 +21512,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Highflorest",
+        "signup_date": "2023-07-07 15:19:38",
+        "account_hash": "afca-c123-f1a9-d900",
+        "hardware_id": "be51-9be9-dcc8-af13",
+        "reason": "AGS+DH+Budget - Victim: d3xtroy",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
