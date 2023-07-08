@@ -13392,7 +13392,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "desi army",
+        "display_rsn": "rsdelilah",
         "signup_date": "2023-05-28 15:57:24",
         "account_hash": "8cc1-92f5-9672-2d54",
         "hardware_id": "261d-6216-a6e4-92ef",
@@ -13400,7 +13400,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "desi army",
+        "display_rsn": "rsdelilah",
         "signup_date": "2023-05-28 16:02:36",
         "account_hash": "8cc1-92f5-9672-2d54",
         "hardware_id": "261d-6216-a6e4-92ef",
@@ -21805,6 +21805,14 @@
         "account_hash": "288e-8bd6-c200-5212",
         "hardware_id": "bc94-497f-0745-1e9b",
         "reason": "Claws+Elder+Torva+Set - VIctim: suikerwafel",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "ispecle some",
+        "signup_date": "2023-07-08 13:17:27",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Voidwaker+DH+Set - Victim: maba",
         "evidence_rating": "3"
     },
     {
