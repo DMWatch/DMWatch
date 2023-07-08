@@ -21816,6 +21816,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zezima",
+        "signup_date": "2023-07-08 13:20:34",
+        "account_hash": "364d-e2c0-89a1-fe98",
+        "hardware_id": "e722-b311-27d6-1065",
+        "reason": "DH+Set+615m - Victim: lower tunnel",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
