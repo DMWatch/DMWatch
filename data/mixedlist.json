@@ -22104,6 +22104,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "ishit hit",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "cc98-0e95-83d5-3a72",
+        "hardware_id": "cb1c-d11d-fafa-aafd",
+        "reason": "Claws+Elder+Inq+Set - Victim: zoxic",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
