@@ -22016,6 +22016,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "biscuit poo",
+        "signup_date": "2023-07-09 07:46:34",
+        "account_hash": "0bd9-12a8-b25c-6e72",
+        "hardware_id": "fca3-2c29-69ab-1399",
+        "reason": "DH + Set + Claws - Eating\/Tele - Victim: outsourced",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
