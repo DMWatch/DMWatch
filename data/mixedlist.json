@@ -21984,6 +21984,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "maxed 2277s",
+        "signup_date": "2023-07-09 07:37:26",
+        "account_hash": "7ecb-a989-e2e1-38ea",
+        "hardware_id": "6153-f793-ed6c-6f04",
+        "reason": "Claws + DH + set - DQ without paying - Victim: ofc",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
