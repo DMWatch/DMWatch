@@ -21976,6 +21976,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "i pk r",
+        "signup_date": "2023-07-09 07:35:46",
+        "account_hash": "c319-a042-1c53-a482",
+        "hardware_id": "a264-a2b3-971d-3c8a",
+        "reason": "Claws + DH + set - Teled - Victim: Marcialago90",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
