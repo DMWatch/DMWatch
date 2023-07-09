@@ -22048,6 +22048,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "miner 4max",
+        "signup_date": "2023-07-09 07:54:22",
+        "account_hash": "a0fc-2959-ff16-5a8d",
+        "hardware_id": "c86f-e2ad-5938-152d",
+        "reason": "Claws + DH + Set - Eating - Victim:",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
