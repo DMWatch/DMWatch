@@ -21400,7 +21400,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "irl brianlag",
+        "display_rsn": "bapi k",
         "signup_date": "2023-07-07 13:31:13",
         "account_hash": "18c1-ffeb-7993-44fa",
         "hardware_id": "d956-934a-0672-9831",
@@ -22237,6 +22237,14 @@
         "account_hash": "82a5-080e-827d-8ca4",
         "hardware_id": "e8ed-8b0f-11c6-6aee",
         "reason": "serial scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Im Shaved",
+        "signup_date": "2023-07-10 07:15:07",
+        "account_hash": "0b4a-82f8-8fa8-4a40",
+        "hardware_id": "8439-b56a-5332-198a",
+        "reason": "tabbed for claw dh set",
         "evidence_rating": "3"
     },
     {
