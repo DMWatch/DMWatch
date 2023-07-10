@@ -22320,6 +22320,22 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "tax1 to lumb",
+        "signup_date": "2023-07-10 10:45:05",
+        "account_hash": "bcf8-e9df-283b-4322",
+        "hardware_id": "7dd9-b433-5d16-ecd8",
+        "reason": "tabbed for ags+dh+budget",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "blamexin",
+        "signup_date": "2023-07-10 10:46:01",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "Abuse | DH+Set+500m - Victim:",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
