@@ -21232,14 +21232,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "kleeww",
-        "signup_date": "2023-07-06 15:04:57",
-        "account_hash": "9e67-1b34-7f70-1e48",
-        "hardware_id": "6c79-6157-fb92-92aa",
-        "reason": "ags dh budget scammer",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "suorpatchkd",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "null",
@@ -22197,6 +22189,14 @@
         "account_hash": "26fa-9aa3-da95-f8ed",
         "hardware_id": "138c-877b-bf62-e71d",
         "reason": "ags dh budget set",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "redstomne",
+        "signup_date": "2023-07-09 18:17:04",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "ags dh budget scammer",
         "evidence_rating": "3"
     },
     {
