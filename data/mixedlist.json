@@ -22192,6 +22192,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "deep damaged",
+        "signup_date": "2023-07-09 18:09:49",
+        "account_hash": "26fa-9aa3-da95-f8ed",
+        "hardware_id": "138c-877b-bf62-e71d",
+        "reason": "ags dh budget set",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
