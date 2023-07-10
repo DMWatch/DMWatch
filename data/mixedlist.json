@@ -22256,6 +22256,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "96 rata 69",
+        "signup_date": "2023-07-10 08:56:25",
+        "account_hash": "0d09-141c-02a8-a60c",
+        "hardware_id": "4274-73f6-a69e-25c7",
+        "reason": "did not pay dq",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
