@@ -30,12 +30,9 @@ import com.DMWatch.ui.PlayerPanel;
 import com.google.inject.Inject;
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -49,23 +46,19 @@ import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
 import lombok.Getter;
-import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.DynamicGridLayout;
 import net.runelite.client.ui.PluginPanel;
-import net.runelite.client.ui.components.IconTextField;
 
 class PartyPanel extends PluginPanel
 {
 	private final DMWatchPlugin plugin;
 
 	private final DMWatchConfig config;
+
 	@Getter
 	private final HashMap<Long, PlayerPanel> playerPanelMap = new HashMap<>();
 	private final JPanel basePanel = new JPanel();
-	private final JPanel passphrasePanel = new JPanel();
 	private final JLabel passphraseLabel = new JLabel();
-	@Getter
-	private final IconTextField searchBar;
 
 	@Getter
 	private final ControlsPanel controlsPanel;
@@ -85,6 +78,7 @@ class PartyPanel extends PluginPanel
 		topPanel.setBorder(new EmptyBorder(BORDER_OFFSET, 2, BORDER_OFFSET, 2));
 		topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
 
+		JPanel passphrasePanel = new JPanel();
 		passphrasePanel.setBorder(new EmptyBorder(4, 0, 0, 0));
 		passphrasePanel.setLayout(new DynamicGridLayout(0, 1, 0, 5));
 
@@ -116,34 +110,6 @@ class PartyPanel extends PluginPanel
 		topPanel.add(controlsPanel);
 		topPanel.add(passphrasePanel);
 
-		this.searchBar = new IconTextField();
-		searchBar.setIcon(IconTextField.Icon.SEARCH);
-		searchBar.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 20, 30));
-		searchBar.setBackground(ColorScheme.DARKER_GRAY_COLOR);
-		searchBar.setHoverBackgroundColor(ColorScheme.DARK_GRAY_HOVER_COLOR);
-		searchBar.setMinimumSize(new Dimension(0, 30));
-		searchBar.addKeyListener(new KeyListener()
-		{
-			@Override
-			public void keyTyped(KeyEvent e)
-			{
-			}
-
-			@Override
-			public void keyPressed(KeyEvent e)
-			{
-			}
-
-			@Override
-			public void keyReleased(KeyEvent e)
-			{
-				redrawOverviewPanel();
-			}
-		});
-		searchBar.addClearListener(() -> redrawOverviewPanel());
-
-		topPanel.add(searchBar);
-
 		this.add(topPanel, BorderLayout.NORTH);
 
 		// Wrap content to anchor to top and prevent expansion
@@ -153,11 +119,6 @@ class PartyPanel extends PluginPanel
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
 		this.add(scrollPane, BorderLayout.CENTER);
-	}
-
-	void redrawOverviewPanel()
-	{
-		renderSidebar();
 	}
 
 	/**
@@ -170,25 +131,12 @@ class PartyPanel extends PluginPanel
 		// Sort by their RSN first; If it doesn't exist sort by their Discord name instead
 		final List<PartyPlayer> players = plugin.getPartyMembers().values()
 			.stream()
-			.sorted(Comparator.comparing(o -> orderByTier(o.getStatus(), o.getWorld())))
+			.sorted(Comparator.comparing(o -> orderByTier(o.getTier(), o.getWorld())))
 			.collect(Collectors.toList());
-
-		plugin.setSearchBarText(searchBar.getText());
 
 		for (final PartyPlayer player : players)
 		{
-			if (!searchBar.getText().isEmpty())
-			{
-				if (player.getUsername().toLowerCase().replaceAll(" ", "")
-					.contains(searchBar.getText().toLowerCase().replaceAll(" ", "")))
-				{
-					drawPlayerPanel(player);
-				}
-			}
-			else
-			{
-				drawPlayerPanel(player);
-			}
+			drawPlayerPanel(player);
 		}
 
 		if (getComponentCount() == 0)
@@ -207,27 +155,21 @@ class PartyPanel extends PluginPanel
 		}
 		switch (tier)
 		{
-			case "0":
+			case "DMer":
 				return 6; // unknown
-			case "1": // smiley
-			case "11": // sergeant
-			case "10": // corporal
-			case "9": // recruit
+			case "Smiley": // smiley
+			case "Sergeant": // sergeant
+			case "Corporal": // corporal
+			case "Recruit": // recruit
 				return 5; // order these thee same
-			case "2":
-				return 101; // accused
-			case "3":
+			case "Scammer":
 				return 100; // scammer
-			case "4":
+			case "Lieutenant":
 				return 3; // lt
-			case "5":
+			case "Captain":
 				return 2; // captain
-			case "8":
+			case "General":
 				return 1; // general
-			case "6":
-				return 4; // twitch
-			case "7":
-				return 4; // kick
 			default: // ?
 				return 10000;
 		}
@@ -240,7 +182,7 @@ class PartyPanel extends PluginPanel
 
 		final String playerName = player.getUsername() == null ? "" : player.getUsername();
 		panel.updatePlayerData(player, !playerName.equals(panel.getPlayer().getUsername())
-			|| !player.getStatus().equals(panel.getPlayer().getStatus())
+			|| !player.getTier().equals(panel.getPlayer().getTier())
 			|| player.getIsVenged() != panel.getPlayer().getIsVenged()
 			|| !player.getUserUnique().equals(panel.getPlayer().getUserUnique())
 			|| !player.getReason().equals(panel.getPlayer().getReason())

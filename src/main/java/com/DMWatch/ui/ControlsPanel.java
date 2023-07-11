@@ -76,9 +76,11 @@ public class ControlsPanel extends JPanel
 			if (!plugin.isInParty() || !plugin.getPartyPassphrase().equals("DMWatch"))
 			{
 				plugin.changeParty("DMWatch");
+				plugin.setOpponent("");
 			}
 			else
 			{
+				plugin.setOpponent("");
 				plugin.leaveParty();
 			}
 		});

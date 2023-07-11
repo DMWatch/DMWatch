@@ -1,22 +1,18 @@
 package com.DMWatch;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
-import java.util.Optional;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import net.runelite.api.FriendsChatRank;
 import net.runelite.api.Player;
 import net.runelite.api.Point;
-import net.runelite.api.clan.ClanTitle;
 import net.runelite.client.game.ChatIconManager;
 import net.runelite.client.ui.overlay.Overlay;
 import net.runelite.client.ui.overlay.OverlayPosition;
 import net.runelite.client.ui.overlay.OverlayPriority;
 import net.runelite.client.ui.overlay.OverlayUtil;
-import net.runelite.client.util.ImageUtil;
 import net.runelite.client.util.Text;
 
 @Singleton
@@ -120,37 +116,39 @@ public class PartyMemberTierOverlay extends Overlay
 			final int textHeight = graphics.getFontMetrics().getHeight() - graphics.getFontMetrics().getMaxDescent();
 			final Point imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 1, textLocation.getY() - textHeight / 2 - rankImage.getHeight() / 2);
 			OverlayUtil.renderImageLocation(graphics, imageLocation, rankImage);
-
 			// move text
 			textLocation = new Point(textLocation.getX() + imageTextMargin, textLocation.getY());
 		}
-
-		BufferedImage scammerImage = decorations.getScammerIcon();
-
-		if (scammerImage != null)
+		else
 		{
-			final int imageWidth = scammerImage.getWidth();
-			final int imageTextMargin;
-			final int imageNegativeMargin;
 
-			if (drawPlayerNamesConfig == PlayerNameLocation.MODEL_RIGHT)
+			BufferedImage dmwatchIcon = decorations.getDmwatchIcon();
+
+			if (dmwatchIcon != null)
 			{
-				imageTextMargin = imageWidth;
-				imageNegativeMargin = 0;
-			}
-			else
-			{
-				imageTextMargin = imageWidth / 2;
-				imageNegativeMargin = imageWidth / 2;
-			}
+				final int imageWidth = dmwatchIcon.getWidth();
+				final int imageTextMargin;
+				final int imageNegativeMargin;
 
-			final int textHeight = graphics.getFontMetrics().getHeight() - graphics.getFontMetrics().getMaxDescent();
+				if (drawPlayerNamesConfig == PlayerNameLocation.MODEL_RIGHT)
+				{
+					imageTextMargin = imageWidth;
+					imageNegativeMargin = 0;
+				}
+				else
+				{
+					imageTextMargin = imageWidth / 2;
+					imageNegativeMargin = imageWidth / 2;
+				}
 
-			final Point imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 8, textLocation.getY() - textHeight / 2 - scammerImage.getHeight() / 2);
-			OverlayUtil.renderImageLocation(graphics, imageLocation, scammerImage);
-			textLocation = new Point(textLocation.getX() - 5 + imageTextMargin, textLocation.getY());
+				final int textHeight = graphics.getFontMetrics().getHeight() - graphics.getFontMetrics().getMaxDescent();
+
+				final Point imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 8, textLocation.getY() - textHeight / 2 - dmwatchIcon.getHeight() / 2);
+				OverlayUtil.renderImageLocation(graphics, imageLocation, dmwatchIcon);
+				// move text
+				textLocation = new Point(textLocation.getX() - 5 + imageTextMargin, textLocation.getY());
+			}
 		}
-
 		OverlayUtil.renderTextLocation(graphics, textLocation, name, decorations.getColor());
 	}
 }

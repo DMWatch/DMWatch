@@ -43,7 +43,6 @@ import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.ImageIcon;
-import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
@@ -61,7 +60,6 @@ import net.runelite.client.game.ItemManager;
 import net.runelite.client.game.SpriteManager;
 import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.DynamicGridLayout;
-import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.ui.components.materialtabs.MaterialTab;
 import net.runelite.client.ui.components.materialtabs.MaterialTabGroup;
 import net.runelite.client.util.AsyncBufferedImage;
@@ -74,8 +72,7 @@ public class PlayerPanel extends JPanel
 	private static final Color BACKGROUND_COLOR = ColorScheme.DARK_GRAY_COLOR;
 	private static final Color BACKGROUND_HOVER_COLOR = ColorScheme.DARKER_GRAY_COLOR;
 	private static final BufferedImage EXPAND_ICON = ImageUtil.loadImageResource(PlayerPanel.class, "expand.png");
-	private static final BufferedImage TWITCH_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "twitch.png");
-	private static final BufferedImage KICK_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "kick.png");
+
 	private final SpriteManager spriteManager;
 	private final ItemManager itemManager;
 	private final PlayerBanner banner;
@@ -84,6 +81,8 @@ public class PlayerPanel extends JPanel
 	private final DMWatchConfig config;
 	private final Map<Integer, Boolean> tabMap = new HashMap<>();
 	private PartyPlayer player;
+	private final DMWatchPlugin plugin;
+
 	@Setter
 	private boolean showInfo;
 
@@ -92,6 +91,7 @@ public class PlayerPanel extends JPanel
 	public PlayerPanel(final PartyPlayer selectedPlayer, final DMWatchConfig config,
 					   final SpriteManager spriteManager, final ItemManager itemManager, DMWatchPlugin plugin)
 	{
+		this.plugin = plugin;
 		this.player = selectedPlayer;
 		this.config = config;
 		this.spriteManager = spriteManager;
@@ -106,11 +106,8 @@ public class PlayerPanel extends JPanel
 		JPanel statsPanel = this.banner.getStatsPanel();
 		JLabel expandIcon = this.banner.getExpandIcon();
 
-
 		final ImageIcon expandIconUp = banner.getExpandIconUp();
-
 		final ImageIcon expandIconDown = banner.getExpandIconDown();
-
 
 		final JMenuItem copyOpt = new JMenuItem("Copy IDs");
 		copyOpt.addActionListener(e ->
@@ -143,11 +140,9 @@ public class PlayerPanel extends JPanel
 							if (showInfo)
 							{
 								expandIcon.setIcon(expandIconUp);
-								banner.hideAndShowIcon(false, showInfo);
 							}
 							else
 							{
-								banner.hideAndShowIcon(true, showInfo);
 								expandIcon.setIcon(expandIconDown);
 							}
 							updatePanel();
@@ -244,12 +239,16 @@ public class PlayerPanel extends JPanel
 
 		if (hasBreakingBannerChange)
 		{
-			banner.recreatePanel(showInfo);
+			banner.recreatePanel();
 		}
 
-		// TODO rename these methods to be way more clear/genericly recreate them
+		if (player.getStats() != null)
+		{
+			banner.refreshStats();
+		}
+
 		banner.setVenged(player.getIsVenged() == 1, spriteManager);
-		banner.setStreamerIcon(player.getStatus(), spriteManager);
+		banner.setStreamerIcon(player.getTier(), spriteManager);
 
 		if (!showInfo)
 		{
@@ -323,17 +322,12 @@ public class PlayerPanel extends JPanel
 		{
 			add(tabGroup);
 			add(view);
-		}
+			banner.getInfoPanel().setVisible(true);
 
-		if (!showInfo)
-		{
-			banner.getStatsPanel().setVisible(false);
-			banner.getInfoPanel().setVisible(false);
 		}
 		else
 		{
-			banner.getStatsPanel().setVisible(true);
-			banner.getInfoPanel().setVisible(!config.hideIDS());
+			banner.getInfoPanel().setVisible(false);
 		}
 
 		revalidate();

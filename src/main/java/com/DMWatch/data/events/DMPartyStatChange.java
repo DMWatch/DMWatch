@@ -25,80 +25,21 @@
 package com.DMWatch.data.events;
 
 import com.DMWatch.data.PartyPlayer;
-import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
+import lombok.Value;
+import net.runelite.api.Skill;
 
-// Used for updating stuff that is just a single integer value and doesn't fit into the other classes
-@Data
-@Slf4j
-public class DMPartyMiscChange implements PartyProcess
+@Value
+public class DMPartyStatChange implements PartyProcess
 {
-	PartyMisc t;
-	Integer v;
-	String s;
-
-	public DMPartyMiscChange(PartyMisc t, Integer v)
-	{
-		this.t = t;
-		this.v = v;
-		this.s = null;
-	}
-
-	public DMPartyMiscChange(PartyMisc t, String s)
-	{
-		this.t = t;
-		this.v = null;
-		this.s = s;
-	}
+	int s; // Skill ordinal
+	int l; // Level
+	int b; // Boosted Level
 
 	@Override
 	public void process(PartyPlayer p)
 	{
-		switch (t)
-		{
-			case LVL:
-			case P:
-				break;
-			case C:
-				p.getStats().setCombatLevel(v);
-				break;
-			case V:
-				p.setIsVenged(v);
-				break;
-			case W:
-				p.setWorld(v);
-				break;
-			case U:
-				p.setUsername(s);
-				break;
-			case TIER:
-				p.setTier(s);
-				break;
-			case HWID:
-				p.setHWID(s);
-				break;
-			case ACCOUNT_HASH:
-				p.setUserUnique(s);
-				break;
-			case REASON:
-				p.setReason(s);
-				break;
-			default:
-				log.warn("Unhandled misc change type for event: {}", this);
-		}
-	}
-
-	public enum PartyMisc
-	{
-		C, // Combat
-		V, // VENGED
-		W, // World
-		U, // Username
-		TIER, // Reason
-		HWID, // HWID
-		ACCOUNT_HASH, // ACCID
-		REASON, // REASON
-		LVL, // UNUSED
-		P // UNUSED
+		final Skill skill = Skill.values()[s];
+		p.getStats().getBaseLevels().put(skill, l);
+		p.getStats().getBoostedLevels().put(skill, b);
 	}
 }

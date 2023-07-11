@@ -9,8 +9,10 @@ import ch.qos.logback.core.rolling.RollingFileAppender;
 import ch.qos.logback.core.rolling.TimeBasedRollingPolicy;
 import com.DMWatch.data.GameItem;
 import com.DMWatch.data.PartyPlayer;
+import com.DMWatch.data.Stats;
 import com.DMWatch.data.events.DMPartyBatchedChange;
 import com.DMWatch.data.events.DMPartyMiscChange;
+import com.DMWatch.data.events.DMPartyStatChange;
 import com.DMWatch.ui.PlayerPanel;
 import com.google.common.collect.ImmutableList;
 import com.google.gson.Gson;
@@ -41,6 +43,7 @@ import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
+import net.runelite.api.Experience;
 import net.runelite.api.GameState;
 import net.runelite.api.InventoryID;
 import net.runelite.api.Item;
@@ -50,10 +53,10 @@ import net.runelite.api.MenuEntry;
 import net.runelite.api.Player;
 import net.runelite.api.ScriptEvent;
 import net.runelite.api.ScriptID;
+import net.runelite.api.Skill;
 import net.runelite.api.Varbits;
 import net.runelite.api.events.ClanMemberJoined;
 import net.runelite.api.events.ClientTick;
-import net.runelite.api.events.CommandExecuted;
 import net.runelite.api.events.FriendsChatMemberJoined;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
@@ -62,6 +65,7 @@ import net.runelite.api.events.MenuEntryAdded;
 import net.runelite.api.events.MenuOptionClicked;
 import net.runelite.api.events.PlayerSpawned;
 import net.runelite.api.events.ScriptPostFired;
+import net.runelite.api.events.StatChanged;
 import net.runelite.api.events.VarbitChanged;
 import net.runelite.api.widgets.JavaScriptCallback;
 import net.runelite.api.widgets.Widget;
@@ -136,7 +140,10 @@ public class DMWatchPlugin extends Plugin
 	Gson gson;
 
 	@Inject
-	CaseManager caseManager;
+	BannedCaseManager bannedCaseManager;
+
+	@Inject
+	RankedCaseManager rankedCaseManager;
 
 	@Inject
 	ClientThread clientThread;
@@ -214,9 +221,6 @@ public class DMWatchPlugin extends Plugin
 	@Getter
 	private boolean showClanRanks;
 
-	@Getter
-	@Setter
-	private String searchBarText;
 
 	@Provides
 	public DMWatchConfig provideConfig(ConfigManager configManager)
@@ -506,9 +510,12 @@ public class DMWatchPlugin extends Plugin
 	@Subscribe
 	public void onPlayerSpawned(PlayerSpawned playerSpawned)
 	{
-		if (!config.notifyOnNearby()) return;
+		if (!config.notifyOnNearby())
+		{
+			return;
+		}
 		String name = playerSpawned.getPlayer().getName();
-		alertPlayerWarning(name, false, AlertType.NEARBY);
+		alertPlayerWarning(name, AlertType.NEARBY);
 	}
 
 	@Subscribe
@@ -559,25 +566,37 @@ public class DMWatchPlugin extends Plugin
 	@Subscribe
 	public void onFriendsChatMemberJoined(FriendsChatMemberJoined event)
 	{
-		if (!config.notifyOnJoin()) return;
+		if (!config.notifyOnJoin())
+		{
+			return;
+		}
 
 		String rsn = Text.toJagexName(event.getMember().getName());
 		String local = client.getLocalPlayer().getName();
-		if (rsn.equals(local)) return;
+		if (rsn.equals(local))
+		{
+			return;
+		}
 
-		alertPlayerWarning(rsn, false, AlertType.FRIENDS_CHAT);
+		alertPlayerWarning(rsn, AlertType.FRIENDS_CHAT);
 	}
 
 	@Subscribe
 	public void onClanMemberJoined(ClanMemberJoined event)
 	{
-		if (!config.notifyOnJoin()) return;
+		if (!config.notifyOnJoin())
+		{
+			return;
+		}
 
 		String rsn = Text.toJagexName(event.getClanMember().getName());
 		String local = client.getLocalPlayer().getName();
-		if (rsn.equals(local)) return;
+		if (rsn.equals(local))
+		{
+			return;
+		}
 
-		alertPlayerWarning(rsn, false, AlertType.CLAN_CHAT);
+		alertPlayerWarning(rsn, AlertType.CLAN_CHAT);
 	}
 
 	@Subscribe
@@ -644,22 +663,6 @@ public class DMWatchPlugin extends Plugin
 		else
 		{
 			return theirName + myName;
-		}
-	}
-
-
-	@Subscribe
-	public void onCommandExecuted(CommandExecuted ce)
-	{
-		if (ce.getCommand().equals("fw"))
-		{
-			final String rsn = String.join(" ", ce.getArguments());
-			caseManager.get(rsn, (c) -> alertPlayerWarning(rsn, true, AlertType.NONE));
-		}
-
-		if (ce.getCommand().equals("updatefw"))
-		{
-			refreshList();
 		}
 	}
 
@@ -836,10 +839,14 @@ public class DMWatchPlugin extends Plugin
 			return;
 		}
 
-		if (myPlayer.getCombatLevel() != client.getLocalPlayer().getCombatLevel())
+		if (myPlayer.getStats() == null)
 		{
-			myPlayer.setCombatLevel(client.getLocalPlayer().getCombatLevel());
-			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.LVL, client.getLocalPlayer().getCombatLevel()));
+			myPlayer.updatePlayerInfo(client, itemManager);
+
+			for (final Skill s : Skill.values())
+			{
+				currentChange.getS().add(myPlayer.getStats().createDMPartyStatChangeForSkill(s));
+			}
 		}
 
 		if (client.getLocalPlayer() != null)
@@ -849,32 +856,6 @@ public class DMWatchPlugin extends Plugin
 				myPlayer.setUserUnique(getAccountID());
 				currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, myPlayer.getUserUnique()));
 			}
-		}
-
-		DMPartyMiscChange e2 = null;
-		DMPartyMiscChange e3 = null;
-		if (caseManager.getByHWID(getHWID()) != null)
-		{
-			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.TIER, caseManager.getByHWID(getHWID()).getStatus());
-			e3 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.getByHWID(getHWID()).getReason());
-		}
-		else if (caseManager.getByAccountHash(getAccountID()) != null)
-		{
-			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.TIER, caseManager.getByAccountHash(getAccountID()).getStatus());
-			e3 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.getByAccountHash(getAccountID()).getReason());
-		}
-		else if (caseManager.get(Text.toJagexName(client.getLocalPlayer().getName() == null ? "" : client.getLocalPlayer().getName())) != null)
-		{
-			e2 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.TIER, caseManager.get(client.getLocalPlayer().getName()).getStatus());
-			e3 = new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, caseManager.get(client.getLocalPlayer().getName()).getReason());
-		}
-
-		if (e2 != null && !myPlayer.getStatus().equals(e2.getS()))
-		{
-			myPlayer.setReason(e3.getS());
-			myPlayer.setStatus(e2.getS());
-			currentChange.getM().add(e2);
-			currentChange.getM().add(e3);
 		}
 
 		if (currentChange.isValid())
@@ -951,11 +932,6 @@ public class DMWatchPlugin extends Plugin
 			}
 		}
 
-		if (passphrase.equals("DMWatch"))
-		{
-			clientThread.invoke(() -> SwingUtilities.invokeLater(() -> panel.getSearchBar().setText("")));
-		}
-
 		partyService.changeParty(passphrase);
 		panel.updateParty();
 	}
@@ -987,6 +963,37 @@ public class DMWatchPlugin extends Plugin
 		{
 			myPlayer.setIsVenged(event.getValue());
 			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.V, event.getValue()));
+		}
+	}
+
+	@Subscribe
+	public void onStatChanged(final StatChanged event)
+	{
+		if (myPlayer == null || myPlayer.getStats() == null || !isInParty())
+		{
+			return;
+		}
+
+		// Always store the players "real" level using their virtual level so when they change the config the data still exists
+		final Skill s = event.getSkill();
+		if (myPlayer.getSkillBoostedLevel(s) == event.getBoostedLevel() &&
+			Experience.getLevelForXp(event.getXp()) == myPlayer.getSkillRealLevel(s))
+		{
+			return;
+		}
+
+		final int virtualLvl = Experience.getLevelForXp(event.getXp());
+
+		myPlayer.setSkillsBoostedLevel(event.getSkill(), event.getBoostedLevel());
+		myPlayer.setSkillsRealLevel(event.getSkill(), virtualLvl);
+		currentChange.getS().add(new DMPartyStatChange(event.getSkill().ordinal(), virtualLvl, event.getBoostedLevel()));
+
+		// Combat level change
+		final int oldCombatLevel = myPlayer.getStats().getCombatLevel();
+		myPlayer.getStats().recalculateCombatLevel();
+		if (myPlayer.getStats().getCombatLevel() != oldCombatLevel)
+		{
+			currentChange.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.C, myPlayer.getStats().getCombatLevel()));
 		}
 	}
 
@@ -1040,16 +1047,23 @@ public class DMWatchPlugin extends Plugin
 		c.setI(convertGameItemsToArray(myPlayer.getInventory()));
 		c.setE(convertGameItemsToArray(myPlayer.getEquipment()));
 
+		// Stats
+		if (myPlayer.getStats() != null)
+		{
+			for (final Skill s : Skill.values())
+			{
+				c.getS().add(myPlayer.getStats().createDMPartyStatChangeForSkill(s));
+			}
+
+			c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.C, myPlayer.getStats().getCombatLevel()));
+		}
+
 		// misc
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.V, myPlayer.getIsVenged()));
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.U, myPlayer.getUsername()));
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.W, myPlayer.getWorld()));
-		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.P, myPlayer.getPluginEnabled()));
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.HWID, getHWID()));
 		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.ACCOUNT_HASH, getAccountID()));
-		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.TIER, myPlayer.getStatus()));
-		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.REASON, myPlayer.getStatus()));
-		c.getM().add(new DMPartyMiscChange(DMPartyMiscChange.PartyMisc.LVL, myPlayer.getCombatLevel()));
 
 		c.setMemberId(partyService.getLocalMember().getMemberId()); // Add member ID before sending
 		c.removeDefaults();
@@ -1062,6 +1076,12 @@ public class DMWatchPlugin extends Plugin
 	{
 		// create new PartyPlayer for this member if they don't already exist
 		final PartyPlayer player = partyMembers.computeIfAbsent(e.getMemberId(), k -> new PartyPlayer(partyService.getMemberById(e.getMemberId())));
+
+		// Create placeholder stats object
+		if (player.getStats() == null && e.hasStatChange())
+		{
+			player.setStats(new Stats());
+		}
 
 		clientThread.invoke(() ->
 		{
@@ -1198,114 +1218,58 @@ public class DMWatchPlugin extends Plugin
 		return logger;
 	}
 
-	private void alertPlayerWarning(String rsn, boolean notifyClear, AlertType alertType)
+	private void alertPlayerWarning(String rsn, AlertType alertType)
 	{
-		if (caseManager.getListSize() == 0)
+		if (bannedCaseManager.getListSize() == 0)
 		{
 			return;
 		}
-		rsn = Text.toJagexName(rsn);
-		Case dmwCase = caseManager.get(rsn);
+		rsn = Text.toJagexName(rsn).toLowerCase();
+		if (!bannedCaseManager.inListByRsn(rsn))
+		{
+			return;
+		}
+		BannedPlayer dmwCase = bannedCaseManager.get(rsn);
+		if (dmwCase == null)
+		{
+			return;
+		}
 
 		ChatMessageBuilder response = new ChatMessageBuilder();
+
 		response.append(alertType.getMessage())
 			.append(ChatColorType.HIGHLIGHT)
 			.append(rsn)
 			.append(ChatColorType.NORMAL);
 
-		if (dmwCase == null && !notifyClear)
+		response.append(" is a scammer [")
+			.append(ChatColorType.HIGHLIGHT)
+			.append(dmwCase.getReason());
+		response.append(ChatColorType.NORMAL)
+			.append("].");
+
+		// name has been notified and -1 means only ever warn once.
+		if (nameNotifier.containsKey(rsn) && (config.notifyReminder() == -1))
 		{
-			// do nothing
+			return;
 		}
-		else if (dmwCase == null)
+
+		// notify on names and set the reminder delay
+		if (nameNotifier.containsKey(rsn) && Instant.now().isAfter(nameNotifier.get(rsn)))
 		{
-			response.append(" is not on DMWatch.");
+			chatMessageManager.queue(QueuedMessage.builder()
+				.type(ChatMessageType.CONSOLE)
+				.runeLiteFormattedMessage(response.build())
+				.build());
+			nameNotifier.put(rsn, Instant.now().plus(Duration.ofMinutes(config.notifyReminder())));
 		}
 		else
 		{
-			if (dmwCase.getStatus().equals("2"))
-			{
-				response.append(" is accused");
-			}
-			else if (dmwCase.getStatus().equals("3"))
-			{
-				response.append(" is a scammer [")
-					.append(ChatColorType.HIGHLIGHT)
-					.append(dmwCase.getReason());
-				response.append(ChatColorType.NORMAL)
-					.append("].");
-			}
-			else
-			{
-				if (notifyClear)
-				{
-					String message = " is a " + msg(dmwCase.getStatus()) +
-						((dmwCase.getReason() == null || dmwCase.getReason().isEmpty()) ? "" :
-							" with a note: '" + dmwCase.getReason() + "'");
-					response.append(ChatColorType.NORMAL).append(message);
-				}
-				else
-				{
-					return;
-				}
-			}
-
-			if (nameNotifier.containsKey(rsn))
-			{
-				if (config.notifyReminder() == -1)
-				{
-					return;
-				}
-				if (Instant.now().isAfter(nameNotifier.get(rsn)))
-				{
-					chatMessageManager.queue(QueuedMessage.builder()
-						.type(ChatMessageType.CONSOLE)
-						.runeLiteFormattedMessage(response.build())
-						.build());
-					nameNotifier.put(rsn, Instant.now().plus(Duration.ofMinutes(config.notifyReminder())));
-				}
-			}
-			else
-			{
-				chatMessageManager.queue(QueuedMessage.builder()
-					.type(ChatMessageType.CONSOLE)
-					.runeLiteFormattedMessage(response.build())
-					.build());
-
-				nameNotifier.put(rsn, Instant.now().plus(Duration.ofMinutes(config.notifyReminder())));
-			}
-		}
-	}
-
-	public String msg(String status)
-	{
-		switch (status)
-		{
-			case "0":
-				return "User";
-			case "1":
-				return "Smiley";
-			case "9":
-				return "Recruit";
-			case "10":
-				return "Corporal";
-			case "11":
-				return "Sergeant";
-			case "2":
-				return "Accused";
-			case "3":
-				return "Scammer";
-			case "4":
-				return "Lieutenant";
-			case "5":
-				return "Captain";
-			case "6":
-			case "7":
-				return "Streamer";
-			case "8":
-				return "General";
-			default:
-				return "Unknown";
+			chatMessageManager.queue(QueuedMessage.builder()
+				.type(ChatMessageType.CONSOLE)
+				.runeLiteFormattedMessage(response.build())
+				.build());
+			nameNotifier.put(rsn, Instant.now().plus(Duration.ofMinutes(config.notifyReminder())));
 		}
 	}
 
@@ -1360,60 +1324,6 @@ public class DMWatchPlugin extends Plugin
 				rid = partyMembers.get(memberID).getUserUnique();
 				rsn = partyMembers.get(memberID).getUsername();
 
-				Case c = caseManager.getByHWID(hwid);
-				int listSize = localScammers.size();
-				if (c != null)
-				{
-					if (c.getStatus().equals("3"))
-					{
-						if (!opponent.equalsIgnoreCase(c.getNiceRSN()))
-						{
-							localScammers.add(rsn);
-							if (listSize != localScammers.size())
-							{
-								ChatMessageBuilder response = new ChatMessageBuilder();
-								response.append("Challenged player is a scammer [")
-									.append(ChatColorType.HIGHLIGHT)
-									.append(rsn)
-									.append(ChatColorType.NORMAL)
-									.append("]");
-
-								chatMessageManager.queue(QueuedMessage.builder()
-									.type(ChatMessageType.CONSOLE)
-									.runeLiteFormattedMessage(response.build())
-									.build());
-							}
-						}
-					}
-				} else
-				{
-					c = caseManager.getByAccountHash(rid);
-					if (c != null)
-					{
-						if (c.getStatus().equals("3"))
-						{
-							if (!opponent.equalsIgnoreCase(c.getNiceRSN()))
-							{
-								localScammers.add(rsn);
-								if (listSize != localScammers.size())
-								{
-									ChatMessageBuilder response = new ChatMessageBuilder();
-									response.append("Challenged player is a scammer [")
-										.append(ChatColorType.HIGHLIGHT)
-										.append(rsn)
-										.append(ChatColorType.NORMAL)
-										.append("]");
-
-									chatMessageManager.queue(QueuedMessage.builder()
-										.type(ChatMessageType.CONSOLE)
-										.runeLiteFormattedMessage(response.build())
-										.build());
-								}
-							}
-						}
-					}
-				}
-
 				if (!uniqueIDs.contains(hwid + rid + rsn))
 				{
 					if (hwid.equals("unknown"))
@@ -1430,14 +1340,98 @@ public class DMWatchPlugin extends Plugin
 		}
 	}
 
-	public ConcurrentHashMap<String, HashSet<String>> getMappings()
+	@Schedule(
+		period = 5000,
+		unit = ChronoUnit.MILLIS
+	)
+	public void checkParty()
 	{
-		return caseManager.getMappings();
+		if (!isInParty())
+		{
+			return;
+		}
+		for (long memberID : partyMembers.keySet())
+		{
+			if (memberID == myPlayer.getMember().getMemberId())
+			{
+				continue;
+			}
+
+			if (partyMembers.get(memberID) != null)
+			{
+				String hwid, rid, rsn;
+				hwid = partyMembers.get(memberID).getHWID();
+				rid = partyMembers.get(memberID).getUserUnique();
+				rsn = partyMembers.get(memberID).getUsername();
+
+				BannedPlayer c1 = bannedCaseManager.getByHWID(hwid);
+
+				if (!alertPlayerBasedOnData(rsn, c1))
+				{
+					BannedPlayer c2 = bannedCaseManager.getByAccountHash(rid);
+					// alert on rid if hwid didn't send an alert
+					alertPlayerBasedOnData(rsn, c2);
+				}
+			}
+		}
+	}
+
+	private boolean alertPlayerBasedOnData(String rsn, BannedPlayer c)
+	{
+		if (c != null)
+		{
+			if (!opponent.equalsIgnoreCase(c.getNiceRSN()))
+			{
+				localScammers.add(rsn);
+				if (!opponent.equals(""))
+				{
+					ChatMessageBuilder response = new ChatMessageBuilder();
+					response.append("Challenged player is a scammer [")
+						.append(ChatColorType.HIGHLIGHT)
+						.append(rsn)
+						.append(ChatColorType.NORMAL)
+						.append("]");
+
+					chatMessageManager.queue(QueuedMessage.builder()
+						.type(ChatMessageType.CONSOLE)
+						.runeLiteFormattedMessage(response.build())
+						.build());
+
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	public ConcurrentHashMap<String, String> getRankedMappings()
+	{
+		return rankedCaseManager.getMappingsRSN();
+	}
+
+	public ConcurrentHashMap<String, String> getBannedMappings()
+	{
+		return bannedCaseManager.getMappingsRSN();
+	}
+
+	public boolean isScammerRSN(String rsn)
+	{
+		return bannedCaseManager.inListByRsn(rsn);
+	}
+
+	public boolean isScammerHWID(String hwid)
+	{
+		return bannedCaseManager.inListByHwid(hwid);
+	}
+
+	public boolean isScammerHash(String hash)
+	{
+		return bannedCaseManager.inListByHash(hash);
 	}
 
 	private void illiteratePlayerWidgets(Widget chatWidget)
 	{
-		if (chatWidget == null || chatWidget.getChildren() == null)
+		if (chatWidget == null || chatWidget.getChildren() == null || bannedCaseManager == null)
 		{
 			return;
 		}
@@ -1451,7 +1445,7 @@ public class DMWatchPlugin extends Plugin
 			{
 				continue;
 			}
-			if (caseManager.getMappings().get("3").contains(Text.toJagexName(memberName.toLowerCase())))
+			if (bannedCaseManager.getMappingsRSN().contains(Text.toJagexName(memberName.toLowerCase())))
 			{
 				listWidget.setTextColor(Color.RED.getRGB());
 			}
@@ -1462,11 +1456,10 @@ public class DMWatchPlugin extends Plugin
 		Optional<Plugin> playerIndicators = pluginManager.getPlugins().stream().filter(p -> p.getName().equals("Player Indicators")).findFirst();
 		if (playerIndicators.isPresent() && pluginManager.isPluginEnabled(playerIndicators.get()))
 		{
-			if (pluginManager.isPluginEnabled(playerIndicators.get())) {
+			if (pluginManager.isPluginEnabled(playerIndicators.get()))
+			{
 				PlayerIndicatorsConfig config1 = (PlayerIndicatorsConfig) pluginManager.getPluginConfigProxy(playerIndicators.get());
-				if (config1.showFriendsChatRanks()) {
-					return  true;
-				}
+				return config1.showFriendsChatRanks();
 			}
 		}
 
@@ -1477,11 +1470,10 @@ public class DMWatchPlugin extends Plugin
 		final Optional<Plugin> playerIndicators = pluginManager.getPlugins().stream().filter(p -> p.getName().equals("Player Indicators")).findFirst();
 		if (playerIndicators.isPresent() && pluginManager.isPluginEnabled(playerIndicators.get()))
 		{
-			if (pluginManager.isPluginEnabled(playerIndicators.get())) {
+			if (pluginManager.isPluginEnabled(playerIndicators.get()))
+			{
 				PlayerIndicatorsConfig config1 = (PlayerIndicatorsConfig) pluginManager.getPluginConfigProxy(playerIndicators.get());
-				if (config1.showClanChatRanks()) {
-					return  true;
-				}
+				return config1.showClanChatRanks();
 			}
 		}
 
@@ -1491,14 +1483,15 @@ public class DMWatchPlugin extends Plugin
 	private boolean shouldRemind()
 	{
 		if (lastNotify == null)
+		{
 			return true;
-		if (Instant.now().isAfter(lastNotify.plus(120, ChronoUnit.SECONDS)))
-			return true;
-		return false;
+		}
+		return Instant.now().isAfter(lastNotify.plus(120, ChronoUnit.SECONDS));
 	}
 
 	private void reset(boolean turningOn)
 	{
+		opponent = "";
 		ticksLoggedIn = 0;
 		DMWATCH_DIR.mkdirs();
 		uniqueIDs = new LinkedHashSet<>();
@@ -1515,9 +1508,6 @@ public class DMWatchPlugin extends Plugin
 		{
 			overlayManager.add(playerMemberTileTierOverlay);
 			overlayManager.add(partyMemberTierOverlay);
-
-			caseManager.refresh(this::colorAll);
-			lastSync = Instant.now();
 			lastLogout = Instant.now();
 
 			if (isInParty())
@@ -1554,7 +1544,6 @@ public class DMWatchPlugin extends Plugin
 
 	private enum AlertType
 	{
-		NONE(""),
 		FRIENDS_CHAT("Friends chat member, "),
 		CLAN_CHAT("Clan chat member, "),
 		NEARBY("Nearby player, ");
@@ -1603,7 +1592,6 @@ public class DMWatchPlugin extends Plugin
 		{
 			return;
 		}
-
 		if (lastLogout != null && lastLogout.isBefore(Instant.now().minus(10, ChronoUnit.MINUTES))
 			&& partyService.isInParty())
 		{
@@ -1615,16 +1603,20 @@ public class DMWatchPlugin extends Plugin
 	@Schedule(period = 1, unit = ChronoUnit.SECONDS)
 	public void refreshList()
 	{
-		if (client.getGameState() != GameState.LOGGED_IN) return;
-
-		// if using default end point, only update list every 2 minutes because github's list only updates every 5 minutes anyways
-		if (config.watchListEndpoint().isEmpty() && lastSync.plus(120, ChronoUnit.SECONDS).isAfter(Instant.now()))
+		if (client.getGameState() != GameState.LOGGED_IN)
+		{
 			return;
-		// if not using default end point, update at the user configured cycle
-		if (!config.watchListEndpoint().isEmpty() && lastSync.plus(config.syncLists(), ChronoUnit.SECONDS).isAfter(Instant.now()))
+		}
+		if (lastSync != null && lastSync.plus(config.syncLists(), ChronoUnit.SECONDS).isAfter(Instant.now()))
+		{
 			return;
-
-		caseManager.refresh(this::colorAll);
-		lastSync = Instant.now();
+		}
+		if (client.getLocalPlayer() != null && client.getLocalPlayer().getName() != null)
+		{
+			String rsn = client.getLocalPlayer().getName();
+			bannedCaseManager.refresh(this::colorAll, rsn);
+			rankedCaseManager.refresh(this::colorAll, rsn);
+			lastSync = Instant.now();
+		}
 	}
 }

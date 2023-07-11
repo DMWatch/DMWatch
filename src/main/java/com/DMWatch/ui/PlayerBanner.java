@@ -26,17 +26,15 @@ package com.DMWatch.ui;
 
 import com.DMWatch.DMWatchConfig;
 import com.DMWatch.DMWatchPlugin;
+import com.DMWatch.DMWatchUtil;
 import com.DMWatch.data.PartyPlayer;
 import com.google.common.base.Strings;
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.Map;
@@ -51,12 +49,12 @@ import javax.swing.border.MatteBorder;
 import lombok.Getter;
 import lombok.Setter;
 import net.runelite.api.Constants;
+import net.runelite.api.Skill;
 import net.runelite.api.SpriteID;
 import net.runelite.client.game.SpriteManager;
 import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.util.ImageUtil;
-import net.runelite.client.util.LinkBrowser;
 
 public class PlayerBanner extends JPanel
 {
@@ -72,21 +70,6 @@ public class PlayerBanner extends JPanel
 	private final Map<String, JLabel> iconLabels = new HashMap<>();
 	@Getter
 	private final JLabel expandIcon = new JLabel();
-	private final JLabel rankIcon = new JLabel();
-	private final JLabel worldLabel = new JLabel();
-	private final JLabel iconLabel = new JLabel();
-
-	private static final BufferedImage SMILEY = ImageUtil.loadImageResource(DMWatchPlugin.class, "smiley.png");
-	private static final BufferedImage RECRUIT = ImageUtil.loadImageResource(DMWatchPlugin.class, "recruit.png");
-	private static final BufferedImage CORPORAL = ImageUtil.loadImageResource(DMWatchPlugin.class, "corporal.png");
-	private static final BufferedImage SERGEANT = ImageUtil.loadImageResource(DMWatchPlugin.class, "sergeant.png");
-	private static final BufferedImage CAPTAIN = ImageUtil.loadImageResource(DMWatchPlugin.class, "captain.png");
-	private static final BufferedImage GENERAL = ImageUtil.loadImageResource(DMWatchPlugin.class, "general.png");
-	private static final BufferedImage LIEUTENANT = ImageUtil.loadImageResource(DMWatchPlugin.class, "lieutenant.png");
-	private static final BufferedImage TWITCH_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "twitch.png");
-	private static final BufferedImage KICK_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "kick.png");
-	private static final BufferedImage SCAMMER_ICON = ImageUtil.loadImageResource(DMWatchPlugin.class, "scammer.png");
-
 	@Getter
 	private final ImageIcon expandIconUp;
 	@Getter
@@ -98,9 +81,14 @@ public class PlayerBanner extends JPanel
 	@Setter
 	@Getter
 	private PartyPlayer player;
+
 	private boolean checkIcon;
-	DMWatchConfig config;
-	DMWatchPlugin plugin;
+	private final JLabel rankIcon = new JLabel();
+	private final JLabel worldLabel = new JLabel();
+	private final JLabel iconLabel = new JLabel();
+
+	private final DMWatchConfig config;
+	private final DMWatchPlugin plugin;
 
 	public PlayerBanner(final PartyPlayer player, boolean expanded, SpriteManager spriteManager, DMWatchConfig config, DMWatchPlugin plugin)
 	{
@@ -111,13 +99,13 @@ public class PlayerBanner extends JPanel
 		this.setLayout(new GridBagLayout());
 		this.setBorder(new EmptyBorder(5, 5, 0, 5));
 
-		statsPanel.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 50));
-		statsPanel.setLayout(new GridLayout(0, 2));
+		statsPanel.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 25));
+		statsPanel.setLayout(new GridLayout(0, 3));
 		statsPanel.setBorder(new EmptyBorder(5, 0, 0, 0));
 		statsPanel.setOpaque(true);
 
 		infoPanel.setPreferredSize(new Dimension(PluginPanel.PANEL_WIDTH - 14, 25));
-		infoPanel.setLayout(new GridLayout(2, 1));
+		infoPanel.setLayout(new GridLayout(0, 2));
 		infoPanel.setBorder(new EmptyBorder(5, 0, 0, 0));
 		infoPanel.setOpaque(true);
 
@@ -132,22 +120,21 @@ public class PlayerBanner extends JPanel
 			expandIcon.setIcon(expandIconDown);
 		}
 
-		statsPanel.add(createIconPanel(spriteManager, SpriteID.SPELL_VENGEANCE_OTHER, "IsVenged", player.getIsVenged() == 1 ? "Is Venged" : "Not Venged", "", false));
-		statsPanel.add(createIconPanel(spriteManager, SpriteID.PLAYER_KILLER_SKULL, "DMWatchStatus", msg(player.getStatus()), player.getReason(), true));
+		statsPanel.add(createIconPanel(spriteManager, SpriteID.SPELL_VENGEANCE_OTHER, "IsVenged", ""));
+		statsPanel.add(createIconPanel(spriteManager, SpriteID.SKILL_HITPOINTS, Skill.HITPOINTS.getName(), String.valueOf(player.getSkillBoostedLevel(Skill.HITPOINTS))));
+		statsPanel.add(createIconPanel(spriteManager, SpriteID.PLAYER_KILLER_SKULL, "Tier", player.getTier()));
 
 		final JLabel trustLabel = new JLabel("Trust this player:");
 		trustLabel.setToolTipText("If selected the inventory will show the players GP and/or Platinum tokens.");
 
-		statsPanel.add(trustLabel);
-		statsPanel.add(trustedPlayerButton);
+		infoPanel.add(trustLabel);
+		trustedPlayerButton.setSelected(config.trustAllPlayers());
+		infoPanel.add(trustedPlayerButton);
 
-		infoPanel.add(createTextPanel("pchash", "HWID: " + player.getHWID()));
-		infoPanel.add(createTextPanel("acchash", "RID: " + player.getUserUnique()));
-
-		recreatePanel(expanded);
+		recreatePanel();
 	}
 
-	public void recreatePanel(boolean expanded)
+	public void recreatePanel()
 	{
 		removeAll();
 
@@ -187,15 +174,18 @@ public class PlayerBanner extends JPanel
 		}
 		else
 		{
-			final String levelText = player.getCombatLevel() == -1 ? "" : " (level-" + player.getCombatLevel() + ")";
+			final String levelText = player.getStats() == null ? "" : " (level-" + player.getStats().getCombatLevel() + ")";
 			usernameLabel.setText(player.getUsername() + levelText);
-
+			String rsn = player.getUsername();
+			String hwid = player.getHWID();
+			String accid = player.getUserUnique();
+			String status = getStatusFromInfo(rsn, hwid, accid);
+			player.setTier(status);
 			if (config.recolorRSNonBanner())
 			{
-				Color color = getColorFromTier(player.getStatus());
-				if (color != null)
+				if (!player.getTier().equals("DMer"))
 				{
-					usernameLabel.setForeground(color);
+					usernameLabel.setForeground(DMWatchUtil.COLORHM.get(player.getTier()));
 				}
 			}
 		}
@@ -209,23 +199,6 @@ public class PlayerBanner extends JPanel
 		worldLabel.setText("Not logged in");
 
 		rankIcon.setAlignmentX(Component.RIGHT_ALIGNMENT);
-		BufferedImage img = getImageFromTier(player.getStatus());
-
-		if (!expanded)
-		{
-			if (img != null)
-			{
-				if (player.getStatus().equals("3") || player.getStatus().equals("6") || player.getStatus().equals("7"))
-				{
-					rankIcon.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
-				}
-				else
-				{
-					rankIcon.setIcon(new ImageIcon(img));
-				}
-				worldLabel.add(rankIcon, BorderLayout.WEST);
-			}
-		}
 
 		if (Strings.isNullOrEmpty(player.getUsername()))
 		{
@@ -250,7 +223,6 @@ public class PlayerBanner extends JPanel
 		c.gridx = 0;
 		c.gridwidth = 2;
 		add(infoPanel, c);
-
 		revalidate();
 		repaint();
 	}
@@ -272,9 +244,9 @@ public class PlayerBanner extends JPanel
 			}
 		}
 
-		statLabels.getOrDefault("IsVenged", new JLabel()).setText(player.getIsVenged() == 1 ? "Is Venged" : "Not Venged");
-		statLabels.getOrDefault("DMWatchStatus", new JLabel()).setText(msg(player.getStatus()));
-		statLabels.get("DMWatchStatus").setToolTipText(player.getReason());
+		statLabels.getOrDefault("Tier", new JLabel()).setText(player.getTier());
+		statLabels.getOrDefault(Skill.HITPOINTS.getName(), new JLabel()).setText(String.valueOf(player.getSkillBoostedLevel(Skill.HITPOINTS)));
+
 		iconLabels.getOrDefault("pchash", new JLabel()).setText("HWID: " + player.getHWID());
 		iconLabels.getOrDefault("acchash", new JLabel()).setText("RID: " + player.getUserUnique());
 
@@ -284,8 +256,7 @@ public class PlayerBanner extends JPanel
 		infoPanel.repaint();
 	}
 
-	private JPanel createIconPanel(final SpriteManager spriteManager, final int spriteID, final String name,
-								   final String value, String hoverOverText, boolean includeHoverText)
+	private JPanel createIconPanel(final SpriteManager spriteManager, final int spriteID, final String name, final String value)
 	{
 		final JLabel iconLabel = new JLabel();
 		iconLabel.setPreferredSize(STAT_ICON_SIZE);
@@ -302,11 +273,7 @@ public class PlayerBanner extends JPanel
 		panel.add(iconLabel, BorderLayout.WEST);
 		panel.add(textLabel, BorderLayout.CENTER);
 		panel.setOpaque(false);
-
-		if (includeHoverText && hoverOverText.length() != 1)
-		{
-			panel.setToolTipText(hoverOverText);
-		}
+		panel.setToolTipText(name);
 
 		return panel;
 	}
@@ -348,7 +315,18 @@ public class PlayerBanner extends JPanel
 	private void setBufferedIcon(String statLabelKey, final BufferedImage img)
 	{
 		final JLabel label = iconLabels.get(statLabelKey);
-		if (!player.getStatus().equals("6") && !player.getStatus().equals("7") && !player.getStatus().equals("3"))
+		if (player.getTier().equals("Scammer"))
+		{
+			SwingUtilities.invokeLater(() ->
+			{
+				ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
+				label.setIcon(ic);
+				label.revalidate();
+				label.repaint();
+			});
+			return;
+		}
+		else
 		{
 			SwingUtilities.invokeLater(() ->
 			{
@@ -358,94 +336,6 @@ public class PlayerBanner extends JPanel
 				label.repaint();
 			});
 			return;
-		}
-
-		if (player.getStatus().equals("3"))
-		{
-			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
-			label.setIcon(ic);
-		}
-
-		if (player.getStatus().equals("6"))
-		{
-			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
-			ImageIcon hoverIC = new ImageIcon(ImageUtil.alphaOffset(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height), 0.53f));
-
-			label.setIcon(ic);
-			if (player.getReason().length() != 1)
-			{
-				SwingUtilities.invokeLater(() ->
-				{
-					if (label.getMouseListeners().length == 0)
-					{
-						label.addMouseListener(new MouseAdapter()
-						{
-							@Override
-							public void mousePressed(MouseEvent e)
-							{
-								if (SwingUtilities.isLeftMouseButton(e))
-								{
-									LinkBrowser.browse("https://www.twitch.tv/" + player.getReason());
-								}
-							}
-
-							@Override
-							public void mouseEntered(MouseEvent e)
-							{
-								label.setIcon(hoverIC);
-							}
-
-							@Override
-							public void mouseExited(MouseEvent e)
-							{
-								label.setIcon(ic);
-							}
-						});
-						label.revalidate();
-					}
-				});
-			}
-		}
-
-		if (player.getStatus().equals("7"))
-		{
-			ImageIcon ic = new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height));
-			ImageIcon hoverIC = new ImageIcon(ImageUtil.alphaOffset(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height), 0.53f));
-			label.setIcon(ic);
-
-			if (player.getReason().length() != 1)
-			{
-				SwingUtilities.invokeLater(() ->
-				{
-					if (label.getMouseListeners().length == 0)
-					{
-						label.addMouseListener(new MouseAdapter()
-						{
-							@Override
-							public void mousePressed(MouseEvent e)
-							{
-								if (SwingUtilities.isLeftMouseButton(e))
-								{
-									LinkBrowser.browse("https://www.kick.com/" + player.getReason());
-								}
-							}
-
-							@Override
-							public void mouseEntered(MouseEvent e)
-							{
-								label.setIcon(hoverIC);
-							}
-
-							@Override
-							public void mouseExited(MouseEvent e)
-							{
-								label.setIcon(ic);
-							}
-						});
-						label.revalidate();
-					}
-				});
-			}
 		}
 	}
 
@@ -464,155 +354,19 @@ public class PlayerBanner extends JPanel
 		statsPanel.repaint();
 	}
 
-	// TODO make this more generic
 	public void setStreamerIcon(String rank, SpriteManager spriteManager)
 	{
-		BufferedImage img = getImageFromTier(rank);
+		BufferedImage img = DMWatchUtil.getRankedIconSidePanel(rank);
 		if (img != null)
 		{
-			setBufferedIcon("DMWatchStatus", img);
+			setBufferedIcon("Tier", img);
 		}
 		else
 		{
-			setSpriteIcon("DMWatchStatus", SpriteID.PLAYER_KILLER_SKULL, spriteManager);
+			setSpriteIcon("Tier", SpriteID.PLAYER_KILLER_SKULL, spriteManager);
 		}
 		statsPanel.revalidate();
 		statsPanel.repaint();
-	}
-
-	public void hideAndShowIcon(boolean isAdding, boolean isExpanded)
-	{
-		if (worldLabel.getComponents().length != 0)
-		{
-			worldLabel.remove(rankIcon);
-		}
-		if (isAdding && worldLabel.getComponents().length == 0 && !isExpanded)
-		{
-			BufferedImage img = getImageFromTier(player.getStatus());
-			if (img != null)
-			{
-				if (player.getStatus().equals("3") || player.getStatus().equals("6") || player.getStatus().equals("7"))
-				{
-					rankIcon.setIcon(new ImageIcon(ImageUtil.resizeImage(img, STAT_ICON_SIZE.width, STAT_ICON_SIZE.height)));
-				}
-				else
-				{
-					rankIcon.setIcon(new ImageIcon(img));
-				}
-				worldLabel.add(rankIcon, BorderLayout.WEST);
-			}
-
-		}
-		worldLabel.revalidate();
-		worldLabel.repaint();
-	}
-
-	private BufferedImage getImageFromTier(String status)
-	{
-		BufferedImage img;
-		switch (status)
-		{
-			case "1":
-				img = SMILEY;
-				break;
-			case "9":
-				img = RECRUIT;
-				break;
-			case "10":
-				img = SERGEANT;
-				break;
-			case "11":
-				img = CORPORAL;
-				break;
-			case "4":
-				img = LIEUTENANT;
-				break;
-			case "5":
-				img = CAPTAIN;
-				break;
-			case "8":
-				img = GENERAL;
-				break;
-			case "6":
-				img = TWITCH_ICON;
-				break;
-			case "7":
-				img = KICK_ICON;
-				break;
-			case "3":
-				img = SCAMMER_ICON;
-				break;
-			default:
-				img = null;
-		}
-		return img;
-	}
-
-	public String msg(String status)
-	{
-		switch (status)
-		{
-			case "0":
-				return "User";
-			case "1":
-				return "Smiley";
-			case "9":
-				return "Recruit";
-			case "10":
-				return "Corporal";
-			case "11":
-				return "Sergeant";
-			case "2":
-				return "Accused";
-			case "3":
-				return "Scammer";
-			case "4":
-				return "Lieutenant";
-			case "5":
-				return "Captain";
-			case "6":
-			case "7":
-				return "Streamer";
-			case "8":
-				return "General";
-			default:
-				return "Unknown";
-		}
-	}
-
-	private Color getColorFromTier(String status)
-	{
-		Color color;
-		switch (status)
-		{
-			case "1":
-				color = new Color(252, 242, 4);
-				break;
-			case "2":
-				color = Color.RED;
-				break;
-			case "3":
-				color = Color.RED;
-				break;
-			case "4":
-				color = new Color(188, 84, 4);
-				break;
-			case "5":
-				color = new Color(236, 236, 220);
-				break;
-			case "8":
-				color = new Color(244, 204, 64);
-				break;
-			case "6":
-				color = new Color(104, 68, 164);
-				break;
-			case "7":
-				color = new Color(84, 252, 28);
-				break;
-			default:
-				color = null;
-		}
-		return color;
 	}
 
 	public void updateWorld(int world)
@@ -629,5 +383,28 @@ public class PlayerBanner extends JPanel
 		{
 			worldLabel.setText("World " + world);
 		}
+	}
+
+	public String getStatusFromInfo(String rsn, String hwid, String hash)
+	{
+		if (plugin.getRankedMappings().contains(rsn))
+		{
+			return plugin.getRankedMappings().get(rsn);
+		}
+
+		if (plugin.isScammerRSN(rsn))
+		{
+			return "Scammer";
+		}
+		if (plugin.isScammerHWID(hwid))
+		{
+			return "Scammer";
+		}
+		if (plugin.isScammerHash(hash))
+		{
+			return "Scammer";
+		}
+
+		return "DMer";
 	}
 }

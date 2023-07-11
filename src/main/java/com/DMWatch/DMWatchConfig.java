@@ -1,6 +1,5 @@
 package com.DMWatch;
 
-import java.awt.Color;
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
@@ -128,13 +127,13 @@ public interface DMWatchConfig extends Config
 
 	@ConfigItem(
 		position = 10,
-		keyName = "hideIDS",
-		name = "Hide ID info",
-		description = "Hide the IDs on the Party Panel"
+		keyName = "trustAllPlayers",
+		name = "Trust players Always",
+		description = "Default to trusting players"
 	)
-	default boolean hideIDS()
+	default boolean trustAllPlayers()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -207,19 +206,6 @@ public interface DMWatchConfig extends Config
 	{
 		return true;
 	}
-
-	@ConfigItem(
-		position = 12,
-		keyName = "watchListEndpoint",
-		name = "Watch list end point",
-		description = "Minutes to notify on same player again, -1 to do it only once",
-		section = WATCHLIST_SECION
-	)
-	default String watchListEndpoint()
-	{
-		return "";
-	}
-
 	@Range(min = 5, max = 180)
 	@Units(Units.SECONDS)
 	@ConfigItem(

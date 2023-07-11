@@ -42,17 +42,20 @@ public class DMPartyBatchedChange extends PartyMemberMessage
 	int[] i; // Inventory
 	int[] e; // equipment
 	Collection<DMPartyMiscChange> m = new ArrayList<>(); // Misc Changes
+	Collection<DMPartyStatChange> s = new ArrayList<>(); // Stat Changes
 
 	public boolean isValid()
 	{
 		return i != null
 			|| e != null
+			|| (s != null && s.size() > 0)
 			|| (m != null && m.size() > 0);
 	}
 
 	// Unset unneeded variables to minimize payload
 	public void removeDefaults()
 	{
+		s = (s == null || s.size() == 0) ? null : s;
 		m = (m == null || m.size() == 0) ? null : m;
 	}
 
@@ -62,6 +65,11 @@ public class DMPartyBatchedChange extends PartyMemberMessage
 		{
 			final GameItem[] gameItems = GameItem.convertItemsToGameItems(i, itemManager);
 			player.setInventory(gameItems);
+		}
+
+		if (s != null)
+		{
+			s.forEach(change -> change.process(player));
 		}
 
 		if (e != null)
@@ -78,15 +86,21 @@ public class DMPartyBatchedChange extends PartyMemberMessage
 
 	public boolean hasBreakingBannerChange()
 	{
-		return m != null && m.size() > 0
-			&& m.stream()
-			.anyMatch(e -> e.getT() == DMPartyMiscChange.PartyMisc.V
+		return m != null && m.stream().anyMatch(e ->
+			e.getT() == DMPartyMiscChange.PartyMisc.V
 				|| e.getT() == DMPartyMiscChange.PartyMisc.W
-				|| e.getT() == DMPartyMiscChange.PartyMisc.LVL
+				|| e.getT() == DMPartyMiscChange.PartyMisc.C
 				|| e.getT() == DMPartyMiscChange.PartyMisc.HWID
 				|| e.getT() == DMPartyMiscChange.PartyMisc.ACCOUNT_HASH
-				|| e.getT() == DMPartyMiscChange.PartyMisc.TIER
 				|| e.getT() == DMPartyMiscChange.PartyMisc.REASON
-			);
+				|| e.getT() == DMPartyMiscChange.PartyMisc.TIER
+		);
+	}
+
+	public boolean hasStatChange()
+	{
+		return s != null && m.stream().anyMatch(e ->
+			e.getT() == DMPartyMiscChange.PartyMisc.C
+		);
 	}
 }
