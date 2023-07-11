@@ -217,6 +217,9 @@ public class DMWatchPlugin extends Plugin
 	private HashSet<String> localScammers;
 
 	@Getter
+	private HashSet<String> localRSNsAdded;
+
+	@Getter
 	private boolean showFriendRanks;
 	@Getter
 	private boolean showClanRanks;
@@ -1326,6 +1329,13 @@ public class DMWatchPlugin extends Plugin
 
 				if (!uniqueIDs.contains(hwid + rid + rsn))
 				{
+					if (localRSNsAdded.contains(rsn)) {
+						localScammers.add(rsn);
+					}
+					else
+					{
+						localRSNsAdded.add(rsn);
+					}
 					if (hwid.equals("unknown"))
 					{
 						dmwLogger.info("Unusual - hwid:{} hash:{} rsn:{}", hwid, rid, rsn);
@@ -1501,6 +1511,7 @@ public class DMWatchPlugin extends Plugin
 		showFriendRanks = showFriendsRanks();
 		showClanRanks = showClanRanks();
 		localScammers = new HashSet<>();
+		localRSNsAdded = new HashSet<>();
 		lastNotify = null;
 		addRemoveMenuOption();
 		renderOnSelf = config.drawOnSelf();
