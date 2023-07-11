@@ -9192,14 +9192,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "spencesuh",
-        "signup_date": "2023-05-09 08:35:53",
-        "account_hash": "unk",
-        "hardware_id": "unk",
-        "reason": "self excluded tag, not a scammer",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "zezima",
         "signup_date": "2023-05-09 09:31:14",
         "account_hash": "b1ab-d6fd-d715-3b8c",
@@ -13301,14 +13293,6 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "AGS DH Base Set | victim: sun up buddy",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "meeran",
-        "signup_date": "2023-05-28 08:10:50",
-        "account_hash": "8d34-3e6a-a29d-6335",
-        "hardware_id": "e0e6-298e-aaf8-a2ca",
-        "reason": "Self Excluded, not a scammer",
         "evidence_rating": "3"
     },
     {
