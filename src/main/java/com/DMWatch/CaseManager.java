@@ -34,7 +34,7 @@ import okhttp3.Response;
 @Singleton
 public class CaseManager
 {
-	private static final HttpUrl DMWatch_LIST_URL_DEFAULT = HttpUrl.parse("https://raw.githubusercontent.com/DMWatch/DMWatch/main/data/mixedlist.json");
+	private static final HttpUrl DMWatch_LIST_URL_DEFAULT = HttpUrl.parse("https://dm.watch/api/mixedlist.json");
 
 	private static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 	private static final Type typeToken = new TypeToken<List<Case>>()
@@ -72,17 +72,7 @@ public class CaseManager
 	 */
 	public void refresh(Runnable onComplete)
 	{
-		Request rwReq;
-
-		if (config.watchListEndpoint().endsWith("mixedlist.json") && config.watchListEndpoint().startsWith("https://"))
-		{
-			rwReq = new Request.Builder().url(config.watchListEndpoint()).build();
-		}
-		else
-		{
-			rwReq = new Request.Builder().url(DMWatch_LIST_URL_DEFAULT).build();
-		}
-
+		Request rwReq = new Request.Builder().url(DMWatch_LIST_URL_DEFAULT).build();
 
 		// call on background thread
 		client.newCall(rwReq).enqueue(new Callback()
