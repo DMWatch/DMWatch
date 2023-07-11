@@ -22488,6 +22488,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "you ziggy rs",
+        "signup_date": "2023-07-11 13:13:56",
+        "account_hash": "899f-b6fd-58cf-ac81",
+        "hardware_id": "f7c3-ce32-4282-e726",
+        "reason": "Claws+DH+Set - Victim: bf drilla",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
