@@ -208,19 +208,7 @@ public interface DMWatchConfig extends Config
 		return true;
 	}
 
-	@ConfigItem(
-		position = 12,
-		keyName = "watchListEndpoint",
-		name = "Watch list end point",
-		description = "Minutes to notify on same player again, -1 to do it only once",
-		section = WATCHLIST_SECION
-	)
-	default String watchListEndpoint()
-	{
-		return "";
-	}
-
-	@Range(min = 5, max = 180)
+	@Range(min = 15, max = 180)
 	@Units(Units.SECONDS)
 	@ConfigItem(
 		position = 13,

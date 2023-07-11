@@ -210,6 +210,9 @@ public class DMWatchPlugin extends Plugin
 	private HashSet<String> localScammers;
 
 	@Getter
+	private HashSet<String> localRSNsAdded;
+
+	@Getter
 	private boolean showFriendRanks;
 	@Getter
 	private boolean showClanRanks;
@@ -1416,6 +1419,14 @@ public class DMWatchPlugin extends Plugin
 
 				if (!uniqueIDs.contains(hwid + rid + rsn))
 				{
+					if (localRSNsAdded.contains(rsn)) {
+						localScammers.add(rsn);
+					}
+					else
+					{
+						localRSNsAdded.add(rsn);
+					}
+
 					if (hwid.equals("unknown"))
 					{
 						dmwLogger.info("Unusual - hwid:{} hash:{} rsn:{}", hwid, rid, rsn);
@@ -1508,6 +1519,7 @@ public class DMWatchPlugin extends Plugin
 		showFriendRanks = showFriendsRanks();
 		showClanRanks = showClanRanks();
 		localScammers = new HashSet<>();
+		localRSNsAdded = new HashSet<>();
 		lastNotify = null;
 		addRemoveMenuOption();
 		renderOnSelf = config.drawOnSelf();
@@ -1617,11 +1629,7 @@ public class DMWatchPlugin extends Plugin
 	{
 		if (client.getGameState() != GameState.LOGGED_IN) return;
 
-		// if using default end point, only update list every 2 minutes because github's list only updates every 5 minutes anyways
-		if (config.watchListEndpoint().isEmpty() && lastSync.plus(120, ChronoUnit.SECONDS).isAfter(Instant.now()))
-			return;
-		// if not using default end point, update at the user configured cycle
-		if (!config.watchListEndpoint().isEmpty() && lastSync.plus(config.syncLists(), ChronoUnit.SECONDS).isAfter(Instant.now()))
+		if (!lastSync.plus(config.syncLists(), ChronoUnit.SECONDS).isAfter(Instant.now()))
 			return;
 
 		caseManager.refresh(this::colorAll);
