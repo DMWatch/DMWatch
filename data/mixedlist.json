@@ -23366,5 +23366,13 @@
         "hardware_id": "3732-d653-77ef-198a",
         "reason": "vanc",
         "evidence_rating": "6"
+    },
+    {
+        "display_rsn": "lord breda",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "9a7f-21c6-5179-5d48",
+        "hardware_id": "86ae-b968-9259-8d7d",
+        "reason": "chuck",
+        "evidence_rating": "11"
     }
 ]
