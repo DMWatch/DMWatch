@@ -206,6 +206,20 @@ public interface DMWatchConfig extends Config
 	{
 		return true;
 	}
+
+	@ConfigItem(
+		position = 12,
+		keyName = "makePluginWork",
+		name = "Enable List",
+		description = "Enable Watchlist",
+		warning = "This will make a connection with the DMWatch list to pull live data, a website not controlled or maintained by Jagex or RuneLite",
+		section = WATCHLIST_SECION
+	)
+	default boolean makePluginWork()
+	{
+		return false;
+	}
+
 	@Range(min = 5, max = 180)
 	@Units(Units.SECONDS)
 	@ConfigItem(

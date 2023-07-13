@@ -1625,8 +1625,8 @@ public class DMWatchPlugin extends Plugin
 		if (client.getLocalPlayer() != null && client.getLocalPlayer().getName() != null)
 		{
 			String rsn = client.getLocalPlayer().getName();
-			bannedCaseManager.refresh(this::colorAll, rsn);
-			rankedCaseManager.refresh(this::colorAll, rsn);
+			bannedCaseManager.refresh(this::colorAll, rsn, config.makePluginWork());
+			rankedCaseManager.refresh(this::colorAll, rsn, config.makePluginWork());
 			lastSync = Instant.now();
 		}
 	}

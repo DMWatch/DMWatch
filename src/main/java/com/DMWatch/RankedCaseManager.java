@@ -66,8 +66,10 @@ public class RankedCaseManager
 	/**
 	 * @param onComplete called once the list has been refreshed. Called on the client thread
 	 */
-	public void refresh(Runnable onComplete, String rsn)
+	public void refresh(Runnable onComplete, String rsn, boolean pluginEnabled)
 	{
+		if (!pluginEnabled) return;
+
 		if (rsn == null || rsn.isEmpty())
 		{
 			log.debug("User is not logged in, not requesting list");
