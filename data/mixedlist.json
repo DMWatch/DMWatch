@@ -23080,6 +23080,14 @@
         "evidence_rating": "1"
     },
     {
+        "display_rsn": "REVCAVE TAXR",
+        "signup_date": "2023-07-12 21:41:15",
+        "account_hash": "x",
+        "hardware_id": "844a-ccdb-e071-8fa9",
+        "reason": "terriblepker",
+        "evidence_rating": "7"
+    },
+    {
         "display_rsn": "kkz",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "48bb-9dd5-4c24-fd10",
