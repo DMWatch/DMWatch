@@ -22840,7 +22840,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "k d m 4",
+        "display_rsn": "kick 0n",
         "signup_date": "2023-07-13 11:55:09",
         "account_hash": "34c1-0abb-9655-0715",
         "hardware_id": "a08b-a6c0-a554-aa82",
@@ -22885,6 +22885,14 @@
         "account_hash": "ba6f-c7e4-bee8-829b",
         "hardware_id": "402c-4dfe-172d-7c34",
         "reason": "claw dh scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "Claw2elder",
+        "signup_date": "2023-07-13 14:31:24",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Abuse | Serial Scammer",
         "evidence_rating": "3"
     },
     {
