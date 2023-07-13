@@ -22848,6 +22848,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "k d m 4",
+        "signup_date": "2023-07-13 11:55:09",
+        "account_hash": "34c1-0abb-9655-0715",
+        "hardware_id": "a08b-a6c0-a554-aa82",
+        "reason": "dh set scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
