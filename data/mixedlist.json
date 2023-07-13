@@ -23190,5 +23190,13 @@
         "hardware_id": "6593-c9b2-f8d5-c082",
         "reason": "240292546239004673",
         "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "711toquito",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "x",
+        "hardware_id": "3732-d653-77ef-198a",
+        "reason": "vanc",
+        "evidence_rating": "6"
     }
 ]
