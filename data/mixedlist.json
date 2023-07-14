@@ -22960,6 +22960,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "looprechaun",
+        "signup_date": "2023-07-14 07:56:04",
+        "account_hash": "b243-c31d-9a98-41cd",
+        "hardware_id": "a1c9-56f7-27d0-4650",
+        "reason": "AGS+DH+Set - Victim: rollin 60zz",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
