@@ -22872,6 +22872,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "not xer",
+        "signup_date": "2023-07-14 05:08:09",
+        "account_hash": "-",
+        "hardware_id": "-",
+        "reason": "tabbed for elder + set",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "Ducktoez",
         "signup_date": "2023-07-14 05:16:46",
         "account_hash": "e0a2-6240-95af-f689",
