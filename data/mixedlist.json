@@ -17281,14 +17281,6 @@
     },
     {
         "display_rsn": "zezima",
-        "signup_date": "2023-06-17 17:00:37",
-        "account_hash": "6bf4-49a2-568b-ccdd",
-        "hardware_id": "ef6f-8d0b-95ef-cfc6",
-        "reason": "ags dh base set - tabbed",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "zezima",
         "signup_date": "2023-06-17 17:01:49",
         "account_hash": "9854-cd6b-c95f-8be0",
         "hardware_id": "8e4f-97a5-01b1-855c",
