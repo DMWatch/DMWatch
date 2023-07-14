@@ -22880,6 +22880,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zeromemory",
+        "signup_date": "2023-07-13 22:15:08",
+        "account_hash": "0248-0d99-7c65-01da",
+        "hardware_id": "c5a3-2fc0-c180-7564",
+        "reason": "serial scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
