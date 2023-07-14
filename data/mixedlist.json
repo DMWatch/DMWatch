@@ -15112,7 +15112,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "3th d",
+        "display_rsn": "the 23th",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "c439-98e2-7ba4-a2e7",
         "hardware_id": "ffa9-bace-104e-d6ec",
@@ -17653,14 +17653,6 @@
         "account_hash": "8ac3-6180-e813-b840",
         "hardware_id": "6368-dc3d-ff89-8882",
         "reason": "Claws+DH+Set - Victim: closedurclan",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "dropsteppin",
-        "signup_date": "2023-06-19 04:46:28",
-        "account_hash": "null",
-        "hardware_id": "null",
-        "reason": "AGS+DH+Budget - Victim: s upernan",
         "evidence_rating": "3"
     },
     {
