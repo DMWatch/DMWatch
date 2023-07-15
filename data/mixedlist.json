@@ -22984,6 +22984,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "sourpatchkd",
+        "signup_date": "2023-07-14 17:44:15",
+        "account_hash": "c68d-4aba-dff4-297b",
+        "hardware_id": "cb47-dc58-402a-bd1a",
+        "reason": "DH+Set+1b - Victim: akhilla",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
