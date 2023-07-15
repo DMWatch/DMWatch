@@ -3080,7 +3080,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "reven op",
+        "display_rsn": "my sow",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "9dcf-109a-d808-08a1",
         "hardware_id": "f32f-948d-0250-3969",
@@ -23069,6 +23069,14 @@
         "account_hash": "937d-b113-dc1d-4b02",
         "hardware_id": "df59-c6a3-fe3f-3638",
         "reason": "claw dh scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "lebronnx",
+        "signup_date": "2023-07-15 14:37:57",
+        "account_hash": "103f-1b7c-7443-3779",
+        "hardware_id": "72b1-8c82-ced5-2f2e",
+        "reason": "claw elder 500m - imped gp",
         "evidence_rating": "3"
     },
     {
