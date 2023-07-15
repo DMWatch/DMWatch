@@ -22890,9 +22890,9 @@
     {
         "display_rsn": "sourpatchkd",
         "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "unk",
-        "hardware_id": "unk",
-        "reason": "Serial scammer",
+        "account_hash": "c68d-4aba-dff4-297b",
+        "hardware_id": "cb47-dc58-402a-bd1a",
+        "reason": "DH+Set+5b - Victim: Zoumok",
         "evidence_rating": "3"
     },
     {
