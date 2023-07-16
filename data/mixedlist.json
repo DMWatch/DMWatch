@@ -23264,6 +23264,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "staytumble",
+        "signup_date": "2023-07-16 10:53:04",
+        "account_hash": "1667-5f8e-8bb6-1238",
+        "hardware_id": "02c3-c6bf-4c49-1325",
+        "reason": "Claws+DH+Set - Victim: Ashlayy",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
