@@ -23296,6 +23296,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "s4d corp",
+        "signup_date": "2023-07-16 13:29:04",
+        "account_hash": "430b-9764-f657-d7a1",
+        "hardware_id": "f013-02f0-8311-c8ff",
+        "reason": "AGS+Torva+Set - Victim: yo_smalls",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
