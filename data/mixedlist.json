@@ -14512,14 +14512,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "keizer",
-        "signup_date": "2023-06-03 16:44:56",
-        "account_hash": "97d8-3430-ea5c-568f",
-        "hardware_id": "abd4-8b79-8dc2-c96f",
-        "reason": "DH+Set+2b - Victim: dh only",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "Namcitoa",
         "signup_date": "2023-06-03 18:37:09",
         "account_hash": "8d22-3bb9-23cd-40b9",
