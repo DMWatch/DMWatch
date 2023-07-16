@@ -23320,6 +23320,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "oovl",
+        "signup_date": "2023-07-16 14:21:44",
+        "account_hash": "4a89-ce5e-a25d-f932",
+        "hardware_id": "198e-a09e-b4e1-4a4b",
+        "reason": "DH+Set+200m - Victim: solobandit",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
