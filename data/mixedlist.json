@@ -23272,14 +23272,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "kaplan rs",
-        "signup_date": "2023-07-16 12:02:48",
-        "account_hash": "x",
-        "hardware_id": "x",
-        "reason": "Claws+DH+Set (x2) - Victim: max puffs",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
