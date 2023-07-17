@@ -23496,6 +23496,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "had 41B",
+        "signup_date": "2023-07-17 14:00:13",
+        "account_hash": "9a33-744b-015d-1a72",
+        "hardware_id": "cc75-8d64-fa29-6371",
+        "reason": "tabbed for ags+dh+budget",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
