@@ -23504,6 +23504,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "elz",
+        "signup_date": "2023-07-17 14:02:39",
+        "account_hash": "77fe-0d2a-39f8-d9d0",
+        "hardware_id": "938c-7605-7aa4-2da5",
+        "reason": "tabbed for dh set",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -23905,11 +23913,11 @@
     },
     {
         "display_rsn": "redrumze",
-        "signup_date": "2023-07-10 17:18:48",
+        "signup_date": "2023-07-17 14:02:28",
         "account_hash": "1",
         "hardware_id": "1",
         "reason": "1",
-        "evidence_rating": "8"
+        "evidence_rating": "7"
     },
     {
         "display_rsn": "wrist gold",
