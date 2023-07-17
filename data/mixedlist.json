@@ -10784,7 +10784,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "krosskilla",
+        "display_rsn": "blazin kross",
         "signup_date": "2023-05-16 11:42:01",
         "account_hash": "bac1-39eb-6cbe-32e5",
         "hardware_id": "290b-0fae-8a14-06b2",
@@ -23541,6 +23541,14 @@
         "account_hash": "-",
         "hardware_id": "-",
         "reason": "tabbed for dh budget set",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "0ver average",
+        "signup_date": "2023-07-17 16:19:49",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Claws+Elder+Inq+Set - Victim: ahooligann",
         "evidence_rating": "3"
     },
     {
