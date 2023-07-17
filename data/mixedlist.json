@@ -3080,7 +3080,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "rip dovik",
+        "display_rsn": "don ison",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "9dcf-109a-d808-08a1",
         "hardware_id": "f32f-948d-0250-3969",
@@ -23328,7 +23328,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "rip dovik",
+        "display_rsn": "don ison",
         "signup_date": "2023-07-16 14:47:16",
         "account_hash": "6467-3b8e-739c-bb00",
         "hardware_id": "9af0-2191-2ced-797d",
@@ -23461,6 +23461,14 @@
         "account_hash": "e1ec-3663-cbb5-86db",
         "hardware_id": "379b-f85e-a920-2ac4",
         "reason": "Claws+DH+Set - Victim: slurpees",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "sloppy gamer",
+        "signup_date": "2023-07-17 12:26:52",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Serial Scammer + Liar",
         "evidence_rating": "3"
     },
     {
