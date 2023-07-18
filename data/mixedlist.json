@@ -23848,6 +23848,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zestyguys",
+        "signup_date": "2023-07-18 16:50:59",
+        "account_hash": "d41c-62e5-d054-0d28",
+        "hardware_id": "0385-b5e3-f726-dd41",
+        "reason": "Claws+DH+Set - Victim: F5H",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
