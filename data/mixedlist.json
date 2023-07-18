@@ -23760,6 +23760,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zezima",
+        "signup_date": "2023-07-18 13:32:30",
+        "account_hash": "c090-4393-15c9-b90c",
+        "hardware_id": "e7bf-8a6c-7f68-7a98",
+        "reason": "Claws+DH+Set - Victim: disciplinai",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
