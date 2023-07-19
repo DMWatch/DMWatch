@@ -23996,7 +23996,15 @@
         "signup_date": "2023-07-19 14:03:23",
         "account_hash": "x",
         "hardware_id": "x",
-        "reason": "DH+Set - Victim: goofykeyz",
+        "reason": "Abuse | DH+Set - Victim: goofykeyz",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "suhbabi",
+        "signup_date": "2023-07-19 14:04:32",
+        "account_hash": "834e-8f7a-093a-20d6",
+        "hardware_id": "b073-4e99-7a1e-4815",
+        "reason": "228m scammer.",
         "evidence_rating": "3"
     },
     {
