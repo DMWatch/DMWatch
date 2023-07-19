@@ -23944,6 +23944,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "40iq",
+        "signup_date": "2023-07-19 00:28:16",
+        "account_hash": "ac14-46bd-81c6-065e",
+        "hardware_id": "40iqe498-250c-e872-9ab6",
+        "reason": "AGS+DH+Budget - Victim: panelcontrol",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
