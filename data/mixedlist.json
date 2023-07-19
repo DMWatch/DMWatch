@@ -24048,6 +24048,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "maxpain11",
+        "signup_date": "2023-07-19 16:20:05",
+        "account_hash": "2448-a7bb-c3bf-0abc",
+        "hardware_id": "1209-219b-3833-bcda",
+        "reason": "Claws+DH+Set - Victim: f5h",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
