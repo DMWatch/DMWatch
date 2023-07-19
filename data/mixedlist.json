@@ -23984,6 +23984,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "burning gs",
+        "signup_date": "2023-07-19 14:01:15",
+        "account_hash": "be80-4c9c-b182-32d0",
+        "hardware_id": "830a-2f84-a187-a9f4",
+        "reason": "Claws+DH+Set - Victim: hunik view",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
