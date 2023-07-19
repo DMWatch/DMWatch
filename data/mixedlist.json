@@ -23856,6 +23856,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "not xer",
+        "signup_date": "2023-07-18 17:03:11",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Claws+DH+Set+300m - Victim: buymycontent",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
