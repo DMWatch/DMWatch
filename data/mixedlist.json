@@ -23528,7 +23528,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "l by default",
+        "display_rsn": "free buck",
         "signup_date": "2023-07-17 17:10:36",
         "account_hash": "x",
         "hardware_id": "x",
@@ -24037,6 +24037,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Abuse | Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "coolman8000",
+        "signup_date": "2023-07-19 16:18:33",
+        "account_hash": "e4df-636b-dbc3-4746",
+        "hardware_id": "ea5f-dc4b-168f-08f0",
+        "reason": "AGS+DH+Set - Victim: FFSMain",
         "evidence_rating": "3"
     },
     {
