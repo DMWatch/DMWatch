@@ -23968,6 +23968,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zezima",
+        "signup_date": "2023-07-19 13:56:29",
+        "account_hash": "4302-2f84-e3b6-bc2f",
+        "hardware_id": "7320-f6a3-1e76-5a03",
+        "reason": "AGS+DH+Set - Victim: Marcialago90",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
