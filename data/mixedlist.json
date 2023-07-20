@@ -24104,6 +24104,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "0b right",
+        "signup_date": "2023-07-19 18:22:45",
+        "account_hash": "314e-6b5d-ad95-8a5b",
+        "hardware_id": "6511-bf94-0d11-5680",
+        "reason": "Claws+DH+Set - Victim: i cm11ke g",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
