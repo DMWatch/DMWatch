@@ -24096,6 +24096,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "WG CHRLS",
+        "signup_date": "2023-07-19 18:20:34",
+        "account_hash": "f1b8-c749-842f-5f8e",
+        "hardware_id": "29b4-771b-c5b9-ff91",
+        "reason": "DH+Set+500m - Victim: From Serbia",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
