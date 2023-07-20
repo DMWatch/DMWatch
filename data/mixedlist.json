@@ -24200,6 +24200,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "hkzr",
+        "signup_date": "2023-07-20 09:42:55",
+        "account_hash": "7acf-5569-8f24-c78a",
+        "hardware_id": "cba4-e96a-6fa6-98c9",
+        "reason": "1.4b - Victim: beyondcontrol",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
