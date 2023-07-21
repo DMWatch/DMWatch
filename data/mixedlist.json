@@ -24424,6 +24424,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "lethalsponge",
+        "signup_date": "2023-07-21 16:07:28",
+        "account_hash": "21e2-6d9f-eb6c-d748",
+        "hardware_id": "eac4-4905-639b-e859",
+        "reason": "dh set scam\/dq",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -24878,13 +24886,5 @@
         "hardware_id": "8718-288b-2611-0941",
         "reason": "doctor_love",
         "evidence_rating": "6"
-    },
-    {
-        "display_rsn": "pee dawg",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "",
-        "hardware_id": "",
-        "reason": "mrk k",
-        "evidence_rating": "10"
     }
 ]
