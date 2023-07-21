@@ -24056,7 +24056,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "maxsanta",
+        "display_rsn": "balli op",
         "signup_date": "2023-07-19 18:49:00",
         "account_hash": "x",
         "hardware_id": "x",
@@ -24325,6 +24325,14 @@
         "account_hash": "adc1-edda-6efc-5a9b",
         "hardware_id": "ec22-0df3-0de7-cf08",
         "reason": "retribution scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "lvl 99 str",
+        "signup_date": "2023-07-21 07:16:47",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "serial scammer",
         "evidence_rating": "3"
     },
     {
