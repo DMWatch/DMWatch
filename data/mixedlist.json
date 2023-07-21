@@ -24400,6 +24400,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "us20",
+        "signup_date": "2023-07-21 14:48:14",
+        "account_hash": "f5a0-1591-e7ec-3ee2",
+        "hardware_id": "c936-f136-5f2f-d431",
+        "reason": "250m scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
