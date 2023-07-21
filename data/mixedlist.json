@@ -24352,6 +24352,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "fire1k",
+        "signup_date": "2023-07-21 08:16:46",
+        "account_hash": "a08c-0d0f-ef56-0fb5",
+        "hardware_id": "69ac-3be9-19fc-9d5a",
+        "reason": "250m spoofer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
