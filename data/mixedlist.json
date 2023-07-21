@@ -24768,14 +24768,6 @@
         "evidence_rating": "10"
     },
     {
-        "display_rsn": "Amys A Guy",
-        "signup_date": "2023-07-07 11:19:38",
-        "account_hash": "2019-fd41-1bdf-c0b7",
-        "hardware_id": "9df6-e6ad-af59-0415",
-        "reason": "952291115661418606\r\nanomaly\r\n1 warning for advertising duel arena stakes",
-        "evidence_rating": "9"
-    },
-    {
         "display_rsn": "dearlola1",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "6a19-ffbd-67e2-f620",
@@ -24901,14 +24893,6 @@
         "account_hash": "",
         "hardware_id": "",
         "reason": "mrk",
-        "evidence_rating": "11"
-    },
-    {
-        "display_rsn": "Amy OFS",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "4a02-b3b1-fb0c-ce68",
-        "hardware_id": "030a-cc6d-725d-551b",
-        "reason": "amy",
         "evidence_rating": "11"
     }
 ]
