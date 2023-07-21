@@ -24320,6 +24320,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "yes sia",
+        "signup_date": "2023-07-21 07:15:23",
+        "account_hash": "adc1-edda-6efc-5a9b",
+        "hardware_id": "ec22-0df3-0de7-cf08",
+        "reason": "retribution scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
