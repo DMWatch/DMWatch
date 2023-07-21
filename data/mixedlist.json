@@ -24232,6 +24232,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "rag narock",
+        "signup_date": "2023-07-20 20:04:08",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "AGS+DH+Set - Victim: uptime3ok",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
