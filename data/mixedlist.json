@@ -24392,6 +24392,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "rinse me cap",
+        "signup_date": "2023-07-21 14:19:19",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
