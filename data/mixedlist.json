@@ -24448,6 +24448,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zezima",
+        "signup_date": "2023-07-22 00:44:15",
+        "account_hash": "878d-7beb-36b1-2f6b",
+        "hardware_id": "ada8-9ec2-3eae-ea1b",
+        "reason": "Claws+DH+Set - Victim: Blahhhhh JJ",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
