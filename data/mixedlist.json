@@ -15024,7 +15024,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "r0mana boy",
+        "display_rsn": "old spooon",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "c439-98e2-7ba4-a2e7",
         "hardware_id": "ffa9-bace-104e-d6ec",
@@ -23960,7 +23960,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "r0mana boy",
+        "display_rsn": "old spooon",
         "signup_date": "2023-07-19 17:18:13",
         "account_hash": "c439-98e2-7ba4-a2e7",
         "hardware_id": "ffa9-bace-104e-d6ec",
@@ -24677,6 +24677,14 @@
         "account_hash": "bcbe-3365-e6ac-95ea",
         "hardware_id": "2ab8-c138-c1f2-1ff6",
         "reason": "Claws+DH+Set - Victim: foppy is hot",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "weakdaggoe",
+        "signup_date": "2023-07-22 13:39:42",
+        "account_hash": "9780-9abf-05f8-ab20",
+        "hardware_id": "bfac-110c-36fb-2c0f",
+        "reason": "Claws+DH+Set - Victim: Morals",
         "evidence_rating": "3"
     },
     {
