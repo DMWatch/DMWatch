@@ -24432,6 +24432,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "IcyWrist",
+        "signup_date": "2023-07-22 00:37:03",
+        "account_hash": "289d-ff07-669d-7a23",
+        "hardware_id": "cb21-d229-4cea-b023",
+        "reason": "Claws+DH+Set - Victim: Money Train",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
