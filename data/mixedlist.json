@@ -24816,6 +24816,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "bigwins only",
+        "signup_date": "2023-07-22 16:52:01",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
