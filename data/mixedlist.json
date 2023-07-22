@@ -24776,6 +24776,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "88deadpool9",
+        "signup_date": "2023-07-22 15:45:17",
+        "account_hash": "424e-dbd0-4280-56b1",
+        "hardware_id": "d1fd-6269-27ad-cbcb",
+        "reason": "Claws+DH+Set (x2) - Victim: ceo i",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
