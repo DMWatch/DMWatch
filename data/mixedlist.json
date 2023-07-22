@@ -24784,6 +24784,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "kephri epstn",
+        "signup_date": "2023-07-22 15:52:45",
+        "account_hash": "3a34-3ea2-0f9a-2441",
+        "hardware_id": "118d-6c49-dfe2-9ada",
+        "reason": "Claws+DH+Set - Victim: ceo i",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
