@@ -24736,6 +24736,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "AEFDG",
+        "signup_date": "2023-07-22 14:59:48",
+        "account_hash": "02c1-e36a-e2c7-460e",
+        "hardware_id": "c59f-4234-f9e3-4059",
+        "reason": "Claws+DH+Set - Victim: stopdacape",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
