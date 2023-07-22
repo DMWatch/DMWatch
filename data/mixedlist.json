@@ -24432,7 +24432,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "oh yessss",
+        "display_rsn": "bringdaton",
         "signup_date": "2023-07-22 00:37:03",
         "account_hash": "289d-ff07-669d-7a23",
         "hardware_id": "cb21-d229-4cea-b023",
@@ -24453,6 +24453,14 @@
         "account_hash": "878d-7beb-36b1-2f6b",
         "hardware_id": "ada8-9ec2-3eae-ea1b",
         "reason": "Claws+DH+Set - Victim: Blahhhhh JJ",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "keepintrack",
+        "signup_date": "2023-07-22 01:10:48",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Claws+Elder+Bandos+Set - Victim: Max Xp Drop",
         "evidence_rating": "3"
     },
     {
