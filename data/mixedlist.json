@@ -24704,6 +24704,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "robin ds",
+        "signup_date": "2023-07-22 14:02:52",
+        "account_hash": "dc97-8524-2aec-9bc2",
+        "hardware_id": "c192-d83a-2533-72bd",
+        "reason": "Claws+DH+Set - Victim: foppy is hot",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
