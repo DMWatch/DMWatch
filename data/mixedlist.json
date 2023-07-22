@@ -24870,5 +24870,13 @@
         "hardware_id": "8718-288b-2611-0941",
         "reason": "doctor_love",
         "evidence_rating": "6"
+    },
+    {
+        "display_rsn": "redrumyliad",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "redrumyliad",
+        "hardware_id": "redrumyliad",
+        "reason": "redrumyliad",
+        "evidence_rating": "7"
     }
 ]
