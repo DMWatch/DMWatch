@@ -24976,7 +24976,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "besmile",
+        "display_rsn": "pk vos",
         "signup_date": "2023-07-23 11:10:51",
         "account_hash": "null",
         "hardware_id": "null",
@@ -25000,7 +25000,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "besmile",
+        "display_rsn": "pk vos",
         "signup_date": "2023-07-23 12:35:28",
         "account_hash": ".",
         "hardware_id": ".",
@@ -25037,6 +25037,14 @@
         "account_hash": "dffa-8123-f2cc-db24",
         "hardware_id": "77a0-14d2-699c-fa79",
         "reason": "Claws+DH+Set - Victim: Money Train",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "superspeccer",
+        "signup_date": "2023-07-23 13:20:27",
+        "account_hash": "9394-7752-a5eb-d0ee",
+        "hardware_id": "c37a-70e6-e793-4e4e",
+        "reason": "Serial scammer",
         "evidence_rating": "3"
     },
     {
@@ -25425,14 +25433,6 @@
     },
     {
         "display_rsn": "ripjoke",
-        "signup_date": "2023-06-09 13:33:37",
-        "account_hash": "1001-0024-6969-7331",
-        "hardware_id": "1337-6969-4200-1001",
-        "reason": "Serial Scammer",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "superspeccer",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
