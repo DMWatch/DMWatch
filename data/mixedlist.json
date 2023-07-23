@@ -25048,6 +25048,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "jugginoobi",
+        "signup_date": "2023-07-23 13:22:21",
+        "account_hash": "1b94-8cf7-c2d7-8f16",
+        "hardware_id": "c9c0-49ba-d094-961d",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "sheepsnslugs",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
@@ -25385,14 +25393,6 @@
     },
     {
         "display_rsn": "hantem",
-        "signup_date": "2023-06-09 13:33:37",
-        "account_hash": "1001-0024-6969-7331",
-        "hardware_id": "1337-6969-4200-1001",
-        "reason": "Serial Scammer",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "jugginoobi",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
