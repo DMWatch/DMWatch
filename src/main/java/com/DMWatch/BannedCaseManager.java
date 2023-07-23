@@ -1,16 +1,10 @@
 package com.DMWatch;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonDeserializer;
 import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -40,7 +34,6 @@ public class BannedCaseManager
 	// This list is the github-pages deployed copy of the live data, has a slight delay but better than regular github lists
 	private static final HttpUrl DMWatch_DEFAULT_BAN_LIST = HttpUrl.parse("https://dmwatch.github.io/dmwatchlist/bans.json");
 
-	private static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 	private static final Type typeToken = new TypeToken<List<BannedPlayer>>()
 	{
 	}.getType();
@@ -63,17 +56,7 @@ public class BannedCaseManager
 	{
 		this.client = client;
 		this.clientThread = clientThread;
-		this.gson = gson.newBuilder().registerTypeAdapter(Date.class, (JsonDeserializer<Date>) (json, typeOfT, context) -> {
-			try
-			{
-				// Allow handling of the occasional empty string as a date.
-				return df.parse(json.getAsString());
-			}
-			catch (ParseException e)
-			{
-				return Date.from(Instant.ofEpochSecond(0));
-			}
-		}).create();
+		this.gson = gson.newBuilder().create();
 	}
 
 	/**
