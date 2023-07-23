@@ -25472,7 +25472,15 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mmelta",
+        "display_rsn": "tarnels",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "bondge",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
@@ -25926,13 +25934,4 @@
         "hardware_id": "31c0-3512-0fb0-10a3",
         "reason": "bakingsodahtv",
         "evidence_rating": "6"
-    },
-    {
-        "display_rsn": "I Need 1M",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "1785-4e59-9fad-407d",
-        "hardware_id": "ed59-ffac-d279-3046",
-        "reason": "ineed_1m",
-        "evidence_rating": "6"
-    }
-]
+   
