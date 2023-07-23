@@ -24984,11 +24984,19 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "vos pk",
+        "display_rsn": "lomp ii",
         "signup_date": "2023-07-23 11:10:51",
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "serial scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "d34th m4tch",
+        "signup_date": "2023-07-23 11:21:45",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "dh scammer",
         "evidence_rating": "3"
     },
     {
