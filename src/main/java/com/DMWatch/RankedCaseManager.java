@@ -18,6 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import javax.inject.Inject;
 import javax.inject.Singleton;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.util.Text;
@@ -32,7 +33,11 @@ import okhttp3.Response;
 @Singleton
 public class RankedCaseManager
 {
-	private static final HttpUrl DMWatch_RANK_LIST = HttpUrl.parse("https://dmwatch.in/dev/ranks.json");
+	// This list is our live end point to pull ranks from
+	private static final HttpUrl DMWatch_FAST_RANK_LIST = HttpUrl.parse("https://dmwatch.in/dev/ranks.json");
+
+	// This list is the github-pages deployed copy of the live data, has a slight delay but better than regular github lists
+	private static final HttpUrl DMWatch_DEFAULT_RANK_LIST = HttpUrl.parse("https://dmwatch.github.io/dmwatchlist/ranks.json");
 
 	private static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 	private static final Type typeToken = new TypeToken<List<RankedPlayer>>()
@@ -40,10 +45,13 @@ public class RankedCaseManager
 	}.getType();
 
 	private final OkHttpClient client;
-	private final Queue<RankedPlayer> dmCases = new ConcurrentLinkedQueue<>();
-	private ConcurrentHashMap<String, String> mappingsRankedRSN = new ConcurrentHashMap<>();
 	private final ClientThread clientThread;
 	private final Gson gson;
+
+	private final Queue<RankedPlayer> dmCases = new ConcurrentLinkedQueue<>();
+
+	@Getter
+	private ConcurrentHashMap<String, String> mappingsRankedRSN = new ConcurrentHashMap<>();
 
 	@Inject
 	private RankedCaseManager(OkHttpClient client, ClientThread clientThread, Gson gson)
@@ -66,16 +74,15 @@ public class RankedCaseManager
 	/**
 	 * @param onComplete called once the list has been refreshed. Called on the client thread
 	 */
-	public void refresh(Runnable onComplete, String rsn, boolean pluginEnabled)
+	public void refresh(Runnable onComplete, boolean useLiveList)
 	{
-		if (!pluginEnabled) return;
+		Request rwReq;
 
-		if (rsn == null || rsn.isEmpty())
-		{
-			log.debug("User is not logged in, not requesting list");
-			return;
+		if (useLiveList) {
+			rwReq = new Request.Builder().url(DMWatch_FAST_RANK_LIST).addHeader("Cache-Control", "no-cache").build();
+		} else {
+			rwReq = new Request.Builder().url(DMWatch_DEFAULT_RANK_LIST).addHeader("Cache-Control", "no-cache").build();
 		}
-		Request rwReq = new Request.Builder().url(DMWatch_RANK_LIST).addHeader("rsn", rsn).build();
 		// call on background thread
 		client.newCall(rwReq).enqueue(new Callback()
 		{
@@ -98,15 +105,15 @@ public class RankedCaseManager
 					{
 						List<RankedPlayer> cases = gson.fromJson(new InputStreamReader(response.body().byteStream()), typeToken);
 						dmCases.clear();
-						ConcurrentHashMap<String, String> localMappings1 = new ConcurrentHashMap<>();
+						ConcurrentHashMap<String, String> localMappingsRanks = new ConcurrentHashMap<>();
 
 						for (RankedPlayer c : cases)
 						{
-							localMappings1.put(c.getNiceRSN(), c.getRank());
+							localMappingsRanks.put(c.getNiceRSN(), c.getRank());
 							dmCases.add(c);
 						}
 
-						mappingsRankedRSN = localMappings1;
+						mappingsRankedRSN = localMappingsRanks;
 						log.debug("saved {}/{} dm cases", dmCases.size(), cases.size());
 					}
 				}
@@ -135,6 +142,9 @@ public class RankedCaseManager
 			return null;
 		}
 		String cleanRsn = Text.removeTags(Text.toJagexName(rsn)).toLowerCase();
+
+		if (!mappingsRankedRSN.containsKey(cleanRsn)) return null;
+
 		Optional<RankedPlayer> foundCase = dmCases.stream().filter(c -> c.getNiceRSN().equals(cleanRsn)).findFirst();
 
 		if (foundCase.isPresent())
@@ -145,10 +155,5 @@ public class RankedCaseManager
 		{
 			return null;
 		}
-	}
-
-	public ConcurrentHashMap<String, String> getMappingsRSN()
-	{
-		return mappingsRankedRSN;
 	}
 }

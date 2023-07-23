@@ -114,10 +114,21 @@ public class PartyMemberTierOverlay extends Overlay
 			}
 
 			final int textHeight = graphics.getFontMetrics().getHeight() - graphics.getFontMetrics().getMaxDescent();
-			final Point imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 1, textLocation.getY() - textHeight / 2 - rankImage.getHeight() / 2);
+			Point imageLocation;
+			if (decorations.isFriendsChatMember())
+			{
+				imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 1, textLocation.getY() - textHeight / 2 - rankImage.getHeight() / 2);
+			} else {
+				imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 6, textLocation.getY() - textHeight / 2 - rankImage.getHeight() / 2);
+
+			}
 			OverlayUtil.renderImageLocation(graphics, imageLocation, rankImage);
 			// move text
-			textLocation = new Point(textLocation.getX() + imageTextMargin, textLocation.getY());
+			if (decorations.isFriendsChatMember()) {
+				textLocation = new Point(textLocation.getX() + imageTextMargin, textLocation.getY());
+			} else {
+				textLocation = new Point(textLocation.getX() - 5 + imageTextMargin, textLocation.getY());
+			}
 		}
 		else
 		{

@@ -55,6 +55,7 @@ import net.runelite.client.game.SpriteManager;
 import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.util.ImageUtil;
+import net.runelite.client.util.Text;
 
 public class PlayerBanner extends JPanel
 {
@@ -324,7 +325,6 @@ public class PlayerBanner extends JPanel
 				label.revalidate();
 				label.repaint();
 			});
-			return;
 		}
 		else
 		{
@@ -335,7 +335,6 @@ public class PlayerBanner extends JPanel
 				label.revalidate();
 				label.repaint();
 			});
-			return;
 		}
 	}
 
@@ -387,20 +386,13 @@ public class PlayerBanner extends JPanel
 
 	public String getStatusFromInfo(String rsn, String hwid, String hash)
 	{
-		if (plugin.getRankedMappings().contains(rsn))
+		String niceRSN = Text.toJagexName(rsn).toLowerCase();
+		if (plugin.getRankedMappings().containsKey(niceRSN))
 		{
-			return plugin.getRankedMappings().get(rsn);
+			return plugin.getRankedMappings().get(niceRSN);
 		}
 
-		if (plugin.isScammerRSN(rsn))
-		{
-			return "Scammer";
-		}
-		if (plugin.isScammerHWID(hwid))
-		{
-			return "Scammer";
-		}
-		if (plugin.isScammerHash(hash))
+		if (plugin.isScammerRSN(niceRSN) || plugin.isScammerHWID(hwid) || plugin.isScammerHash(hash))
 		{
 			return "Scammer";
 		}

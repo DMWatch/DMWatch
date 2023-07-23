@@ -19,6 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import javax.inject.Inject;
 import javax.inject.Singleton;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.util.Text;
@@ -33,7 +34,11 @@ import okhttp3.Response;
 @Singleton
 public class BannedCaseManager
 {
-	private static final HttpUrl DMWatch_BAN_LIST = HttpUrl.parse("https://dmwatch.in/dev/bans.json");
+	// This list is our live end point to pull bans from
+	private static final HttpUrl DMWatch_FAST_BAN_LIST = HttpUrl.parse("https://dmwatch.in/dev/bans.json");
+
+	// This list is the github-pages deployed copy of the live data, has a slight delay but better than regular github lists
+	private static final HttpUrl DMWatch_DEFAULT_BAN_LIST = HttpUrl.parse("https://dmwatch.github.io/dmwatchlist/bans.json");
 
 	private static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 	private static final Type typeToken = new TypeToken<List<BannedPlayer>>()
@@ -42,11 +47,16 @@ public class BannedCaseManager
 
 	private final OkHttpClient client;
 	private final Queue<BannedPlayer> dmCases = new ConcurrentLinkedQueue<>();
-	private ConcurrentHashMap<String, String> mappingsRSN = new ConcurrentHashMap<>();
-	private HashSet<String> hwidBans = new HashSet<>();
-	private HashSet<String> accidBans = new HashSet<>();
 	private final ClientThread clientThread;
 	private final Gson gson;
+
+	@Getter
+	private ConcurrentHashMap<String, String> mappingsRSN = new ConcurrentHashMap<>();
+	@Getter
+	private HashSet<String> hwidBans = new HashSet<>();
+	@Getter
+	private HashSet<String> accidBans = new HashSet<>();
+
 
 	@Inject
 	private BannedCaseManager(OkHttpClient client, ClientThread clientThread, Gson gson)
@@ -69,16 +79,15 @@ public class BannedCaseManager
 	/**
 	 * @param onComplete called once the list has been refreshed. Called on the client thread
 	 */
-	public void refresh(Runnable onComplete, String rsn, boolean pluginEnabled)
+	public void refresh(Runnable onComplete, boolean useLiveList)
 	{
-		if (!pluginEnabled) return;
+		Request rwReq;
 
-		if (rsn == null || rsn.isEmpty())
-		{
-			log.debug("User is not logged in, not requesting list");
-			return;
+		if (useLiveList) {
+			rwReq = new Request.Builder().url(DMWatch_FAST_BAN_LIST).addHeader("Cache-Control", "no-cache").build();
+		} else {
+			rwReq = new Request.Builder().url(DMWatch_DEFAULT_BAN_LIST).addHeader("Cache-Control", "no-cache").build();
 		}
-		Request rwReq = new Request.Builder().url(DMWatch_BAN_LIST).addHeader("rsn", rsn).build();
 
 		// call on background thread
 		client.newCall(rwReq).enqueue(new Callback()
@@ -173,6 +182,9 @@ public class BannedCaseManager
 		{
 			return null;
 		}
+
+		if (!accidBans.contains(hashID)) return null;
+
 		Optional<BannedPlayer> foundCase = dmCases.stream().filter(c -> c.getAccountHash().equals(hashID)).findFirst();
 
 		if (foundCase.isPresent())
@@ -191,6 +203,9 @@ public class BannedCaseManager
 		{
 			return null;
 		}
+
+		if (!hwidBans.contains(hwid)) return null;
+
 		Optional<BannedPlayer> foundCase1 = dmCases.stream().filter(c -> c.getAccountHash().equals(hwid)).findFirst();
 
 		if (foundCase1.isPresent())
@@ -213,41 +228,8 @@ public class BannedCaseManager
 		return getMappingsRSN().containsKey(cleanRsn);
 	}
 
-	public boolean inListByHash(String hashID)
-	{
-		if (hashID == null || dmCases.size() == 0)
-		{
-			return false;
-		}
-		return getAccidBans().contains(hashID);
-	}
-
-	public boolean inListByHwid(String hwid)
-	{
-		if (hwid == null || dmCases.size() == 0)
-		{
-			return false;
-		}
-		return getHwidBans().contains(hwid);
-	}
-
 	public int getListSize()
 	{
 		return dmCases.size();
-	}
-
-	public ConcurrentHashMap<String, String> getMappingsRSN()
-	{
-		return mappingsRSN;
-	}
-
-	public HashSet<String> getHwidBans()
-	{
-		return hwidBans;
-	}
-
-	public HashSet<String> getAccidBans()
-	{
-		return accidBans;
 	}
 }

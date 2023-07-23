@@ -441,6 +441,11 @@ public class DMWatchPlugin extends Plugin
 		{
 			colorAll();
 		}
+		if (event.getKey().equals("makeWatchListLive"))
+		{
+			lastSync = null;
+			refreshList();
+		}
 
 		if (event.getKey().equals("hideIDS"))
 		{
@@ -1351,7 +1356,7 @@ public class DMWatchPlugin extends Plugin
 	}
 
 	@Schedule(
-		period = 5000,
+		period = 3500,
 		unit = ChronoUnit.MILLIS
 	)
 	public void checkParty()
@@ -1374,49 +1379,65 @@ public class DMWatchPlugin extends Plugin
 				rid = partyMembers.get(memberID).getUserUnique();
 				rsn = partyMembers.get(memberID).getUsername();
 
-				BannedPlayer c1 = bannedCaseManager.getByHWID(hwid);
+				boolean redraw = false;
 
-				if (!alertPlayerBasedOnData(rsn, c1))
+				BannedPlayer cHWID = bannedCaseManager.getByHWID(hwid);
+				if (cHWID != null)
 				{
-					BannedPlayer c2 = bannedCaseManager.getByAccountHash(rid);
-					// alert on rid if hwid didn't send an alert
-					alertPlayerBasedOnData(rsn, c2);
+					redraw = true;
+					alertPlayerBasedOnData(rsn, cHWID);
+					partyMembers.get(memberID).setTier("Scammer");
+				}
+
+				BannedPlayer cHASH = bannedCaseManager.getByAccountHash(rid);
+				if (!redraw && cHASH != null)
+				{
+					redraw = true;
+					alertPlayerBasedOnData(rsn, cHASH);
+					partyMembers.get(memberID).setTier("Scammer");
+				}
+
+				if (redraw) {
+					SwingUtilities.invokeLater(() -> {
+						final PlayerPanel playerPanel = panel.getPlayerPanelMap().get(memberID);
+						if (playerPanel != null)
+						{
+							playerPanel.updatePlayerData(partyMembers.get(memberID), true);
+							return;
+						}
+
+						panel.drawPlayerPanel(partyMembers.get(memberID));
+					});
 				}
 			}
 		}
 	}
 
-	private boolean alertPlayerBasedOnData(String rsn, BannedPlayer c)
+	private void alertPlayerBasedOnData(String rsn, BannedPlayer c)
 	{
-		if (c != null)
+		if (!opponent.equalsIgnoreCase(c.getNiceRSN()))
 		{
-			if (!opponent.equalsIgnoreCase(c.getNiceRSN()))
+			localScammers.add(rsn);
+			if (!opponent.equals(""))
 			{
-				localScammers.add(rsn);
-				if (!opponent.equals(""))
-				{
-					ChatMessageBuilder response = new ChatMessageBuilder();
-					response.append("Challenged player is a scammer [")
-						.append(ChatColorType.HIGHLIGHT)
-						.append(rsn)
-						.append(ChatColorType.NORMAL)
-						.append("]");
+				ChatMessageBuilder response = new ChatMessageBuilder();
+				response.append("Challenged player is a scammer [")
+					.append(ChatColorType.HIGHLIGHT)
+					.append(rsn)
+					.append(ChatColorType.NORMAL)
+					.append("]");
 
-					chatMessageManager.queue(QueuedMessage.builder()
-						.type(ChatMessageType.CONSOLE)
-						.runeLiteFormattedMessage(response.build())
-						.build());
-
-					return true;
-				}
+				chatMessageManager.queue(QueuedMessage.builder()
+					.type(ChatMessageType.CONSOLE)
+					.runeLiteFormattedMessage(response.build())
+					.build());
 			}
 		}
-		return false;
 	}
 
 	public ConcurrentHashMap<String, String> getRankedMappings()
 	{
-		return rankedCaseManager.getMappingsRSN();
+		return rankedCaseManager.getMappingsRankedRSN();
 	}
 
 	public ConcurrentHashMap<String, String> getBannedMappings()
@@ -1426,17 +1447,18 @@ public class DMWatchPlugin extends Plugin
 
 	public boolean isScammerRSN(String rsn)
 	{
-		return bannedCaseManager.inListByRsn(rsn);
+		String cleanRSN = Text.toJagexName(rsn).toLowerCase();
+		return bannedCaseManager.getMappingsRSN().containsKey(cleanRSN);
 	}
 
 	public boolean isScammerHWID(String hwid)
 	{
-		return bannedCaseManager.inListByHwid(hwid);
+		return bannedCaseManager.getHwidBans().contains(hwid);
 	}
 
 	public boolean isScammerHash(String hash)
 	{
-		return bannedCaseManager.inListByHash(hash);
+		return bannedCaseManager.getAccidBans().contains(hash);
 	}
 
 	private void illiteratePlayerWidgets(Widget chatWidget)
@@ -1624,9 +1646,8 @@ public class DMWatchPlugin extends Plugin
 		}
 		if (client.getLocalPlayer() != null && client.getLocalPlayer().getName() != null)
 		{
-			String rsn = client.getLocalPlayer().getName();
-			bannedCaseManager.refresh(this::colorAll, rsn, config.makePluginWork());
-			rankedCaseManager.refresh(this::colorAll, rsn, config.makePluginWork());
+			bannedCaseManager.refresh(this::colorAll, config.makeWatchListLive());
+			rankedCaseManager.refresh(this::colorAll, config.makeWatchListLive());
 			lastSync = Instant.now();
 		}
 	}

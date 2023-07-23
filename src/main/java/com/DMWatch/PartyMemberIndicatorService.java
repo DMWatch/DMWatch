@@ -87,7 +87,7 @@ public class PartyMemberIndicatorService
 				clanTitle = getClanTitle(player);
 			}
 
-			return new Decorations(rank, clanTitle, color, dmwatchIcon);
+			return new Decorations(rank, clanTitle, color, dmwatchIcon, player.isFriendsChatMember());
 		}
 
 		if (plugin.isScammerRSN(rsn))
@@ -103,7 +103,7 @@ public class PartyMemberIndicatorService
 				clanTitle = getClanTitle(player);
 			}
 
-			return new Decorations(rank, clanTitle, color, dmwatchIcon);
+			return new Decorations(rank, clanTitle, color, dmwatchIcon, player.isFriendsChatMember());
 		}
 
 		ConcurrentHashMap<String, String> rankedMappings = plugin.getRankedMappings();
@@ -124,7 +124,7 @@ public class PartyMemberIndicatorService
 				clanTitle = getClanTitle(player);
 			}
 
-			return new Decorations(rank, clanTitle, color, dmwatchIcon);
+			return new Decorations(rank, clanTitle, color, dmwatchIcon, player.isFriendsChatMember());
 		}
 
 		return null;
@@ -137,6 +137,7 @@ public class PartyMemberIndicatorService
 		ClanTitle clanTitle;
 		Color color;
 		BufferedImage dmwatchIcon;
+		boolean isFriendsChatMember;
 	}
 
 	private ClanTitle getClanTitle(Player player)

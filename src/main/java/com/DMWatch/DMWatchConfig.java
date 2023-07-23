@@ -16,6 +16,13 @@ public interface DMWatchConfig extends Config
 	String PLAYER_TEXT_COLOR = "playerTextColor";
 
 	@ConfigSection(
+		name = "Side Panel Settings",
+		description = "All the options for Overlays behavior",
+		position = 1
+	)
+	String SIDEPANEL_SECTION = "Side Panel";
+
+	@ConfigSection(
 		name = "Overlay Stuff",
 		description = "All the options for Overlays behavior",
 		position = 30
@@ -107,7 +114,8 @@ public interface DMWatchConfig extends Config
 		position = 8,
 		keyName = "recolorRSNonBanner",
 		name = "Recolor RSN on Party Panel",
-		description = "Shows the color of a rank on the party panel"
+		description = "Shows the color of a rank on the party panel",
+		section = SIDEPANEL_SECTION
 	)
 	default boolean recolorRSNonBanner()
 	{
@@ -118,7 +126,8 @@ public interface DMWatchConfig extends Config
 		position = 9,
 		keyName = "showLogsButton",
 		name = "Show Logs button",
-		description = "Shows a logs button on side panel"
+		description = "Shows a logs button on side panel",
+		section = SIDEPANEL_SECTION
 	)
 	default boolean showLogsButton()
 	{
@@ -129,7 +138,8 @@ public interface DMWatchConfig extends Config
 		position = 10,
 		keyName = "trustAllPlayers",
 		name = "Trust players Always",
-		description = "Default to trusting players"
+		description = "Default to trusting players",
+		section = SIDEPANEL_SECTION
 	)
 	default boolean trustAllPlayers()
 	{
@@ -140,7 +150,8 @@ public interface DMWatchConfig extends Config
 		position = 11,
 		keyName = "hideMyWorld",
 		name = "Hide my world",
-		description = "Don't share world"
+		description = "Don't share world",
+		section = SIDEPANEL_SECTION
 	)
 	default boolean hideWorld()
 	{
@@ -151,7 +162,8 @@ public interface DMWatchConfig extends Config
 		position = 12,
 		keyName = "openNav",
 		name = "DMWatch side panel on challenge",
-		description = "Opens DMWatch side panel when a challenge is issued"
+		description = "Opens DMWatch side panel when a challenge is issued",
+		section = SIDEPANEL_SECTION
 	)
 	default boolean openDMWatchSidePanelOnChallenge()
 	{
@@ -209,18 +221,18 @@ public interface DMWatchConfig extends Config
 
 	@ConfigItem(
 		position = 12,
-		keyName = "makePluginWork",
-		name = "Enable List",
-		description = "Enable Watchlist",
+		keyName = "makeWatchListLive",
+		name = "Fast List",
+		description = "Fast Watchlist",
 		warning = "This will make a connection with the DMWatch list to pull live data, a website not controlled or maintained by Jagex or RuneLite",
 		section = WATCHLIST_SECION
 	)
-	default boolean makePluginWork()
+	default boolean makeWatchListLive()
 	{
 		return false;
 	}
 
-	@Range(min = 5, max = 180)
+	@Range(min = 5, max = 60)
 	@Units(Units.SECONDS)
 	@ConfigItem(
 		position = 13,
