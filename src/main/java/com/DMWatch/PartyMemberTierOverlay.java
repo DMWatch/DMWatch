@@ -118,15 +118,20 @@ public class PartyMemberTierOverlay extends Overlay
 			if (decorations.isFriendsChatMember())
 			{
 				imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 1, textLocation.getY() - textHeight / 2 - rankImage.getHeight() / 2);
-			} else {
+			}
+			else
+			{
 				imageLocation = new Point(textLocation.getX() - imageNegativeMargin - 6, textLocation.getY() - textHeight / 2 - rankImage.getHeight() / 2);
 
 			}
 			OverlayUtil.renderImageLocation(graphics, imageLocation, rankImage);
 			// move text
-			if (decorations.isFriendsChatMember()) {
+			if (decorations.isFriendsChatMember())
+			{
 				textLocation = new Point(textLocation.getX() + imageTextMargin, textLocation.getY());
-			} else {
+			}
+			else
+			{
 				textLocation = new Point(textLocation.getX() - 5 + imageTextMargin, textLocation.getY());
 			}
 		}

@@ -400,19 +400,25 @@ public class DMWatchPlugin extends Plugin
 	@Subscribe
 	public void onConfigChanged(ConfigChanged event)
 	{
-		if(event.getGroup().equals("runelite")) {
-			if (event.getKey().equals("playerindicatorsplugin")) {
-				if (event.getNewValue().equals("false")) {
+		if (event.getGroup().equals("runelite"))
+		{
+			if (event.getKey().equals("playerindicatorsplugin"))
+			{
+				if (event.getNewValue().equals("false"))
+				{
 					showClanRanks = false;
 					showFriendRanks = false;
-				} else {
+				}
+				else
+				{
 					showClanRanks = showClanRanks();
 					showFriendRanks = showFriendsRanks();
 				}
 			}
 		}
 
-		if (event.getGroup().equals("playerindicators")) {
+		if (event.getGroup().equals("playerindicators"))
+		{
 			showClanRanks = showClanRanks();
 			showFriendRanks = showFriendsRanks();
 		}
@@ -466,7 +472,9 @@ public class DMWatchPlugin extends Plugin
 		if (add)
 		{
 			menuManager.addPlayerMenuItem(CHALLENGE);
-		} else{
+		}
+		else
+		{
 			menuManager.removePlayerMenuItem(CHALLENGE);
 		}
 	}
@@ -529,7 +537,10 @@ public class DMWatchPlugin extends Plugin
 	@Subscribe
 	public void onMenuEntryAdded(MenuEntryAdded event)
 	{
-		if (!menuOptionEnabled) return;
+		if (!menuOptionEnabled)
+		{
+			return;
+		}
 
 		int groupId = WidgetInfo.TO_GROUP(event.getActionParam1());
 		String option = event.getOption();
@@ -764,7 +775,8 @@ public class DMWatchPlugin extends Plugin
 			return;
 		}
 		ticksLoggedIn++;
-		if (ticksLoggedIn == 5 && config.discordNotify() && shouldRemind()) {
+		if (ticksLoggedIn == 5 && config.discordNotify() && shouldRemind())
+		{
 			lastNotify = Instant.now();
 			ChatMessageBuilder response = new ChatMessageBuilder();
 			response.append(ChatColorType.NORMAL)
@@ -800,7 +812,7 @@ public class DMWatchPlugin extends Plugin
 		Widget chatWidget = client.getWidget(WidgetInfo.CHATBOX_MESSAGE_LINES);
 		if (chatWidget != null && config.discordNotify())
 		{
-			for (Widget w: chatWidget.getDynamicChildren())
+			for (Widget w : chatWidget.getDynamicChildren())
 			{
 				if (Text.removeTags(w.getText()).contains("Join DMWatch's discord by clicking here!")
 					|| Text.removeTags(w.getText()).contains("Or by clicking the discord icon in side panel!"))
@@ -812,7 +824,9 @@ public class DMWatchPlugin extends Plugin
 						w.setNoClickThrough(true);
 						w.revalidate();
 					});
-				} else {
+				}
+				else
+				{
 					clientThread.invokeLater(() -> {
 						w.setHasListener(false);
 						w.setNoClickThrough(false);
@@ -1334,7 +1348,8 @@ public class DMWatchPlugin extends Plugin
 
 				if (!uniqueIDs.contains(hwid + rid + rsn))
 				{
-					if (localRSNsAdded.contains(rsn)) {
+					if (localRSNsAdded.contains(rsn))
+					{
 						localScammers.add(rsn);
 					}
 					else
@@ -1397,7 +1412,8 @@ public class DMWatchPlugin extends Plugin
 					partyMembers.get(memberID).setTier("Scammer");
 				}
 
-				if (redraw) {
+				if (redraw)
+				{
 					SwingUtilities.invokeLater(() -> {
 						final PlayerPanel playerPanel = panel.getPlayerPanelMap().get(memberID);
 						if (playerPanel != null)
@@ -1484,7 +1500,8 @@ public class DMWatchPlugin extends Plugin
 		}
 	}
 
-	private boolean showFriendsRanks() {
+	private boolean showFriendsRanks()
+	{
 		Optional<Plugin> playerIndicators = pluginManager.getPlugins().stream().filter(p -> p.getName().equals("Player Indicators")).findFirst();
 		if (playerIndicators.isPresent() && pluginManager.isPluginEnabled(playerIndicators.get()))
 		{
@@ -1498,7 +1515,8 @@ public class DMWatchPlugin extends Plugin
 		return false;
 	}
 
-	private boolean showClanRanks() {
+	private boolean showClanRanks()
+	{
 		final Optional<Plugin> playerIndicators = pluginManager.getPlugins().stream().filter(p -> p.getName().equals("Player Indicators")).findFirst();
 		if (playerIndicators.isPresent() && pluginManager.isPluginEnabled(playerIndicators.get()))
 		{

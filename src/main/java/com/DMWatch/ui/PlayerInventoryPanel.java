@@ -71,7 +71,8 @@ public class PlayerInventoryPanel extends JPanel
 			if (i != null)
 			{
 				// Adds an empty box in place of GP and plat coins
-				if (!(trustedPlayer && !trustedJOptionPaneOpened) && (i.getId() == ItemID.COINS_995 || i.getId() == ItemID.PLATINUM_TOKEN)) {
+				if (!(trustedPlayer && !trustedJOptionPaneOpened) && (i.getId() == ItemID.COINS_995 || i.getId() == ItemID.PLATINUM_TOKEN))
+				{
 					add(label);
 					continue;
 				}

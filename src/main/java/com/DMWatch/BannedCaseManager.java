@@ -83,9 +83,12 @@ public class BannedCaseManager
 	{
 		Request rwReq;
 
-		if (useLiveList) {
+		if (useLiveList)
+		{
 			rwReq = new Request.Builder().url(DMWatch_FAST_BAN_LIST).addHeader("Cache-Control", "no-cache").build();
-		} else {
+		}
+		else
+		{
 			rwReq = new Request.Builder().url(DMWatch_DEFAULT_BAN_LIST).addHeader("Cache-Control", "no-cache").build();
 		}
 
@@ -183,7 +186,10 @@ public class BannedCaseManager
 			return null;
 		}
 
-		if (!accidBans.contains(hashID)) return null;
+		if (!accidBans.contains(hashID))
+		{
+			return null;
+		}
 
 		Optional<BannedPlayer> foundCase = dmCases.stream().filter(c -> c.getAccountHash().equals(hashID)).findFirst();
 
@@ -204,7 +210,10 @@ public class BannedCaseManager
 			return null;
 		}
 
-		if (!hwidBans.contains(hwid)) return null;
+		if (!hwidBans.contains(hwid))
+		{
+			return null;
+		}
 
 		Optional<BannedPlayer> foundCase1 = dmCases.stream().filter(c -> c.getAccountHash().equals(hwid)).findFirst();
 

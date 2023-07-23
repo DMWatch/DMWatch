@@ -78,9 +78,12 @@ public class RankedCaseManager
 	{
 		Request rwReq;
 
-		if (useLiveList) {
+		if (useLiveList)
+		{
 			rwReq = new Request.Builder().url(DMWatch_FAST_RANK_LIST).addHeader("Cache-Control", "no-cache").build();
-		} else {
+		}
+		else
+		{
 			rwReq = new Request.Builder().url(DMWatch_DEFAULT_RANK_LIST).addHeader("Cache-Control", "no-cache").build();
 		}
 		// call on background thread
@@ -143,7 +146,10 @@ public class RankedCaseManager
 		}
 		String cleanRsn = Text.removeTags(Text.toJagexName(rsn)).toLowerCase();
 
-		if (!mappingsRankedRSN.containsKey(cleanRsn)) return null;
+		if (!mappingsRankedRSN.containsKey(cleanRsn))
+		{
+			return null;
+		}
 
 		Optional<RankedPlayer> foundCase = dmCases.stream().filter(c -> c.getNiceRSN().equals(cleanRsn)).findFirst();
 

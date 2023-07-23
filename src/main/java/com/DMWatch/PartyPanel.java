@@ -150,7 +150,8 @@ class PartyPanel extends PluginPanel
 
 	private int orderByTier(String tier, int world)
 	{
-		if (world == 0) {
+		if (world == 0)
+		{
 			return 1000;
 		}
 		switch (tier)

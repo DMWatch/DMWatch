@@ -168,7 +168,8 @@ public class PlayerPanel extends JPanel
 
 		// Add event listener here as we want to update their inventory when the state changes and we cant access it from inside PlayerBanner
 		banner.getTrustedPlayerButton().addItemListener((i) -> {
-			if (i.getStateChange() != ItemEvent.SELECTED) {
+			if (i.getStateChange() != ItemEvent.SELECTED)
+			{
 				// Ensure we update inventory on deselects
 				inventoryPanel.updateInventory(player.getInventory(), banner.getTrustedPlayerButton().isSelected(), JOptionPaneOpened);
 				return;
@@ -182,7 +183,8 @@ public class PlayerPanel extends JPanel
 					"Trust player " + player.getUsername() + "?",
 					JOptionPane.YES_NO_OPTION);
 
-				if (confirm == JOptionPane.NO_OPTION || confirm == -1) {
+				if (confirm == JOptionPane.NO_OPTION || confirm == -1)
+				{
 					banner.getTrustedPlayerButton().setSelected(false);
 					return;
 				}
