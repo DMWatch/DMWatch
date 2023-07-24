@@ -208,6 +208,7 @@ public class DMWatchPlugin extends Plugin
 	private Instant lastSync;
 	private int ticksLoggedIn;
 	private boolean menuOptionEnabled;
+	@Getter
 	@Setter
 	private String opponent;
 	@Getter
@@ -648,7 +649,7 @@ public class DMWatchPlugin extends Plugin
 
 			if (target != null)
 			{
-				opponent = Text.toJagexName(target).toLowerCase();
+				setOpponent(Text.toJagexName(target).toLowerCase());
 				partyService.changeParty(getPrivateDM(target));
 				if (config.openDMWatchSidePanelOnChallenge())
 				{
@@ -967,7 +968,7 @@ public class DMWatchPlugin extends Plugin
 	{
 		if (isInParty())
 		{
-			opponent = "";
+			setOpponent("");
 			partyService.changeParty(null);
 			panel.updateParty();
 		}
@@ -1387,31 +1388,50 @@ public class DMWatchPlugin extends Plugin
 				continue;
 			}
 
-			if (partyMembers.get(memberID) != null)
+			if (partyMembers.get(memberID) != null && (!getOpponent().equals("")))
 			{
 				String hwid, rid, rsn;
 				hwid = partyMembers.get(memberID).getHWID();
 				rid = partyMembers.get(memberID).getUserUnique();
 				rsn = partyMembers.get(memberID).getUsername();
+				String cleanRSN = Text.toJagexName(rsn).toLowerCase();
 
 				boolean redraw = false;
 
-				BannedPlayer cHWID = bannedCaseManager.getByHWID(hwid);
-				if (cHWID != null)
+				// player's transmitted RSN is not equal to the one challenged
+				if (!getOpponent().equalsIgnoreCase(cleanRSN))
 				{
 					redraw = true;
-					alertPlayerBasedOnData(rsn, cHWID);
+					BannedPlayer bp = new BannedPlayer(cleanRSN, rid, hwid, hwid, "Serial Scammer");
+					alertPlayerBasedOnData(getOpponent(), bp);
 					partyMembers.get(memberID).setTier("Scammer");
 				}
 
-				BannedPlayer cHASH = bannedCaseManager.getByAccountHash(rid);
-				if (!redraw && cHASH != null)
+				// check the transmitted hwid to list of hwid of scammers
+				if (!redraw)
 				{
-					redraw = true;
-					alertPlayerBasedOnData(rsn, cHASH);
-					partyMembers.get(memberID).setTier("Scammer");
+					BannedPlayer cHWID = bannedCaseManager.getByHWID(hwid);
+					if (cHWID != null)
+					{
+						redraw = true;
+						alertPlayerBasedOnData(rsn, cHWID);
+						partyMembers.get(memberID).setTier("Scammer");
+					}
 				}
 
+				// check the transmitted rid to list of rid of scammers
+				if (!redraw)
+				{
+					BannedPlayer cHASH = bannedCaseManager.getByAccountHash(rid);
+					if (cHASH != null)
+					{
+						redraw = true;
+						alertPlayerBasedOnData(rsn, cHASH);
+						partyMembers.get(memberID).setTier("Scammer");
+					}
+				}
+
+				// draw scammer tier on people
 				if (redraw)
 				{
 					SwingUtilities.invokeLater(() -> {
@@ -1429,25 +1449,24 @@ public class DMWatchPlugin extends Plugin
 		}
 	}
 
+	// alert because the hwid/hash with the RSN does not match the opponent's rsn
 	private void alertPlayerBasedOnData(String rsn, BannedPlayer c)
 	{
-		if (!opponent.equalsIgnoreCase(c.getNiceRSN()))
+		if (!getOpponent().equalsIgnoreCase(c.getNiceRSN()))
 		{
 			localScammers.add(rsn);
-			if (!opponent.equals(""))
-			{
-				ChatMessageBuilder response = new ChatMessageBuilder();
-				response.append("Challenged player is a scammer [")
-					.append(ChatColorType.HIGHLIGHT)
-					.append(rsn)
-					.append(ChatColorType.NORMAL)
-					.append("]");
 
-				chatMessageManager.queue(QueuedMessage.builder()
-					.type(ChatMessageType.CONSOLE)
-					.runeLiteFormattedMessage(response.build())
-					.build());
-			}
+			ChatMessageBuilder response = new ChatMessageBuilder();
+			response.append("Challenged player is a scammer [")
+				.append(ChatColorType.HIGHLIGHT)
+				.append(rsn)
+				.append(ChatColorType.NORMAL)
+				.append("]");
+
+			chatMessageManager.queue(QueuedMessage.builder()
+				.type(ChatMessageType.CONSOLE)
+				.runeLiteFormattedMessage(response.build())
+				.build());
 		}
 	}
 
@@ -1541,7 +1560,7 @@ public class DMWatchPlugin extends Plugin
 
 	private void reset(boolean turningOn)
 	{
-		opponent = "";
+		setOpponent("");
 		ticksLoggedIn = 0;
 		DMWATCH_DIR.mkdirs();
 		uniqueIDs = new LinkedHashSet<>();

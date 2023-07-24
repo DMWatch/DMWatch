@@ -18,6 +18,9 @@ public class BannedPlayer
 	@SerializedName("hid")
 	private String hardwareID;
 
+	@SerializedName("uid")
+	private String hardwareID2;
+
 	@SerializedName("context")
 	private String reason;
 

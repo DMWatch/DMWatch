@@ -59,7 +59,6 @@ public class PartyMemberIndicatorService
 			return null;
 		}
 
-		ConcurrentHashMap<String, String> bannedMappings = plugin.getBannedMappings();
 		HashSet<String> localList = plugin.getLocalScammers();
 		if (player.getName() == null)
 		{
