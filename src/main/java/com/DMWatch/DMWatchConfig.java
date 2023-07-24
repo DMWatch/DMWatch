@@ -13,42 +13,44 @@ public interface DMWatchConfig extends Config
 	String CONFIG_GROUP = "DMWatch";
 	String PLAYER_OPTION = "playerOption";
 	String MENU_OPTION = "menuOption";
-	String PLAYER_TEXT_COLOR = "playerTextColor";
+	String LIVE_OPTION = "makeWatchListLive";
+	String DRAWSELF_OPTION = "drawOnSelf";
+	String DISCORD_NOTIFY = "discordNotify";
+
+	@ConfigSection(
+		name = "Watchlist",
+		description = "All the options for Watchlist behavior",
+		position = 10
+	)
+	String WATCHLIST_SECION = "Watch List Endpoint";
 
 	@ConfigSection(
 		name = "Side Panel Settings",
-		description = "All the options for Overlays behavior",
-		position = 1
+		description = "All the options for Side panel",
+		position = 20
 	)
 	String SIDEPANEL_SECTION = "Side Panel";
 
 	@ConfigSection(
-		name = "Overlay Stuff",
+		name = "Overlay Settings",
 		description = "All the options for Overlays behavior",
 		position = 30
 	)
 	String OVERLAY_SECTION = "Overlay";
 
 	@ConfigSection(
-		name = "Notifications",
-		description = "All the notification options",
+		name = "Notification Settings",
+		description = "All the options for notification behavior",
 		position = 70
 	)
 	String NOTIFICATIONS_SECTION = "Notifications";
 
 	@ConfigSection(
-		name = "Menu",
-		description = "All the options for menu behavior",
+		name = "Menu Settings",
+		description = "All the options for Menu behavior",
 		position = 80
 	)
 	String MENU_SECTION = "Menu";
-
-	@ConfigSection(
-		name = "Watchlist",
-		description = "All the Watchlist stuff",
-		position = 90
-	)
-	String WATCHLIST_SECION = "Watch List Endpoint";
 
 	@ConfigItem(
 		position = 3,
@@ -64,7 +66,7 @@ public interface DMWatchConfig extends Config
 
 	@ConfigItem(
 		position = 4,
-		keyName = "menuOption",
+		keyName = MENU_OPTION,
 		name = "Menu option",
 		description = "Show Challenge in DM option in menus",
 		section = MENU_SECTION
@@ -76,7 +78,7 @@ public interface DMWatchConfig extends Config
 
 	@ConfigItem(
 		position = 100,
-		keyName = "drawOnSelf",
+		keyName = DRAWSELF_OPTION,
 		name = "Draw own color",
 		description = "Show own color code",
 		section = OVERLAY_SECTION
@@ -221,7 +223,7 @@ public interface DMWatchConfig extends Config
 
 	@ConfigItem(
 		position = 12,
-		keyName = "makeWatchListLive",
+		keyName = LIVE_OPTION,
 		name = "Fast List",
 		description = "Fast Watchlist",
 		warning = "This will make a connection with the DMWatch list to pull live data, a website not controlled or maintained by Jagex or RuneLite",
@@ -243,6 +245,6 @@ public interface DMWatchConfig extends Config
 	)
 	default int syncLists()
 	{
-		return 30;
+		return 20;
 	}
 }

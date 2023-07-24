@@ -434,7 +434,7 @@ public class DMWatchPlugin extends Plugin
 			addRemoveMenuOption();
 		}
 
-		if (event.getKey().equals("drawOnSelf"))
+		if (event.getKey().equals(DMWatchConfig.DRAWSELF_OPTION))
 		{
 			renderOnSelf = config.drawOnSelf();
 		}
@@ -444,20 +444,17 @@ public class DMWatchPlugin extends Plugin
 			addRemovePlayerMenu();
 		}
 
-		else if (event.getKey().equals(DMWatchConfig.PLAYER_TEXT_COLOR))
-		{
-			colorAll();
-		}
-		if (event.getKey().equals("makeWatchListLive"))
+		if (event.getKey().equals(DMWatchConfig.LIVE_OPTION))
 		{
 			lastSync = null;
 			refreshList();
 		}
 
-		if (event.getKey().equals("hideIDS"))
+		if (event.getKey().equals(DMWatchConfig.DISCORD_NOTIFY) && event.getNewValue().equals("false"))
 		{
-			panel.renderSidebar();
+			removeClickableLinks();
 		}
+
 		if (event.getKey().equals("hideMyWorld"))
 		{
 			hideWorld();
@@ -465,6 +462,27 @@ public class DMWatchPlugin extends Plugin
 		if (event.getKey().equals("notifyReminder"))
 		{
 			nameNotifier.clear();
+		}
+	}
+
+	// remove the clickable link that the discord notification has
+	private void removeClickableLinks()
+	{
+		Widget chatWidget = client.getWidget(WidgetInfo.CHATBOX_MESSAGE_LINES);
+		if (chatWidget != null)
+		{
+			for (Widget w : chatWidget.getDynamicChildren())
+			{
+				if (Text.removeTags(w.getText()).contains("Join DMWatch's discord by clicking here!")
+					|| Text.removeTags(w.getText()).contains("Or by clicking the discord icon in side panel!"))
+				{
+					clientThread.invokeLater(() -> {
+						w.setHasListener(false);
+						w.setNoClickThrough(false);
+						w.revalidate();
+					});
+				}
+			}
 		}
 	}
 
