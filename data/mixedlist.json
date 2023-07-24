@@ -25288,6 +25288,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "observated",
+        "signup_date": "2023-07-24 06:26:22",
+        "account_hash": "e5e2-ae70-f6de-6e0f",
+        "hardware_id": "b6ed-2556-2666-0d0c",
+        "reason": "3b scammer VT",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "sheepsnslugs",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
