@@ -24976,14 +24976,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "zezima",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "345a-994f-ab80-ea60",
-        "hardware_id": "345a-994f-ab80-ea60",
-        "reason": "plugin dev testing",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "dr star",
         "signup_date": "2023-07-23 12:35:28",
         "account_hash": ".",
