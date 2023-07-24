@@ -25296,6 +25296,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "reven op",
+        "signup_date": "2023-07-24 08:45:05",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Claws+DH+Set - Victim: vero luqa",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "sheepsnslugs",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
