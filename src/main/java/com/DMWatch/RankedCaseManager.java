@@ -28,7 +28,7 @@ import okhttp3.Response;
 public class RankedCaseManager
 {
 	// This list is our live end point to pull ranks from
-	private static final HttpUrl DMWatch_FAST_RANK_LIST = HttpUrl.parse("https://dmwatch.in/dev/ranks.json");
+	private static final HttpUrl DMWatch_FAST_RANK_LIST = HttpUrl.parse("https://dm.watch/api/ranks.json");
 
 	// This list is the github-pages deployed copy of the live data, has a slight delay but better than regular github lists
 	private static final HttpUrl DMWatch_DEFAULT_RANK_LIST = HttpUrl.parse("https://dmwatch.github.io/dmwatchlist/ranks.json");

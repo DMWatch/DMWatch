@@ -29,7 +29,7 @@ import okhttp3.Response;
 public class BannedCaseManager
 {
 	// This list is our live end point to pull bans from
-	private static final HttpUrl DMWatch_FAST_BAN_LIST = HttpUrl.parse("https://dmwatch.in/dev/bans.json");
+	private static final HttpUrl DMWatch_FAST_BAN_LIST = HttpUrl.parse("https://dm.watch/api/bans.json");
 
 	// This list is the github-pages deployed copy of the live data, has a slight delay but better than regular github lists
 	private static final HttpUrl DMWatch_DEFAULT_BAN_LIST = HttpUrl.parse("https://dmwatch.github.io/dmwatchlist/bans.json");
