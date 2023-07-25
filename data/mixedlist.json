@@ -25504,6 +25504,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "55two",
+        "signup_date": "2023-07-25 11:33:45",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Claws+DH+Set+450m - Victim: jameshypebch",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "sheepsnslugs",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
