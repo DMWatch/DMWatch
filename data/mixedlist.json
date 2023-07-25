@@ -25512,6 +25512,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "zezima",
+        "signup_date": "2023-07-25 14:32:34",
+        "account_hash": "cbca-25f5-db11-7746",
+        "hardware_id": "9836-d124-c65b-81ad",
+        "reason": "Claws+DH+Set - Victim: drillerd65",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "sheepsnslugs",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
