@@ -25480,6 +25480,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "old gegs",
+        "signup_date": "2023-07-25 11:03:31",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "sheepsnslugs",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
