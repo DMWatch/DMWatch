@@ -20664,7 +20664,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pak yak xxl",
+        "display_rsn": "meinsand",
         "signup_date": "2023-07-05 17:12:50",
         "account_hash": "bc5c-f585-6965-e207",
         "hardware_id": "e4d8-8739-1faf-300c",
@@ -26033,6 +26033,14 @@
     },
     {
         "display_rsn": "happy2go",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "fapamy",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
