@@ -25536,6 +25536,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "tobylows",
+        "signup_date": "2023-07-25 12:00:02",
+        "account_hash": "4175-483f-b200-cba8",
+        "hardware_id": "b50a-9d5f-e5ce-a53e",
+        "reason": "Claws+Elder+Bandos+Set - Victim: d e a k e",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "sheepsnslugs",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
@@ -25977,14 +25985,6 @@
     },
     {
         "display_rsn": "tarnels",
-        "signup_date": "2023-06-09 13:33:37",
-        "account_hash": "1001-0024-6969-7331",
-        "hardware_id": "1337-6969-4200-1001",
-        "reason": "Serial Scammer",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "tobylows",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
