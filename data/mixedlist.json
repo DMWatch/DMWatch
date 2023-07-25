@@ -7784,7 +7784,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mackmin",
+        "display_rsn": "papi outside",
         "signup_date": "2023-05-04 04:52:50",
         "account_hash": "eadc-d4df-12dc-4e8d",
         "hardware_id": "8c62-852d-66ea-f78c",
@@ -9827,7 +9827,7 @@
         "display_rsn": "Calilum",
         "signup_date": "2023-05-12 07:13:58",
         "account_hash": "945c-05db-cf88-9099",
-             "hardware_id": "a77a-dd04-9751-2d22",
+        "hardware_id": "a77a-dd04-9751-2d22",
         "reason": "Voidwaker+Elder+Inq+Set - Victim: Glur",
         "evidence_rating": "3"
     },
@@ -26462,4 +26462,5 @@
         "hardware_id": "1",
         "reason": "p",
         "evidence_rating": "10"
-  
+    }
+]
