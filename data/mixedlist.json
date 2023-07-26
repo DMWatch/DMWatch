@@ -47030,5 +47030,13 @@
         "hardware_id": "30b8-39c9-eaaf-bcc0",
         "reason": "173098820572413953",
         "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "snapper",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "7e55-fdab-d835-3527",
+        "hardware_id": "dbff-5c33-06c3-5eeb",
+        "reason": "1107697855558320179",
+        "evidence_rating": "1"
     }
 ]
