@@ -47038,5 +47038,13 @@
         "hardware_id": "dbff-5c33-06c3-5eeb",
         "reason": "1107697855558320179",
         "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "soul gaze",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "a9f9-ec3f-4adc-4d31",
+        "hardware_id": "ebeb-328f-3e60-f030",
+        "reason": "444296858391674900",
+        "evidence_rating": "1"
     }
 ]
