@@ -24896,7 +24896,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pk vos",
+        "display_rsn": "idankit",
         "signup_date": "2023-07-23 11:10:51",
         "account_hash": "null",
         "hardware_id": "null",
@@ -24912,7 +24912,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pk vos",
+        "display_rsn": "idankit",
         "signup_date": "2023-07-23 12:35:28",
         "account_hash": ".",
         "hardware_id": ".",
@@ -25120,7 +25120,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pk vos",
+        "display_rsn": "idankit",
         "signup_date": "2023-07-23 20:07:31",
         "account_hash": "x",
         "hardware_id": "x",
@@ -25224,7 +25224,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pk vos",
+        "display_rsn": "idankit",
         "signup_date": "2023-07-24 08:45:05",
         "account_hash": "x",
         "hardware_id": "x",
@@ -25312,7 +25312,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pk vos",
+        "display_rsn": "idankit",
         "signup_date": "2023-07-24 15:48:22",
         "account_hash": "x",
         "hardware_id": "x",
@@ -25512,7 +25512,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "pk vos",
+        "display_rsn": "idankit",
         "signup_date": "2023-07-25 17:38:36",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -25581,6 +25581,14 @@
         "account_hash": "836b-56ad-4b2a-12bd",
         "hardware_id": "7c87-ab05-e2ea-f3f0",
         "reason": "vw Bandos Elder Scammer - venges",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "3 21",
+        "signup_date": "2023-07-26 09:18:28",
+        "account_hash": "8141-7b50-f3bb-6a95",
+        "hardware_id": "9e01-5336-5ee5-da0e",
+        "reason": "ags dh scammer",
         "evidence_rating": "3"
     },
     {
