@@ -25608,6 +25608,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "simpa",
+        "signup_date": "2023-07-26 12:35:29",
+        "account_hash": "3390-2398-1b93-cbac",
+        "hardware_id": "be0-c830-5d29-457e",
+        "reason": "ags dh scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
