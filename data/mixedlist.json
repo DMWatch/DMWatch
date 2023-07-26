@@ -25568,7 +25568,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Shit0s",
+        "display_rsn": "bi4d",
         "signup_date": "2023-07-26 08:00:10",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -38360,6 +38360,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "shit0s",
+        "signup_date": "2023-07-26 08:00:10",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "veng scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "sheepsnslugs",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
@@ -46337,6 +46345,14 @@
     },
     {
         "display_rsn": "burratas",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "shit0s",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
