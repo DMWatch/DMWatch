@@ -25552,7 +25552,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "mooties xx",
+        "display_rsn": "dm vos",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -38360,6 +38360,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "mooties xx",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "serial scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "shit0s",
         "signup_date": "2023-07-26 08:00:10",
         "account_hash": "unk",
@@ -38376,7 +38384,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "boabobs",
+        "display_rsn": "baobobs",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
@@ -46345,6 +46353,14 @@
     },
     {
         "display_rsn": "burratas",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "mooties xx",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
