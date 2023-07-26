@@ -25544,7 +25544,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "burratas",
+        "display_rsn": "faronas",
         "signup_date": "2023-07-26 06:58:06",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -38352,6 +38352,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "burratas",
+        "signup_date": "2023-07-26 06:58:06",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "scams then name changes",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "sheepsnslugs",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
@@ -46328,6 +46336,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "burratas",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "GBGShooter",
         "signup_date": "2023-05-06 22:26:06",
         "account_hash": "40c488e0-cfb1-43b2-9eaf-9955373ce87b",
@@ -46777,18 +46793,4 @@
     },
     {
         "display_rsn": "softcorest",
-        "signup_date": "2023-07-25 12:30:57",
-        "account_hash": "6db0-47a3-26bf-01e4",
-        "hardware_id": "4ff6-beef-58c7-28e9",
-        "reason": "602119769357025281\r\n1 warning for holding above rank",
-        "evidence_rating": "1"
-    },
-    {
-        "display_rsn": "zoxic",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "3b63-9832-4df7-e5a7",
-        "hardware_id": "30b8-39c9-eaaf-bcc0",
-        "reason": "173098820572413953",
-        "evidence_rating": "1"
-    }
-]
+        "signup_date": "
