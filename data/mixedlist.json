@@ -25648,6 +25648,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "0bzz",
+        "signup_date": "2023-07-26 16:27:06",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "DH + VW + Set - Venged - Victim: Dazle",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
@@ -38477,6 +38485,14 @@
         "account_hash": "x",
         "hardware_id": "x",
         "reason": "Claws+Elder+Set - Victim: DMT Kitty",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "cryinaloud",
+        "signup_date": "2023-07-26 16:27:06",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "DH + VW + Set - Venged - Victim: Dazle",
         "evidence_rating": "3"
     },
     {
