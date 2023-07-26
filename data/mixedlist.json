@@ -25200,14 +25200,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "boloatrix",
-        "signup_date": "2023-07-24 06:16:42",
-        "account_hash": "9394-7752-a5eb-d0ee",
-        "hardware_id": "c37a-70e6-e793-4e4e",
-        "reason": "serial scammer",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "off h3r",
         "signup_date": "2023-07-24 06:18:02",
         "account_hash": "null",
@@ -25533,6 +25525,14 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "serial scammer, imposter",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "demonslay44",
+        "signup_date": "2023-07-25 19:32:11",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Impostering",
         "evidence_rating": "3"
     },
     {
@@ -25977,6 +25977,14 @@
     },
     {
         "display_rsn": "minoz grey",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "boloatrix",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
