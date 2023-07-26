@@ -25592,6 +25592,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "sighxboi",
+        "signup_date": "2023-07-26 09:20:39",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "ags set scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
@@ -38381,6 +38389,14 @@
         "account_hash": "unk",
         "hardware_id": "unk",
         "reason": "veng scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "the realt0pg",
+        "signup_date": "2023-07-26 09:20:39",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "ags set scammer",
         "evidence_rating": "3"
     },
     {
