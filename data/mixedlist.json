@@ -25752,6 +25752,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "bamfguy",
+        "signup_date": "2023-07-27 05:42:07",
+        "account_hash": "d4d0-c4b2-8249-5e2d",
+        "hardware_id": "9b93-105a-5fe5-8a09",
+        "reason": "Claws+DH+Set - Victim: dmt kitty",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
