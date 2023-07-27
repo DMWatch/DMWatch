@@ -24800,7 +24800,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "turkish nher",
+        "display_rsn": "tobylows",
         "signup_date": "2023-07-23 07:24:02",
         "account_hash": "null",
         "hardware_id": "null",
@@ -38197,6 +38197,14 @@
         "account_hash": "x",
         "hardware_id": "x",
         "reason": "Abuse | Imp Box for 316mm",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "turkish nher",
+        "signup_date": "2023-07-23 07:24:02",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "voidwaker set scam",
         "evidence_rating": "3"
     },
     {
