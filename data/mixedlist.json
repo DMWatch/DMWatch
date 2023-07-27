@@ -2856,7 +2856,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "rhaenyra t",
+        "display_rsn": "duke suc",
         "signup_date": "2023-04-20 19:32:05",
         "account_hash": "8d60-77ef-5815-1b62",
         "hardware_id": "67b9-8bfd-3e0e-b893",
@@ -27656,6 +27656,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "rhaenyra t",
+        "signup_date": "2023-04-20 19:32:05",
+        "account_hash": "8d60-77ef-5815-1b62",
+        "hardware_id": "67b9-8bfd-3e0e-b893",
+        "reason": "Claw+DH+Set - Victim: Lick Time",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "ttaf",
         "signup_date": "2023-04-20 23:09:16",
         "account_hash": "2112-67d2-83c3-6f65",
@@ -40937,6 +40945,14 @@
     },
     {
         "display_rsn": "LeInsomnia",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "rhaenyra t",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
