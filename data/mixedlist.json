@@ -25778,8 +25778,8 @@
     {
         "display_rsn": "bilaa",
         "signup_date": "2023-07-27 06:33:59",
-        "account_hash": "x",
-        "hardware_id": "x",
+        "account_hash": "xxx",
+        "hardware_id": "xxx",
         "reason": "Abuse | Claws+DH+Set+350m - Victim: m0stert",
         "evidence_rating": "3"
     },
@@ -38666,8 +38666,8 @@
     {
         "display_rsn": "4realls",
         "signup_date": "2023-07-27 06:33:59",
-        "account_hash": "x",
-        "hardware_id": "x",
+        "account_hash": "xxx",
+        "hardware_id": "xxx",
         "reason": "Abuse | Claws+DH+Set+350m - Victim: m0stert",
         "evidence_rating": "3"
     },
