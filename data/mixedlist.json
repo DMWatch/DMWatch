@@ -25784,6 +25784,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "leonaddi",
+        "signup_date": "2023-07-27 05:55:45",
+        "account_hash": "e4d7-17cd-289a-c997",
+        "hardware_id": "631d-9850-ddc7-f703",
+        "reason": "AGS+DH+Set - Victim: IVIunchies",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
