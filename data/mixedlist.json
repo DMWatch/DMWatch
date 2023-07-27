@@ -25776,6 +25776,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "baba flex",
+        "signup_date": "2023-07-27 06:33:59",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Abuse | Claws+DH+Set+350m - Victim: m0stert",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
@@ -38653,6 +38661,14 @@
         "account_hash": "x",
         "hardware_id": "x",
         "reason": "Abuse | DH+Claws+Set+390m - Victim: substroniics",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "4realls",
+        "signup_date": "2023-07-27 06:33:59",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Abuse | Claws+DH+Set+350m - Victim: m0stert",
         "evidence_rating": "3"
     },
     {
