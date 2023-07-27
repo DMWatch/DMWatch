@@ -25744,6 +25744,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "BG Slow Buck",
+        "signup_date": "2023-07-27 05:41:08",
+        "account_hash": "582f-47c9-938c-9533",
+        "hardware_id": "6817-f415-c352-e010",
+        "reason": "Claws+DH+Set - Victim: dmt kitty",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
