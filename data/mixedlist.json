@@ -25832,6 +25832,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "Vinicz",
+        "signup_date": "2023-07-27 14:08:24",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "AGS+DH+Set - Victim: DefoAmKiwi",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
