@@ -18944,7 +18944,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "Wehrrmact",
+        "display_rsn": "pikinlekuntt",
         "signup_date": "2023-06-28 13:13:05",
         "account_hash": "unk",
         "hardware_id": "unk",
@@ -35440,6 +35440,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "wehrrmact",
+        "signup_date": "2023-06-28 13:13:05",
+        "account_hash": "unk",
+        "hardware_id": "unk",
+        "reason": "vouches scammers",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "jack dowsonn",
         "signup_date": "2023-06-28 14:11:30",
         "account_hash": "036b-223b-5b29-de63",
@@ -45033,6 +45041,14 @@
     },
     {
         "display_rsn": "drew into8",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "wehrrmact",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
