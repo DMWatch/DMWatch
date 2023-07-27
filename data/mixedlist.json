@@ -47102,5 +47102,13 @@
         "hardware_id": "ebeb-328f-3e60-f030",
         "reason": "444296858391674900",
         "evidence_rating": "1"
+    },
+    {
+        "display_rsn": "i have lost",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "1056-e0f9-34da-4049",
+        "hardware_id": "5352-5392-665a-cbd9",
+        "reason": "218483131248803842",
+        "evidence_rating": "1"
     }
 ]
