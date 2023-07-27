@@ -24136,7 +24136,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "kuhwazyy",
+        "display_rsn": "frontbutttt",
         "signup_date": "2023-07-21 07:18:22",
         "account_hash": "f4e1-2061-92a9-9d0b",
         "hardware_id": "101e-24ed-67e0-c6e8",
@@ -38064,6 +38064,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "kuhwazyy",
+        "signup_date": "2023-07-21 07:18:22",
+        "account_hash": "f4e1-2061-92a9-9d0b",
+        "hardware_id": "101e-24ed-67e0-c6e8",
+        "reason": "did not pay 250m after",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "pidstar",
         "signup_date": "2023-07-21 08:24:39",
         "account_hash": "null",
@@ -46313,6 +46321,14 @@
     },
     {
         "display_rsn": "destroyspic",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "kuhwazyy",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
