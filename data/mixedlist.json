@@ -25824,14 +25824,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "redrumze",
-        "signup_date": "2023-04-04 22:07:36",
-        "account_hash": "redrumze",
-        "hardware_id": "redrumze",
-        "reason": "redrumze",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
@@ -39449,6 +39441,14 @@
     },
     {
         "display_rsn": "big luck",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "redrumze",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
