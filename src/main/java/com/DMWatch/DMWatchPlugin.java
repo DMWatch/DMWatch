@@ -1704,6 +1704,31 @@ public class DMWatchPlugin extends Plugin
 			bannedCaseManager.refresh(this::colorAll, config.makeWatchListLive());
 			rankedCaseManager.refresh(this::colorAll, config.makeWatchListLive());
 			lastSync = Instant.now();
+
+			if (isInParty())
+			{
+				for (long memberID : partyMembers.keySet())
+				{
+					if (memberID == myPlayer.getMember().getMemberId())
+					{
+						continue;
+					}
+
+					clientThread.invoke(() ->
+					{
+						SwingUtilities.invokeLater(() -> {
+							final PlayerPanel playerPanel = panel.getPlayerPanelMap().get(memberID);
+							if (playerPanel != null)
+							{
+								playerPanel.updatePlayerData(partyMembers.get(memberID), true);
+								return;
+							}
+
+							panel.drawPlayerPanel(partyMembers.get(memberID));
+						});
+					});
+				}
+			}
 		}
 	}
 }
