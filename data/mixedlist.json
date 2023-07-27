@@ -25824,6 +25824,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "sar0ss",
+        "signup_date": "2023-07-27 13:52:31",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Claws+DH+Set - Victim: orochy",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
@@ -38725,6 +38733,14 @@
         "account_hash": "x",
         "hardware_id": "x",
         "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "hadi la",
+        "signup_date": "2023-07-27 13:52:31",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Claws+DH+Set - Victim: orochy",
         "evidence_rating": "3"
     },
     {
