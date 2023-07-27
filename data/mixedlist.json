@@ -25728,6 +25728,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "frugal phill",
+        "signup_date": "2023-07-27 05:38:42",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Claws+DH+Set - Victim: subtroniics",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
