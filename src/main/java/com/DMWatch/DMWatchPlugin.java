@@ -1530,7 +1530,7 @@ public class DMWatchPlugin extends Plugin
 			{
 				continue;
 			}
-			if (bannedCaseManager.getMappingsRSN().contains(Text.toJagexName(memberName.toLowerCase())))
+			if (bannedCaseManager.getMappingsRSN().containsKey(Text.toJagexName(memberName.toLowerCase())))
 			{
 				listWidget.setTextColor(Color.RED.getRGB());
 			}
