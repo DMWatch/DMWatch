@@ -25776,6 +25776,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "dirtydan_xx",
+        "signup_date": "2023-07-27 05:52:51",
+        "account_hash": "c154-cbf6-5f47-026f",
+        "hardware_id": "8308-4f24-b615-4e67",
+        "reason": "AGS+DH+Set - Victim: the ceo",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
