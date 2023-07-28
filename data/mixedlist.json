@@ -25968,6 +25968,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "do sum",
+        "signup_date": "2023-07-28 09:34:56",
+        "account_hash": "f117-a592-8d73-1ae8",
+        "hardware_id": "687d-79c8-6315-f327",
+        "reason": "claw dh scam",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
