@@ -39712,7 +39712,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "naughty b0y",
+        "display_rsn": "stor m0r",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
@@ -47265,6 +47265,14 @@
     },
     {
         "display_rsn": "yolo holoz",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "naughty b0y",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
