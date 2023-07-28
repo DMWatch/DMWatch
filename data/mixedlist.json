@@ -25992,6 +25992,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "welf rune 0s",
+        "signup_date": "2023-07-28 13:08:42",
+        "account_hash": "ff6b-4dcf-9788-d29c",
+        "hardware_id": "ff6b-4dcf-9788-d29c",
+        "reason": "serial scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
@@ -38941,6 +38949,14 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "400m dh scam",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "stretchab",
+        "signup_date": "2023-07-28 13:08:42",
+        "account_hash": "ff6b-4dcf-9788-d29c",
+        "hardware_id": "ff6b-4dcf-9788-d29c",
+        "reason": "serial scammer",
         "evidence_rating": "3"
     },
     {
