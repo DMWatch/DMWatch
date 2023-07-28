@@ -25928,6 +25928,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "argos875",
+        "signup_date": "2023-07-28 06:44:43",
+        "account_hash": "null",
+        "hardware_id": "a831-f104-9dd1-bad3",
+        "reason": "claw dh scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
@@ -38861,6 +38869,14 @@
         "account_hash": "x",
         "hardware_id": "x",
         "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "breaking bod",
+        "signup_date": "2023-07-28 06:44:43",
+        "account_hash": "null",
+        "hardware_id": "a831-f104-9dd1-bad3",
+        "reason": "claw dh scammer",
         "evidence_rating": "3"
     },
     {
