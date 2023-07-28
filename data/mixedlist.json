@@ -25960,6 +25960,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "clean ashell",
+        "signup_date": "2023-07-28 08:47:11",
+        "account_hash": "0da8-9f22-1f7b-407a",
+        "hardware_id": "d9b4-7b01-826a-2652",
+        "reason": "serial scammer",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
