@@ -25792,7 +25792,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "born2lozedms",
+        "display_rsn": "dqshitclient",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "x",
         "hardware_id": "x",
@@ -38896,6 +38896,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "born2lozedms",
+        "signup_date": "2023-04-04 22:07:36",
+        "account_hash": "x",
+        "hardware_id": "x",
+        "reason": "Serial scammer + imposter",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "bergleevos",
         "signup_date": "2023-07-27 13:49:20",
         "account_hash": "ddb2-5199-afc7-5536",
@@ -47289,6 +47297,14 @@
     },
     {
         "display_rsn": "marboulla",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "born2lozedms",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
