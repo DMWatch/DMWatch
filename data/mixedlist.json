@@ -21168,7 +21168,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "imaximilian",
+        "display_rsn": "oopiedoops",
         "signup_date": "2023-07-07 21:45:23",
         "account_hash": "null",
         "hardware_id": "null",
@@ -36928,6 +36928,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "imaximilian",
+        "signup_date": "2023-07-07 21:45:23",
+        "account_hash": "null",
+        "hardware_id": "null",
+        "reason": "held 20b, did not pay out 40b",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "i c eyez",
         "signup_date": "2023-07-08 07:27:03",
         "account_hash": "31cd-c39e-b7de-1a9c",
@@ -46009,6 +46017,14 @@
     },
     {
         "display_rsn": "hosthlov",
+        "signup_date": "2023-06-09 13:33:37",
+        "account_hash": "1001-0024-6969-7331",
+        "hardware_id": "1337-6969-4200-1001",
+        "reason": "Serial Scammer",
+        "evidence_rating": "3"
+    },
+    {
+        "display_rsn": "imaximilian",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
