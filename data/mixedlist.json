@@ -12776,7 +12776,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "gob",
+        "display_rsn": "zezima",
         "signup_date": "2023-05-25 21:23:35",
         "account_hash": "650d-4de1-961b-17f2",
         "hardware_id": "0d47-c364-4718-f235",
@@ -32597,14 +32597,6 @@
         "account_hash": "null",
         "hardware_id": "null",
         "reason": "Voidwaker+DH+Set - Victim: BobbyXHill",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "cerbie",
-        "signup_date": "2023-05-25 21:23:35",
-        "account_hash": "650d-4de1-961b-17f2",
-        "hardware_id": "0d47-c364-4718-f235",
-        "reason": "300m + Claws DH | victim: NlNERS",
         "evidence_rating": "3"
     },
     {
