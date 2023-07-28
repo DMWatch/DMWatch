@@ -2704,7 +2704,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "tittan 2023",
+        "display_rsn": "gong bao",
         "signup_date": "2023-04-20 09:44:05",
         "account_hash": "329a-b59c-9e87-8ab2",
         "hardware_id": "bc09-379a-8add-a075",
@@ -27664,14 +27664,6 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "gong bao",
-        "signup_date": "2023-04-20 09:44:05",
-        "account_hash": "329a-b59c-9e87-8ab2",
-        "hardware_id": "bc09-379a-8add-a075",
-        "reason": "DH + Base Set | Victim: a luck",
-        "evidence_rating": "3"
-    },
-    {
         "display_rsn": "boo0000ooo0m",
         "signup_date": "2023-04-20 10:46:58",
         "account_hash": "null",
@@ -41161,14 +41153,6 @@
     },
     {
         "display_rsn": "distinkton",
-        "signup_date": "2023-06-09 13:33:37",
-        "account_hash": "1001-0024-6969-7331",
-        "hardware_id": "1337-6969-4200-1001",
-        "reason": "Serial Scammer",
-        "evidence_rating": "3"
-    },
-    {
-        "display_rsn": "gong bao",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
