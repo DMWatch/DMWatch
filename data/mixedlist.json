@@ -25864,6 +25864,14 @@
         "evidence_rating": "3"
     },
     {
+        "display_rsn": "SLYFERGODZ",
+        "signup_date": "2023-07-27 17:11:45",
+        "account_hash": "3c95-ab5a-310d-4a2e",
+        "hardware_id": "f134-1e7a-6800-2536",
+        "reason": "AGS+DH+Set - Victim: marcialago90",
+        "evidence_rating": "3"
+    },
+    {
         "display_rsn": "boltingtword",
         "signup_date": "2023-04-04 22:07:36",
         "account_hash": "unknown",
@@ -39520,7 +39528,7 @@
         "evidence_rating": "3"
     },
     {
-        "display_rsn": "freddie cc",
+        "display_rsn": "freddie xx",
         "signup_date": "2023-06-09 13:33:37",
         "account_hash": "1001-0024-6969-7331",
         "hardware_id": "1337-6969-4200-1001",
