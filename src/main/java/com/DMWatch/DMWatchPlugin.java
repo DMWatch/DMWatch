@@ -63,9 +63,12 @@ import net.runelite.api.events.MenuOptionClicked;
 import net.runelite.api.events.PlayerSpawned;
 import net.runelite.api.events.ScriptPostFired;
 import net.runelite.api.events.VarbitChanged;
+import net.runelite.api.widgets.ComponentID;
+import net.runelite.api.widgets.InterfaceID;
 import net.runelite.api.widgets.JavaScriptCallback;
 import net.runelite.api.widgets.Widget;
 import net.runelite.api.widgets.WidgetInfo;
+import net.runelite.api.widgets.WidgetUtil;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.chat.ChatColorType;
 import net.runelite.client.chat.ChatMessageBuilder;
@@ -112,15 +115,15 @@ public class DMWatchPlugin extends Plugin
 	public static final File DMWATCH_DIR = new File(BASE_DIRECTORY, "DMWatch");
 
 	private static final List<Integer> MENU_WIDGET_IDS = ImmutableList.of(
-		WidgetInfo.FRIENDS_LIST.getGroupId(),
-		WidgetInfo.IGNORE_LIST.getGroupId(),
+		InterfaceID.FRIEND_LIST,
+		InterfaceID.IGNORE_LIST,
 
-		WidgetInfo.CHATBOX.getGroupId(),
-		WidgetInfo.FRIENDS_CHAT.getGroupId(),
-		WidgetInfo.PRIVATE_CHAT_MESSAGE.getGroupId(),
+		InterfaceID.CHATBOX,
+		InterfaceID.FRIENDS_CHAT,
+		InterfaceID.PRIVATE_CHAT,
 
-		WidgetInfo.CLAN_MEMBER_LIST.getGroupId(),
-		WidgetInfo.CLAN_GUEST_MEMBER_LIST.getGroupId()
+		ComponentID.CLAN_MEMBERS,
+		ComponentID.CLAN_GUEST_MEMBERS
 	);
 
 	private static final ImmutableList<String> AFTER_OPTIONS = ImmutableList.of(
@@ -516,7 +519,7 @@ public class DMWatchPlugin extends Plugin
 	{
 		if (!menuOptionEnabled) return;
 
-		int groupId = WidgetInfo.TO_GROUP(event.getActionParam1());
+		final int groupId = WidgetUtil.componentToInterface(event.getActionParam1());
 		String option = event.getOption();
 
 		if (!MENU_WIDGET_IDS.contains(groupId) || !AFTER_OPTIONS.contains(option))
@@ -616,10 +619,10 @@ public class DMWatchPlugin extends Plugin
 				{
 					SwingUtilities.invokeLater(() ->
 					{
-						if (!navButton.isSelected())
+						SwingUtilities.invokeLater(() ->
 						{
-							navButton.getOnSelect().run();
-						}
+							clientToolbar.openPanel(navButton);
+						});
 					});
 				}
 			}
@@ -786,7 +789,7 @@ public class DMWatchPlugin extends Plugin
 				.build());
 		}
 
-		Widget chatWidget = client.getWidget(WidgetInfo.CHATBOX_MESSAGE_LINES);
+		Widget chatWidget = client.getWidget(ComponentID.CHATBOX_MESSAGE_LINES);
 		if (chatWidget != null && config.discordNotify())
 		{
 			for (Widget w: chatWidget.getDynamicChildren())
@@ -1311,7 +1314,7 @@ public class DMWatchPlugin extends Plugin
 
 	private void colorFriendsChat()
 	{
-		Widget ccList = client.getWidget(WidgetInfo.FRIENDS_CHAT_LIST);
+		Widget ccList = client.getWidget(ComponentID.FRIENDS_CHAT_LIST);
 		if (ccList != null)
 		{
 			illiteratePlayerWidgets(ccList);
@@ -1320,7 +1323,7 @@ public class DMWatchPlugin extends Plugin
 
 	private void colorClanChat()
 	{
-		Widget clanChatList = client.getWidget(WidgetInfo.CLAN_MEMBER_LIST);
+		Widget clanChatList = client.getWidget(ComponentID.CLAN_MEMBERS);
 		if (clanChatList != null)
 		{
 			illiteratePlayerWidgets(clanChatList);
@@ -1329,7 +1332,7 @@ public class DMWatchPlugin extends Plugin
 
 	private void colorGuestClanChat()
 	{
-		Widget guestClanChatList = client.getWidget(WidgetInfo.CLAN_MEMBER_LIST);
+		Widget guestClanChatList = client.getWidget(ComponentID.CLAN_GUEST_MEMBERS);
 		if (guestClanChatList != null)
 		{
 			illiteratePlayerWidgets(guestClanChatList);
